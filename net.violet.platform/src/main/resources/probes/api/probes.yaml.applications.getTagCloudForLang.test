@@ -1,0 +1,5 @@
+application=webui
+
+url=applications/getTagCloudForLang/fr
+content_type=text/yaml
+regex=!!map:TagInformation|\[\]

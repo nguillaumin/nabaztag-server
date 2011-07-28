@@ -1,0 +1,19 @@
+--- 
+id: 9e5A8180249f
+shortcut: test_probes
+title: LOC_srv_podcast/aquariano_title
+instructions: LOC_srv_podcast/how_to
+optimized_for: &id1
+    - violet.nabaztag.tagtag
+    - violet.rfid.ztamp
+    - violet.rfid.nanoztag
+    - violet.rfid.other
+description: LOC_srv_podcast/aquariano_description
+categ: LOC_srv_category_lifestyle/title
+name: net.violet.podcast.aquariano_test_probes
+supported_hardware: *id1
+url: 
+languages: 
+  - pt
+visible: !!str true
+---

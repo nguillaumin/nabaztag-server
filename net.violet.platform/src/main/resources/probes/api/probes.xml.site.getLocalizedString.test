@@ -1,0 +1,6 @@
+
+application=webui
+
+url=site/getLocalizedString
+post_data=<map><key>source_meteo/AFGHANISTAN_KABOUL</key><id>fr</id></map>
+regex=<string>AFGHANISTAN.Kaboul</string>

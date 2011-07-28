@@ -1,0 +1,13 @@
+application=webui
+
+[get_probes]
+url=people/getObjects
+content_type=text/yaml
+post_data=@yaml/people.yml
+regex=- !!map:ObjectInformation
+
+[get_probesTest]
+url=people/getObjects
+content_type=text/yaml
+post_data=@yaml/people.info.yml
+regex=InformationObject

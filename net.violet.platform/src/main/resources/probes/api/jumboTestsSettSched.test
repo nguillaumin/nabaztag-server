@@ -1,0 +1,158 @@
+application=webui
+
+[ztampcounter sched]
+url=applications/getSchedulingMasks?id=38dAfe5b510e&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[ztampcounter set]
+url=applications/getConfigurationInterface?id=38dAfe5b510e
+regex=.*list.*
+
+[weather sched]
+url=applications/getSchedulingMasks?id=37eAb3078b78&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[weather set]
+url=applications/getConfigurationInterface?id=37eAb3078b78
+regex=.*list.*
+
+[horloge sched]
+url=applications/getSchedulingMasks?id=388A7f2002c6&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[horloge set]
+url=applications/getConfigurationInterface?id=388A7f2002c6
+regex=.*list.*
+
+[radio sched]
+url=applications/getSchedulingMasks?id=3a7A7e4e067c&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[radio set]
+url=applications/getConfigurationInterface?id=3a7A7e4e067c
+regex=.*list.*
+
+[communion sched]
+url=applications/getSchedulingMasks?id=38cA4ab46404&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[communion set]
+url=applications/getConfigurationInterface?id=38cA4ab46404
+regex=.*list.*
+
+[air sched]
+url=applications/getSchedulingMasks?id=37fA7da141e2&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[air set]
+url=applications/getConfigurationInterface?id=37fA7da141e2
+regex=.*list.*
+
+[bilan sched]
+url=applications/getSchedulingMasks?id=380A38120863&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[bilan set]
+url=applications/getConfigurationInterface?id=380A38120863
+regex=.*list.*
+
+[trafic sched]
+url=applications/getSchedulingMasks?id=381A459cdb1b&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[trafic set]
+url=applications/getConfigurationInterface?id=381A459cdb1b
+regex=.*list.*
+
+[bourse sched]
+url=applications/getSchedulingMasks?id=382A69a676a2&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[bourse set]
+url=applications/getConfigurationInterface?id=382A69a676a2
+regex=.*list.*
+
+[podcast free sched]
+url=applications/getSchedulingMasks?id=403Aca08ef45&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[podcast free set]
+url=applications/getConfigurationInterface?id=403Aca08ef45
+regex=.*list.*
+
+[RSS free sched]
+url=applications/getSchedulingMasks?id=41aAbef8089b&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[RSS Free set]
+url=applications/getConfigurationInterface?id=41aAbef8089b
+regex=.*list.*
+
+
+[RSS full sched]
+url=applications/getSchedulingMasks?id=3f8A4edb4e92&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[RSS full set]
+url=applications/getConfigurationInterface?id=3f8A4edb4e92
+regex=.*list.*
+
+
+[Podcast full sched]
+url=applications/getSchedulingMasks?id=3f9A08bd21fe&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[Podcast  full set]
+url=applications/getConfigurationInterface?id=3f9A08bd21fe
+regex=.*list.*
+
+[reveil sched]
+url=applications/getSchedulingMasks?id=38aAffc70386&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[reveil  set]
+url=applications/getConfigurationInterface?id=38aAffc70386
+regex=.*list.*
+
+
+[Email alert  sched]
+url=applications/getSchedulingMasks?id=384A6ee06d24&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[Email alert set]
+url=applications/getConfigurationInterface?id=384A6ee06d24
+regex=.*list.*
+
+
+[Pense bete sched]
+url=applications/getSchedulingMasks?id=38bAaf1aad57&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[Pense bete set]
+url=applications/getConfigurationInterface?id=38bAaf1aad57
+regex=.*list.*
+
+[Gmail sched]
+url=applications/getSchedulingMasks?id=386Aabe2ead9&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[Gmail set]
+url=applications/getConfigurationInterface?id=386Aabe2ead9
+regex=.*list.*
+
+[TwitterPost sched]
+url=applications/getSchedulingMasks?id=9A8edc32c9&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[TwitterPost set]
+url=applications/getConfigurationInterface?id=9A8edc32c9
+regex=.*list.*
+
+[MailPost sched]
+url=applications/getSchedulingMasks?id=3f6A9ec5d2c3&hw_type=violet.nabaztag.tagtag
+regex=.*list.*
+
+[MailPost set]
+url=applications/getConfigurationInterface?id=3f6A9ec5d2c3
+regex=.*list.*
+

@@ -1,0 +1,15 @@
+application_id: 381A459cdb1b
+object_id: 10a7aO90ddb8a0
+settings:
+  -
+    value: Bagnolet
+    key: start
+  -
+    value: Orleans
+    key: end
+scheduling:
+  -
+    type: Daily
+    Wednesday:
+      time_h: 10
+      time_m: 10

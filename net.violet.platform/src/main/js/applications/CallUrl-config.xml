@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/9moifwytWN -->
+	<name>"net.violet.js.callurl"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"dev"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>500</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"CallUrl"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Transmettre des données dans une URL (Call URL)"]]></fr>
+		<en><![CDATA["Send data to an URL (Call URL)"]]></en>
+		<it><![CDATA["Trasmettere dei dati ad una URL (Call URL)"]]></it>
+		<es><![CDATA["Transmitir los datos a una URL (Call URL)"]]></es>
+		<de><![CDATA["Übermittlung von Daten an eine URL (Call URL)"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["HTTPリクエスト"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Cette application est destinée aux développeurs. Vous avez une application ou un site quelque part sur Internet. Transmettez-lui les paramètres d'un Ztamp détecté et utilisez ces données dans vos applications ou dans des API.</p> "]]></fr>
+		<en><![CDATA["<p>This application is designed for developers. You have an application or website somewhere on the Internet: send it the parameters from a detected Ztamp and use the data in your applications or in APIs.</p>"]]></en>
+		<it><![CDATA["<p>Quest'Applicazione é pensata per i programmatori. Hai un'Applicazione o un sito da qualche parte su Interne? Inviagli le impostazioni di uno Ztamp e utilizza questi dati nelle tue Applicazioni o nelle API.</p>"]]></it>
+		<es><![CDATA["Esta aplicación está destinada a los desarrolladores. En alguna parte de Internet tienes una aplicación o un sitio. Transmítele los parámetros de un Ztamp y usa esos datos en tus aplicaciones o en las API"]]></es>
+		<de><![CDATA["<p>Diese Applikation richtet sich an Entwickler. Sie haben irgendwo eine Applikation oder eine Seite im Internet. Übermitteln Sie ihr die Einstellungen eines Ztamp und benutzen Sie diese Daten in Ihren Applikationen oder in Ihrer API.</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>このアプリケーションは開発者のためのものです。<br/>ズタンプによりパラメータを送信できますので、インターネット上のアプリケーションやAPIに利用することができます。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Comment faire ? <br/>
+Entrez l'URL complète que l'application devra appeler à chaque fois que le Ztamp est détecté.<br/>
+Vous pouvez utiliser dans cette URL les variables suivantes<br/>
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Heure de l'envoi du message.</li>
+<li> ${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : Les mêmes parties de l'heure, mais préfixée d'un zéro s'il le faut. Ex : '02' au lieu de '2'.</li>
+<li> ${object.name} : nom de l'objet ayant lu le Ztamp. </li>
+<li> ${object.owner.firstname} : prénom du propriétaire de l'objet.</li>
+<li> ${object.owner.lastname} : nom du propriétaire de l'objet. </li>
+<li> ${object.owner.city} : ville du propriétaire de l'objet. </li>
+<li> ${ztamp.name} : nom du Ztamp.</li>
+<li> ${ztamp.serial} : numéro de série du Ztamp.</li>
+<li> ${ztamp.owner.lastname} : nom du propriétaire du Ztamp. </li>
+<li> ${ztamp.owner.firstname} : prénom du propriétaire du Ztamp. </li>
+<li> ${ztamp.owner.city} : ville du propriétaire du Ztamp. </li>
+</ul>
+Ex : <code>http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}</code><br/>
+Note : si une des variables insérée comporte des espaces, par ex : <em>mon parapluie jaune, </em>ces espaces seront remplacés par %20 : <em>mon%20parapluie%20jaune</em><br/>
+Lorsque le Ztamp est lu, une requête HTTP GET est envoyée sur l'URL indiquée. En fonction de la réponse du serveur, quelques  notifications apparaîtront dans la bulle de l'application.<br/>
+	<u>Expiration du délai d'attente :</u>
+Si votre serveur ne répond pas dans les 10 secondes, le message suivant apparaîtra dans la bulle de l'application : "Délai d’attente dépassé".</br> Cela ne signifie pas que l'action a échouée, mais que le serveur n'a pas donné de réponse dans le délai attendu.<br/>
+	<u>Mauvais format de réponse :</u>
+La réponse attendue du serveur contacté doit être dans un des formats suivants: text/plain, text/json, text/xml.<br/>
+Les réponses en text/html sont inadéquates, une notification de contenu invalide est affichée dans la bulle de l’application. Cette notification ne signifie pas que l’action n’a pas été exécutée mais simplement qu’il est impossible d’interpréter la réponse du serveur.</br>
+Fonctionne avec Mir:ror et Nabaztag:tag.</p>"]]></fr>
+
+		<en><![CDATA["<p>How does this work?<br/>
+Enter the full URL for the application you want to call every time the Ztamp is detected.<br/>
+You may use the following variables in the URL:
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}: Time message was sent.</li>
+<li>${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : The same time parts, but with a leading zero. Ex : '02' instead of '2'.</li>
+<li>${object.name}: Name of the object that has read the Ztamp.</li>
+<li>${object.owner.firstname}: First name of the object owner.</li>
+<li>${object.owner.lastname}: Last name of the object owner.</li>
+<li>${object.owner.city}: City where the object owner lives.</li>
+<li>${ztamp.name}: Ztamp name.</li>
+<li>${ztamp.serial}: Ztamp serial number.</li>
+<li>${ztamp.owner.lastname}: Last name of the Ztamp owner.</li>
+<li>${ztamp.owner.firstname}: First name of the Ztamp owner.</li>
+<li>${ztamp.owner.city}: City where the Ztamp owner lives.</li>
+</ul>
+Example : http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>
+Note : if one of the variables inserted contains spaces, e.g. <em>my yellow umbrella, </em>, the spaces will be replaced with %20: <em>my%20yellow%20umbrella, </em><br/>
+When the Ztamp is read, an HTTP GET request is sent to the specified URL. Depending on the server's response, a few  notifications will display in the application's bubble.<br/>
+	<u>Timeout:</u>
+If your server fails to respond within 10 seconds, the following message will display in the app bubble: "Timeout exceeded".<br/> This does not mean the action has failed, only that the server has not responded within the expected time.<br/>
+	<u>Incorrect response format:</u>
+The response expected from the contacted server must be in one of the following formats: text/plain, text/json, text/xml.<br/>
+Responses in text/html format are unsuitable: an invalid content notification displays in the app bubble. This does not mean the action has failed, only that the server's response cannot be interpreted.<br/>
+Works with Nabaztag:tag and Mir:ror."]]></en>
+
+		<it><![CDATA["<p>Come si fa?<br/>
+Inserisci la l'URL completa che l'Applicazione dovrà richiamare ogni volta che riconoscerà lo Ztamp. Per questa URL puoi utilizzare le seguenti variabili: <br/>
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}: Ora d'invio del messaggio. </li>
+<li> ${object.name}: Nome dell'oggetto che ha visto lo Ztamp. </li>
+<li> ${object.owner.firstname}: Nome del proprietario dell'oggetto.</li>
+<li> ${object.owner.lastname}: Cognome del proprietario dell'oggetto. </li>
+<li> ${object.owner.city}: Città dove risiede il proprietario dell'oggetto. </li>
+<li> ${ztamp.name}: Nome dello Ztamp. </li>
+<li> ${ztamp.owner.lastname}: Cognome del proprietario dello Ztamp. </li>
+<li> ${ztamp.owner.firstname}: Nome del proprietario dello Ztamp. </li>
+<li> ${ztamp.owner.city}: Città dove risiede il proprietario dello Ztamp.</li>
+</ul>
+Ex :http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>
+Nota: se una delle variabili inserite comporta degli spazi, ad esempio: <em>il mio ombrello giallo </em>questi spazi vengono sostituiti da %20 : <em>il%20mio%20 ombrello%20 giallo</em><br/>
+Quando lo Ztamp viene letto, una richiesta HTTP GET viene inviata sull'URL richiesto. A seconda della risposta del server, verrà visualizzata una notifica.<br/>
+<u>Limite del tempo di attesa</u>Se il vostro server non risponde entro 10 secondi, apparirà il seguente messaggio "Tempo di attesa scaduto". Questo non significa che l'azione sia fallita, ma che il server non ha dato una risposta nel tempo previsto.<br/>
+<u>Formato errato della risposta</u>La risposta attesa dal server contattato dev'essere in uno dei seguenti formati: text/plain, text/json, text/xml.<br/>
+Le risposte in text/html non vengono accettate e appare una notifica di contenuto non valido. Questa notifica non significa che l'azione non sia stata eseguita, ma semplicemente che è impossibile interpretare la risposta del server.<br/>
+Appena lo Ztamp verrà riconosciuto, una richiesta HTTP GET verrà inviata all'URL indicato. In funzione della risposta del server, delle notifiche appariranno nella bolla dell'Applicazione.<br/>
+<u>Fine del tempo d'attesa:</u>Se il tuo server non risponde entro 10 secondi, il messaggio seguente apparirà nella bolla dell'Applicazione: "Tempo d'attesa finito".</br>
+Questo non significa che l'azione sia fallita, ma che il server non ha risposto nel tempo dovuto.<br/>
+<u>Formato di risposta sbagliato:</u>La risposta attesa dal server contattato deve essere in uno dei seguenti formati: text/plain, text/json, text/xml.<br/>
+Le risposte in text/html sono inadeguate, una notifica di contenuto non valido appare nella bolla dell’Applicazione. Tale notifica non significa che l’azione non sia stata eseguita, ma semplicemente che é impossibile d’interpretare la risposta del server.<br/>
+Funziona con Nabaztag:tag e Mir:ror.</p>"]]></it>
+
+		<es><![CDATA["¿Cómo se hace?<br/>
+Introduce la URL completa que la aplicación deberá abrir cada vez que se detecte el Ztamp. <br/>
+En esta URL, puedes usar las variables que siguen :<br/>
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Hora del envío del mensaje.</li>
+<li>${object.name} : nombre del objeto que haya leído el Ztamp.</li>
+<li>${object.owner.firstname} : nombre del propietario del objeto. </li>
+<li>${object.owner.lastname} : apellido del propietario del objeto.</li>
+<li>${object.owner.city} :ciudad del propietario del objeto.</li>
+<li>${ztamp.name} : nombre del Ztamp.</li>
+<li>${ztamp.owner.lastname} : apellido del propietario del Ztamp.</li>
+<li>${ztamp.owner.firstname} : nombre del propietario del Ztamp.</li>
+<li>${ztamp.owner.city} : ciudad del propietario del Ztamp.</li>
+</ul>
+Ex : http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>
+Nota : si una de las variables insertadas lleva espacios, por ejemplo: <em>mi paraguas amarillo</em>, esos espacios serán reemplazados por %20 :<em>mi%20paraguas%20amarillo</em><br/>
+When the Ztamp is read, an HTTP GET request is sent to the specified URL. Depending on the server's response, a few  notifications will display in the application's bubble.<br/>
+	<u>Timeout:</u>
+If your server fails to respond within 10 seconds, the following message will display in the app bubble: "Timeout exceeded".</br> This does not mean the action has failed, only that the server has not responded within the expected time.<br/>
+	<u>Incorrect response format:</u>
+The response expected from the contacted server must be in one of the following formats: text/plain, text/json, text/xml.<br/>
+Responses in text/html format are unsuitable: an invalid content notification displays in the app bubble. This does not mean the action has failed, only that the server's response cannot be interpreted.<br/>
+Funciona con Mir:ror y Nabaztag:tag.</p>"]]></es>
+
+		<de><![CDATA["<p>Wie funktioniert das?? <br/>
+Geben Sie die komplette URL ein, die die Applikation bei jeder Erkennung des Ztamp aufrufen soll.
+Sie können in dieser URL folgende Variablen benutzen :<br/>
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Uhrzeit des Emailversands. </li>
+<li> ${object.name} : Name des Objektes, das den Ztamp gelesen hat. </li>
+<li> ${object.owner.firstname} : Vorname des Objektbesitzers.</li>
+<li> ${object.owner.lastname} : Name des Objektbesitzers. </li>
+<li> ${object.owner.city} : Stadt des Objektbesitzers. </li>
+<li> ${ztamp.name} : Name des Ztamps. </li>
+<li> ${ztamp.owner.lastname} : Name des Ztamp-Besitzers. </li>
+<li> ${ztamp.owner.firstname} : Vorname des Ztamp-Besitzers. </li>
+<li> ${ztamp.owner.city} : Stadt des Ztamp-Besitzers. </li>
+</ul>
+Bsp :http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>
+Anmerkung : Falls eine der eingefügten Variablen Leerzeichen enthält, zum Bsp : <em>mein gelber Regenschirm, </em>werden diese Leerzeichen ersetzt durch %20 : <em>mein%20gelber%20Regenschirm</em><br/>
+Wenn der Ztamp gelesen wird, wird eine HTTP GET Anfrage an die angegebene URL gesendet. Abhängig von der Serverantwort werden entsprechende Benachrichtigungen im  Applikationsfenster angezeigt.<br/>
+	<u>Zeitübeschreitung:</u>
+Sollte Ihr Server innheralb von 10 Sekunden nicht antworten, erscheint die folgende Nachricht im Applikationsfenster: "Zeit überschritten".<br/> Dies bedeutet nicht, dass die Aktion fehlgeschlagen ist, sondern dass der Server in der erwarteten Zeit nicht geantwortet hat.<br/>
+	<u>Ungültiges Antwortformat:</u>
+Die Antwort des kontaktierten Servers muss in einem der folgenden Formate stehen: text/plain, text/json, text/xml.<br/>
+Antworten im Format text/html sind nicht geeignet. Eine Benachrichtigung über den ungültigen Inhalt wird im Applikationsfenster angezeigt. Diese Benachrichtigung bedeutet nicht, dass die Aktion nicht ausgeführt wurde, sondern nur, dass die Serverantwort nicht verstanden werden kann.<br/>
+Funktioniert mit Mir:ror und Nabaztag:tag.</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>使い方<br/>
+		ズタンプを使った時にリクエストを利用してアクセスしたいURLを入力します。<br/>
+		以下の変数を使うこともできます。<br/>
+		<ul>
+		<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}： このリクエストがされた時間</li>
+		<li>${object.name}： ズタンプを読み込んだアイテムの名前</li>
+		<li>${object.owner.firstname}： アイテムの登録者の名前（名）</li>
+		<li>${object.owner.lastname}： アイテムの登録者の名前（姓）</li>
+		<li>${object.owner.city}： アイテムの登録者の所在地</li>
+		<li>${ztamp.serial}： ズタンプのシリアルナンバー</li>
+		<li>${ztamp.owner.lastname}： ズタンプの登録者の名前（姓）.</li>
+		<li>${ztamp.owner.firstname}： ズタンプの登録者の名前（名）</li>
+		<li>${ztamp.owner.city}：ズタンプの登録者の所在地</li>
+		</ul>
+		<br/>
+		<u>注記： </u><br/>
+		文字を使用したパラメータに空白を使いたい場合は、空白を%20に置き換えてください。例えば<em>my yellow umbrella, </em>は、<em>my%20yellow%20umbrella, </em>となります。<br/>
+		ズタンプによりHTTP GETリクエストを利用した場合、サーバの応答によってはディスプレイ上にメッセージが現れることがあります。<br/>
+		ナバズタグ：タグとミラーで利用できる機能です。<br/>
+		<u>リクエストの例： </u><br/>
+		 http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>
+		 <u>タイムアウト： </u><br/>10秒以上レスポンスがなかった場合は、「Timeout exceeded」というメッセージが表示されます。<br/>
+		 タイムアウトになる原因は、サーバがレスポンスを返さなかった場合だけではありません。<br/>
+		 <u>MIMEタイプ： </u><br/>
+		 サーバからのレスポンスのMIMEタイプは text/plain、text/json、text/xmlのどれかである必要があります。<br/>
+		 MIMEタイプが text/html のレスポンスの場合、MIMEタイプが対応していないのでディスプレイ上でメッセージが表示されますが、エラーが発生したことを意味するものではありません。</p>"]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+	<item><map>
+		<key>"url"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["URL"]]></fr>
+			<en><![CDATA["URL"]]></en>
+			<it><![CDATA["URL"]]></it>
+			<es><![CDATA["URL"]]></es>
+			<de><![CDATA["URL"]]></de>
+			<pt><![CDATA["URL"]]></pt>
+			<ja><![CDATA["URL"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Tapez l'url à atteindre chaque fois que le Ztamp est détecté"]]></fr>
+			<en><![CDATA["Enter the URL to be called every time the Ztamp is detected"]]></en>
+			<it><![CDATA["Scrivi la url che deve comporre ogni volta che lo Ztamp verrà riconosciuto"]]></it>
+			<es><![CDATA["Escribe la URL a la cual hay que llegar cada vez que se detecte el Ztamp"]]></es>
+			<de><![CDATA["Geben Sie die zu öffnende URL bei jeder Erkennung des Ztamp ein"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["ズタンプがかざされた時に送信するURLを入力してください"]]></ja>
+		</map></description>
+	</map></item>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

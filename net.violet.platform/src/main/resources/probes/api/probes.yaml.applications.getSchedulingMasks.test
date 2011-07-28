@@ -1,0 +1,7 @@
+application=webui
+
+[clock]
+url=applications/getSchedulingMasks
+content_type=text/yaml
+post_data=@yaml/appId_hw.yml
+regex=SchedulingMask

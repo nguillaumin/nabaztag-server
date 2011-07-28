@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.objects.getInfo
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?"NoSuchObject",?\],.*"method_class":"GET"

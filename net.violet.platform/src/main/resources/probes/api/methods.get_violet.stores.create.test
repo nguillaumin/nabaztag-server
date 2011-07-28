@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.stores.create
+content_type=text/json
+regex="errors":\["InvalidData",?"InvalidParameter",?"NoSuchFile",?\],.*"method_class":"CREATE"

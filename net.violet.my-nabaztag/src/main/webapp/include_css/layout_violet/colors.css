@@ -1,0 +1,142 @@
+.messagesListeTable th,
+ul.messages-list-func a:hover,
+.paginate li.current a:hover,
+.paginate li.current,
+#mp3-sender .menu li.selected
+{ background-color:#825FC5; }
+
+.paginate li.current a {color:black;}
+
+.messagesListeTable tbody {border:1px solid #B5B4B2;}
+.messagesListeTable td {border-left:1px solid #B5B4B2;}
+.messagesListeTable tr.odd {background-color:#F2F2F2;}
+.messagesListeTable tr.even {background-color:#E6E6E6}
+
+.messagesListeTable tr.odd.selected {background-color:#d8d0e1;}
+.messagesListeTable tr.even.selected {background-color:#ccc3d5;}
+.messagesListeTable tr.selected td, .messagesListeTable tr.selected a {color:black;}
+
+ul.messages-list-func li,
+ul.messages-list-func a
+{ background:#E2D4FF; }
+
+
+.maMusique span.selected {color:#C1D300;}
+
+.maMusique .nameMp3Input {background:#FAFFC5;}
+
+.maMusique li.delete a	{color:#B50073;}
+
+
+.lastMessageHome .joue {color:#00CC00}
+.lastMessageHome .pasJoue {color:red}
+
+.specialBlockAndTitle h1,
+.specialBlockAndTitle h2,
+h1,
+a.bigLink,
+.nabshare h3,
+.maMusique li.play a,
+.commandes li a,
+.srv-list-entries a.link-modify,
+.song-picker-holder .text,
+.keskidit h3,
+#bloc-MyServices .tri a,
+#bloc-MyServices .tri a.selected
+{ color:#41326d;}
+ 
+.nabcastHisto .lesSons li,
+.listItemContener td,
+.diffusionNabcasts li
+{border-bottom:1px dotted #754BBF;}
+
+.supprService { border:1px dotted #B80171; background-color:#f9e8f3;}
+
+.srv-list-entries li.keywords ul,
+.radio-chooser li.selected
+{border-bottom:1px dotted #754BBF;}
+
+.warningMsg {border:1px dotted #B80171;}
+
+.home-warning-msg {  border:2px dotted #B90176; background-color:#FFD8F1; }
+
+fieldset,
+#description-srv .imgSrv,
+.messagesListeTable th,
+ul.messages-list-func li
+{border:1px solid #754BBF; }
+
+.tabNav a,
+.tabNav a:hover
+{color:#41326d}
+
+.tabNav li.active a,
+.tabNav li.active_last a {color:white}
+
+ul.tabNav li.disabled_last a,
+ul.tabNav li.disabled a
+{color:#938aac;}
+
+#loginBox div.main {border-left:none;}
+#loginBox div.profil {border-bottom:1px dotted white;}
+
+.tabNavContener h1 {color:#430E7F;}
+
+#rightcontent li a.selected, #leftcontent li a.selected,
+#bloc-MyServices .selected .srvName,
+ul.item-listing a:hover,
+ul.item-listing a.selected
+{ background-color:#754BBF; color:white;}
+
+.link-more-options,
+.link-help-txt {text-decoration:none; border-bottom:1px dotted #754BBF;}
+
+.main-cadre-content h3, .main-cadre-content a,
+.intro-cadre-content a,
+.flat-block a, .flat-block a:hover, .main-cadre-contener a, .main-cadre-contener a:hover,
+.intro-cadre-contener h3,
+.simple-link:hover,
+.simple-link,
+.colored-text,
+legend,
+.link-help-txt,
+.link-more-options,
+.warningMsg, .warningMsg div,
+.bigWord,
+div.selectedItem span,
+.lastMessageHome .user,
+ul.item-listing a.shuffle,
+#bloc-nablives blockquote a
+{color:#754BBF;}
+
+fieldset,
+#description-srv .imgSrv,
+ul.messages-list-func li,
+.srv-list-entries li 
+{border:1px dotted;}
+
+/*
+.radio-chooser li.selected,
+#mp3-sender .mp3-choice {border:1px dotted;}	
+.color_selected {border:3px solid;}
+.srv-list-entries li.keywords {border-top:1px dotted;}
+.srv-list-entries ul.txt-list {border-left:1px solid;}
+.srv-list-entries li.selected { border:2px solid;}
+*/
+
+#myInfos label,
+#rightcontent li, #leftcontent li,
+.srv-list-entries li.selected,
+.radio-chooser li.selected,
+.srv-list-entries ul.txt-list,
+fieldset,
+#description-srv .imgSrv,
+ul.messages-list-func li,
+.srv-list-entries li,
+#mp3-sender .mp3-choice,
+.color_selected,
+.srv-list-entries li.keywords
+{border-color:#754BBF}
+
+#tooltip { background-color:#e5d7ff;}
+

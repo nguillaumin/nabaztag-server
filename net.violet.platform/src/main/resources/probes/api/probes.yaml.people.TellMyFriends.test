@@ -1,0 +1,7 @@
+application=webui
+
+[tellMyFriends]
+url=people/tellMyFriends
+content_type=text/yaml
+post_data=@yaml/people.tellMyFriends.yml
+regex=~

@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.contacts.retractRequest
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidContact",?"InvalidParameter",?"InvalidSession",?"NoSuchContact",?\],.*"method_class":"DELETE"

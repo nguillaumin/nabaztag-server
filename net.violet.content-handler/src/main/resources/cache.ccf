@@ -1,0 +1,39 @@
+# DEFAULT CACHE REGION
+
+jcs.default=DC
+jcs.default.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+jcs.default.cacheattributes.MaxObjects=1000
+jcs.default.cacheattributes.MemoryCacheName=org.apache.jcs.engine.memory.lru.LRUMemoryCache
+jcs.default.cacheattributes.UseMemoryShrinker=true
+jcs.default.cacheattributes.MaxMemoryIdleTimeSeconds=3600
+jcs.default.cacheattributes.ShrinkerIntervalSeconds=60
+jcs.default.cacheattributes.MaxSpoolPerRun=500
+jcs.default.elementattributes=org.apache.jcs.engine.ElementAttributes
+jcs.default.elementattributes.IsEternal=false
+
+# AVAILABLE AUXILIARY CACHE
+jcs.auxiliary.DC=org.apache.jcs.auxiliary.disk.indexed.IndexedDiskCacheFactory
+jcs.auxiliary.DC.attributes=org.apache.jcs.auxiliary.disk.indexed.IndexedDiskCacheAttributes
+jcs.auxiliary.DC.attributes.DiskPath=/var/tmp
+jcs.auxiliary.DC.attributes.OptimizeAtRemoveCount=250
+
+#Default 5000 keys, < 0 for unlimited
+jcs.auxiliary.DC.attributes.MaxKeySize=250
+
+# SPECIFIC CACHE REGION ObjectCache
+#jcs.region.ObjectCache=DC
+#jcs.region.ObjectCache.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+#jcs.region.ObjectCache.cacheattributes.MaxObjects=10
+#jcs.region.ObjectCache.cacheattributes.MemoryCacheName=org.apache.jcs.engine.memory.lru.LRUMemoryCache
+#jcs.region.ObjectCache.cacheattributes.UseMemoryShrinker=true
+#jcs.region.ObjectCache.cacheattributes.MaxMemoryIdleTimeSeconds=3600
+#jcs.region.ObjectCache.cacheattributes.ShrinkerIntervalSeconds=60
+#jcs.region.ObjectCache.cacheattributes.MaxSpoolPerRun=500
+#jcs.region.ObjectCache.elementattributes=org.apache.jcs.engine.ElementAttributes
+#jcs.region.ObjectCache.elementattributes.IsEternal=false
+
+# SPECIFIC CACHE REGION : FFMPEG
+jcs.region.FFMPEGCache=DC
+jcs.region.FFMPEGCache.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+jcs.region.FFMPEGCache.cacheattributes.MaxObjects=50
+jcs.region.FFMPEGCache.elementattributes=org.apache.jcs.engine.ElementAttributes

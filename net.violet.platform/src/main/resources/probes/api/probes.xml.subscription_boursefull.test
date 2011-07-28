@@ -1,0 +1,6 @@
+application=webui
+
+[create_boursefull]
+url=subscriptions/create
+post_data=<map><application_id><string>383A5b1e14e4</string></application_id><object_id><string>10a7aO90ddb8a0</string></object_id><settings><list><item><map><value><string>CA.PA</string></value><key><string>stock_code</string></key></map></item><item><map><value><string>Test alert name</string></value><key><string>alert_name_name</string></key></map></item></list></settings><scheduling><list><item><map><type><string>Ambiant</string></type></map></item></list></scheduling></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>

@@ -1,0 +1,13 @@
+application=webui
+
+[status_private]
+url=objects/getStatus
+content_type=text/yaml
+post_data=@yaml/objects.private.yml
+regex=disconnected
+
+[status_MataHariProbes]
+url=objects/getStatus
+content_type=text/yaml
+post_data=@yaml/objects.yml
+regex=(awaken)|(asleep)

@@ -1,0 +1,48 @@
+<map>
+<scheduling_masks>
+	<list>
+	<item>
+		<map>
+			<hw_type>"violet.nabaztag.tagtag"</hw_type>
+			<scheduling_type>"Daily"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>0</minimum>
+		</map>
+	</item>
+
+	<item>
+		<map>
+			<hw_type>"violet.nabaztag.tagtag"</hw_type>
+			<scheduling_type>"NewContentWithFrequency"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>0</minimum>
+		</map>
+	</item>
+
+
+        <item>
+	       <map>
+	            <hw_type>"violet.rfid"</hw_type>
+	            <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		 <label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>																		</map>
+	</item>
+	
+	<item>
+		<map>
+		   <hw_type>"violet.rfid"</hw_type>
+		  <scheduling_type>"InteractionTrigger"</scheduling_type>
+		  <event>"ZtampRemoval"</event>
+		  <label>"LOC_events/ZtampRemoval"</label>
+		 <minimum>0</minimum>
+		 <maximum>1</maximum>
+		 </map>
+	</item>
+
+	</list>
+
+</scheduling_masks>
+</map>
+

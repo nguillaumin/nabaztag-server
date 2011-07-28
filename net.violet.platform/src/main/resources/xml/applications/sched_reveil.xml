@@ -1,0 +1,25 @@
+<map>
+<scheduling_masks>
+	<list>
+	<item>
+		<map>
+			<hw_type>"violet.nabaztag"</hw_type>
+			<scheduling_type>"DailyWithMedia"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>1</minimum>
+		</map>
+	</item>
+
+	<item>
+		<map>
+			<hw_type>"violet.daldal"</hw_type>
+			<scheduling_type>"DailyWithMedia"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>1</minimum>
+		</map>
+	</item>
+
+	</list>
+
+</scheduling_masks>
+</map>

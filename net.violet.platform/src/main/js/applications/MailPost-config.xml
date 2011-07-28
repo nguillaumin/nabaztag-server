@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/k0tNqGvMtW -->
+
+	<name>"net.violet.js.mailpost"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"communication"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>1800</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"MailPost"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Envoyer un e-mail"]]></fr>
+		<en><![CDATA["Send an Email"]]></en>
+		<it><![CDATA["Invia una e-mail"]]></it>
+		<es><![CDATA["Enviar un e-mail"]]></es>
+		<de><![CDATA["Versenden einer Email "]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["Eメールの送信"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["Ecrivez le texte d'un e-mail, entrez ses destinataires. A chaque fois que le Ztamp sera détecté, ce message sera envoyé aux personnes désignées.<br/>
+Exemple: Vous souhaitez être prévenu que votre enfant est bien rentré à la maison alors que vous êtes au bureau ? Collez un Ztamp sur son porte-clé, quand il le passera devant le Lapin ou le Mir:ror de la maison, vous recevrez cet e-mail indiquant que c'est bien le Mir:ror du salon qui l'a vu passer et l'heure exacte de la détection.
+"]]></fr>
+		<en><![CDATA["Write an e-mail message and specify the recipients. Every time the Ztamp is detected, the message will be sent to its designated recipients.<br/>
+Example: would you like to be sure your kid has got back from school safely even when you're still at work? Stick a Ztamp on his house key: when he flashes it to the Rabbit or Mir:ror in your home, you'll be sent an e-mail confirming that the Mir:ror in the lounge saw him passing by at a given time."]]></en>
+		<it><![CDATA["<p>Scrivi il testo di una mail, inserisci i destinatari. Ogni volta che lo Ztamp verrà riconosciuto, invierà il messaggio alle persone designate. <br/>Esempio: desideri essere avvertito quando tuo/a figlio/a rientra a casa mentre tu sei ancora al lavoro ? Incolla uno Ztamp sul suo portachiavi, ogni volta che lo passerà davanti al Coniglio o al Mir :ror di casa riceverai un messaggio che ti informerà che il Mir :ror del salotto ha visto passare tuo figlio e l'ora esatta del suo passaggio.</p>
+"]]></it>
+		<es><![CDATA["<p>Escribe el texto de un e-mail, entra sus destinatarios. Cada vez que se detecte el Ztamp, se enviará este mensaje a  las personas designadas. <br/>
+			Ejemplo: ¿Deseas que te avisen si tu hijo ha vuelto a casa mientras tu estás en tu despacho? Pega un Ztamp en su llavero, cuando pasará frente al Conejo o el Mir:ror de la casa, recibirás este e-mail indicando que el Mir:ror del salón lo ha visto pasar a la hora exacta de la detección.</p>"]]></es>
+		<de><![CDATA["<p>Schreiben Sie den Text einer Email und geben Sie die Adressaten ein. Jedes Mal, wenn der Ztamp erkannt wird, wird diese Nachricht an die angegebenen Personen gesendet. <br/>
+Beispiel: Sie sind im Büro und wollen benachrichtigt werden, dass Ihr Kind gut nach Hause gekommen ist? Heften Sie einen Ztamp auf seinen Haustürschlüssel. Sobald Ihr Kind ihn dem Mir:ror (oder wahlweise dem Hasen) des Hauses zeigt, erhalten Sie eine Email mit dem Hinweis, dass der Mir:ror des Wohnzimmers Ihr Kind gesehen hat, einschließlich der genauen Angabe der Uhrzeit.</p>
+"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>メッセージ内容と送信先のアドレスを入力してください。このアプリケーションが設定されたズタンプが起動したときに、入力されたメールが送信されます。<br/>
+たとえば、あなたが仕事中で家にいなかったとした場合、子供がいつ帰ってくるか心配ではありませんか？　家の鍵にズタンプを貼っておき、帰ってきたらナバズタグ：タグかミラーにその鍵をかざすようにしておくと……携帯電話や会社のコンピュータに「ただいま」のメールが届く！　こんなことが可能です。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Entrez l'adresse e-mail du destinataire principal et de ceux que vous souhaitez mettre en copie du message. S'il y a plusieurs adresses, séparez-les par « , ».<br/>
+Entrez l'objet du message, puis tapez le texte principal.<br/>
+Si vous le souhaitez, vous pouvez insérer des variables dans le texte de l'objet ou du contenu de votre mail. Elles se mettront à jour automatiquement au moment de l'envoi du message.<br/>
+Ces variables sont :
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Heure de l'envoi du message. </li>
+<li> ${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : Les mêmes variables horaires, mais préfixée d'un zéro s'il le faut. Ex : '02' au lieu de '2'.</li>
+<li> ${object.name} : nom de l'objet ayant lu le Ztamp. </li>
+<li> ${object.owner.firstname} : prénom du propriétaire de l'objet</li>
+<li> ${object.owner.lastname} : nom du propriétaire de l'objet. </li>
+<li> ${object.owner.city} : ville du propriétaire de l'objet. </li>
+<li> ${ztamp.name} : nom du Ztamp. </li>
+<li> ${ztamp.owner.lastname} : nom du propriétaire du Ztamp.
+<li> ${ztamp.owner.firstname} : prénom du propriétaire du Ztamp. </li>
+<li> ${ztamp.owner.city} : ville du propriétaire du Ztamp. </li></ul>
+Note : les variables ${hours}, ${hours24}, ${minutes}, ${seconds} et leurs variantes ${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} n'insèrent que les chiffres. <br/>
+Exemple: Saisissez le texte suivant :<br/>
+<em>Coucou, je suis ${object.name}, je viens de voir Thomas, il est bien rentré à la maison à ${hours24} heures ${minutes}. Signé ${ztamp.name}.</em><br/>
+Le destinataire recevra l'e-mail suivant : <br/>
+<em>Coucou je suis FamilyNab, je viens de voir Thomas, il est bien rentré à 16 heures 32. Signé le porte-clé de Thomas.</em><br/>
+Fonctionne avec Nabaztag:tag et Mir:ror</p>
+"]]></fr>
+		<en><![CDATA["Enter the main recipient's e-mail address, and any CC's. Separate multiple addresses with commas.<br/>
+Enter a subject and body for the message.<br/><br/>
+<p>
+If you wish, you may insert variables in the subject or body of your message. They will automatically update when the message is sent.<br/>
+Available variables are:
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}: Time the Ztamp was detected</li>
+<li>${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : The same time parts, but with a leading zero. Ex : '02' instead of '2'.</li>
+<li>${object.name}: Name of the object that has read the Ztamp.</li>
+<li>${object.owner.firstname}: First name of the object's owner.</li>
+<li>${object.owner.lastname}: Last name of the object's owner.</li>
+<li>${object.owner.city}: City where the object's owner lives.</li>
+<li>${ztamp.name}: name of the detected Ztamp.</li>
+<li>${ztamp.owner.lastname}: Last name of the Ztamp's owner.</li>
+<li>${ztamp.owner.firstname}: First name of the Ztamp's owner.</li>
+<li>${ztamp.owner.city}: City where the Ztamp's owner lives.</li>
+</ul>
+<small>Note: variables ${hours}, ${hours24}, ${minutes}, ${seconds} and their counterparts ${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} insert digits only.</small><br/>
+</p>
+Example: Enter the following text:<br/>
+<em>Hi, this is ${object.name}, I've just seen Thomas, he got home safely at ${HOURS}:${MINUTES} ${AMPM}. Signed ${ztamp.name}.</em><br/>
+The recipient will receive a message like this:<br/>
+<em>Hi, this is FamilyNab, I've just seen Thomas, he got home safely at 04:32 PM. Signed Thomas' keys.</em><br/>
+Works with Nabaztag:tag and Mir:ror"]]></en>
+		<it><![CDATA["<p>Inserisci l'indirizzo del destinatario e di quelli che desideri metter in copia al tuo messaggio. Se sono più indirizzi, separali con « , ».<br/>Scrivi l'oggetto e poi il corpo del messaggio.<br/>Se desideri puoi inserire delle variabili all'interno del messaggio, si aggiorneranno al momento dell'invio.<br/>Queste le variabili:<ul><li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}: Ora d'invio del messaggio. </li><li> ${object.name}: Nome dell'oggetto Ztampato. </li><li> ${object.owner.firstname}: Cognome del proprietario dell'oggetto.</li><li> ${object.owner.lastname}: Nome del proprietario dell'oggetto.</li><li> ${object.owner.city}: Città dove risiede il proprietario dell'oggetto. </li><li> ${ztamp.name}: Nome dello Ztamp. </li><li> ${ztamp.owner.lastname}: Nome del proprietario dello Ztamp.<li> ${ztamp.owner.firstname}: Cognome del proprietario. </li><li> ${ztamp.owner.city}: Città dove risiede il proprietario dello Ztamp. </li><li> Nota: per le variabili ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} inserire solo cifre. </li></ul>Esempio. Inserisci il seguente testo :<br/><em>Ciao, sono ${object.name}, ho appena visto Luca, è tornato a casa alle ${hours} ore ${minutes}. Firmato ${ztamp.name}.</em><br/>Il destinatario riceverà il seguente messaggio: <br/><em>Ciao, sono FamilyNab, ho appena visto Luca, è tornato a casa alle 16 o re 32. Firmato Portachiavi di Luca..</em><br/>Funziona con Nabaztag:tag e Mir:ror</p>"]]></it>
+		<es><![CDATA["<p>Entra la dirección e-mail del destinatario principal y de los que deseas que reciban una copia del mensaje. Si hay varias direcciones, sepáralas por « , ». <br/>
+Entra el objeto del mensaje y luego escribe el texto principal. <br/>
+
+Si así lo deseas, puedes insertar variables en el texto del objeto o del contenido de tu correo. En el momento del envío del mensaje se actualizarán automáticamente.   <br/>
+Estas variables son:
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Hora de envío del mensaje. </li>
+<li>${object.name} : nombre del objeto que leyó el Ztamp.</li>
+<li>${object.owner.firstname} : nombre del propietario del objeto.</li>
+<li>${object.owner.lastname} : apellido del propietario del objeto.</li>
+<li>${object.owner.city} :ciudad del propietario del objeto.</li>
+<li>${ztamp.name} : nombre del Ztamp.</li>
+<li>${ztamp.owner.lastname} : apellido del propietario del Ztamp.</li>
+<li>${ztamp.owner.firstname} : nombre del propietario del Ztamp.</li>
+<li>${ztamp.owner.city} : ciudad del propietario del Ztamp.</li>
+</ul>
+Note : las variables ${hours}, ${hours24}, ${minutes}, ${seconds}, ${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} sólo insertan la cifra. <br/>
+Ejemplo. Escriba el texto que sigue:<br/>
+<em>Hola, yo soy ${objeto.nombre}, Acabo de ver a Tomás, llegó a casa a las  ${hours24} horas ${minutes}. Firmado ${ztamp.nombre}.</em><br/>
+El destinatario recibirá el e-mail que sigue: <br/>
+<em>Hola, soy FamilyNab, acabo de ver a Tomás y ha llegado a las 16 horas 32. Firmado: el llavero de Tomás.</em><br/>
+Funciona con Nabaztag:tag y Mir:ror</p>"]]></es>
+		<de><![CDATA["<p>Geben Sie die Email-Adresse des Hauptempfängers und evtl. der Adressaten, die Sie in Kopie setzen wollen, an. Trennen Sie mehrere Adressen durch ein « , ».<br/>
+Geben Sie den Betreff der Nachricht an und setzen Sie die Mail auf.<br/>
+Auf Wunsch können Sie Variablen in die Betreffzeile oder in den Emailtext einfügen. Sie werden beim Versenden automatisch aktualisiert.<br/>
+Folgende Variablen stehen zur Verfügung :
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Uhrzeit des Emailversands. </li>
+<li> ${object.name} : Name des Objektes, das den Ztamp gelesen hat. </li>
+<li> ${object.owner.firstname} : Vorname des Objektbesitzers</li>
+<li> ${object.owner.lastname} : Name des Objektbesitzers. </li>
+<li> ${object.owner.city} : Stadt des Objektbesitzers. </li>
+<li> ${ztamp.name} : Name des Ztamp. </li>
+<li> ${ztamp.owner.lastname} : Name des Ztamp-Besitzers.
+<li> ${ztamp.owner.firstname} : Vorname des Ztamp-Besitzers. </li>
+<li> ${ztamp.owner.city} : Stadt des Ztamp-Besitzers. </li>
+<li> Anmerkung: für die Variablen ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} wird nur die Zahl eingesetzt. </li>
+</ul>
+Beispiel. Geben Sie den folgenden Text ein:<br/>
+<em>Hallo, ich bin ${object.name}. Ich habe gerade Thomas gesehen. Er ist um ${hours24} Uhr ${minutes} gut nach Hause gekommen. Von ${ztamp.name}.</em><br/>
+Der Empfänger erhält folgende Email: <br/>
+<em> Hallo, ich bin FamilienNab. Ich habe gerade Thomas gesehen. Er ist um 16 Uhr 32 gut nach Hause gekommen. Von Thomas Haustürschlüssel.</em><br/>
+Funktioniert mit Nabaztag:tag und Mir:ror</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>送信先は半角コンマ「,」で区切ることにより、複数のアドレスを指定できます。<br/>メールの件名と内容を入力してください。<br/><br/>
+メールの件名と内容の中で変数を利用することができます。変数を使えば、送信するときの状況によりメールの内容を変えることができます。<br/>以下の変数を使うことができます。<br/>
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}： ズタンプがかざされたの時間</li>
+<li>${object.name}： ズタンプを読み込んだアイテムの名前</li>
+<li>${object.owner.firstname}： アイテムの登録者の名前（名）</li>
+<li>${object.owner.lastname}： アイテムの登録者の名前（姓）</li>
+<li>${object.owner.city}： アイテムの登録者の所在地</li>
+<li>${ztamp.name}： ズタンプの名前</li>
+<li>${ztamp.owner.lastname}： ズタンプの登録者の名前（姓）.</li>
+<li>${ztamp.owner.firstname}： ズタンプの登録者の名前（名）</li>
+<li>${ztamp.owner.city}：ズタンプの登録者の所在地</li>
+</ul>
+<br/>
+時間の変数は十進数になります。<br/>
+たとえば、「<strong>やあ、${object.name}からのメールです。トーマスが${hours24}時 ${minutes}分に無事に帰ってきたみたい。心配しないでね。${ztamp.name}より</strong>」<br />という内容は、送信される時に、「<strong>やあ、家のウサウサからのメールです。トーマスが16時 32分に無事に帰ってきたみたい。心配しないでね。トーマスのカギより」と変換されます。<br>
+このアプリケーションはナバズタグ：タグとミラーで利用できます。
+</p>"]]></ja>
+
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA["Mail, Communication, Messages"]]></fr>
+		<en><![CDATA["Mail, Communication, Messages"]]></en>
+		<it><![CDATA["Messaggio"]]></it>
+		<es><![CDATA["Correo, Comunicación, Mensajes"]]></es>
+		<de><![CDATA["Email, Kommunikation, Nachrichten"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["メール、コミュニケーション、メッセージ"]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+		<item><map>
+			<key>"title"</key>
+			<fr><![CDATA["Titre"]]></fr>
+			<en><![CDATA["Message title"]]></en>
+			<it><![CDATA["Titolo"]]></it>
+			<es><![CDATA["Título"]]></es>
+			<de><![CDATA["Titel"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["件名"]]></ja>
+
+		</map></item>
+
+		<item><map>
+			<key>"description"</key>
+			<fr><![CDATA["Titre affiché dans la liste Mes Applications"]]></fr>
+			<en><![CDATA["Title displayed in My Applications list"]]></en>
+			<it><![CDATA["Titolo che si trova nella listta delle Mie Applicazioni"]]></it>
+			<es><![CDATA["Se presentará el título en la lista Mis Aplicaciones"]]></es>
+			<de><![CDATA["Titel wird in der Liste Meine Applikationen angezeigt"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["アプリケーション一覧には件名が表示されます"]]></ja>
+		</map></item>
+
+	</list></dico>
+
+	<files><list>
+		<!-- <entry name="media/audio/intro" fileName="intro.m3" /> -->
+	</list></files>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"emailDest"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["À"]]></fr>
+			<en><![CDATA["To"]]></en>
+			<it><![CDATA["A"]]></it>
+			<es><![CDATA["A"]]></es>
+			<de><![CDATA["An"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["宛先"]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["La liste des adresses emails des destinataires principaux, séparées par des virgules."]]></fr>
+			<en><![CDATA["List of e-mail adresses for primary recipients, separated by commas."]]></en>
+			<it><![CDATA["La lista delle email dei destinatari principali, separati da virgole."]]></it>
+			<es><![CDATA["La lista de las direcciones de los e-mail de los destinatarios principales, separados por comas"]]></es>
+			<de><![CDATA["Liste der Emailadressen der Hauptempfänger, durch Kommata getrennt."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["複数の宛先に送信する場合は、半角コンマ「,」で区切ってください"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"emailCC"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>false</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Cc"]]></fr>
+			<en><![CDATA["Cc"]]></en>
+			<it><![CDATA["Cc"]]></it>
+			<es><![CDATA["Cc"]]></es>
+			<de><![CDATA["Cc"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["Cc"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["La liste des adresses emails des destinataires secondaires, séparées par des virgules."]]></fr>
+			<en><![CDATA["List of e-mail adresses for secondary recipients, separated by commas."]]></en>
+			<it><![CDATA["La lista delle email dei destinatari secondari, separati da virgole."]]></it>
+			<es><![CDATA["La lista de las direcciones de los e-mail de los destinatarios secundarios, separados por comas."]]></es>
+			<de><![CDATA["Liste der Emailadressen der Nebenempfänger, durch Kommata getrennt."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["複数の宛先に送信する場合は、半角コンマ「,」で区切ってください"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"subject"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Objet"]]></fr>
+			<en><![CDATA["Subject"]]></en>
+			<it><![CDATA["Oggetto"]]></it>
+			<es><![CDATA["Objeto"]]></es>
+			<de><![CDATA["Betreff"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["件名"]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Le sujet du mail (vous pouvez utiliser les variables de remplacement ${var})"]]></fr>
+			<en><![CDATA["Message subject (${var} replacement variables can be used)"]]></en>
+			<it><![CDATA["della mail(puoi utilizzare le variabili di sostituzione ${var})")"]]></it>
+			<es><![CDATA["El sujeto del correo (puedes usar las variables de reemplazo ${var}) "]]></es>
+			<de><![CDATA["Die Betreffzeile der Email (Sie können die Ersetzungsvariablen benutzen ${var})"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["件名に変数（${**}）を利用することができます"]]></ja>
+
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"message"</key>
+		<type>"TextArea"</type>
+		<datatype>"text"</datatype>
+		<maxlength>1000</maxlength>
+		<cols>80</cols>
+		<rows>6</rows>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Message"]]></fr>
+			<en><![CDATA["Message"]]></en>
+			<it><![CDATA["Messaggio"]]></it>
+			<es><![CDATA["Mensaje"]]></es>
+			<de><![CDATA["Nachricht"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["メッセージ内容"]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Le corps du mail (vous pouvez utiliser les variables de remplacement ${var})"]]></fr>
+			<en><![CDATA["Message body (${var} replacement variables can be used)"]]></en>
+			<it><![CDATA["Corpo del messaggio(puoi utilizzare le variabili di sostituzione ${var}) "]]></it>
+			<es><![CDATA["El cuerpo principal del correo (puedes usar las variables de reemplazo ${var})"]]></es>
+			<de><![CDATA["Der Inhalt der E-Mail (Sie können die Ersetzungsvariablen benutzen ${var})"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["本文中に変数（${**}）を利用することができます"]]></ja>
+
+		</map></description>
+	</map></item>
+
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+</list></scheduling_masks>
+
+
+</map>

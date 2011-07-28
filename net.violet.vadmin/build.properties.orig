@@ -1,0 +1,26 @@
+# Context path to install this application on
+app.path=/VAdmin
+
+#Tomcat 5 installation directory
+#catalina.home=/usr/java/tomcat
+#catalina.home=/usr/local/tomcat
+catalina.home=/usr/local/tomcat/tomcat-current/
+
+# Compilation properties
+exclude.from.classpath=commons-el.jar,jasper*.jar,jsp-api.jar,naming*.jar, jakarta-oro*, asm*, catalina-ant.jar
+exclude.from.warlib=servlet-api.jar,mysql-connector*, cobertura*, junit*
+include.in.war=*.jsp,include_jsp/**/*,include_img/**/*
+include.in.war.properties=**/*.properties
+
+# WAR properties
+war.filename=myVAdmin.war
+
+# Svn tasks properties
+svn.username=tomcat
+svn.password=c36cb0fe8078ca8fe89ac521b45e4883
+
+OSDIR=/usr/local/tomcat/violet/OS
+COMMONDEVDIR=/usr/local/tomcat/violet/CommonDev
+PROBESDIR=/usr/local/tomcat/violet/Probes
+DBENGINEDIR=/usr/local/tomcat/violet/DBEngine
+COMMONDIR=/usr/local/tomcat/violet/Common

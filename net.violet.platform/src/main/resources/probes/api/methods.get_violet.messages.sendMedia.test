@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.messages.sendMedia
+content_type=text/json
+regex="errors":\["BlackListed",?"Forbidden",?"InternalError",?"InvalidParameter",?"InvalidSession",?"NoSuchObject",?"NoSuchPerson",?"ParentalFilter",?\],.*"method_class":"CREATE"

@@ -1,0 +1,17 @@
+application=webui
+
+[invisible]
+url=objects/findByName/AladinProbes
+content_type=text/yaml
+regex=~
+
+[visible]
+url=objects/findByName/ ?id="MissionSumatra"
+content_type=text/yaml
+regex=name: MissionSumatra
+
+[inexisting_Name]
+is_error=yes
+url=objects/findByName/inexisting_Name
+content_type=text/yaml
+regex=message: no_such_object

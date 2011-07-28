@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/RLpQnB90f5 -->
+	<name>"net.violet.js.rollingdice"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"daylife"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>1000</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"RollingDice"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Le dé virtuel"]]></fr>
+		<en><![CDATA["The virtual dice"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Choisissez combien de dés vous voulez jeter et le nombre de faces de chacun de ces dés.</p>"]]></fr>
+		<en><![CDATA["<p>Choose how many dices you want to throw and the number of faces for each of them.</p>"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Saisissez le nombre de dés à jeter, le nombre de faces de chacun d'eux et la voix avec laquelle vous voulez que le résultat soit lu.<br/>
+		Chaque fois que vous exécuterez l'application, un nouveau tirage sera effectué.</p>"]]></fr>
+
+		<en><![CDATA["<p>Type in how many dices you want to throw, the number of faces for each one and the voice with which you want the results to be said.<br/>
+		Each time you'll play the application, new dices will be thrown.</p>"]]></en>
+
+		<it><![CDATA[""]]></it>
+
+		<es><![CDATA[""]]></es>
+
+		<de><![CDATA[""]]></de>
+
+		<pt><![CDATA[""]]></pt>
+
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA["Jeux, Hasard"]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+	</list></dico>
+
+	<files><list>
+		<!-- <entry name="media/audio/intro" fileName="intro.m3" /> -->
+	</list></files>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"count"</key>
+		<type>"InputLine"</type>
+		<datatype>"integer"</datatype>
+		<required>true</required>
+		<default_value>3</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Nombre de dés à lancer"]]></fr>
+			<en><![CDATA["Number of dices to throw"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Entrez le nombre de dés à lancer (doit être un entier positif)"]]></fr>
+			<en><![CDATA["Enter the number of dices to throw (must be a positive integer)"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"facets"</key>
+		<type>"InputLine"</type>
+		<datatype>"integer"</datatype>
+		<required>true</required>
+		<default_value>6</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Nombre de faces"]]></fr>
+			<en><![CDATA["Number of faces"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Entrez le nombre de faces des dés (doit être un entier positif)."]]></fr>
+			<en><![CDATA["Enter the number of faces for the dices (must be a positive number)."]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+	</map></item>
+
+
+	<item><map>
+		<key>"voice"</key>
+		<type>"Popup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<source>"view_tts_voices"</source>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Voix"]]></fr>
+			<en><![CDATA["Voice"]]></en>
+			<it><![CDATA["Voce"]]></it>
+			<es><![CDATA["Voz"]]></es>
+			<de><![CDATA["Stimme"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Choisissez la langue et la voix avec laquelle vous voulez qu'il lise le message."]]></fr>
+			<en><![CDATA["Select the language and voice you want the message to be read with."]]></en>
+			<it><![CDATA["Scegli la lingua e la voce che desideri leggano il tuo messaggio."]]></it>
+			<es><![CDATA["Elige la lengua y la voz que quieres que te lean el mensaje."]]></es>
+			<de><![CDATA["Sie die Sprache und die Stimme, mit der die Nachricht gelesen werden soll."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map><value>"FR-Anastasie"</value><label>"FR - Anastasie"</label></map></item>
+			<item><map><value>"FR-Archibald"</value><label>"FR - Archibald"</label></map></item>
+			<item><map><value>"FR-Gertrude"</value><label>"FR - Gertrude"</label></map></item>
+			<item><map><value>"FR-Maxence"</value><label>"FR - Maxence"</label></map></item>
+			<item><map><value>"UK-Edwin"</value><label>"UK - Edwin"</label></map></item>
+			<item><map><value>"UK-Leonard"</value><label>"UK - Leonard"</label></map></item>
+			<item><map><value>"UK-Mistermuggles"</value><label>"UK - Mister muggles"</label></map></item>
+			<item><map><value>"UK-Penelope"</value><label>"UK - Penelope"</label></map></item>
+			<item><map><value>"UK-Shirley"</value><label>"UK - Shirley"</label></map></item>
+			<item><map><value>"US-Bethany"</value><label>"US - Bethany"</label></map></item>
+			<item><map><value>"US-Billye"</value><label>"US - Billye"</label></map></item>
+			<item><map><value>"US-Clarence"</value><label>"US - Clarence"</label></map></item>
+			<item><map><value>"US-Darleen"</value><label>"US - Darleen"</label></map></item>
+			<item><map><value>"US-Liberty"</value><label>"US - Liberty"</label></map></item>
+			<item><map><value>"US-Lilian"</value><label>"US - Lilian"</label></map></item>
+			<item><map><value>"AU-Colleen"</value><label>"AU - Colleen"</label></map></item>
+			<item><map><value>"AU-Jon"</value><label>"AU - Jon"</label></map></item>
+			<item><map><value>"ES-Alfonsina"</value><label>"ES - Alfonsina"</label></map></item>
+			<item><map><value>"ES-Baltasar"</value><label>"ES - Baltasar"</label></map></item>
+			<item><map><value>"ES-Bertrana"</value><label>"ES - Bertrana"</label></map></item>
+			<item><map><value>"ES-Dunixe"</value><label>"ES - Dunixe"</label></map></item>
+			<item><map><value>"ES-Emilia"</value><label>"ES - Emilia"</label></map></item>
+			<item><map><value>"ES-Rosalia"</value><label>"ES - Rosalia"</label></map></item>
+			<item><map><value>"IT-Assunta"</value><label>"IT - Assunta"</label></map></item>
+			<item><map><value>"IT-Ugo"</value><label>"IT - Ugo"</label></map></item>
+			<item><map><value>"BE-Hendrik"</value><label>"BE - Hendrik"</label></map></item>
+			<item><map><value>"BE-Minna"</value><label>"BE - Minna"</label></map></item>
+			<item><map><value>"BR-Lygia"</value><label>"BR - Lygia"</label></map></item>
+			<item><map><value>"CA-Antonine"</value><label>"CA - Antonine"</label></map></item>
+			<item><map><value>"CA-Felix"</value><label>"CA - Felix"</label></map></item>
+			<item><map><value>"CN-Pan"</value><label>"CN - Pan"</label></map></item>
+			<item><map><value>"CZ-Zdenech"</value><label>"CZ - Zdenech"</label></map></item>
+			<item><map><value>"DE-Otto"</value><label>"DE - Otto"</label></map></item>
+			<item><map><value>"DK-Karen"</value><label>"DK - Karen"</label></map></item>
+			<item><map><value>"DK-Pia"</value><label>"DK - Pia"</label></map></item>
+			<item><map><value>"EG-Nabil"</value><label>"EG - Nabil"</label></map></item>
+			<item><map><value>"EG-Nayla"</value><label>"EG - Nayla "</label></map></item>
+			<item><map><value>"GR-Antonis"</value><label>"GR - Antonis"</label></map></item>
+			<item><map><value>"IE-Orla"</value><label>"IE - Orla"</label></map></item>
+			<item><map><value>"IN-Nima"</value><label>"IN - Nima"</label></map></item>
+			<item><map><value>"IN-Sangeeta"</value><label>"IN - Sangeeta"</label></map></item>
+			<item><map><value>"JP-Tamura"</value><label>"JP - Tamura"</label></map></item>
+			<item><map><value>"KR-Choe"</value><label>"KR - Choe"</label></map></item>
+			<item><map><value>"NL-Femke"</value><label>"NL - Femke"</label></map></item>
+			<item><map><value>"NL-Max"</value><label>"NL - Max"</label></map></item>
+			<item><map><value>"NL-Renate"</value><label>"NL - Renate"</label></map></item>
+			<item><map><value>"NO-Cora"</value><label>"NO - Cora"</label></map></item>
+			<item><map><value>"NO-Sigrid"</value><label>"NO - Sigrid"</label></map></item>
+			<item><map><value>"PL-Ignacy"</value><label>"PL - Ignacy"</label></map></item>
+			<item><map><value>"PT-Celia"</value><label>"PT - Celia"</label></map></item>
+			<item><map><value>"RU-Bella"</value><label>"RU - Bella"</label></map></item>
+			<item><map><value>"SE-Hjalmar"</value><label>"SE - Hjalmar"</label></map></item>
+			<item><map><value>"SE-Maj"</value><label>"SE - Maj"</label></map></item>
+			<item><map><value>"SE-Selma"</value><label>"SE - Selma"</label></map></item>
+			<item><map><value>"TH-Boon-mee"</value><label>"TH - Boon-mee"</label></map></item>
+			<item><map><value>"TR-Asli"</value><label>"TR - Asli"</label></map></item>
+			<item><map><value>"YUE-Baibo"</value><label>"YUE - Bai bo"</label></map></item>
+			<item><map><value>"ZA-Wilbur"</value><label>"ZA - Wilbur"</label></map></item>
+		</list></items>
+	</map></item>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

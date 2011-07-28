@@ -1,0 +1,76 @@
+<map>
+<scheduling_masks>
+	<list>
+	<item>
+		<map>
+			<hw_type>"violet.nabaztag"</hw_type>
+			<scheduling_type>"Daily"</scheduling_type>
+			<maximum>2</maximum>
+			<minimum>0</minimum>
+		</map>
+	</item>
+
+	<item>
+		<map>
+			<hw_type>"violet.nabaztag"</hw_type>
+			<scheduling_type>"Ambiant"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>0</minimum>
+		</map>
+	</item>
+
+	<item>
+		<map>
+			<hw_type>"violet.nabaztag.tagtag"</hw_type>
+			<scheduling_type>"VoiceTrigger"</scheduling_type>
+			<keyword>"srv_air/vocal"</keyword>
+			<maximum>1</maximum>
+			<minimum>0</minimum>
+		</map>
+	</item>
+
+	<item>
+		<map>
+			<hw_type>"violet.daldal"</hw_type>
+			<scheduling_type>"Daily"</scheduling_type>
+			<minimum>0</minimum>
+			<maximum>2</maximum>
+		</map>
+	</item>
+
+	<item>
+		<map>
+			<hw_type>"violet.daldal"</hw_type>
+			<scheduling_type>"Ambiant"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>0</minimum>
+		</map>
+	</item>
+	
+	<item>
+		<map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampDetection"</event>
+			<label>"LOC_events/ZtampDetection"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map>
+	</item>
+	<!-- application can be installed on ztamp removal -->
+	<item>
+		<map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampRemoval"</event>
+			<label>"LOC_events/ZtampRemoval"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map>
+	</item>
+
+	</list>
+
+</scheduling_masks>
+</map>
+

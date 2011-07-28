@@ -1,0 +1,13 @@
+MESSAGE
+
+このメールは FIRST_NAME LAST_NAME さんから、OBJ_READER を通して OBJ_SENDER によって送信されました。
+
+--- このメールは自動的に作成されたものです ---
+
+
+
+++ 知っていおくといいかもしれないこと ++
+- FIRST NAME がこのメールをどのように送信したかというと、OBJ_SENDER を OBJ_READER にかざしただけです。
+- http://www.violet.net でそんな様々なアイテムを発見することができるでしょう。
+
+-- Violet. Let All Things Be Connected --

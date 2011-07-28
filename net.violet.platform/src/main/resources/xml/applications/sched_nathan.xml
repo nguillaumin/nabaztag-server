@@ -1,0 +1,17 @@
+<map>
+<scheduling_masks>
+	<list>
+	
+	<item>
+		<map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<minimum>1</minimum>
+			<maximum>1</maximum>
+		</map>
+	</item>
+
+	</list>
+
+</scheduling_masks>
+</map>

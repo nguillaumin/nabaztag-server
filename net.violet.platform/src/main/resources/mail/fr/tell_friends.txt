@@ -1,0 +1,19 @@
+-- Ce message vous est envoyé de la part de FIRST_NAME LAST_NAME depuis le site www.violet.net --
+
+
+FIRST_NAME nous charge de vous informer qu'il a désormais franchi une nouvelle étape dans sa vie : il fait désormais partie de l'Internet des Objets. 
+
+FIRST_NAME a connecté au réseau:
+USER_OBJECTS
+
+Connecter des choses à l’Internet, c’est leur permettre, de fournir des informations, de rendre des services interactifs, de faciliter la vie quotidienne et de pouvoir communiquer avec le reste du monde. 
+
+Ainsi, vous pouvez désormais communiquer avec FIRST_NAME à travers l’un des objets de son réseau. Vous découvrirez des formes inédites d’envoyer des messages, riches, spectaculaires, surprenants, pertinents et contextuels. 
+
+Rendez-vous vite sur www.violet.net et créez un compte. C’est rapide, c’est gratuit.  Vous pourrez alors envoyer des messages aux objets de FIRST_NAME et de vos autres amis qui ont des choses connectées. 
+
+Ce monde d’objets qui communiquent vous paraît étrange ? En allant sur www.violet.net vous découvrirez l’ultime évolution de l’internet, celle qui permet, au-delà des ordinateurs, à n’importe quel objet d’être désormais connecté au réseau.
+
+Bienvenue dans l’Internet des Objets.
+
+-- Violet. Let All Things Be Connected --

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/tEWumOnu8d -->
+
+	<name>"net.violet.js.launchscript"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"dev"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>400</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"LaunchScript"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Lancer un script"]]></fr>
+		<en><![CDATA["Launching a script"]]></en>
+		<it><![CDATA["Lanciare uno script"]]></it>
+		<es><![CDATA["Lanzar un script"]]></es>
+		<de><![CDATA["Ausführen eines Skripts"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["スクリプトの実行"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Cette application est destinée aux développeurs. Indiquez le script sur votre ordinateur. A chaque fois qu'il sera détecté, le Ztamp exécutera ce que vous avez programmé. <br/>Vous pouvez utiliser des scripts .bat ou .vbs sous Windows ou AppleScript sous MacOSX.</p>"]]></fr>
+		<en><![CDATA["<p>This application is designed for developers. Specify the script on your computer. Every time it is detected, the Ztamp will perform what you programmed. <br/>You can use .bat or .vbs scripts in Windows or AppleScript in Mac OSX.</p>"]]></en>
+		<it><![CDATA["<p>Questa applicazione è pensata per i programmatori. Indica lo script sul tuo computer. Ogni volta che verrà riconosciuto, lo Ztamp eseguirà quello che hai programmato. <br/>Puoi utilizzare degli scripts .bat o .vbs in Windows o MacOSX. </p>"]]></it>
+		<es><![CDATA["<p>Esta aplicación está destinada a los desarrolladores. Indica el script en  tu ordenador. Cada vez que se le detectará, el Ztamp ejecutará lo que hayas programado. <br/>Puedes utilizar los scripts .bat o .vbs en Windows o AppleScript en MacOSX.</p>"]]></es>
+		<de><![CDATA["<p>Diese Applikation richtet sich an Entwickler. Geben Sie den Skript-Pfad ein. Bei jeder Erkennung führt der Ztamp das aus, was Sie programmiert haben. <br/>Benutzen Sie die Skripts .bat oder .vbs für Windows oder AppleScript für MacOSX</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>このアプリケーションは開発者のためのものです。<br/>ズタンプを使用した時にコンピュータ上のプログラムを実行することができます。Windows の場合は、バッチファイル（.bat）かVBScript（.vbs）、Mac OSX の場合は、AppleScript を実行できます。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p><ul><li>Si votre script se trouve sur le bureau (desktop) de votre ordinateur, entrer seulement son nom.</li>
+<li>Si le fichier se trouve ailleurs sur votre ordinateur, saisissez le chemin complet d'accès au fichier (ex : <em>C:\Documents and Settings\Alain\programme.bat</em>) ou <em>/Users/Nabaztag/MyScript.</em></li></ul>
+Fonctionne uniquement sur un Mir:ror relié à l'ordinateur sur lequel se trouve le fichier concerné.</p>"]]></fr>
+		<en><![CDATA["<p><ul><li>If your script is located on your computer's desktop, enter its name only.</li>
+<li>If the file is elsewhere on your computer, enter the file's full access path (e.g. <em>C:\Documents and Settings\Alan\programme.bat </em>) or <em>/Users/Nabaztag/MyScript </em></li></ul>
+Only works with a Mir:ror connected to the computer where the appropriate file is located.</p>"]]></en>
+		<it><![CDATA["<p><ul><li>Se lo script è sul desktop, è sufficiente digitarne il nome.</li><li>Se lo script non si trova sul desktop, digita il percorso completo (es : <em>C:\Documents and settings\Gianni\programme.bat</em>) o <em>/Users/Nabaztag/MyScript.</em></li></ul>Funziona solamente su un Mir:ror collegato al computer nel quale si trova lo script interessato.</p>"]]></it>
+		<es><![CDATA["<p><ul><li>Si tu script se encuentra en el desktop de tu ordenador, entra únicamente su nombre.</li>
+<li>Si el archivo se encuentra en otra parte del ordenador, escribe la dirección completa de acceso al archivo (por ejemplo : <em>C:\Documents and Settings\Alain\programme.bat</em>) o <em>/Users/Nabaztag/MyScript</em></li></ul>
+Funciona únicamente con un Mir:ror conectado al ordenador en el que se encuentra el archivo correspondiente.</p>"]]></es>
+		<de><![CDATA["<p><ul><li>Befindet sich Ihr Skript auf dem Schreibtisch (Desktop) Ihres Computers, geben Sie einfach den Namen ein.</li>
+<li> Befindet sich die Datei an einem anderen Ort auf Ihrem Computer, geben Sie den vollständigen Dateipfad ein (Bsp: <em>C:\Dokumente und Einstellungen\Eva\Programme.bat</em>) oder <em>/Benutzer/Nabaztag/MeinSkript</em></li></ul>
+Funktioniert ausschließlich mit einem Mir:ror, der mit dem Computer verbunden ist, auf dem sich die entsprechende Datei befindet.</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p><ul><li>スクリプトファイルがコンピュータのデスクトップ上にある場合は、ファイル名のみ入力してください。</li><li>デスクトップ上にない場合は、ファイルの置き場所のフルパスを入力してください。（例えば、<em>C:\Documents and Settings\Alan\programme.bat </em> 、または  <em>/Users/Nabaztag/MyScript </em>）</li></ul>ミラーとミラーが接続されているコンピュータ上のファイルのみ利用できます。</p>"]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+	<item><map>
+		<key>"type"</key>
+		<type>"RadioGroup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Type de script"]]></fr>
+			<en><![CDATA["Type of script"]]></en>
+			<it><![CDATA["Tipo di script"]]></it>
+			<es><![CDATA["Tipo de script"]]></es>
+			<de><![CDATA["Skriptart"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["スクリプトの種類"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Indiquez le nom du Système d'exploitation."]]></fr>
+			<en><![CDATA["Specify the Operating System name."]]></en>
+			<it><![CDATA["Indica il nome del Sistema Operativo."]]></it>
+			<es><![CDATA["Indica el nombre del Sistema de Operación."]]></es>
+			<de><![CDATA["Geben Sie den Namen des Betriebssystems an."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["OS（オペレーティングシステム）を選択してください"]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map>
+				<type>"RadioButton"</type>
+				<label>"Windows batch"</label>
+				<value>"windows"</value>
+			</map></item>
+			<item><map>
+				<type>"RadioButton"</type>
+				<label>"AppleScript (Mac OS X)"</label>
+				<value>"apple"</value>
+			</map></item>
+		</list></items>
+	</map></item>
+
+	<item><map>
+		<key>"script"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Chemin"]]></fr>
+			<en><![CDATA["Path"]]></en>
+			<it><![CDATA["Radice"]]></it>
+			<es><![CDATA["Ruta"]]></es>
+			<de><![CDATA["Pfad"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["パス"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Chemin du fichier à lancer"]]></fr>
+			<en><![CDATA["Path to file to be launched"]]></en>
+			<it><![CDATA["Radice del file da aprire"]]></it>
+			<es><![CDATA["Ruta del fichero que hay que lanzar"]]></es>
+			<de><![CDATA["Pfad der zu öffnenden Datei"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["実行するスクリプトのパスを入力してください"]]></ja>
+		</map></description>
+	</map></item>
+
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

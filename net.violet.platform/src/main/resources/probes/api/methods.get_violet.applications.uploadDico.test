@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.applications.uploadDico
+content_type=text/json
+regex="errors":\["BadCredentials",?"InvalidParameter",?"NoSuchApplication",?\],.*"method_class":"CREATE"

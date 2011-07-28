@@ -1,0 +1,18 @@
+application=webui
+
+[create]
+url=press/create
+content_type=text/yaml
+post_data=@constants/press.create.yml
+regex= id: (.*?)\s
+
+[update]
+url=press/update/GROUP_1
+content_type=text/yaml
+post_data=@constants/press.update.yml
+regex= id: (.*?)\s
+
+[delete]
+url=press/delete/GROUP_1
+content_type=text/yaml
+regex=~

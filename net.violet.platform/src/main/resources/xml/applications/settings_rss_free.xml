@@ -1,0 +1,16 @@
+<map>
+<settings>
+<list>
+
+	<item>
+	<map>
+		<type>"InputLine"</type>
+		<key>"nbNews"</key>
+		<label>"srv_rss/nb_news"</label>
+		<default>"5"</default>
+	</map>
+	</item>
+
+</list>
+</settings>
+</map>

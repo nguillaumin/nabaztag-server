@@ -1,0 +1,37 @@
+application=webui
+
+[count]
+url=messages/count
+content_type=text/yaml
+post_data=@yaml/messages.get.yml
+regex=[0-9]+
+
+[get]
+url=messages/get
+content_type=text/yaml
+post_data=@yaml/messages.get.yml
+regex= id: (.*?)\s
+
+[replay]
+url=messages/replay/GROUP_1
+content_type=text/yaml
+post_data=@yaml/session.yml
+regex=~
+
+[get2]
+url=messages/get
+content_type=text/yaml
+post_data=@yaml/messages.get.yml
+regex= id: (.*?)\s
+
+[archive]
+url=messages/archive/GROUP_1
+content_type=text/yaml
+post_data=@yaml/session.yml
+regex=~
+
+[get3]
+url=messages/get
+content_type=text/yaml
+post_data=@yaml/messages.archived.yml
+regex= id: (.*?)\s

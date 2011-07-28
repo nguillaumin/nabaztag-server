@@ -1,0 +1,6 @@
+application=webui
+
+url=site/getLocalizedString/fr
+content_type=text/yaml
+post_data=key: !!str source_meteo/AFGHANISTAN_KABOUL
+regex=AFGHANISTAN.Kaboul

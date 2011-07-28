@@ -1,0 +1,17 @@
+application=webui
+
+[exist]
+url=people/exists/probes@violet.net
+content_type=text/yaml
+regex=true
+
+[doesnt_exist]
+url=people/exists/doesntexist@violet.net
+content_type=text/yaml
+regex=false
+
+[missing_param]
+url=people/exists
+content_type=text/yaml
+is_error=yes
+regex=[M|m]issing

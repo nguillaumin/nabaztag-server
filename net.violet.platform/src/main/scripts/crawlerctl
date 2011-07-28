@@ -1,0 +1,294 @@
+#!/bin/bash
+
+HOSTNAME=$(/bin/hostname)
+
+if [ ${HOSTNAME} != "nabdev" -a ${HOSTNAME} != "prune" ]; then
+  . /etc/sysconfig/network-scripts/ifcfg-eth3
+  admin_if=${IPADDR}
+fi
+
+function arglist {
+    local data="<array><data>"
+    for argval in $*; do
+        data="$data<value>$argval</value>"
+        done
+        
+    data="$data</data></array>"
+    echo "$data"
+    return 0;
+}
+
+function crawlerStatus {
+	# crawler status leger.
+	
+	local COMMAND="$1"
+	local CRAWLER="$2"
+	local PORT_OPTION="5556"
+	
+	if [ -n "$3" ]; then
+	    PORT_OPTION="$3"
+	fi
+	
+	case $CRAWLER in
+	    GestionCheckDiff)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerCheckDiff
+	    argline="-d 15000"
+	    ;;
+	    GestionCheckStatus)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerCheckStatus
+	    argline="-d 60000"
+	    ;;
+	    GestionScheduledMessage)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerScheduledMessage
+	    argline="-d 15000"
+	    ;;
+	    GestionCheckPing)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerCheckPing
+	    argline="-d 1200000"
+	    ;;
+	    GestionCheckJabber)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerCheckJabber
+	    argline="-d 180000"
+	    ;;
+	    GestionCheckNewObject)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerCheckNewObject
+	    argline="-d 300000"
+	    ;;
+	    GestionCheckServerUrl)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerCheckServerUrl
+	    argline="--once"
+	    ;;
+	    GestionPurge)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerPurge
+	    argline="-d 60000"
+	    ;;
+	    SourceAir)
+	    crawlerclass=net.violet.platform.daemons.crawlers.source.CrawlerSourceAir
+	    argline="-d 1800000"
+	    ;;
+	    SourceBourse)
+	    crawlerclass=net.violet.platform.daemons.crawlers.source.CrawlerSourceBourse
+	    argline="-d 900000"
+	    ;;
+	    SourceBourseAdvanced)
+	    crawlerclass=net.violet.platform.daemons.crawlers.source.CrawlerSourceBourseAdvanced
+	    argline="-d 900000"
+	    ;;
+	    SourceMeteo)
+	    crawlerclass=net.violet.platform.daemons.crawlers.source.CrawlerSourceMeteo
+	    argline="-d 3600000"
+	    ;;
+	    SourceTrafic)
+	    crawlerclass=net.violet.platform.daemons.crawlers.source.CrawlerSourceTrafic
+	    argline="-d 600000"
+	    ;;
+	    ServiceMail)
+	    crawlerclass=net.violet.platform.daemons.crawlers.source.CrawlerSourceMail
+	    argline="-d 300000 -m 480000 -s 10"
+	    ;;
+	    RssFree)
+	    crawlerclass=net.violet.platform.daemons.crawlers.vaction.CrawlerRssFree
+	    argline="-d 60000 -s 10 -a 5 -c 5"
+	    ;;
+	    NewRssFree)
+	    crawlerclass=net.violet.platform.feeds.crawlers.RssFreeCrawler
+	    argline="-d 60000 -s 10 -a 5 -c 5"
+	    ;;
+	    RssFull)
+	    crawlerclass=net.violet.platform.daemons.crawlers.vaction.CrawlerRssFull
+	    argline="-d 60000 -s 10 -a 5 -c 5"
+	    ;;
+	    NewRssFull)
+	    crawlerclass=net.violet.platform.feeds.crawlers.RssFullCrawler
+	    argline="-d 60000 -s 10 -a 5 -c 5"
+	    ;;
+	    Twitter)
+	    crawlerclass=net.violet.platform.daemons.crawlers.application.CrawlerTwitter
+	    argline="-d 60000 -s 10 -a 5 -c 5"
+	    ;;
+	    NewTwitter)
+	  	crawlerclass=net.violet.platform.feeds.crawlers.TwitterCrawler
+	    argline="-d 60000 -s 10 -a 5 -c 5"
+	    ;;
+	    Gmail)
+	    crawlerclass=net.violet.platform.daemons.crawlers.application.CrawlerGmail
+	    argline="-d 60000 -s 10 -a 5 -c 5"
+	    ;;
+	    NewGmail)
+	  	crawlerclass=net.violet.platform.feeds.crawlers.GmailCrawler
+	    argline="-d 60000 -s 10 -a 5 -c 5"
+	    ;;
+	    Facebook)
+	    	crawlerclass=net.violet.platform.feeds.crawlers.FacebookCrawler
+		argline="-d 1200000 -s 10 -a 5 -c 5"
+	    ;;
+	    PodcastFull)
+	    crawlerclass=net.violet.platform.daemons.crawlers.vaction.CrawlerPodcastFull
+	    argline="-d 1200000 -s 10 -a 5 -c 5"
+	    ;;
+	    NewPodcastFull)
+	    crawlerclass=net.violet.platform.feeds.crawlers.PodcastFullCrawler
+	    argline="-d 60000 -s 10 -a 5 -c 5"
+	    ;;
+	    PodcastFree)
+	    crawlerclass=net.violet.platform.daemons.crawlers.vaction.CrawlerPodcastFree
+	    argline="-d 1200000 -s 10 -a 5 -c 5"
+	    ;;
+	    NewPodcastFree)
+	    crawlerclass=net.violet.platform.feeds.crawlers.PodcastFreeCrawler
+	    argline="-d 60000 -s 10 -a 1 -c 1"
+	    ;;
+	    CachePulse)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerCachePulse
+	    argline="-d 5000"
+	    ;;
+	    ServiceMultiMailSend)
+	    crawlerclass=net.violet.platform.daemons.crawlers.service.MultiCrawlerMailNab
+	    argline="-d 30000"
+	    ;;
+	    GestionCheckNabcast)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerCheckNabcast
+	    argline="--once"
+	    ;;
+	    PurgeContent)
+	    crawlerclass=net.violet.platform.daemons.crawlers.PurgeContentDaemon
+	    argline="-d 21600000"
+	    # 6 heures
+	    ;;
+	    PurgeFiles)
+	    crawlerclass=net.violet.platform.daemons.crawlers.PurgeFilesDaemon
+	    argline="-d 300000 -e 1000 -p 1"
+	    ;;
+	    Hadoop)
+	    crawlerclass=net.violet.platform.daemons.crawlers.HadoopCrawler
+	    argline="--once"
+	    ;;
+	    DailyScheduler)
+	    crawlerclass=net.violet.platform.daemons.schedulers.DailyScheduler
+	    argline="-d 900000 -m 1200000 -x 300000 -p 4"
+	    ;;
+	    WeeklyScheduler)
+	    crawlerclass=net.violet.platform.daemons.schedulers.WeeklyScheduler
+	    argline="-d 1800000 -m 2100000 -x 300000 -p 4"
+	    ;;
+	    NewContentWithFrequencyScheduler)
+	    crawlerclass=net.violet.platform.daemons.schedulers.NewContentWithFrequencyScheduler
+	    argline="-d 300000 -m 600000 -x 300000 -p 4"
+	    ;;
+	    DailyWithMediaScheduler)
+	    crawlerclass=net.violet.platform.daemons.schedulers.DailyWithMedia
+	    argline="-d 900000 -m 1200000 -x 300000 -p 4"
+	    ;;
+	    RandomWithFrequencyScheduler)
+	    crawlerclass=net.violet.platform.daemons.schedulers.RandomWithFrequencyScheduler
+	    argline="-d 600000 -m 900000 -x 300000 -p 4"
+	    ;;
+	    AmbiantScheduler)
+	    crawlerclass=net.violet.platform.daemons.schedulers.AmbiantScheduler
+	    argline="-d 600000 -m 900000 -x 300000 -p 4"
+	    ;;
+	    DailyWithDurationScheduler)
+	    crawlerclass=net.violet.platform.daemons.schedulers.DailyWithDuration
+	    argline="-d 900000 -m 1200000 -x 300000 -p 4"
+	    ;;
+	    AmbiantWithKeywordScheduler)
+	    crawlerclass=net.violet.platform.daemons.schedulers.AmbiantWithKeywordScheduler
+	    argline="-d 900000 -m 1200000 -x 300000 -p 4"
+	    ;;
+	    FrequencyScheduler)
+	    crawlerclass=net.violet.platform.daemons.schedulers.FrequencyScheduler
+	    argline="-d 1800000 -m 2100000 -x 300000 -p 4"
+	    ;;
+	    FixPwd)
+	    crawlerclass=net.violet.platform.daemons.crawlers.gestion.CrawlerFixUserPwd
+	    argline="--once"
+	    ;;
+	    TimeZoneCrawler)
+	    crawlerclass=net.violet.platform.daemons.crawlers.TimeZoneCrawler
+	    argline="--once"
+	    ;;
+	    *)
+	    echo "Unknown crawler $CRAWLER"
+	    exit 1
+	    ;;
+	esac
+	
+	ARGLIST=`arglist $argline`
+	params="<param><value>$crawlerclass</value></param>"
+	
+	
+	case "$COMMAND" in
+	    start)
+	    method="startCrawler"
+	    params="<param><value>$crawlerclass</value></param><param><value>$ARGLIST</value></param>"
+	    ;;
+	    stop)
+	    method="stopCrawler"
+	    params="<param><value>$crawlerclass</value></param><param><value>$ARGLIST</value></param>"
+	    ;;
+	    status)
+	    method="getCrawlerStatus"
+	    ;;
+	esac
+	
+	REQUEST="<?xml version='1.0' encoding='UTF-8'?><methodCall><methodName>CrawlerShell.$method</methodName><params>$params</params></methodCall>"
+	LENGTH=`expr length "$REQUEST"`
+	
+	RESPONSE=`nc 127.0.0.1 $PORT_OPTION <<DATA
+POST / HTTP/1.1
+Content-Type: text/xml
+Content-Length: $LENGTH
+
+$REQUEST
+DATA`
+
+	echo $RESPONSE | sed -n -e 's/.*<value>\(.*\)<\/value>.*/\1/p'
+}
+
+PATH=/usr/local/java/jdk-current/bin/:/usr/local/ant/bin:$PATH
+if [ -e $PWD/build-crawlers.xml ]; then
+        OS=$PWD
+elif [ -e $PWD/../build-crawlers.xml ]; then
+        OS=$PWD/..
+elif [ -e /usr/local/tomcat/violet/OS/build-crawlers.xml ]; then
+        OS=/usr/local/tomcat/violet/OS
+fi
+
+COMMAND="$1"
+
+case "$COMMAND" in
+        start|stop|status)
+        if [ $# -lt 2 ] || [ $# -gt 3 ]; then
+                echo "Syntax: crawlerctl (start|stop|status) crawler [port]"
+                exit 1
+        fi
+
+if [ $# = 2 ]; then
+    crawlerStatus $COMMAND $2 
+else
+    crawlerStatus $COMMAND $2 $3
+fi
+        ;;
+
+
+        startshell)
+        PORT_OPTION=""
+        if [ -n "$2" ]; then
+                PORT_OPTION="-Dport=$2 "
+        fi
+        nohup ant -f $OS/build-crawlers.xml -Djava.rmi.server.hostname=${admin_if} -Ddaemon=Shell ${PORT_OPTION} startDaemon < /dev/null > /usr/local/crawler/Shell$2-std.log 2>&1 &
+        sleep 1
+        cat /usr/local/crawler/Shell$2-std.log
+        ;;
+        stopshell)
+        PORT_OPTION=""
+        if [ -n "$2" ]; then
+                PORT_OPTION="-Dport=$2 "
+        fi
+        ant -f $OS/build-crawlers.xml -Djava.rmi.server.hostname=${admin_if} -Ddaemon=Shell ${PORT_OPTION} stopDaemon 2>&1 < /dev/null | tee -a /usr/local/crawler/Shell$2-std.log
+        ;;
+        *)
+                echo "crawlerctl (start|stop|status|startshell|stopshell)"
+                ;;
+esac
+

@@ -1,0 +1,8 @@
+application=webui
+
+[create_exist_ztamp]
+is_error=yes
+url=objects/create
+content_type=text/yaml
+post_data=@yaml/objects.create.yml
+regex=AlreadyExists

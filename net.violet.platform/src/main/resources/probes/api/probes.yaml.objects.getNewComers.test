@@ -1,0 +1,6 @@
+application=webui
+
+[count_1]
+url=objects/getNewComers?count=1
+content_type=text/yaml
+size_greater_than=150

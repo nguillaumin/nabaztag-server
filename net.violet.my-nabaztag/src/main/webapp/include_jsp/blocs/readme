@@ -1,0 +1,41 @@
+
+generic:
+	usage: afficher un bloc contenant un contenu varié. Le contenu est chargé du DicoTools.dico.
+	Le titre du bloc est récupéré dans le DicoTools.dico aussi, il est cependant facultatif:
+	
+	Exemple de clé de DicoTools.dico "PARAM" donnée:
+	Clés de DicoTools.dico cherchées:
+	genericBloc/PARAM1_title
+	genericBloc/PARAM1
+	
+	param:
+		action: =generic
+		param1: clées de DicoTools.dico séparées par des points virgules.
+	exemple: vlisp/action/Bloc.do?action=generic&param1=test_bloc;test_bloc2
+		
+friends:
+	usage: afficher la liste des amis du user id.
+	param:
+		action: =friends
+		param1: id du user dont on affiche la liste des amis (id du user logue a default).
+	exemple: vlisp/action/Bloc.do?action=friends&param1=5595
+
+blackList:
+	usage: afficher la liste noir du user logue.
+	param:
+		action: =blackList
+	exemple: vlisp/action/Bloc.do?action=blackList
+	
+DernierAnnuaire
+	usage: afficher les nabaztag recent.
+	param:
+		action: =DernierAnnuaire
+		param1: true = boite de dialogue apres qui dirige vers annuaire.
+	exemple: vlisp/action/Bloc.do?action=DernierAnnuaire		
+	
+DecouvrirNabaztag
+	usage : bloc sur la home qui affiche les 3 anims flashs
+	param:
+		action: =DecouvrirNabaztag
+	exemple: vlisp/action/Bloc.do?action=DecouvrirNabaztag
+	

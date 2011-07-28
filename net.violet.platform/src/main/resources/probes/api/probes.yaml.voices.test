@@ -1,0 +1,13 @@
+application=webui
+
+[getByLang]
+url=voices/getByLang
+content_type=text/yaml
+post_data=@yaml/voices.getbylang.yml
+regex=- !!map:VoiceInformation
+
+[getLocalizedString1]
+url=site/getLocalizedString
+content_type=text/yaml
+post_data=@yaml/voices.getlocalizedstring.yml
+regex=JAPON.Osaka

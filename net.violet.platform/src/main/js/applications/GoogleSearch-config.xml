@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<name>"net.violet.js.googlesearch"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"GoogleSearch"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr>"Recherche Google"</fr>
+		<en>"Google Search"</en>
+	</map></title>
+
+	<description><map>
+		<fr>"Pour tests uniquement."</fr>
+		<en>"For tests only."</en>
+	</map></description>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"search"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr>"Recherche"</fr>
+			<en>"Query"</en>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr>"Tapez votre requète"</fr>
+			<en>"Type your search query"</en>
+		</map></description>
+	</map></item>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+  </map></item>
+	<!-- application can be installed on ztamp removal -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+  </map></item>
+</list></scheduling_masks>
+
+</map>

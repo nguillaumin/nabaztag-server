@@ -1,0 +1,15 @@
+application=webui
+
+
+
+[setSignature]
+content_type=text/yaml
+url=people/setSignature
+post_data=@yaml/people.setSignature.yml
+regex=~
+
+[getSignature]
+url=people/getSignature
+post_data=@yaml/people.yml
+content_type=text/yaml
+regex=SignatureInformation\sanim: (LOC_anim/[a-z]+)*\sitem: (([a-f]|[0-9])*MU([a-f]|[0-9])*)|~\scolor: (red)|(green)|(blue)|(cyan)|(magenta)|(yellow)

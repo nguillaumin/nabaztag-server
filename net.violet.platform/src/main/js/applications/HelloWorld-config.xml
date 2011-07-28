@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<name>"net.violet.js.helloworld"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"dev"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>20</rank>
+
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"HelloWorld"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr>"Bonjour le Monde dans une bulle !"</fr>
+		<en>"Oï to the World in Bubble !"</en>
+	</map></title>
+
+	<description><map>
+		<fr>"Démo pour tests uniquement de la modalité bubble."</fr>
+		<en>"Demo for tests only."</en>
+	</map></description>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr>"Communication"</fr>
+		<en>"Communication"</en>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+	<item><map>
+		<key>"title"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Titre"]]></fr>
+			<en><![CDATA["Title"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA[""]]></fr>
+			<en><![CDATA[""]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"message"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Message"]]></fr>
+			<en><![CDATA["Message"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA[""]]></fr>
+			<en><![CDATA[""]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"width"</key>
+		<type>"InputLine"</type>
+		<datatype>"integer"</datatype>
+		<required>false</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Largeur"]]></fr>
+			<en><![CDATA["Width"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA[""]]></fr>
+			<en><![CDATA[""]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"height"</key>
+		<type>"InputLine"</type>
+		<datatype>"integer"</datatype>
+		<required>false</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Largeur"]]></fr>
+			<en><![CDATA["Width"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></label>
+	</map></item>
+
+	<item><map>
+		<key>"scrollingspeed"</key>
+		<type>"InputLine"</type>
+		<datatype>"integer"</datatype>
+		<required>false</required>
+		<default_value></default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Vitesse de scrolling"]]></fr>
+			<en><![CDATA["Scrolling speed"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></label>
+	</map></item>
+
+	<item><map>
+		<key>"pictureurl"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>false</required>
+		<default_value></default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["URL de l'image"]]></fr>
+			<en><![CDATA["Image URL"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></label>
+	</map></item>
+
+	<item><map>
+		<key>"url"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>false</required>
+		<default_value></default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Lien (URL)"]]></fr>
+			<en><![CDATA["Link URL"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></label>
+	</map></item>
+
+	<item><map>
+		<key>"closable"</key>
+		<type>"CheckBox"</type>
+		<datatype>"boolean"</datatype>
+		<required>true</required>
+		<default_value>true</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Peut être fermée"]]></fr>
+			<en><![CDATA["Closable"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></label>
+	</map></item>
+
+	<item><map>
+		<key>"displaytime"</key>
+		<type>"InputLine"</type>
+		<datatype>"integer"</datatype>
+		<required>false</required>
+		<default_value></default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Temps d'affichage (en ms)"]]></fr>
+			<en><![CDATA["Display time (in ms)"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+		</map></label>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+  </map></item>
+	<!-- application can be installed on ztamp removal -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+  </map></item>
+</list></scheduling_masks>
+
+</map>

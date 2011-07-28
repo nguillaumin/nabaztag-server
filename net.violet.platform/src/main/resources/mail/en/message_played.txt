@@ -1,0 +1,15 @@
+﻿Your message:
+
+MESSAGE
+
+sent to FIRST_NAME LAST_NAME
+through their OBJ_RECIPIENT Object
+has been played successfully NB_TIMES time(s)
+ 
+ 
+ 
+++ A FEW THINGS YOU MIGHT WANT TO KNOW ++
+- There are lots of different ways to send messages. You can use your own voice, send MP3 titles, or sound bite postcards... With Violet, you can make up totally new forms of communication.
+- You’d rather not receive notifications when your messages have been played? Go to your account settings on the website.
+ 
+-- Violet. Let All Things Be Connected --

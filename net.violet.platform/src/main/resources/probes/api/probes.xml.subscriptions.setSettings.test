@@ -1,0 +1,87 @@
+application=webui
+
+[get_Ztamp_68170_A]
+url=subscriptions/get
+post_data=<map><id><string>10a4bO0bee75c6</string></id></map>
+regex=<application_id>\s*<string>(.*?)</string>\s*</application_id>
+
+[get_first2]
+url=subscriptions/get
+post_data=<map><id><string>10a4bO0bee75c6</string></id><application_id><string>GROUP_0</string></application_id></map>
+regex=<id>\s*<string>(.*?)</string>\s*</id>
+
+[setSettings]
+url=subscriptions/setSettings
+post_data=<map><id><string>GROUP_0</string></id><settings><list><item><map><key><string>password</string></key><value><string>hkfpdnhdbajmdpai</string></value></map></item><item><map><key><string>login</string></key><value><string>probes.tests@gmail.com</string></value></map></item><item><map><key><string>id_last_news</string></key><value><string>tag:gmail.google.com,2004:1260900850174623947</string></value></map></item><item><map><key><string>language</string></key><value><string>1</string></value></map></item></list></settings></map>
+regex=null
+
+[get_verif_settings]
+url=subscriptions/get
+post_data=<map><id><string>10a4bO0bee75c6</string></id></map>
+regex=<application_id>\s*<string>(.*?)</string>\s*</application_id>
+
+[get_first2_verif_settings]
+url=subscriptions/get
+post_data=<map><id><string>10a4bO0bee75c6</string></id><application_id><string>GROUP_0</string></application_id></map>
+regex=<list>
+  <item>
+    <map>
+      <settings>
+        <list>
+          <item>
+            <map>
+              <key>
+                <string>password</string>
+              </key>
+              <value>
+                <string>hkfpdnhdbajmdpai</string>
+              </value>
+            </map>
+          </item>
+          <item>
+            <map>
+              <key>
+                <string>login</string>
+              </key>
+              <value>
+                <string>probes.tests@gmail.com</string>
+              </value>
+            </map>
+          </item>
+          <item>
+            <map>
+              <key>
+                <string>id_last_news</string>
+              </key>
+              <value>
+                <string>tag:gmail.google.com,2004:1260900850174623947</string>
+              </value>
+            </map>
+          </item>
+          <item>
+            <map>
+              <key>
+                <string>language</string>
+              </key>
+              <value>
+                <string>1</string>
+              </value>
+            </map>
+          </item>
+        </list>
+      </settings>
+      <application_id>
+        <string>386Aabe2ead9</string>
+      </application_id>
+      <object_id>
+        <string>10a4bO0bee75c6</string>
+      </object_id>
+      <scheduling>
+        <list />
+      </scheduling>
+      <id>
+        <string>1159a8S46a49a03</string>
+      </id>
+    </map>
+  </item>
+</list>

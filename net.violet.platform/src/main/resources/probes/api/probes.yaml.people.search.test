@@ -1,0 +1,14 @@
+application=webui
+
+[empty]
+url=people/search
+content_type=text/yaml
+post_data=@constants/people.search.empty.yml
+is_error=yes
+regex=empty_query
+
+[perform]
+url=people/search
+content_type=text/yaml
+post_data=@yaml/people.search.yml
+regex=  

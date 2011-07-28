@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+    <!-- application + application_profile -->
+    <!-- http://etherpad.com/2B5Fu67t5r -->
+    <name>"net.violet.js.mailbox"</name>
+    <author>"dev-js@violet.net"</author>
+    <category>"communication"</category>
+    <class>"native"</class>
+    <language>"JAVASCRIPT"</language>
+    <apiVersion>"0.8"</apiVersion>
+    <opensource>false</opensource>
+    <interactive>false</interactive>
+    <visible>true</visible>
+    <removable>true</removable>
+    <rank>1900</rank> <!-- the greatest numbers will be ranked first -->
+
+    <credentials><map>
+        <!-- Creates application_credentials entry -->
+        <public_key>"Mailbox"</public_key>
+        <private_key>"private"</private_key>
+    </map></credentials>
+
+    <title><map>
+        <fr><![CDATA["La boîte aux lettres de mon Ztamp"]]></fr>
+        <en><![CDATA["My Ztamp's Mailbox"]]></en>
+        <it><![CDATA["La casella di posta del mio Ztamp"]]></it>
+        <es><![CDATA["El buzón de mi Ztamp "]]></es>
+        <de><![CDATA["Die Mailbox meines Ztamp"]]></de>
+        <pt><![CDATA[""]]></pt>
+        <ja><![CDATA["ズタンプのメールボックス"]]></ja>
+    </map></title>
+
+    <description><map>
+        <fr><![CDATA["Cette application est présente par défaut sur chaque Ztamp. Elle lui permet de recevoir et de jouer des messages et contenus. <br/>
+Exemple : Envoyez un message au livre de votre enfant pour lui dire que vous allez rentrer tard. Le message lui sera dit juste avant de commencer la lecture de l'histoire de son livre."]]></fr>
+        <en><![CDATA["This application is installed by default on each ztamp. It allows it to receive and play messages and content.<br/>
+Example: send a message to your kid's book to tell to him you're going to be back late. The message will be told just before the book starts to read."]]></en>
+        <it><![CDATA["<p>Quest'applicazione è presente su ogni Ztamp. Permette di ricevere e di trasmettere messaggi e contenuti. <br/>Esempio: Invia un messaggio al libro del tuo bambino per dirgli che rincaserai tardi. Il messaggio verrà letto poco prima d'iniziare la lettura della storia contenuta nel libro.</p>"]]></it>
+        <es><![CDATA["Se presenta esta aplicación por defecto para cada Ztamp. Permite recibir y emitir mensajes y contenmidos. <br/>
+Ejemplo: envía un mensaje al libro de tu hijo(a) para decirle que vas a llegar tarde. Escuchará el mensaje antes de comenzar la lectura del cuento en su libro."]]></es>
+        <de><![CDATA["<p>Diese Applikation ist Grundeinstellung für jeden Ztamp. Der Ztamp kann entsprechend Nachrichten und Inhalte senden und empfangen. <br/>
+Beispiel: Senden Sie dem Buch Ihres Kindes eine Email, um ihm mitzuteilen, dass Sie spät nach Hause kommen. Die Email wird ihm kurz vor Beginn seiner Lektüre mitgeteilt. </p>"]]></de>
+        <pt><![CDATA[""]]></pt>
+        <ja><![CDATA["<p>このアプリケーションはズタンプに最初から追加されています。<br/>ズタンプが受け取ったメッセージを再生することができます。<br/>たとえば、子供の絵本にメッセージを送っておきます。そうすれば子供が絵本を読もうとナバズタグ：タグにかざした時にそのメッセージが再生されます。</p>"]]></ja>
+
+        </map></description>
+
+    <instructions><map>
+        <fr><![CDATA["Vous n'avez aucun paramètre à définir pour cette application. Lorsqu'elle est présente dans vos applications, vous pourrez recevoir des messages sur votre objet. <br/>
+Si vous ne souhaitez plus recevoir de messages sur votre objet, vous pouvez désinstaller cette application de votre Ztamp."]]></fr>
+        <en><![CDATA["You don't need to define any settings for this application. When the application is installed, your object can receive messages.<br/>
+If you don't want to receive messages anymore, uninstall this application."]]></en>
+        <it><![CDATA["<p>Non devi impostare alcun parametro per quest'applicazione. E già presente nelle tue applicazioni, potrai ricevere dei messaggi sui tuoi oggetti.<br/>
+Se desideri non ricevere messaggi su quest'oggetto non hai che da disinstallare l'applicazione.</p>"]]></it>
+        <es><![CDATA["En esta aplicación no tienes que definir ningún parámetro. Cuando se la presenta en tus aplicaciones, puedes recibir mensajes en tu objeto.<br/>
+Si no deseas recibir mensajes en tu objeto, puedes desinstalar esta aplicación en tu Ztamp"]]></es>
+        <de><![CDATA["<p>Sie müssen keine Einstellungen für diese Applikation vornehmen. Ist sie unter Ihren Applikationen aufgeführt, können Sie Nachrichten auf Ihrem Objekt empfangen. <br/>
+Wollen Sie keine Nachrichten auf Ihrem Objekt empfangen, können Sie diese Applikation auf Ihrem Ztamp deinstallieren.</p>"]]></de>
+        <pt><![CDATA[""]]></pt>
+        <ja><![CDATA["<p>特に設定する項目はありません。<br/>
+        このアプリケーションが追加されていると、アイテムが受け取ったメッセージを再生します。<br/>
+        このアプリケーションが必要なければ、アイテムから削除してください。</p>"]]></ja>
+    </map></instructions>
+
+    <tags><map>
+        <!-- Applications tags are a comma separated list of words in a given language -->
+        <fr><![CDATA["Communication, Messages"]]></fr>
+        <en><![CDATA["Communication, Messages"]]></en>
+        <it><![CDATA["Comunicazione, Messaggi"]]></it>
+        <es><![CDATA["Comunicación, Mensajes"]]></es>
+        <de><![CDATA["Kommunikation, Nachrichten "]]></de>
+        <pt><![CDATA[""]]></pt>
+        <ja><![CDATA["コミュニケーション、メッセージ"]]></ja>
+    </map></tags>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+</list></settings>
+
+<scheduling_masks><list>
+    <!-- application can be installed on ztamp detection -->
+    <item><map>
+        <hw_type>"violet.rfid"</hw_type>
+        <scheduling_type>"InteractionTrigger"</scheduling_type>
+        <event>"ZtampDetection"</event>
+        <label>"LOC_events/ZtampDetection"</label>
+        <minimum>0</minimum>
+        <maximum>1</maximum>
+    </map></item>
+</list></scheduling_masks>
+
+</map>
+

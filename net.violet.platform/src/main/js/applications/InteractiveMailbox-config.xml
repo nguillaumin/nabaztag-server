@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<name>"net.violet.js.interactivemailbox"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>true</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"InteractiveMailbox"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr>"Boite aux lettres des Ztamps"</fr>
+		<en>"Ztamp Mailbox"</en>
+	</map></title>
+
+	<description><map>
+		<fr>"Transformez un simple ztamp en boite aux lettres sur laquelle n'importe quel utilisateur de la plateforme Violet peut vous envoyer des messages ou des contenus multimédias, et lisez les derniers messages reçus sur simple présentation du ztamp à n'importe quel lecteur (nabaztag:tag, mir:ror..)"</fr>
+		<en>"Add a mailbox to your ztamp, so that any user of the Violet platform can send you messages or multimedia content, and read these messages by simply submitting the ztamp to a target object (nabaztag:tag, mir:ror..)"</en>
+	</map></description>
+
+	<instructions><map>
+		<fr>""</fr>
+		<en>""</en>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr>"Communication, Messages"</fr>
+		<en>"Communication, Messages"</en>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+  </map></item>
+</list></scheduling_masks>
+
+</map>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/KOI9oAm5c0 -->
+
+	<name>"net.violet.js.lockscreen"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>600</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"LockScreen"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Verrouiller l'Ordinateur"]]></fr>
+		<en><![CDATA["Lock the Computer"]]></en>
+		<it><![CDATA["Chiudere sessione"]]></it>
+		<es><![CDATA["Bloquear el ordenador"]]></es>
+		<de><![CDATA["Den Computer abschließen"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["コンピュータのロック"]]></ja>
+
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Montrez votre Ztamp, il verrouillera instantanément votre ordinateur. <br/>
+			Exemple: On vous appelle d'urgence hors de votre bureau, montrez votre Nano:ztag fétiche au Mir:ror et il protégera immédiatement vos informations. </p> "]]></fr>
+		<en><![CDATA["Flash your Ztamp to instantly lock your computer.<br/>Example: you are called away from your desk for an emergency, show the Mir:ror your favourite Nano:ztag and it will instantly protect your precious data."]]></en>
+		<it><![CDATA["<p>Mostra lo Ztamp, chiuderà immediatamente la sessione in uso sul tuo Computer. <br/>
+			Esempio: Ti hanno chiamato urgentemente e devi uscire dal tuo ufficio. Mostra il tuo Nano:ztag al Mir:ror e ti proteggrà le informazioni custodite nel tuo computer. </p>"]]></it>
+		<es><![CDATA["<p>Presenta tu Ztamp, éste bloqueará instantáneamente tu ordenador. <br/>
+			Ejemplo: recibes una llamada urgente fuera de tu despacho, presenta su Nano:ztag favorito al Mir:ror y éste protegerá inmediatamente tus informaciones</p>"]]></es>
+		<de><![CDATA["<p>Zeigen Sie Ihren Ztamp. Er schließt sofort Ihren Computer ab. <br/>Beispiel: Man ruft Sie dringend aus dem Büro. Zeigen Sie Ihrem Mir:ror Ihren Lieblings-Nano:ztag; er sichert umgehend Ihre Informationen. </p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ズタンプにより即座にコンピュータをロックすることができます。<br/>たとえば、急に上司に呼ばれ席をはなれなければいけないときに、ナノズタグをミラーに載せるだけでコンピュータをロックできますので、秘密のデータを守ることができます。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Vous n'avez rien à faire, il suffit d'ajouter cette application à un Ztamp ou un Nano:ztag. <br/>
+Assurez-vous préalablement que le verrouillage et la protection par mot de passe sont bien activés sur votre ordinateur. <br/>
+Pour le déverrouiller, vous n'aurez qu'à entrer votre mot de passe, comme vous le faîte d'habitude. <br/>
+Ce service fonctionne uniquement sur un Mir:ror relié à un ordinateur.</p>"]]></fr>
+		<en><![CDATA["<p>There's nothing much to do: simply add this application to a Ztamp or Nano:ztag.<br/>
+Make sure locking and password protection are actually activated on your computer.<br/>
+To unlock, simply enter your password as you would normally.<br/>
+This service only works with a Mir:ror connected to a computer.</p>"]]></en>
+		<it><![CDATA["<p>Non devi fare nulla, devi solo aggiungere quest'applicazione a uno Ztamp o un Nano:ztag. <br/>Assicurati che sul tuo computer sia attivo il « Chiudi sessione » e la protezione della tua password. <br/>Per riaccedere al tuo computer non hai che da inserire la tua password, come fai abitualmente. <br/>Questo servizio funziona unicamente su un Mir:ror collegato ad un computer.</p>"]]></it>
+		<es><![CDATA["<p>No tienes que hacer nada, alcanza con agregar esta aplicación a un Ztamp o a un Nano:ztag. <br/>
+			Verifica previamente que están activados en tu ordenador, el bloqueo y la protección por contraseña. <br/>
+			Para desbloquearlos sólo tienes que proceder como lo haces habitualmente, es decir, entrar tu contraseña.<br/>
+			Este servicio funciona únicamente con un Mir:ror conectado a un ordenador.</p> "]]></es>
+		<de><![CDATA["<p>Sie müssen nichts tun. Fügen Sie diese Applikation einfach zu einem Ztamp oder einem Nano:ztag hinzu. <br/>
+Vergewissern Sie sich vorab, dass Sperre und Passwortsicherung auf Ihrem Computer aktiviert sind. <br/>
+Zur Entsperrung geben Sie wie gewöhnlich einfach Ihr Passwort ein. <br/>
+Dieser Dienst funktioniert ausschließlich mit einem an einen Computer angeschlossenen Mir:ror.</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>特に設定する項目はありません。<br/>
+		ズタンプやナノズタグにこのアプリケーションを追加するだけで、即座にコンピュータをロックし、パスワードの入力画面を表示できます。<br/>
+		ロックを解除するには、普段通りコンピュータにパスワードを入力してください。<br/>
+		ミラーとミラーが接続されているコンピュータでのみ利用できます。</p>"]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+
+</map>

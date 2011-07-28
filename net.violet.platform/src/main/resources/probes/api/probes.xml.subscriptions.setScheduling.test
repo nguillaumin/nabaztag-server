@@ -1,0 +1,32 @@
+application=webui
+
+[daylife]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_daylife/title</string></id></map>
+regex= <name>\s*<string>net.violet.trafic</string>\s*</name>\s*<owner>\s*<string>1Ua190246f</string>\s*</owner>\s*<id>\s*<string>(.*?)</string>\s*</id>
+
+
+[create_trafic]
+url=subscriptions/create
+post_data=<map><application_id><string>GROUP_0</string></application_id><object_id><string>10a7aO90ddb8a0</string></object_id><settings><list><item><map><value><string>Bagnolet</string></value><key><string>start</string></key></map></item><item><map><value><string>Orleans</string></value><key><string>end</string></key></map></item></list></settings><scheduling><list><item><map><wednesday><map><time_h>1</time_h><time_m>1</time_m></map></wednesday><monday><map><time_h>1</time_h><time_m>1</time_m></map></monday><type><string>Daily</string></type></map></item></list></scheduling></map>
+regex=  <id>\s*<string>(.*?)</string>\s*</id>
+
+
+[create_schedulling]
+url=subscriptions/setScheduling
+post_data=<map><id><string>GROUP_0</string></id><scheduling><list><item><map><Wednesday><map><time_h>10</time_h><time_m>5</time_m></map></Wednesday><monday><map><time_h>1</time_h><time_m>1</time_m></map></monday><type><string>Daily</string></type></map></item></list></scheduling></map>
+regex= <wednesday>(.*?)</wednesday>
+
+
+[daylife]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_daylife/title</string></id></map>
+regex= <name>\s*<string>net.violet.trafic</string>\s*</name>\s*<owner>\s*<string>1Uc55355c2</string>\s*</owner>\s*<id>\s*<string>(.*?)</string>\s*</id>
+
+
+[get]
+url=subscriptions/get/10a7aO90ddb8a0
+post_data=<map><application_id><string>GROUP_0</string></application_id></map>
+regex= <wednesday>(.*?)</wednesday>
+
+ 

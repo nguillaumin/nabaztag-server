@@ -1,0 +1,7 @@
+application=webui
+
+url=people/create
+is_error=yes
+content_type=text/yaml
+post_data=@yaml/people.create.yml
+regex=email_address_already_exists

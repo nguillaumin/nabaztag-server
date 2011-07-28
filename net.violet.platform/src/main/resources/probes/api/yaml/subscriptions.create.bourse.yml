@@ -1,0 +1,25 @@
+--- 
+object_id: 10b0eO4150540f
+settings: []
+scheduling: 
+  - &id2 Friday: &id1
+      &id3 time_h: &id4 17
+      &id5 time_m: 30
+    &id6 Tuesday: *id1
+    &id8 Thursday: *id1
+    &id9 type: &id10 Daily
+    &id11 Wednesday: *id1
+    &id12 Monday: *id1
+    &id13 Saturday: *id1
+    &id14 Sunday: *id1
+  - *id2: &id7
+      *id3: *id4
+      *id5: 0
+    *id6: *id7
+    *id8: *id7
+    *id9: *id10
+    *id11: *id7
+    *id12: *id7
+    *id13: *id7
+    *id14: *id7
+application_id: 382A310044af

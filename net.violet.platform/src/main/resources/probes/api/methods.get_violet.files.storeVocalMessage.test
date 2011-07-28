@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.files.storeVocalMessage
+content_type=text/json
+regex="errors":\["Forbidden",?"InternalError",?"InvalidParameter",?"InvalidSession",?"VocalMessageConversionFailed",?\],.*"method_class":"CREATE"

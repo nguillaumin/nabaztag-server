@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.subscriptions.delete
+content_type=text/json
+regex="errors":\["ApplicationCantBeRemoved",?"InvalidParameter",?"NoSuchSubscription",?\],.*"method_class":"DELETE"

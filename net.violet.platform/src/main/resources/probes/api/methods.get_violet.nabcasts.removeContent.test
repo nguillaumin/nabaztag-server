@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.nabcasts.removeContent
+content_type=text/json
+regex="errors":\["API",?"Forbidden",?"InvalidParameter",?"InvalidSession",?\],.*"method_class":"DELETE"

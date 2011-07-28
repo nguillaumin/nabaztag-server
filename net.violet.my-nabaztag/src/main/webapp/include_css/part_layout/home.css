@@ -1,0 +1,81 @@
+
+.home-create-account,
+.home-login { min-height:180px; border:1px solid #ddd; padding:9px;}
+
+.home-create-account,
+.home-login {_height:180px;}
+
+.home-create-account h1,
+.home-login h1 {margin-bottom:15px;}
+
+/* =recover-form
+----------------------------------------------- 
+*/
+#contentSeConnecter .recover-form {background:#ffd; padding:5px; margin-top:3px; margin-left:8px; border:1px solid #dd0;}
+#contentSeConnecter .recover-form {_margin-left:0; border:1px solid #dd0; _height:1%;}
+#contentSeConnecter .recover-form p {margin-bottom:5px; background:none;}
+#contentSeConnecter .recover-form label {display:block; margin-top:5px;}
+
+/* =#bloc-generic-register
+----------------------------------------------- 
+*/
+#bloc-generic-register {display:none;}
+#bloc-generic-register li {position:relative; font-size:14px;}
+#bloc-generic-register li.reg-weAreNotHere {background: url(../../include_img/layout/wizard_progress_bar_back_grey.gif) 0% 50% repeat-y; }
+#bloc-generic-register li { border:none; padding:4px 0 4px 18px; line-height:1.1em;}
+#bloc-generic-register li.reg-weAreNotHere {color:#ccc;}
+#bloc-generic-register li.reg-weAreHere {font-weight:bold; padding-left:25px; color:white}
+#bloc-generic-register .wizard-img-indic {left:0px; position:absolute;z-index:100; bottom:0px;}
+
+/* =#reg-top-switchLanguage
+----------------------------------------------- 
+*/
+div#reg-top-switchLanguage {position:absolute; top:9px; right:18px; z-index:100;}
+div#reg-top-switchLanguage select {font-size:10px; padding:0}
+
+/* =intro-cadre-contener
+----------------------------------------------- 
+*/
+div.myHome .intro-cadre-contener {margin:0 0 10px 6px;}
+
+/* =chooseLapinou
+----------------------------------------------- 
+*/
+#contentCreerCompte ul.chooseLapinou { margin:0; padding:0; list-style:none; }
+#contentCreerCompte ul.chooseLapinou img {border:0;}
+#contentCreerCompte ul.chooseLapinou li { border:2px solid white; float:left; margin-right:2px; width:31%; overflow: hidden; clear:none; height:180px;}
+#contentCreerCompte ul.chooseLapinou li label { display:inline; font-size:14px; float:none; text-align:left; font-weight:bold; }
+
+/* =#reg-back
+----------------------------------------------- 
+*/
+#contentCreerCompte .reg-back { text-align:center; width:60%; margin-bottom:10px; margin-top:5px;margin-left:auto; margin-right:auto; }
+#contentCreerCompte .reg-back a, #contentCreerCompte .reg-back {font-size:10px;}
+
+/* =#rabbitSelector
+----------------------------------------------- 
+*/
+#rabbitSelector ul.chooseLapinou li.specialBlockSelected {border:2px solid #d7d7d7; border-bottom:none; background:#eee; position:relative; z-index:5;}
+#rabbitSelector .macaddress-contener {position:relative; height:225px;}
+#rabbitSelector .macaddress {width:98%; padding:1%; height:200px; position:absolute; top:-5px; border:2px solid #d7d7d7; background:#eee;}
+#rabbitSelector .macaddress .img {float:left; width:225px;}
+#rabbitSelector .macaddress .form {margin-left:230px; margin-top:50px;}
+#rabbitSelector .macaddress .form label {width:auto; float:none; text-align:left;}
+
+/* =#help-rabbit-plug
+----------------------------------------------- 
+*/
+
+#help-rabbit-plug .un-tier {width:205px; float:left;}
+#help-rabbit-plug .deux-tier {width:auto; float:left;}
+.help-nabaztag-swf {position:absolute; left:0;}
+.help-nabaztag-text {margin-left:165px; min-height:165px; _height:165px; }
+.reg-help-more {display:none; margin-top:6px; /* border-top:1px dotted #ddd; padding-top:4px; */}
+.reg-help-more ul { margin:0 0 0 22px; padding:0;}
+.reg-help-more ul li { border:1px solid red;}
+
+.help-nabaztag-text .genericList { margin:0; padding:0; list-style:none; }
+.help-nabaztag-text .genericList li h4 { font-size:12px; font-weight:normal; margin:0; padding:0; }
+.help-nabaztag-text .genericList li {border-bottom:1px dotted #ddd; margin-bottom:6px; padding-bottom:6px; padding-left:16px; font-weight:normal;}
+.help-nabaztag-text .genericList li li { list-style:disc; background:none; padding:0; margin:0; border:0;}
+.help-nabaztag-text  .whatisit, .help-nabaztag-text .help-quefaire { font-style:italic; font-weight:bold; display:block;}

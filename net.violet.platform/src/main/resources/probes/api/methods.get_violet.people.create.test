@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.people.create
+content_type=text/json
+regex="errors":\["InvalidParameter",?"PersonAlreadyExists",?\],.*"method_class":"CREATE"

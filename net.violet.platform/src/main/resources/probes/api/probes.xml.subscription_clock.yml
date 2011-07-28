@@ -1,0 +1,19 @@
+application_id: 388A7f2002c6
+object_id: 10a39O61fa7ab9
+settings:
+  -
+    value:
+    - 1
+    key: types
+  -
+    value:
+    - 1
+    - 2
+    - 4
+    key: languages
+scheduling:
+  -
+    Wednesday:
+      time_h: 10
+      time_m: 1
+    type: Daily

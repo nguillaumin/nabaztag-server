@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.applications.fetchResource
+content_type=text/json
+regex="errors":\["BadCredentials",?"FileNotFound",?"InvalidParameter",?"NoSuchApplication",?"QuotaOverFlow",?\],.*"method_class":"CREATE"

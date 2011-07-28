@@ -1,0 +1,12 @@
+application=webui
+
+[no_such_person]
+url=people/findByEmailAddress/no_such_person@violet.net
+is_error=yes
+content_type=text/yaml
+regex=Unknown user
+
+[exists_person]
+url=people/findByEmailAddress/probes@violet.net
+content_type=text/yaml
+regex=id

@@ -1,0 +1,183 @@
+div.srvlist-contener .intro-cadre-top h2.categTitle { margin:5px 0 0 0; padding:0; }
+div.srvlist-contener .intro-cadre-top h3.categTitle { margin:5px 0 0 0; padding:6px 0pt 0pt; }
+
+#contentServicesByCateg,
+#contentNabaztaland,
+#contentAllServices {padding-top:0;}
+
+div.ztamps-contener { border-bottom:1px dotted #ddd; clear:both; min-height:128px; margin-bottom:9px;}
+
+#recover-password { zoom:normal;}
+
+div.srvlist-contener { position:relative;}
+
+/* =webRadioPlayNow
+----------------------------------------------- 
+*/
+.webRadioPlayNow {text-decoration:none; float:left; outline:none;     background: url(../../include_img/webradio/bouton_ecouter_radio.gif) no-repeat; display:block; width: 71px; height: 47px; cursor: pointer; border:none; margin: 0.5em}
+.webRadioStopNow {text-decoration:none; float:left; outline:none;     background: url(../../include_img/webradio/bouton_arreter_radio.gif) no-repeat; display:none; width: 71px; height: 47px; cursor: pointer; border:none; margin: 0.5em}
+
+/* =srv-list-entries 
+----------------------------------------------- 
+*/
+.srv-list-entries { border:2px solid #ddd; background:#F5F5F5; padding:10px; margin-bottom:10px;}
+.srv-list-entries ul { margin:0; padding:0;list-style:none; }
+.srv-list-entries li {margin-top:5px;   overflow: auto; list-style-type:none; border:1px dotted #919F01; padding:4px; }
+.srv-list-entries li.selected { border:2px solid #919F01; padding:3px;  background:url(../../include_img/layout/backSpecialBlockGreen.gif);}
+
+.srv-list-entries li li {border:none; margin-top:0; padding:0; overflow: hidden; height: auto;}
+
+.srv-list-entries ul.ico-list {float:left;width:18px;  }
+.srv-list-entries ul.ico-list li {margin-bottom:2px; overflow: auto;}
+.srv-list-entries ul.txt-list { float:left; border-left:1px solid #919F01; padding-left:4px; min-height:47px;  }
+.srv-list-entries ul li {clear:both; }
+
+	
+.srv-list-entries a.link-modify { text-decoration:underline; }
+.srv-list-entries li.modifier {margin-top:5px; }
+
+.srv-list-entries li.keywords { border-top:1px dotted #919F01; padding-top:2px; margin-top:4px;margin-left:10px;}
+.srv-list-entries li.keywords ul { margin-top:2px; padding-bottom:2px; border-bottom:1px dotted #919F01;}
+
+
+.srv-list-entries ul ul {margin-left:0}
+
+
+/* =menu
+----------------------------------------------- 
+*/
+div.srvlist-contener div.menu { position:absolute; top:0; right:0;  margin:5px 5px 0 0}
+div.srvlist-contener div.menu .categ-chooser {   margin:0 5px 0 5px}
+div.srvlist-contener div.menu .categ-chooser select { width:155px; font-size:11px; height:20px;}
+div.srvlist-contener div.menu .categ-chooser select option { padding-left:15px; background-color:white;}
+div.srvlist-contener div.menu .categ-chooser optgroup { background-color:#ddd; margin-bottom:5px; font-style:normal;} 
+div.srvlist-contener div.menu .categ-chooser select option.choosetxt { padding-left:2px;}
+div.srvlist-contener div.menu .menulinks { padding:3px 0 0 0; margin:0; list-style:none; clear:left; text-align:right; }
+div.srvlist-contener div.menu .menulinks li { border-bottom:1px solid #ccc; margin-left:135px; }
+div.srvlist-contener div.menu .menulinks li:hover { background-color: #f8f8f8;}
+div.srvlist-contener div.menu .menulinks a { color:#513F89; text-decoration:none; }
+div.srvlist-contener .intro-cadre-contener { height:85px;}
+
+/* =list-services
+----------------------------------------------- 
+*/
+div.srvlist-contener .list-services { float:left; clear:none; margin-bottom:2px; width:195px;}
+
+div.srvlist-contener .list-services .image { width:176px;}
+div.srvlist-contener .list-services .description { height:153px; overflow:hidden; position:relative;}
+
+/* d�sactiv�, je trouve �a tr�s laid */
+div.srvlist-contener .list-services .description .truncated{ display:none; height:11px; width:18px; background:url(../../include_img/layout/srv-more-txt.gif) no-repeat; position:absolute; left:126px; top:138px;}
+div.srvlist-contener .list-services .flat-block-content-inner { padding-bottom:25px; }
+div.srvlist-contener .list-services .image {  text-align:center; height:100px; width:172px; display: table-cell; vertical-align: middle; overflow:hidden}
+div.srvlist-contener .list-services h3 span{ display:block; white-space:nowrap; overflow:hidden; margin-right:10px; width:130px; font-size:12px;}
+div.srvlist-contener .list-services h3.selected { color:#C00; }
+div.srvlist-contener .list-services .add-srv { display:block; width:30px; height:22px; background:url(../../include_img/layout/addservice-buttons.gif); position:absolute; right:4px; bottom:4px; text-indent:-5000px;}
+div.srvlist-contener .list-services .add-srv.selected,
+div.srvlist-contener .list-services .add-srv:hover { background-position:100% ;}
+div.srvlist-contener .list-services .text-status-holder {position:absolute; bottom:5px; width:70%; overflow:hidden; height:18px; overflow:hidden}
+div.srvlist-contener .list-services .text-status-holder strong {text-align:center; display:none;}
+
+div.srvlist-contener .intro-cadre-top h2,
+div.srvlist-contener .intro-cadre-content h2
+ { padding-bottom:0; margin-bottom:0; padding-left:0; font-size:20px; margin-bottom:0; padding-bottom:6px;}
+ 
+div.srvlist-contener .intro-cadre-top h3 { font-size:15px; margin:5px 0 0 5px; padding:7px 0 0 0;}
+
+div.srvlist-contener .intro-cadre-content { padding-left:5px; width:60%; margin:0;}
+div.srvlist-contener .intro-cadre-content .intro { margin:0;}
+
+/* =serviceBookReaderConfig
+----------------------------------------------- 
+*/
+.serviceBookReaderConfig .ztamps-pic { float:left; width:130px; margin-right:16px; font-size:10px; text-align:center; font-weight:bold;}
+.serviceBookReaderConfig select { width:200px;  }
+.serviceBookReaderConfig .voiceConfig { margin:15px 0 6px 0 }
+
+.serviceBookReaderConfig form span { font-weight:bold; display:block; margin-bottom:2px; margin-top:3px;} 
+
+
+/* =srvConfigForm
+----------------------------------------------- 
+*/
+.srvConfigForm label { display:block; width:190px; line-height:18px; float:left; text-align:right; margin-right:9px;}
+.srvConfigForm label.big { display:block; width:200px;line-height:18px; float:left; text-align:right; margin-right:9px; }
+.srvConfigForm label.right { display:inline; width:auto; float:none; text-align:left; margin: 0 6px 0 4px; font-weight:normal; }
+
+/* =auto-select-field
+----------------------------------------------- 
+*/
+.auto-select-field { width:80%; border:1px solid #ccc; }
+.auto-select-field:hover { border:1px solid #888}
+
+/* =keskidit
+----------------------------------------------- 
+*/
+.keskidit { clear:both; /*display:none;*/}
+.keskidit .inner { width:500px; text-align:center; margin-left:auto; margin-right:auto;}
+.nabSrvPreview {width:140px; border:1px dotted #909E01; padding:5px; float:left; margin-right:8px; margin-bottom:5px;}
+.keskidit h3 { color:#909E01; border-bottom:1px solid #B5B4B2; margin-bottom:5px;}
+.inner strong { display:block; text-align:center;}
+.keskidit select {width:135px;}
+
+/* =song-picker
+----------------------------------------------- 
+*/
+.song-picker-holder {float:left; }
+.song-picker-holder .text { background:#ffffff; padding:2px; font-weight:bold; font-size:14px;}
+a.song-picker {float:left;height:21px; width:20px; display:block; background:url(../../include_img/layout/zicPicto.gif) no-repeat; }
+.popup-song {  z-index:2; background:white; border:1px solid black; padding:12px; position:absolute; margin-left:16px; }
+
+
+/* icones parfois utilis�es...
+----------------------------------------------- 
+*/
+a.lumi-on  {display:block; background:url(../../include_img/light_on.gif) no-repeat; width:15px; height:13px;margin-right:3px; float:left; position:relative; z-index:3;}
+a.lumi-on span { display:none;}
+
+a.lumi-off  {display:block; background:url(../../include_img/light_off.gif) no-repeat; width:15px; height:13px;margin-right:3px; float:left; position:relative; z-index:3;}
+a.lumi-off span { display:none;}
+
+a.vocal-on  {display:block; background:url(../../include_img/micro_on.gif) no-repeat; width:15px; height:13px;margin-right:1px; float:left; position:relative; z-index:3;}
+a.vocal-on span { display:none;}
+
+a.vocal-off  {display:block; background:url(../../include_img/micro_off.gif) no-repeat; width:15px; height:13px;margin-right:1px; float:left; position:relative; z-index:3;}
+a.vocal-off span { display:none;}
+
+a.suppr  {display:block; background:url(../../include_img/icones/LdelIcone.gif) no-repeat; width:15px; height:15px;margin-right:3px; float:left; position:relative; z-index:3;}
+a.suppr span { display:none;}
+
+/* =srvHorlogeFreeConfig
+----------------------------------------------- 
+*/
+#srvHorlogeFreeConfig .inline-list { margin-left:200px;}
+
+/* =srvHumeurConfig
+----------------------------------------------- 
+*/
+#srvHumeurConfig .inline-list { margin-left:200px;}
+#srvHumeurConfig .inline-list label { width:auto; }
+
+
+/* =createNabcast
+----------------------------------------------- 
+*/
+.createNabcast li {margin-bottom:5px; list-style:none; min-height:24px;}
+.createNabcast label {display:block; width:27%; float:left; }
+.createNabcast input.normal {width:auto;}
+.createNabcast input, .createNabcast textarea, .createNabcast select {width:65%;}
+
+#formNabcast label { float:none; clear:both;  margin-top:0; padding-top:5px; margin-bottom:5px;width:95%; text-align: left; }
+#formNabcast li { clear:both; }
+#formNabcast ul.colorChoice {padding:0; margin:0;}
+#formNabcast ul.colorChoice li {float:left; clear: none; }
+
+
+.diffusionNabcasts ul {list-style:none; margin:0; padding:0;}
+.diffusionNabcasts li {margin-bottom:5px; border:1px dotted #919F01}
+.diffusionNabcasts .date { font-size:10px;}
+.diffusionNabcasts .titre { font-weight:bold;}
+
+.nabcastMp3Upload ul { list-style:none; margin:0; padding:0; }
+.nabcastMp3Upload li { margin-bottom:5px;clear:both;}
+.nabcastMp3Upload label {width:32%; display:block; float:left; clear:both;}

@@ -1,0 +1,11 @@
+application=webui
+
+[daylife]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_daylife/title</string></id></map>
+regex= <name>\s*<string>net.violet.bilan</string>\s*</name>\s*<owner>\s*<string>1Ua190246f</string>\s*</owner>\s*<id>\s*<string>(.*?)</string>\s*</id>
+
+[create_bilan]
+url=subscriptions/create
+post_data=<map><application_id><string>GROUP_0</string></application_id><object_id><string>10b0eO4150540f</string></object_id><settings><list/></settings><scheduling><list><item><map><wednesday><map><time_h>1</time_h><time_m>1</time_m></map></wednesday><type><string>Daily</string></type></map></item></list></scheduling></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>

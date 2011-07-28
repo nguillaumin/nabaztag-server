@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.hints.findByContext
+content_type=text/json
+regex="errors":\["InvalidParameter",?"NoSuchContext",?\],.*"method_class":"GET"

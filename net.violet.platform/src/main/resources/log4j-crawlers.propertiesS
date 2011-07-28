@@ -1,0 +1,8 @@
+log4j.rootLogger=DEBUG, console
+# Sur silence, on ne redirige pas stdout (qui est capturée par CruiseControl)
+#log4j.logger.SystemOut=DEBUG, console
+
+# Et on redirige tout vers stdout.
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout=org.apache.log4j.SimpleLayout
+

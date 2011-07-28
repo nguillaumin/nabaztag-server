@@ -1,0 +1,47 @@
+<map>
+<settings>
+<list>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"source"</key>
+		<label>"srv_bourse/choose_index"</label>
+		<items>
+			<list>
+			
+			<item><map><type>"PopupItem"</type><label>"indices/USA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"S&amp;P/TSX"</label><separator>false</separator><enabled>true</enabled><value>"money.S&amp;P/TSX"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"DOW JONES INDU."</label><separator>false</separator><enabled>true</enabled><value>"money.DOW JONES INDU."</value></map></item>
+<item><map><type>"PopupItem"</type><label>"NASDAQ COMPOSITE"</label><separator>false</separator><enabled>true</enabled><value>"money.NASDAQ COMPOSITE"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"NASDAQ 100"</label><separator>false</separator><enabled>true</enabled><value>"money.NASDAQ 100"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"SP 500"</label><separator>false</separator><enabled>true</enabled><value>"money.SP 500"</value></map></item>
+
+<item><map><type>"PopupItem"</type><label>"indices/Europe"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"DAX Xetra"</label><separator>false</separator><enabled>true</enabled><value>"money.DAX XETRA"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"BEL 20"</label><separator>false</separator><enabled>true</enabled><value>"money.BEL 20"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Ibex35"</label><separator>false</separator><enabled>true</enabled><value>"money.IBEX35"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"CAC 40"</label><separator>false</separator><enabled>true</enabled><value>"money.CAC 40"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Mibtel"</label><separator>false</separator><enabled>true</enabled><value>"money.MIB 30"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"AEX 25"</label><separator>false</separator><enabled>true</enabled><value>"money.AEX 25"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"SMI"</label><separator>false</separator><enabled>true</enabled><value>"money.SMI"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"FTSE 100"</label><separator>false</separator><enabled>true</enabled><value>"money.FTSE 100"</value></map></item>
+
+<item><map>
+<type>"PopupItem"</type>
+<label>"indices/Asia"</label>
+<separator>true</separator>
+<enabled>false</enabled>
+</map></item>
+
+<item><map><type>"PopupItem"</type><label>"Nikkei 225"</label><separator>false</separator><enabled>true</enabled><value>"money.NIKKEI 225"</value></map></item>
+			
+			
+			</list>
+		</items>
+	</map>
+	</item>
+	
+</list>
+</settings>
+</map>

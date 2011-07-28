@@ -1,0 +1,79 @@
+<map>
+<settings>
+<list>
+	
+	<item>
+	<map>
+		<type>"Label"</type>
+		<label>"srv_clock/language"</label>
+	</map>
+	</item>
+	
+	<item>
+	<map>
+		<type>"CheckBox"</type>
+		<key>"languages"</key>
+		<label>"Français"</label>
+		<value>"fr-FR"</value>
+	</map>
+	</item>
+	<item>
+	<map>
+		<type>"CheckBox"</type>
+		<key>"languages"</key>
+		<label>"English (US)"</label>
+		<value>"en-US"</value>
+	</map>
+	</item>
+	<item>
+	<map>
+		<type>"CheckBox"</type>
+		<key>"languages"</key>
+		<label>"English (UK)"</label>
+		<value>"en-GB"</value>
+	</map>
+	</item>
+	<item>
+	<map>
+		<type>"CheckBox"</type>
+		<key>"languages"</key>
+		<label>"Deutsch"</label>
+		<value>"de-DE"</value>
+	</map>
+	</item>
+	<item>
+	<map>
+		<type>"CheckBox"</type>
+		<key>"languages"</key>
+		<label>"Español"</label>
+		<value>"es-ES"</value>
+	</map>
+	</item>
+	<item>
+	<map>
+		<type>"CheckBox"</type>
+		<key>"languages"</key>
+		<label>"Italiano"</label>
+		<value>"it-IT"</value>
+	</map>
+	</item>
+	<item>
+	<map>
+		<type>"CheckBox"</type>
+		<key>"languages"</key>
+		<label>"Português do Brasil"</label>
+		<value>"pt-BR"</value>
+	</map>
+	</item>
+	<item>
+	<map>
+		<type>"CheckBox"</type>
+		<key>"languages"</key>
+		<label>"Japanese"</label>
+		<value>"ja-JP"</value>
+	</map>
+	</item>
+
+</list>
+</settings>
+</map>

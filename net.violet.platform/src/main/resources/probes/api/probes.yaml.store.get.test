@@ -1,0 +1,6 @@
+application=webui
+
+[get]
+url=store/get/1e1SE7180c4ef
+content_type=text/yaml
+regex=StoreInformationMap

@@ -1,0 +1,15 @@
+Il tuo messaggio:
+
+MESSAGE
+
+a FIRST_NAME LAST_NAME
+è stato inviato
+sul suo Oggetto OBJ_RECIPIENT
+
+
+
+++ QUALCOSINA CHE SAREBBE MEGLIO TU SAPESSI ++
+- Esistono svariati modi per inviare dei messaggi. Puoi inviare messaggi con la tua voce, inviare delle canzoni MP3 o delle cartoline sonore . Grazie a Violet potrai inventare nuove forme inedite di comunicazione.
+- Desideri non ricevere più le notifiche quando i tuoi messaggi vengono recapitati ? Vai alle Impostazioni del tuo conto.
+
+-- Violet. Let All Things Be Connected --

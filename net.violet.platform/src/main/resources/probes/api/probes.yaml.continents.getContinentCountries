@@ -1,0 +1,6 @@
+application=webui
+
+[get]
+url=continents/getContinentCountries/Africa
+content_type=text/yaml
+regex=- !!map:CountryInformation

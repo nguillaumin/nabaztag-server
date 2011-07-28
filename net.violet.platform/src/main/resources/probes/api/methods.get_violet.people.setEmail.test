@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.people.setEmail
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?"NameAlreadyExists",?"NoSuchPerson",?\],.*"method_class":"UPDATE"

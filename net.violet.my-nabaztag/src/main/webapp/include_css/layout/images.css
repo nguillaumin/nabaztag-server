@@ -1,0 +1,49 @@
+/* CSS Document */
+/* LAYOUT ***********************************************/
+
+
+#mainBigMenu span{display:none;}
+#mainBigMenu a{display:block; cursor:pointer;}
+
+a.LplayIcone span {display:none;}
+a.LplayIcone, a.LplayIcone:hover { display:block; background:none; width:16px; height:16px; background: url(../../include_img/icones/LplayIcone.gif) no-repeat; }
+
+a.LdeleteIcone span {display:none;}
+a.LdeleteIcone { display:block; width:16px; height:16px; background: url(../../include_img/icones/LdelIcone.gif) no-repeat; }
+
+
+
+/* TERRIER ***********************************************/
+.maMusique #liste_mp3 .edit span{ display:none;}
+.maMusique #liste_mp3 .edit a{ display:block;  margin-right:5px;}
+
+.maMusique #liste_mp3 .efface span{ display:none;}
+.maMusique #liste_mp3 .efface a{ display:block; width:16px; height:16px; background: url(../../include_img/terrier/supprim_mp3.gif) no-repeat;}
+
+
+.href-big-button { text-decoration:none; float:left;display:block; white-space:nowrap; font-size:13px; color:#B8B2D4; margin:5px 0;  background: url(../../include_img/buttons-ico/bt-left.gif) no-repeat; _background-position:0 1px;}
+.href-big-button:hover {color:white;}
+.href-big-button strong {display:block; line-height:31px; margin-left:10px; padding-right:10px; background: url(../../include_img/buttons-ico/bt-right.gif) no-repeat right; _background-position:right 1px; }
+
+.title-big {float:left;display:block; white-space:nowrap; font-size:13px; color:#919F01; margin:5px 0;  background: url(../../include_img/titles-ico/ti-left.gif) no-repeat; _background-position:0 1px;}
+.title-big strong {display:block; line-height:31px; margin-left:10px; padding-left:5px; padding-right:10px; background: url(../../include_img/titles-ico/ti-right.gif) no-repeat right; _background-position:right 5px; color:#555;}
+
+
+.bbAnnuaire {background-image: url(../../include_img/buttons-ico/bt-annu-left.gif); padding-left:31px;}
+.bbAddFriend {background-image: url(../../include_img/buttons-ico/bt-addfriend-left.gif); padding-left:13px;}
+
+.ttMyFriend {background-image: url(../../include_img/titles-ico/ti-myfriend-left.gif); padding-left:14px;}
+
+.toggleMode-open {background: url(../../include_img/layout/blockClose.gif);}
+.toggleMode-close {background: url(../../include_img/layout/blockOpen.gif);}
+
+h1.icoTitle_Home {background:url(../../include_img/icones_title/ico_terrier.png) left no-repeat; height:28px; margin-left:15px;  }
+h1.icoTitle_Tools {background:url(../../include_img/icones_title/ico_tools.png) left 2px no-repeat; height:28px; margin-left:19px; }
+h1.icoTitle_Terrier {background:url(../../include_img/icones_title/ico_terrier.png) left no-repeat; height:28px; margin-left:15px; }
+h1.icoTitle_Messages {background:url(../../include_img/icones_title/ico_messages.png) left -1px no-repeat; height:35px; margin-left:7px;}
+h1.icoTitle_Nablife {background:url(../../include_img/icones_title/ico_nablife.png) left no-repeat; height:28px; margin-left:10px;}
+
+
+
+.new-sticker span { background: url(../../include_img/layout/new-cadre.png) no-repeat; width:50px; height:31px; display:block; text-indent:-9000px; position:absolute; left:3px; top:4px; }
+* html .new-sticker span {background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../include_img/layout/new-cadre.png', sizingMethod='crop'); }

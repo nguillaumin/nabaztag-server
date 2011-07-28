@@ -1,0 +1,21 @@
+application=webui
+
+[daylife]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_daylife/title</string></id><hw_type><string>violet.nabaztag.tag</string></hw_type></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>
+
+
+[create_rssfull]
+url=subscriptions/create
+post_data=<map><application_id><string>GROUP_0</string></application_id><object_id><string>10a7aO90ddb8a0</string></object_id><settings><list><item><map><value><string>Langue4</string></value><key><string>rss_tts_language</string></key></map></item><item><map><value><string>3</string></value><key><string>rss_nb_news</string></key></map></item></list></settings><scheduling><list><item><map><wednesday><map><time_h>1</time_h><time_m>1</time_m></map></wednesday><type><string>Daily</string></type></map></item></list></scheduling></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>
+
+
+[create_rss.a]
+url=subscriptions/create
+post_data=<map><application_id><string>416Aded505ee</string></application_id><object_id><string>10a7aO90ddb8a0</string></object_id><settings><list><item><map><value><string>Langue4</string></value><key><string>rss_tts_language</string></key></map></item><item><map><value><string>3</string></value><key><string>rss_nb_news</string></key></map></item></list></settings><scheduling><list><item><map><wednesday><map><time_h>1</time_h><time_m>1</time_m></map></wednesday><type><string>Daily</string></type></map></item></list></scheduling></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>
+
+
+

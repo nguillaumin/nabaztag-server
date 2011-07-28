@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.libraries.delete
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?"NoSuchItem",?\],.*"method_class":"DELETE"

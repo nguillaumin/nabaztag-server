@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.libraries.setProfile
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?"NoSuchCategory",?"NoSuchItem",?\],.*"method_class":"UPDATE"

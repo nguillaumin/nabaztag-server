@@ -1,0 +1,6 @@
+application=webui
+
+[get]
+url=continents/getContinents
+content_type=text/yaml
+regex=- Africa

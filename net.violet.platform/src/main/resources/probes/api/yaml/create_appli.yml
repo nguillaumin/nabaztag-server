@@ -1,0 +1,19 @@
+--- 
+shortcut: !!str NULL
+title: titre_probes
+instructions: LOC_srv_podcast/how_to
+optimized_for: &id1
+    - violet.nabaztag.tagtag
+    - violet.rfid.ztamp
+    - violet.rfid.nanoztag
+    - violet.rfid.other
+desc: LOC_srv_podcast/aquariano_description
+categ: LOC_srv_category_lifestyle/title
+type: podcast
+name: net.violet.podcast.test_probes1
+supported_hardware: *id1
+url: 
+languages: 
+  - pt
+visible: !!str true
+---

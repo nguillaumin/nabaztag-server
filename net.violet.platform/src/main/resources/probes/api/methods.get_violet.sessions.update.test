@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.sessions.update
+content_type=text/json
+regex="errors":\["InvalidParameter",?"InvalidSession",?\],.*"method_class":"UPDATE"

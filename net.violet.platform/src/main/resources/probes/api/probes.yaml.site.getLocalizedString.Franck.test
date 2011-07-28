@@ -1,0 +1,6 @@
+application=webui
+
+url=site/getLocalizedString/fr
+content_type=text/yaml
+post_data=key: !!str srv_rss/how_to
+regex=AFGHANISTAN.Kaboul

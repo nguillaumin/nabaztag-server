@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.continents.getContinentCountries
+content_type=text/json
+regex="errors":\["InvalidParameter",?"NoSuchContinent",?\],.*"method_class":"GET"

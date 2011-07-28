@@ -1,0 +1,13 @@
+application=webui
+
+[Nabaztag:tag]
+url=objects/getInfo
+content_type=text/yaml
+post_data=@yaml/objects.yml
+regex= name: MataHariProbes
+
+[ztamp]
+url=objects/getInfo
+content_type=text/yaml
+post_data=@yaml/objects.ztamp.yml
+regex= hw_type: violet.rfid.ztamp

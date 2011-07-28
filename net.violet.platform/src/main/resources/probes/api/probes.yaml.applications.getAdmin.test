@@ -1,0 +1,7 @@
+application=webui
+
+[podcast]
+url=applications/getAdmin
+content_type=text/yaml
+post_data=@yaml/a_podcast_id.yml
+regex=name: net.violet.podcast

@@ -1,0 +1,7 @@
+application=webui
+
+[clock]
+url=applications/getProfile
+content_type=text/yaml
+post_data=@yaml/clock_id.yml
+regex=title: LOC_srv_clock/title

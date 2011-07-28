@@ -1,0 +1,3 @@
+application=webui
+url=applications/getTagCloudForLang/fr
+regex=<string>JavaScript</string>

@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.applications.create
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?"NameAlreadyExists",?"NoSuchCategory",?"NoSuchClass",?"NoSuchFile",?"NoSuchObjectType",?\],.*"method_class":"CREATE"

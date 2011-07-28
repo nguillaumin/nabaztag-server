@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/hYo66fTVxz -->
+	<name>"net.violet.js.colorigomixte"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"kids"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>false</removable>
+	<rank>300</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"ColoriGOMixte"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["ColoriGO pour tous"]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["ColoriGO vous permet d'imprimer des coloriages à GoGo en posant simplement un lapin sur le mir:ror."]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+
+		</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<ol><li>Allumez votre ordinateur <i>et</i> votre imprimante.</li><li>Posez un des lapin bleu vert ou orange sur le mir:ror connecté à votre ordinateur.</li><li>Un nouveau coloriage est imprimé à chaque fois !</li></ol>"]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA[""]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<dico><list>
+	</list></dico>
+</map></resources>
+
+<settings><list>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>1</minimum>
+		<maximum>1</maximum>
+    <supports_target>false</supports_target>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

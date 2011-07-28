@@ -1,0 +1,8 @@
+#.nabaztag.com
+DOMAIN		= .nabaztag.com
+
+#r.nabaztag.com
+STREAM_SERVER	= broad.violet.net
+
+#temporaire
+RED5_STREAM_SERVER		= vosges.violet.net

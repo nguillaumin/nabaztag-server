@@ -1,0 +1,6 @@
+application=webui
+
+url=people/getInfo
+content_type=text/yaml
+post_data=@yaml/people.yml
+regex=PersonInformation

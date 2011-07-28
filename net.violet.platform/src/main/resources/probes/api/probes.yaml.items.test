@@ -1,0 +1,79 @@
+application=webui
+
+[put]
+url=items/put
+content_type=text/yaml
+post_data=@yaml/items.put.yml
+regex=--- !!map:ItemInformation
+
+[count]
+url=items/count
+content_type=text/yaml
+post_data=@yaml/items.count.yml
+regex=[0-9]+
+
+[get]
+url=items/get
+content_type=text/yaml
+post_data=@yaml/items.get.yml
+regex=id: (.*?)\s
+
+[setProfile]
+url=items/setProfile/GROUP_1
+content_type=text/yaml
+post_data=@yaml/items.setprofile.yml
+regex=~
+
+[get]
+url=items/get
+content_type=text/yaml
+post_data=@yaml/items.get.yml
+regex=id: (.*?)\s
+
+[getProfile]
+url=items/getProfile/GROUP_1
+content_type=text/yaml
+post_data=@yaml/items.getprofile.yml
+regex=--- !!map:ItemProfile
+
+[getRecent]
+url=items/getRecent
+content_type=text/yaml
+post_data=@yaml/items.recent.yml
+regex=(- !!map:ItemInformation)
+
+[get]
+url=items/get
+content_type=text/yaml
+post_data=@yaml/items.get.yml
+regex=id: (.*?)\s
+
+[delete]
+url=items/delete/GROUP_1
+content_type=text/yaml
+post_data=@yaml/items.delete.yml
+regex=~
+
+[getForSignature]
+url=items/getForSignature
+content_type=text/yaml
+post_data=@yaml/items.recent.yml
+regex=(- !!map:ItemInformation)
+
+[getCategories]
+url=items/getCategories
+content_type=text/yaml
+post_data=@yaml/items.categories.yml
+regex=(- nabshare_cat)
+
+[getByCategory]
+url=items/getByCategory
+content_type=text/yaml
+post_data=@yaml/items.bycategory.yml
+regex=(- !!map:ItemInformation)
+
+[getShuffle]
+url=items/getShuffle
+content_type=text/yaml
+post_data=@yaml/items.shuffle.yml
+regex=--- !!map:ItemInformation

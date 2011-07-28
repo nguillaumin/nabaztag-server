@@ -1,0 +1,12 @@
+--- 
+object_id: 10b0eO4150540f
+settings: 
+  - &id1 value: 1,2
+    &id2 key: types
+  - *id1: fr-FR
+    *id2: languages
+scheduling: 
+  - type: Frequency
+    frequency: Hourly
+    last_time: !!str 2008-10-27 16:33:20
+application_id: 388A6170144f

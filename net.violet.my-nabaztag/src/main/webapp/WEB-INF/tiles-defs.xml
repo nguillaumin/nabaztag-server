@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions> 
+
+  <definition name="serviceLayout" path="/include_jsp/myServices/templates/srvMainLayout.jsp">
+  	<put name="description" value="/include_jsp/myServices/templates/srvDesc.jsp"/>
+    <put name="setUpSrv" value=""/>
+    <put name="extraSrv" value=""/>
+    <put name="rabbitTalk" value=""/>
+    <put name="manual"   value="/include_jsp/myServices/templates/srvManual.jsp"/>
+    <put name="links" value="/include_jsp/myServices/templates/srvLinks.jsp" />
+  </definition>
+
+  <definition name="preferences" path="/include_jsp/myTerrier/terrierPreferences.jsp">
+  	<put name="account-bloc" value="/action/myTerrierCompte.do"/>
+    <put name="display-bloc" value="/action/myTerrierAffichage.do"/>
+    <put name="alertes-bloc" value="/action/myTerrierAlerte.do"/>
+    <put name="prive-bloc" value="/action/myTerrierPrive.do"/>
+    <put name="api-bloc" value="/action/myToolsApi.do" />
+    <put name="couche-bloc" value="/action/myTerrierCouche.do" />
+  </definition>
+  
+  <definition name="friends" path="/include_jsp/myTerrier/terrierFriends.jsp">
+  	<put name="friends-bloc" value="/action/myTerrierFriendsList.do"/>
+  	<put name="black-bloc" value="/action/myTerrierBlackList.do"/>
+  </definition>
+  
+  <definition name="profil" path="/include_jsp/myTerrier/terrierProfil.jsp">
+  	<put name="profil-bloc" value="/action/myTerrierMyself.do" />
+  	<put name="signature-bloc" value="/action/myTerrierSignature.do" />
+  </definition>
+
+  <definition name="serviceMeteoFree" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvMeteoFreeConfig.do"/>
+    <put name="extraSrv" value=""/>
+    <put name="rabbitTalk" value="/include_jsp/mySrv/inc_meteo_light.jsp"/>
+  </definition>
+  
+  <definition name="serviceHumeur" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvHumeurConfig.do"/>
+    <put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceConseil" extends="serviceLayout">
+  	<put name="links" value="" />
+  </definition>
+  
+  <definition name="serviceFacebook" extends="serviceLayout">
+  </definition>
+
+  <definition name="serviceTaichi" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvTaichiConfig.do"/>
+    <put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceBilan" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvBilanConfig.do"/>
+    <put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceTraffic" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvTrafficConfig.do"/>
+    <put name="extraSrv" value=""/>
+    <put name="rabbitTalk" value="/include_jsp/mySrv/inc_trafic_light.jsp"/>	
+  </definition>
+  
+  <definition name="serviceAir" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvAirConfig.do"/>
+    <put name="extraSrv" value=""/>
+    <put name="rabbitTalk" value="/include_jsp/mySrv/inc_air_light.jsp"/>
+  </definition>
+  
+  <definition name="serviceBourseFree" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvBourseFreeConfig.do"/>
+    <put name="extraSrv" value=""/>
+    <put name="rabbitTalk" value="/include_jsp/mySrv/inc_bourse_light.jsp"/>
+  </definition>
+  
+  <definition name="serviceBourseFull" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvBourseFullConfig.do"/>
+    <put name="extraSrv" value=""/>
+    <put name="rabbitTalk" value="/include_jsp/mySrv/inc_bourse_light.jsp"/>
+  </definition>
+  
+  <definition name="serviceReveilFree" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvReveilFreeConfig.do"/>
+    <put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceReveilFull" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvReveilFullConfig.do"/>
+    <put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceClock" extends="serviceLayout">
+	<put name="setUpSrv" value="/action/srvClockConfig.do"/>
+	<put name="extraSrv"  value="/action/srvClockUpload.do"/>
+  </definition>
+  
+  <definition name="serviceDialog" extends="serviceLayout">
+    <put name="setUpSrv" value="/action/srvDialogConfig.do"/>
+    <put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceWebRadioFree" extends="serviceLayout">
+	<put name="setUpSrv"  value="/action/srvWebRadioFreePlayer.do"/>
+	<put name="extraSrv" value="/action/srvWebRadioFreeConfig.do"/>
+  </definition>
+  
+  <definition name="serviceRssFree" extends="serviceLayout">
+	<put name="setUpSrv"  value="/action/srvRssFreeConfig.do"/>
+  </definition>
+
+  <definition name="serviceRssFull" extends="serviceLayout">
+	<put name="setUpSrv"  value="/action/srvRssFullConfig.do"/>
+  </definition>
+  
+  <definition name="servicePodcastFree" extends="serviceLayout">
+	<put name="setUpSrv"  value="/action/srvPodcastFreeConfig.do"/>
+  </definition>
+  
+  <definition name="servicePodcastFull" extends="serviceLayout">
+	<put name="setUpSrv"  value="/action/srvPodcastFullConfig.do"/>
+  </definition>
+  
+  <definition name="serviceTwitter" extends="serviceLayout">
+  	<put name="setUpSrv" value="/action/srvTwitterConfig.do"/>
+  	<put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceFlickr" extends="serviceLayout">
+  	<put name="setUpSrv" value="/action/srvFlickrConfig.do"/>
+  	<put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceGmail" extends="serviceLayout">
+  	<put name="setUpSrv" value="/action/srvGmailConfig.do"/>
+  	<put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="servicePlayer" extends="serviceLayout">
+  	<put name="setUpSrv" value="/action/srvPlayerConfig.do"/>
+  	<put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceNathan" extends="serviceLayout">
+  	<put name="setUpSrv" value="/action/srvNathanHome.do" />
+  	<put name="extraSrv" value=""/>
+  	 <put name="manual"   value=""/>
+  </definition>
+  
+  <definition name="serviceResultSearch" extends="serviceLayout">
+  	<put name="description" value="/include_jsp/myServices/templates/srvResult.jsp"/>
+    <put name="setUpSrv" value=""/>
+    <put name="extraSrv" value=""/>
+  </definition>
+  
+  <definition name="serviceShortcutState" extends="serviceLayout">
+  	<put name="description" value="/include_jsp/myServices/templates/srvShortcutState.jsp"/>
+    <put name="setUpSrv" value=""/>
+    <put name="extraSrv" value=""/>
+  </definition>
+  
+</tiles-definitions>

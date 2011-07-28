@@ -1,0 +1,15 @@
+﻿Votre message :
+
+MESSAGE
+
+envoyé à FIRST_NAME LAST_NAME
+via son Objet OBJ_RECIPIENT
+a été joué NB_TIMES fois
+
+
+
+++ QUELQUES TRUCS QU'IL EST PEUT ETRE BON DE SAVOIR ++
+- Il existe plein de manières différentes d'envoyer des messages. Vous pouvez par exemple envoyer des messages avec votre propre voix, envoyer des chansons en MP3 ou des cartes postales sonores... Avec Violet vous inventez des formes inédites de communication.
+- Vous ne souhaitez plus recevoir de notifications quand vos messages ont été joués ? Rendez-vous dans les préférences de votre compte sur le site.
+
+-- Violet. Let All Things Be Connected --

@@ -1,0 +1,9 @@
+--- 
+object_id: 10b0eO4150540f
+settings: []
+scheduling: 
+  - time_h: 21
+    time_m: 35
+    type: Weekly
+    weekday: Friday
+application_id: 380A6150448f

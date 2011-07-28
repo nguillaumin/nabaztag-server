@@ -1,0 +1,6 @@
+application=webui
+
+[get]
+url=anim/get
+content_type=text/yaml
+regex=- LOC_anim/

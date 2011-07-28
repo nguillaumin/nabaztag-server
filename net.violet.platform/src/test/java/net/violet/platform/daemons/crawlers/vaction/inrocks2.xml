@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" >
+  <channel>
+    <title>LesInrocks.com - Podcast</title>
+    <link>http://www.lesinrocks.com</link>
+    <description>Retrouvez toute l'actualité musicale pop, rock, hip hop, electro par Les Inrocks, chaque semaine</description>
+    <language>fr</language>
+    <copyright>LesInrocks.com</copyright>
+    <lastBuildDate>Tue, 13 May 2008 10:00:01 +0200</lastBuildDate>
+    <generator>LesInrocks.com</generator>
+    <image>
+      <url>http://www.lesinrocks.com/fileadmin/picts/new-inrockscom300.jpg</url>
+      <title>LesInrocks.com - Podcast</title>
+      <link>http://www.lesinrocks.com</link>
+    </image>
+    <itunes:author>LesInrocks.com</itunes:author>
+    <itunes:category text="International" />
+    <itunes:category text="French" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:image href="http://www.lesinrocks.com/fileadmin/picts/new-inrockscom300.jpg" />
+    <itunes:owner>
+      <itunes:name>LesInrocks.com</itunes:name>
+    </itunes:owner>
+    <itunes:subtitle>Retrouvez toute l'actualité musicale pop, rock, hip hop, electro par Les Inrocks, chaque semaine</itunes:subtitle>
+    <itunes:summary>Retrouvez toute l'actualité musicale pop, rock, hip hop, electro par Les Inrocks, chaque semaine</itunes:summary>
+    <item>
+      <title>Les Inrocks Podcast vol. 81 </title>
+      <link>http://www.lesinrocks.com</link>
+      <description>Site Internet : http://www.lesinrocks.com</description>
+      <author>LesInrocks.com</author>
+      <category>International French</category>
+      <enclosure url="http://podcasts.lesinrocks.com/inrocks/podcast/jd/JD_THE_DJ-Podcast_81.mp3" type="audio/mpeg" length="0" />
+      <pubDate>Mon, 12 May 2008 02:00:00 +0200</pubDate>
+      <itunes:author>LesInrocks.com</itunes:author>
+      <itunes:category text="International" />
+      <itunes:category text="French" />
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:keywords>Les Inrocks Podcast vol. 81</itunes:keywords>
+      <description>Avec Flight Of The Conchords &lt;i&gt;Foux Du Fafa&lt;/i&gt;, CSS &lt;i&gt;Rat Is Dead (Rage)&lt;/i&gt;, Neils Children &lt;i&gt;Reflective/Surface&lt;/i&gt;, Apache Beat &lt;i&gt;Tropics&lt;/i&gt;, The Notwist &lt;i&gt;Good Lies&lt;/i&gt;. </description>
+      <itunes:summary>Avec Flight Of The Conchords &lt;i&gt;Foux Du Fafa&lt;/i&gt;, CSS &lt;i&gt;Rat Is Dead (Rage)&lt;/i&gt;, Neils Children &lt;i&gt;Reflective/Surface&lt;/i&gt;, Apache Beat &lt;i&gt;Tropics&lt;/i&gt;, The Notwist &lt;i&gt;Good Lies&lt;/i&gt;. </itunes:summary>
+      <itunes:image href="http://www.lesinrocks.com/fileadmin/picts/new-inrockscom300.jpg" />
+      <itunes:subtitle>podcast du Mon, 12 May 2008 02:00:00 +0200)</itunes:subtitle>
+    </item>
+    <item>
+      <title>Les Inrocks Podcast vol. 80 : invite Midnight Juggernauts </title>
+      <link>http://www.lesinrocks.com</link>
+      <description>Site Internet : http://www.lesinrocks.com</description>
+      <author>LesInrocks.com</author>
+      <category>International French</category>
+      <enclosure url="http://podcasts.lesinrocks.com/inrocks/podcast/jd/podcastMJ.mp3" type="audio/mpeg" length="0" />
+      <pubDate>Mon, 05 May 2008 02:00:00 +0200</pubDate>
+      <itunes:author>LesInrocks.com</itunes:author>
+      <itunes:category text="International" />
+      <itunes:category text="French" />
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:keywords>Les Inrocks Podcast vol. 80 : invite Midnight Juggernauts</itunes:keywords>
+      <description>Les Midnight Juggernauts s'emparent du podcast des Inrocks, avec
+leur tube &lt;i&gt;Shadows&lt;/i&gt;, Van Halen &lt;i&gt;Jump&lt;/i&gt;, Slayer &lt;i&gt;Seasons in the
+Abyss&lt;/i&gt;, Ride &lt;i&gt;Dreams Burn Down&lt;/i&gt;, Holy Ghost &lt;i&gt;Hold On&lt;/i&gt;.</description>
+      <itunes:summary>Les Midnight Juggernauts s'emparent du podcast des Inrocks, avec
+leur tube &lt;i&gt;Shadows&lt;/i&gt;, Van Halen &lt;i&gt;Jump&lt;/i&gt;, Slayer &lt;i&gt;Seasons in the
+Abyss&lt;/i&gt;, Ride &lt;i&gt;Dreams Burn Down&lt;/i&gt;, Holy Ghost &lt;i&gt;Hold On&lt;/i&gt;.</itunes:summary>
+      <itunes:image href="http://www.lesinrocks.com/fileadmin/picts/new-inrockscom300.jpg" />
+      <itunes:subtitle>podcast du Mon, 05 May 2008 02:00:00 +0200)</itunes:subtitle>
+    </item>
+    <item>
+      <title>Les Inrocks Podcast vol. 79 </title>
+      <link>http://www.lesinrocks.com</link>
+      <description>Site Internet : http://www.lesinrocks.com</description>
+      <author>LesInrocks.com</author>
+      <category>International French</category>
+      <enclosure url="http://podcasts.lesinrocks.com/inrocks/podcast/jd/JD_THE_DJ-Podcast_79.mp3" type="audio/mpeg" length="0" />
+      <pubDate>Mon, 28 Apr 2008 02:00:00 +0200</pubDate>
+      <itunes:author>LesInrocks.com</itunes:author>
+      <itunes:category text="International" />
+      <itunes:category text="French" />
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:keywords>Les Inrocks Podcast vol. 79</itunes:keywords>
+      <description>Avec The La’s &lt;i&gt;There She Goes (John Leckie)&lt;/i&gt;, Poor Boy &lt;i&gt;Untitled Son&lt;/i&gt;, The Cool Kids &lt;i&gt;Black Mags&lt;/i&gt;, Portishead &lt;i&gt;The Rip&lt;/i&gt;, Leila &lt;i&gt;Why Should I? (feat Terry Hall &amp; Martina Topley-Bird)&lt;/i&gt;.</description>
+      <itunes:summary>Avec The La’s &lt;i&gt;There She Goes (John Leckie)&lt;/i&gt;, Poor Boy &lt;i&gt;Untitled Son&lt;/i&gt;, The Cool Kids &lt;i&gt;Black Mags&lt;/i&gt;, Portishead &lt;i&gt;The Rip&lt;/i&gt;, Leila &lt;i&gt;Why Should I? (feat Terry Hall &amp; Martina Topley-Bird)&lt;/i&gt;.</itunes:summary>
+      <itunes:image href="http://www.lesinrocks.com/fileadmin/picts/new-inrockscom300.jpg" />
+      <itunes:subtitle>podcast du Mon, 28 Apr 2008 02:00:00 +0200)</itunes:subtitle>
+    </item>
+  </channel>
+</rss>

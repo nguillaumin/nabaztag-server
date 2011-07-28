@@ -1,0 +1,38 @@
+<map>
+<scheduling_masks>
+	<list>
+		<item>
+			<map>
+			<hw_type>"violet.nabaztag"</hw_type>
+			<scheduling_type>"Daily"</scheduling_type>
+			<maximum>2</maximum>
+			<minimum>0</minimum>
+			</map>
+		</item>
+		<item>
+			<map>
+			<hw_type>"violet.nabaztag.tagtag"</hw_type>
+			<scheduling_type>"DailyWithDuration"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>0</minimum>
+			</map>
+		</item>
+		<item>
+			<map>
+			<hw_type>"violet.nabaztag"</hw_type>
+			<scheduling_type>"Ambiant"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>0</minimum>
+			</map>
+		</item>
+		<item>
+			<map>
+			<hw_type>"violet.rfid.book"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>1</minimum>
+			</map>
+		</item>
+	</list>
+</scheduling_masks>
+</map>

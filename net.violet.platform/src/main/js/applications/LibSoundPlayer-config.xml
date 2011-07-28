@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<name>"net.violet.js.libsoundplayer"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"LibSoundPlayer"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr>"Lib Sound Player"</fr>
+	</map></title>
+
+	<description><map>
+		<fr>"Pour usage interne uniquement."</fr>
+	</map></description>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+  </map></item>
+	<!-- application can be installed on ztamp removal -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+  </map></item>
+</list></scheduling_masks>
+
+</map>

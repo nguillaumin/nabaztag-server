@@ -1,0 +1,5 @@
+application=webui
+
+url=storecities/getStoreCities/FR
+content_type=text/yaml
+regex=StoreCityInformation

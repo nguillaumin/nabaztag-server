@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/E07aysDH35 -->
+	<name>"net.violet.js.ztampcounter"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"daylife"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>15</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"ZtampCounter"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Compter et réagir"]]></fr>
+		<en><![CDATA["Count and react"]]></en>
+		<it><![CDATA["Contare e ragire "]]></it>
+		<es><![CDATA["Contar y actuar"]]></es>
+		<de><![CDATA["Zählen und reagieren"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["回数のカウント"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["Votre Ztamp compte le nombre de fois qu'il est détecté. Quand vous avez atteint le nombre que vous avez défini, il vous prévient.<br/>
+Exemple : Combien de fois avez-vous pris des aspirines depuis ce matin ? Quand vous dépassez le 4ème café de la journée, un message vous rappelle à l'ordre... "]]></fr>
+		<en><![CDATA["Your Ztamp counts the number of times it has been detected. When you reach a given number, it can warn you. <br/>
+Example: How many aspirins have you taken since this morning? After your 4th coffee of the day, a message tells you to go easy on the espresso..."]]></en>
+		<it><![CDATA["<p>Il tuo Ztamp sa contare tutte le volte che viene riconosciuto. Quando raggiungi un tetto prestabilito, ti saprà avvertire. <br/>Esempio : Quante volte hai preso l'aspirina da stamattina? Quando superi la quarta tazzina di caffé nella stessa giornata, riceverai un messaggio di richiamo all'ordine...</p>"]]></it>
+		<es><![CDATA["Tu Ztamp cuenta las veces que ha sido detectado. Cuando hayas alcanzado el número que has definido, te previene. <br/>
+Ejemplo: ¿Cuántas aspirinas has tomado desde esta mañana? Cuando durante el día hayas superado la 4ª taza de café, un mensaje te lo indica..."]]></es>
+		<de><![CDATA["Ihr Ztamp zählt, wie oft er erkannt wird. Bei Erreichen des festgelegten Wertes benachrichtigt er sie. <br/>
+Beispiel: Wie oft haben Sie seit heute Morgen schon Aspirin genommen? Nach dem vierten Kaffee des Tages werden Sie zur Ordnung gerufen..."]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ズタンプが使われた回数を数え、ある回数に達すると警告を発することができます。<br/>
+		たとえば、頭痛薬を飲むのが何回目なのか教えてくれたり、今日４回目のコーヒーを飲む時に、もう少し控えた方が……と伝えることも。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["Fixez le chiffre à partir duquel vous voulez commencer à compter. Habituellement 0.<br/>
+Fixez l'incrément. Combien le Ztamp doit-il ajouter au compteur à chaque fois qu'il est détecté. Habituellement 1.<br/>
+Précisez la valeur d'alerte du compteur, c'est le nombre de fois à partir duquel le Ztamp devra réagir en vous jouant un message spécifique.<br/>
+Précisez quand le compteur devra revenir à sa valeur initiale. A la fin de chaque jour, chaque semaine ? Quand la valeur d'alerte est atteinte ?<br/>
+Entrez le message qui sera dit quand la valeur d'alerte est atteinte ou dépassée. Vous pouvez utiliser la variable ${currentCount} dans votre texte pour préciser la valeur du conteur. ex « tu as bu ${currentCount} cafés aujourd'hui. Tu devrais arrêter. » pour obtenir « tu as bu 7 cafés aujourd'hui. Tu devrais arrêter. »<br/>
+Entrez le message qui sera dit à chaque valeur du compteur : ex : « 3 Cafés ». Par défaut le compteur dit seulement le nombre auquel il est parvenu.<br/>
+Les variables insérables dans le corps des messages sont :<br/>
+<ul>
+<li>${lastTime.hours}, ${lastTime.minutes}, ${lastTime.seconds} : L'heure à laquelle le ztamp a été vu la dernière fois.</li>
+<li>${currently.hours}, ${currently.minutes}, ${currently.seconds} : Heure actuelle.</li>
+<li>${object.name} : nom de l'objet ayant lu le Ztamp.</li>
+<li>${object.owner.firstname} : prénom du propriétaire de l'objet.</li>
+<li>${object.owner.lastname} : nom du propriétaire de l'objet.</li>
+<li>${object.owner.city} : ville du propriétaire de l'objet.</li>
+<li>${ztamp.name} : nom du Ztamp.</li>
+<li>${ztamp.owner.firstname} : prénom du propriétaire du Ztamp.</li>
+<li>${ztamp.owner.lastname} : nom du propriétaire du Ztamp.</li>
+<li>${ztamp.owner.city} : ville du propriétaire du Ztamp.</li>
+</ul>
+Fonctionne avec Nabaztag:tag et Mir:ror."]]></fr>
+
+		<en><![CDATA["Set the number from which you want to start counting (usually 0).<br/>
+Set the increment. How much should the Ztamp add to his counter every time it is detected (usually 1).<br/>
+Specify the alert value for the counter: this is the number of times after which the Ztamp should react by playing a specific message.<br/>
+Specify when the counter should be reset to its initial value. At the end of each day, every week? When the alert value is reached?<br/>
+Enter the message to be spoken when the alert value is reached or exceeded. You can include the $ {currentCount} variable in your text to specify the counter's value. For example: with "You have had ${currentCount} coffees today. You should stop now!" you obtain "You have had 7 coffees today. You should stop now!"<br/>
+Enter the message that should play for every counter value: e.g.: “3 coffees”. By default, the counter just says the number it has reached.<br/>
+Available variables in the body of messages are :<br/>
+<ul>
+<li>${lastTime.hours}, ${lastTime.minutes}, ${lastTime.seconds} : Time the Ztamp was last seen</li>
+<li>${currently.hours}, ${currently.minutes}, ${currently.seconds} : Current time</li>
+<li>${object.name}: Name of the object that has read the Ztamp.</li>
+<li>${object.owner.firstname}: First name of the object's owner.</li>
+<li>${object.owner.lastname}: Last name of the object's owner.</li>
+<li>${object.owner.city}: City where the object's owner lives.</li>
+<li>${ztamp.name}: name of the detected Ztamp.</li>
+<li>${ztamp.owner.lastname}: Last name of the Ztamp's owner.</li>
+<li>${ztamp.owner.firstname}: First name of the Ztamp's owner.</li>
+<li>${ztamp.owner.city}: City where the Ztamp's owner lives.</li>
+</ul>
+Note: variables ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} insert digits only.<br/>
+Works with Nabaztag:tag and Mir:ror."]]></en>
+
+		<it><![CDATA["<p>Stabilisci la cifra dalla quale desideri iniziare il conteggio, solitamente 0. <br/>Stabilisci l'incremento. Quanto lo Ztamp deve aggiungere ogni volta che detetta, solitamente 1. <br/>Precisa il valore d'allarme del contatore, il numero di volte a partire del quale lo Ztamp deve reagire mandandoti un messaggio preciso e prestabilito.<br/>Precisa quando il contatore dovrà azzerarsi. Ogni giorno? Ogni settimana? Quando raggiunge un certo valore? <br/>Scrivi il messaggio che desideri venga letto quando i valori prestabiliti vengono raggiunti o superati. Puoi utilizzare la variabile ${currentCount} all'interno del tuo testo per precisare il valore del contatore, ad esempio «Oggi hai bevuto ${currentCount} caffé. Dovresti smetterla. » per ottenere « Oggi hai bevuto 7 caffé. Dovresti smetterla. » <br/>Inserisci il messaggio che ti verrà detto ad ogni incremento del contatore: ex : « 3 caffé». Il contatore dice solo il numero al quale è arrivato a contare. <br/>Funziona con Nabaztag:tag e Mir:ror.</p>
+"]]></it>
+
+		<es><![CDATA["Fija la cifra a partir de la cual quieres comenzar a contar. Habitualmente 0.<br/>
+Fija el incremento. Cuánto debe añadir el Ztamp al contador cada vez que se le detecta. Habitualmente 1.<br/>
+Define el valor de alerta del contador, es decir, el número de veces que una vez alcanzado, el Ztamp tendrá que reaccionar enviando un mensaje específico.<br/>
+Define cuando el contador deberá volver a su valor inicial. ¿Al fin del día, una vez por semana? ¿Cuándo se haya llegado al valor de alerta<br/>
+Entra el mensaje que se deberá emitir cuando se haya alcanzado o superado el valor de alerta. Puedes utilizar en tu texto la variable $ {currentCount} para definir el valor del contador  , por ejemplo,  « hoy has bebido ${currentCount} cafés. Deberías dejar de tomar. » para obtener « hoy has bebido 7 cafés. Deberías dejar de tomar. »<br/>
+Entra el  mensaje que se repetirá a cada valor del contador: por ejemplo: « 3 Cafés ». Por defecto, el contador repite únicamente el número que ha alcanzado.<br/>
+Si así lo deseas, puedes insertar variables en el texto.<br/>
+Estas variables son:<br/>
+<ul>
+<li>${lastTime.hours}, ${lastTime.minutes}, ${lastTime.seconds} : Hora de detección del Ztamp</li>
+<li>${currently.hours}, ${currently.minutes}, ${currently.seconds} : Hora</li>
+<li>${object.name} : nombre del objeto que leyó el Ztamp.</li>
+<li>${object.owner.firstname} : nombre del propietario del objeto</li>
+<li>${object.owner.lastname} : apellido del propietario del objeto</li>
+<li>${object.owner.city} : ciudad del propietario del objeto</li>
+<li>${ztamp.name} : nombre del Ztamp</li>
+<li>${ztamp.owner.lastname} : apellido del propietario del Ztamp</li>
+<li>${ztamp.owner.firstname} : nombre del propietario del Ztamp.</li>
+<li>${ztamp.owner.city} : ciudad del propietario del Ztamp</li>
+</ul>
+Note : las variables ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} sólo insertan la cifra. <br/>
+Funciona con Nabaztag:tag y Mir:ror."]]></es>
+
+		<de><![CDATA["Bestimmen Sie die Zahl, ab der gezählt werden soll. Normalerweise 0.<br/>
+Bestimmen Sie die Steigerung. Wieviel soll der Ztamp bei jeder Erkennung zum Zähler hinzuzählen? Normalerweise 1.<br/>
+Präzisieren Sie den Signalwert des Zählers, das heißt den Oberwert, ab dem der Ztamp reagiert und eine bestimme Nachricht abspielt.<br/>
+Präzisieren Sie, wann der Zähler auf seinen Ausgangswert zurückgesetzt werden soll. Am Ende des Tages, am Wochenanfang? Wenn der Signalwert erreicht ist?<br/>
+Geben Sie die Nachricht ein, die nach Erreichen oder Überschreiten des Signalwertes abgespielt werden soll. Sie können die Variable ${currentCount} in Ihren Text einfügen, damit der aktuelle Zahlenwert ermittelt wird. Bsp: « Du hast heute  ${currentCount} Kaffee getrunken. Hör lieber auf. » für « Du hast heute 7 Kaffee getrunken. Hör lieber auf. »<br/>
+Geben Sie die für jeden Zählerwert die abzuspielende Nachricht ein: Bsp : « 3 Kaffee ». Als Grundeinstellung gibt der Zähler die erreichte Anzahl<br/>
+Auf Wunsch können Sie Variablen in den Text einfügen. Sie werden beim Versenden automatisch aktualisiert.<br/>
+Folgende Variablen stehen zur Verfügung:
+<ul>
+<li> ${lastTime.hours}, ${lastTime.minutes}, ${lastTime.seconds} : Uhrzeit der Erkennung des Ztamp </li>
+<li> ${currently.hours}, ${currently.minutes}, ${currently.seconds} : Uhrzeit der Erkennung des Ztamp </li>
+<li> ${object.name} : Name des Objektes, das den Ztamp gelesen hat. </li>
+<li> ${object.owner.firstname} : Vorname des Objektbesitzers</li>
+<li> ${object.owner.lastname} : Name des Objektbesitzers</li>
+<li> ${object.owner.city} : Stadt des Objektbesitzers</li>
+<li> ${ztamp.name} : Name des Ztamps</li>
+<li> ${ztamp.owner.lastname} : Name des Ztamp-Besitzers</li>
+<li> ${ztamp.owner.firstname} : Vorname des Ztamp-Besitzers. </li>
+<li> ${ztamp.owner.city} : Stadt des Ztamp-Besitzers</li>
+</ul>
+Anmerkung: für die Variablen ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} wird nur die Zahl eingesetzt.<br/>
+Funktioniert mit Nabaztag:tag und Mir:ror."]]></de>
+
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>数え始める数字（初期値）を入力します。（０にすることが多いです）<br/>
+		ズタンプを使ったときに増やす数値の量を設定します。（通常は１ずつでしょう）<br/>
+		何回目にメッセージを発するか（上限値）設定します。<br/>
+		数値をいつ初期値に戻すのか（１日でリセットするのか上限値に達したらりせっとするのか）設定します。<br/>
+		上限値に達したら発せられるメッセージを設定します。メッセージの文章の中に変数 ${currentCount} を使用すると回数を読み上げることができます。<br/>
+		たとえば、「今日 ${currentCount} 杯目のコーヒーです。飲みすぎですよ」と設定したメッセージは「今日７杯目のコーヒーです。飲みすぎですよ」と読み上げられます。<br/>
+		変数を使用しないと毎回同じ数字が読み上げられますので注意してください。<br/>
+		以下の変数を使うことができます。<br/>
+		<ul>
+		<li>${lastTime.hours}、${lastTime.minutes}、${lastTime.seconds}： 最後にズタンプが使用された時間</li>
+		<li>${currently.hours}、${currently.minutes}、${currently.seconds}： 現在の時間</li>
+		<li>${object.name}： ズタンプを読み込んだアイテムの名前</li>
+		<li>${object.owner.firstname}： アイテムの登録者の名前（名）</li>
+		<li>${object.owner.lastname}： アイテムの登録者の名前（姓）</li>
+		<li>${object.owner.city}： アイテムの登録者の所在地</li>
+		<li>${ztamp.name}： ズタンプの名前</li>
+		<li>${ztamp.owner.lastname}： ズタンプの登録者の名前（姓）.</li>
+		<li>${ztamp.owner.firstname}： ズタンプの登録者の名前（名）</li>
+		<li>${ztamp.owner.city}：ズタンプの登録者の所在地</li>
+		</ul>
+		<br/>
+		時間の変数は十進数になります。<br/>
+		ナバズタグ：タグとミラーで利用できます。
+		</p>
+		"]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA[""]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+		<item><map>
+			<key>"title"</key>
+			<fr><![CDATA[""]]></fr>
+			<en><![CDATA[""]]></en>
+			<en><![CDATA[""]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></item>
+	</list></dico>
+
+	<files><list>
+		<!-- <entry name="media/audio/intro" fileName="intro.m3" /> -->
+	</list></files>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+	<item><map>
+		<key>"initialValue"</key>
+		<type>"InputLine"</type>
+		<datatype>"integer"</datatype>
+		<required>true</required>
+		<default_value>0</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Valeur initiale"]]></fr>
+			<en><![CDATA["Initial value"]]></en>
+			<it><![CDATA["Valore iniziale"]]></it>
+			<es><![CDATA["Valor inicial"]]></es>
+			<de><![CDATA["Ausgangswert"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["初期値"]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Valeur de départ du compteur"]]></fr>
+			<en><![CDATA["Initial value for the counter"]]></en>
+			<it><![CDATA["Valore d'inizio del contatore"]]></it>
+			<es><![CDATA["Valor inicial del contador"]]></es>
+			<de><![CDATA["Ausgangswert des Zählers"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["カウントの初期値"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"increment"</key>
+		<type>"InputLine"</type>
+		<datatype>"integer"</datatype>
+		<required>true</required>
+		<default_value>1</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Incrément"]]></fr>
+			<en><![CDATA["Increment"]]></en>
+			<it><![CDATA["Incremento"]]></it>
+			<es><![CDATA["Incremento"]]></es>
+			<de><![CDATA["Steigerung"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["増加値"]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Valeur dont est incrémentée le compteur à chaque reconnaissance du ztamp."]]></fr>
+			<en><![CDATA["Increment value for the counter."]]></en>
+			<it><![CDATA["Valore d'incremento ad ogni riconoscimento dello Ztamp."]]></it>
+			<es><![CDATA["Valor por el cual se incrementa el contador a cada reconocimiento del Ztamp."]]></es>
+			<de><![CDATA["Steigerungswert des Zählers bei jeder Erkennung des Ztamp."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["カウントの増加値"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"countLimit"</key>
+		<type>"InputLine"</type>
+		<datatype>"integer"</datatype>
+		<required>true</required>
+		<default_value>10</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Limite"]]></fr>
+			<en><![CDATA["Limit"]]></en>
+			<it><![CDATA["Limite"]]></it>
+			<es><![CDATA["Límite"]]></es>
+			<de><![CDATA["Höchstgrenze"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["上限値"]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Valeur à atteindre."]]></fr>
+			<en><![CDATA["Value to reach."]]></en>
+			<it><![CDATA["Valore da raggiungere"]]></it>
+			<es><![CDATA["Valor que hay que alcanzar"]]></es>
+			<de><![CDATA["Zielwert"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["上限値"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"resetOptions"</key>
+		<type>"RadioGroup"</type>
+		<required>true</required>
+		<default_value>"counter"</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Remettre à zéro le compteur quand"]]></fr>
+			<en><![CDATA["Reset counter when"]]></en>
+			<it><![CDATA["Azzerare il contatore quando"]]></it>
+			<es><![CDATA["Llevar a cero el contador cuando"]]></es>
+			<de><![CDATA["Den Zähler auf Null zurücksetzen wenn"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["初期値に戻すタイミング"]]></ja>
+		</map></label>
+
+		<items><list>
+			<item><map>
+				<type>"RadioButton"</type>
+				<value>"never"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key> -->
+					<fr><![CDATA["jamais"]]></fr>
+					<en><![CDATA["never"]]></en>
+					<it><![CDATA["mai"]]></it>
+					<es><![CDATA["jamás"]]></es>
+					<de><![CDATA["niemals"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["初期値に戻さない"]]></ja>
+				</map></label>
+			</map></item>
+
+			<item><map>
+				<type>"RadioButton"</type>
+				<value>"counter"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key> -->
+					<fr><![CDATA["quand la valeur limite est atteinte"]]></fr>
+					<en><![CDATA["when the limit value is reached"]]></en>
+					<it><![CDATA["quando il valore limite viene raggiunto"]]></it>
+					<es><![CDATA["cuando se haya alcanzado el valor límite"]]></es>
+					<de><![CDATA["wenn die Höchstgrenze erreicht ist"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["上限値に達したとき"]]></ja>
+				</map></label>
+			</map></item>
+
+			<item><map>
+				<type>"RadioButton"</type>
+				<value>"day"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key> -->
+					<fr><![CDATA["chaque jour"]]></fr>
+					<en><![CDATA["each day"]]></en>
+					<it><![CDATA["ogni giorno"]]></it>
+					<es><![CDATA["cada día"]]></es>
+					<de><![CDATA["jeden Tag"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["毎日"]]></ja>
+				</map></label>
+			</map></item>
+
+			<item><map>
+				<type>"RadioButton"</type>
+				<value>"week"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key> -->
+					<fr><![CDATA["chaque semaine"]]></fr>
+					<en><![CDATA["each week"]]></en>
+					<it><![CDATA["ogni settimana"]]></it>
+					<es><![CDATA["cada semana"]]></es>
+					<de><![CDATA["jede Woche"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["毎週"]]></ja>
+				</map></label>
+			</map></item>
+
+			<item><map>
+				<type>"RadioButton"</type>
+				<value>"month"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key> -->
+					<fr><![CDATA["chaque mois"]]></fr>
+					<en><![CDATA["each month"]]></en>
+					<it><![CDATA["ogni mese"]]></it>
+					<es><![CDATA["cada mes"]]></es>
+					<de><![CDATA["jeden Monat"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["毎月"]]></ja>
+				</map></label>
+			</map></item>
+
+			<item><map>
+				<type>"RadioButton"</type>
+				<value>"year"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key> -->
+					<fr><![CDATA["chaque année"]]></fr>
+					<en><![CDATA["each year"]]></en>
+					<it><![CDATA["ogni anno"]]></it>
+					<es><![CDATA["cada año"]]></es>
+					<de><![CDATA["jedes Jahr"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["毎年"]]></ja>
+				</map></label>
+			</map></item>
+
+		</list></items>
+	</map></item>
+
+	<item><map>
+		<key>"messageWhenCount"</key>
+		<type>"TextArea"</type><!-- Should be TextArea when it will be supported -->
+		<datatype>"text"</datatype>
+		<maxlength>1000</maxlength>
+		<cols>80</cols>
+		<rows>3</rows>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Message à jouer à chaque fois que le ztamp est lu"]]></fr>
+			<en><![CDATA["Message to play every time the ztamp is detected"]]></en>
+			<it><![CDATA["Messaggio da trasmettere ogni volta che lo Ztamp viene letto "]]></it>
+			<es><![CDATA["Mensaje que se debe difundir cada vez que se lea el ztamp"]]></es>
+			<de><![CDATA["Abzuspielende Nachricht bei jedem Lesen des Ztamp"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["毎回再生されるメッセージ"]]></ja>
+		</map></label>
+
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["(les variables de remplacements ${} peuvent être utilisées ici)"]]></fr>
+			<en><![CDATA["(you can use the replacement variables ${} here)"]]></en>
+			<it><![CDATA["(le variabili di sostituzione ${} possono venir utilizzate qui)"]]></it>
+			<es><![CDATA["(Aquí se pueden utilizar las variables ${} de reemplazo)"]]></es>
+			<de><![CDATA["(die Ersetzungsvariablen ${} können hier benutzt werden)"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["（${} の中身を自由に変更することができます）"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"messageWhenReached"</key>
+		<type>"TextArea"</type><!-- Should be TextArea when it will be supported -->
+		<datatype>"text"</datatype>
+		<maxlength>1000</maxlength>
+		<cols>80</cols>
+		<rows>3</rows>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Message à jouer quand la limite définie est atteinte"]]></fr>
+			<en><![CDATA["Message to play when reset condition is met"]]></en>
+			<it><![CDATA["Messaggio da trasmettere una volta raggiunto il limite definito "]]></it>
+			<es><![CDATA["Mensaje que se debe difundir cuando se haya alcanzado la fecha límite"]]></es>
+			<de><![CDATA["Abzuspielende Nachricht, wenn der festgelegte Höchstwert erreicht ist"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["初期値戻る時に再生されるメッセージ"]]></ja>
+		</map></label>
+
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["(les variables de remplacements ${} peuvent être utilisées ici)"]]></fr>
+			<en><![CDATA["(you can use the replacement variables ${} here)"]]></en>
+			<it><![CDATA["(le variabili di sostituzione ${} possono venir utilizzate qui)"]]></it>
+			<es><![CDATA["(Aquí se pueden utilizar las variables ${} de reemplazo)"]]></es>
+			<de><![CDATA["(die Ersetzungsvariablen ${} können hier benutzt werden)"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["（${} の中身を自由に変更することができます）"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"voice"</key>
+		<type>"Popup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<source>"view_tts_voices"</source>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Voix"]]></fr>
+			<en><![CDATA["Voice"]]></en>
+			<it><![CDATA["Voce"]]></it>
+			<es><![CDATA["Voz"]]></es>
+			<de><![CDATA["Stimme"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["音声"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Choisissez la langue et la voix avec laquelle vous voulez qu'il lise le message."]]></fr>
+			<en><![CDATA["Select the language and voice you want the message to be read with."]]></en>
+			<it><![CDATA["Scegli la lingua e la voce che desideri leggano il tuo messaggio."]]></it>
+			<es><![CDATA["Elige la lengua y la voz que quieres que te lean el mensaje."]]></es>
+			<de><![CDATA["Sie die Sprache und die Stimme, mit der die Nachricht gelesen werden soll."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["メッセージを読み上げるときの言語と音声を選択してください。"]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map><value>"FR-Anastasie"</value><label>"FR - Anastasie"</label></map></item>
+			<item><map><value>"FR-Archibald"</value><label>"FR - Archibald"</label></map></item>
+			<item><map><value>"FR-Gertrude"</value><label>"FR - Gertrude"</label></map></item>
+			<item><map><value>"FR-Maxence"</value><label>"FR - Maxence"</label></map></item>
+			<item><map><value>"UK-Edwin"</value><label>"UK - Edwin"</label></map></item>
+			<item><map><value>"UK-Leonard"</value><label>"UK - Leonard"</label></map></item>
+			<item><map><value>"UK-Mistermuggles"</value><label>"UK - Mister muggles"</label></map></item>
+			<item><map><value>"UK-Penelope"</value><label>"UK - Penelope"</label></map></item>
+			<item><map><value>"UK-Shirley"</value><label>"UK - Shirley"</label></map></item>
+			<item><map><value>"US-Bethany"</value><label>"US - Bethany"</label></map></item>
+			<item><map><value>"US-Billye"</value><label>"US - Billye"</label></map></item>
+			<item><map><value>"US-Clarence"</value><label>"US - Clarence"</label></map></item>
+			<item><map><value>"US-Darleen"</value><label>"US - Darleen"</label></map></item>
+			<item><map><value>"US-Liberty"</value><label>"US - Liberty"</label></map></item>
+			<item><map><value>"US-Lilian"</value><label>"US - Lilian"</label></map></item>
+			<item><map><value>"AU-Colleen"</value><label>"AU - Colleen"</label></map></item>
+			<item><map><value>"AU-Jon"</value><label>"AU - Jon"</label></map></item>
+			<item><map><value>"ES-Alfonsina"</value><label>"ES - Alfonsina"</label></map></item>
+			<item><map><value>"ES-Baltasar"</value><label>"ES - Baltasar"</label></map></item>
+			<item><map><value>"ES-Bertrana"</value><label>"ES - Bertrana"</label></map></item>
+			<item><map><value>"ES-Dunixe"</value><label>"ES - Dunixe"</label></map></item>
+			<item><map><value>"ES-Emilia"</value><label>"ES - Emilia"</label></map></item>
+			<item><map><value>"ES-Rosalia"</value><label>"ES - Rosalia"</label></map></item>
+			<item><map><value>"IT-Assunta"</value><label>"IT - Assunta"</label></map></item>
+			<item><map><value>"IT-Ugo"</value><label>"IT - Ugo"</label></map></item>
+			<item><map><value>"BE-Hendrik"</value><label>"BE - Hendrik"</label></map></item>
+			<item><map><value>"BE-Minna"</value><label>"BE - Minna"</label></map></item>
+			<item><map><value>"BR-Lygia"</value><label>"BR - Lygia"</label></map></item>
+			<item><map><value>"CA-Antonine"</value><label>"CA - Antonine"</label></map></item>
+			<item><map><value>"CA-Felix"</value><label>"CA - Felix"</label></map></item>
+			<item><map><value>"CN-Pan"</value><label>"CN - Pan"</label></map></item>
+			<item><map><value>"CZ-Zdenech"</value><label>"CZ - Zdenech"</label></map></item>
+			<item><map><value>"DE-Otto"</value><label>"DE - Otto"</label></map></item>
+			<item><map><value>"DK-Karen"</value><label>"DK - Karen"</label></map></item>
+			<item><map><value>"DK-Pia"</value><label>"DK - Pia"</label></map></item>
+			<item><map><value>"EG-Nabil"</value><label>"EG - Nabil"</label></map></item>
+			<item><map><value>"EG-Nayla"</value><label>"EG - Nayla "</label></map></item>
+			<item><map><value>"GR-Antonis"</value><label>"GR - Antonis"</label></map></item>
+			<item><map><value>"IE-Orla"</value><label>"IE - Orla"</label></map></item>
+			<item><map><value>"IN-Nima"</value><label>"IN - Nima"</label></map></item>
+			<item><map><value>"IN-Sangeeta"</value><label>"IN - Sangeeta"</label></map></item>
+			<item><map><value>"JP-Tamura"</value><label>"JP - Tamura"</label></map></item>
+			<item><map><value>"KR-Choe"</value><label>"KR - Choe"</label></map></item>
+			<item><map><value>"NL-Femke"</value><label>"NL - Femke"</label></map></item>
+			<item><map><value>"NL-Max"</value><label>"NL - Max"</label></map></item>
+			<item><map><value>"NL-Renate"</value><label>"NL - Renate"</label></map></item>
+			<item><map><value>"NO-Cora"</value><label>"NO - Cora"</label></map></item>
+			<item><map><value>"NO-Sigrid"</value><label>"NO - Sigrid"</label></map></item>
+			<item><map><value>"PL-Ignacy"</value><label>"PL - Ignacy"</label></map></item>
+			<item><map><value>"PT-Celia"</value><label>"PT - Celia"</label></map></item>
+			<item><map><value>"RU-Bella"</value><label>"RU - Bella"</label></map></item>
+			<item><map><value>"SE-Hjalmar"</value><label>"SE - Hjalmar"</label></map></item>
+			<item><map><value>"SE-Maj"</value><label>"SE - Maj"</label></map></item>
+			<item><map><value>"SE-Selma"</value><label>"SE - Selma"</label></map></item>
+			<item><map><value>"TH-Boon-mee"</value><label>"TH - Boon-mee"</label></map></item>
+			<item><map><value>"TR-Asli"</value><label>"TR - Asli"</label></map></item>
+			<item><map><value>"YUE-Baibo"</value><label>"YUE - Bai bo"</label></map></item>
+			<item><map><value>"ZA-Wilbur"</value><label>"ZA - Wilbur"</label></map></item>
+		</list></items>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

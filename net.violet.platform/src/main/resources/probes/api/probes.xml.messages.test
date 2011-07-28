@@ -1,0 +1,14 @@
+application=webui
+
+[get]
+url=messages/get/inbox?session=1f6b2:104787c9d:8d9fe7de68b0703564f331328e8e54de5d51f25d
+regex=super</string>(.|\s)+<id>\s*<string>(.*?)</string>\s*</id>
+
+[replay]
+url=messages/replay/GROUP_2?session=1f6b2:104787c9d:8d9fe7de68b0703564f331328e8e54de5d51f25d
+regex=null
+
+[count]
+url=messages/count/inbox?session=1f6b2:104787c9d:8d9fe7de68b0703564f331328e8e54de5d51f25d
+regex=1
+

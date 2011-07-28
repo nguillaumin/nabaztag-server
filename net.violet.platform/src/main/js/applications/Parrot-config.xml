@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/6PMMs6kmXx -->
+	<name>"net.violet.js.parrot"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>1000</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"Parrot"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Faire parler l'objet"]]></fr>
+		<en><![CDATA["Get the object talking"]]></en>
+		<it><![CDATA["Fai parlare gli oggetti"]]></it>
+		<es><![CDATA["Haz que el objeto hable"]]></es>
+		<de><![CDATA["Lassen Sie Ihr Objekt sprechen "]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["おしゃべり"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Entrez un texte, insérez dedans des parties variables. A chaque fois que le Ztamp sera vu, votre texte sera dit à haute voix. <br/>
+Exemple : vous voulez qu'avant de vous donner la météo, votre parapluie vous salue en vous donnant l'heure ? Combinez cette application avec les autres applications du Ztamp pour donner encore plus de vie. </p>"]]></fr>
+		<en><![CDATA["Enter some text, including variable elements. Each time the Ztamp is seen, your text will be read out loud.<br/>
+Example: you want your umbrella to greet you with the current time before it gives you the weather forecast? Add this application to the Ztamp's other applications to make it even more lively."]]></en>
+		<it><![CDATA["<p>Inserisci un testo con delle variabili. Ogni volta che lo Ztamp verrà riconosciuuto, il tuo testo verrà letto ad alta voce. <br/>
+Esempio: desideri che il tuo ombrello, prima di darti le previsioni, ti saluti e ti dia l'ora ? Combina questa applicazione con delle altre dello Ztamp per dargli ancora piu vita. </p>
+"]]></it>
+		<es><![CDATA["<p>Entra un texto, insértalo entre las partes variables. Cada vez que se verá el Ztamp, se reproducirá tu texto a viva voz. <br/>
+			Ejemplo: ¿quieres que antes de darte el estado del tiemo tu paraguas te salude dándote la hora? Combina esta aplicación con las otras aplicaciones del Ztamp, así le darás más vida. </p>"]]></es>
+		<de><![CDATA["<p>Geben Sie einen Text ein und fügen Sie Variablen hinzu. Bei jeder Erkennung des Ztamp wird Ihr Text mit lauter Stimme gesprochen. <br/>
+Beispiel: Sie wollen, dass Ihr Regenschirm, bevor er Ihnen die Wettervorhersage mitteilt, Sie mit der Zeitansage begrüßt? Kombinieren Sie diese Applikation mit den anderen Applikationen des Ztamp und hauchen Sie ihm noch mehr Leben ein. </p>
+"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ズタンプを使った時、入力された文章を音声で読み上げることができます。<br/>たとえば、天気予報を教えてくれるように設定したズタンプを傘に貼り、そのズタンプを使ったときに、一緒に今の時間を教えてくれるようになったら、さらに便利になるのでは？</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Saisissez le texte que vous voulez faire dire à l'objet.<br/>
+Sélectionnez la voix qui le dira.<br/>
+Si vous le souhaitez, vous pouvez insérer des variables dans le texte. Elles se mettront à jour automatiquement au moment de le lire.
+<ul>Ces variables sont :
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Heure de détection du Ztamp</li>
+<li> ${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : Les mêmes variables horaires, mais préfixées d'un zéro s'il le faut. Ex : '02' au lieu de '2'.</li>
+<li> ${object.name} : nom de l'objet ayant lu le Ztamp. </li>
+<li> ${object.owner.firstname} : prénom du propriétaire de l'objet</li>
+<li> ${object.owner.lastname} : nom du propriétaire de l'objet</li>
+<li> ${object.owner.city} : ville du propriétaire de l'objet</li>
+<li> ${ztamp.name} : nom du Ztamp</li>
+<li> ${ztamp.owner.lastname} : nom du propriétaire du Ztamp</li>
+<li> ${ztamp.owner.firstname} : prénom du propriétaire du Ztamp. </li>
+<li> ${ztamp.owner.city} : ville du propriétaire du Ztamp</li></u
+l><br/>
+Note : les variables ${hours}, ${hours24}, ${minutes}, ${seconds} n'insèrent que le chiffre. Vous devez ajouter les mots « heures » et « minutes » après ces variables.<br/>
+Exemple. Saisissez le texte suivant :<br/>
+<em>Salut ${ztamp.owner.firstname}, il est ${hours24} heures, ${minutes} à ${object.owner.city}. Je vais te lire les nouvelles.  </em><br/>
+Vous entendrez<br/>
+<em>Salut Boris, il est 8 heures 12 ici à Stockholm. Je vais te lire les nouvelles.</em></p>"]]></fr>
+
+		<en><![CDATA["<p>Enter the texte you would like the object to speak.<br/>
+Select a voice to read it.<br/>
+If you wish, you may insert variables in the spoken text. They will automatically update when the text is read.<br/>
+Available variables:<br/>
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Time the Ztamp was detected</li>
+<li>${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : The same time parts, but with a leading zero if needed. Ex : '02' instead of '2'.</li>
+<li>${object.name}: name of the object that has read the Ztamp.</li>
+<li>${object.owner.firstname}: First name of the object's owner.</li>
+<li>${object.owner.lastname}: Last name of the object's owner.</li>
+<li>${object.owner.city}: City where the object's owner lives.</li>
+<li>${ztamp.name}: name of the detected Ztamp.</li>
+<li>${ztamp.owner.lastname}: Last name of the Ztamp's owner.</li>
+<li>${ztamp.owner.firstname}: First name of the Ztamp's owner.</li>
+<li>${ztamp.owner.city}: City where the Ztamp's owner lives.</li>
+</ul>
+Note: variables ${hours}, ${hours24}, ${minutes}, ${seconds} insert digits only. You may insert the words "hours" and "minutes" after these variables.<br/>
+Example: Enter the following text:
+<em>Hi ${ztamp.owner.firstname}, the time is ${hours}, ${minutes} ${AMPM} here in ${object.owner.city}. I'm going to read you the news.</em>
+You will hear:<br/>
+<em>Hi Boris, the time is 8, 12 AM here in Stockholm. I'm going to read you the news.</em></p>"]]></en>
+
+		<it><![CDATA["<p>Inserisci il testo che desideri venga detto dall'oggetto.<br/>Seleziona la voce.<br/>Se lo desideri, puoi inserire delle variabili nel testo. Si aggiorneranno ad ogni lettura.<br/>Le variabili sono :<br/><ul><li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}: Ora di riconoscimento dello Ztamp</li><li>${object.name}: Nome dell'oggetto che ha letto lo Ztamp. </li><li>${object.owner.firstname}: Nome del proprietario dell'oggetto</li><li>${object.owner.lastname}: Cognome del proprietario dell'oggetto</li><li>${object.owner.city}: Città dove risiede il proprietario dell'oggetto </li><li>${ztamp.name}: Nome dello Ztamp</li><li>${ztamp.owner.firstname}: Nome del proprietario dello Ztamp. </li><li>${ztamp.owner.lastname}: Cognome del proprietario dello Ztamp </li><li>${ztamp.owner.city}: Città dove risiede il proprietario dello Ztamp</li></ul><br/>Nota: le variabili ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} sono delle cifre. Devi inserire le parole « ore » et « minuti » subito dopo queste variabili.<br/>Ad esempio inserisci il seguente testo :<br/><em> Ciao ${ztamp.owner.firstname}, sono le ${hours} ore, ${minutes} qui a ${object.owner.city}. Adesso ti leggo le ultime news.  </em><br/>E sentirai<br/><em>Ciao Marco, sono le 8 ore 12 qui a Stoccolma. Adesso ti leggo le ultime news.</em></p>
+"]]></it>
+
+		<es><![CDATA[""<p>Escribe el texto que quieres que el objeto reproduzca.<br/>
+Selecciona la voz que lo dirá .<br/>
+Si así lo deseas, puedes insertar variables en el texto. Estas se actualizarán automáticamente en ocasión de la lectura.<br/>
+Estas variables son :<br/>
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Hora de detección del  Ztamp</li>
+<li>${object.name} : nombre del objeto que leyó el Ztamp.</li>
+<li>${object.owner.firstname} : nombre del propietario del objeto</li>
+<li>${object.owner.lastname} : apellido del propietario del objeto</li>
+<li>${object.owner.city} : ciudad del propietario del objeto</li>
+<li>${ztamp.name} : nombre del Ztamp</li>
+<li>${ztamp.owner.firstname} : nombre del propietario del Ztamp</li>
+<li>${ztamp.owner.lastname} : apellido del propietario del Ztamp</li>
+<li>${ztamp.owner.city} : ciudad del propietario del Ztamp</li>
+</ul>
+Nota : las variables  ${hours}, ${hours24}, ${minutes}, ${seconds} sólo insertan la cifra. Debes añadir las palabras  « horas » et « minutos » después de las variables.<br/>
+Ejemplo. Escribe el texto que sigue:<br/>
+<em>Hola ${ztamp.owner.firstname}, son ${hours24} horas, ${minutos} en ${object.owner.city}. Te leeré las noticias.  </em><br/>
+Tu escucharás<br/>
+<em>Hola Boris, son las 8 horas 12 en Estocolmo. Te voy a leer las noticias.</em></p>"]]></es>
+
+		<de><![CDATA["<p>Geben Sie den Text ein, den das Objekt sprechen soll.<br/>
+Wählen Sie die Stimme aus, die ihn spricht.<br/>
+Auf Wunsch können Sie Variablen in den Text einfügen. Sie werden beim Vorlesen automatisch aktualisiert.
+Folgende Variablen stehen zur Verfügung:<br/>
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Uhrzeit der Ztamp-Erkennung</li>
+<li> ${object.name} : Name des Objektes, das den Ztamp gelesen hat. </li>
+<li> ${object.owner.firstname} : Vorname des Objektbesitzers</li>
+<li> ${object.owner.lastname} : Name des Objektbesitzers</li>
+<li> ${object.owner.city} : Stadt des Objektbesitzers</li>
+<li> ${ztamp.name} : Name des Ztamps</li>
+<li> ${ztamp.owner.firstname} : Vorname des Ztamp-Besitzers. </li>
+<li> ${ztamp.owner.lastname} : Name des Ztamp-Besitzers</li>
+<li> ${ztamp.owner.city} : Stadt des Ztamp-Besitzers</li>
+</ul><br/>
+Anmerkung: für die Variablen ${hours}, ${hours24}, ${minutes}, ${seconds} wird nur die Zahl eingesetzt. Sie müssen die Wörter « Uhr » und « Minuten » selbst eingeben.<br/>
+Beispiel. Geben Sie den folgenden Text ein:<br/>
+<em>Hallo ${ztamp.owner.firstname}, es ist ${hours24} Uhr, ${minutes} in ${object.owner.city}. Ich lese Dir die Neuigkeiten vor.  </em><br/>
+Sie hören<br/>
+<em>Hallo Boris, es ist 8 Uhr 12 in Stockholm. Ich lese Dir die Neuigkeiten vor.</em></p>"]]></de>
+
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>しゃべらせたい文章を入力してください。<br/>読み上げる音声を選択します。<br/>文章中に以下の変数を使うこともできます。変数を使えば自動的に文章内容が変更されます。<br/>
+		<ul>
+		<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}： ズタンプが使用された時間</li>
+		<li>${object.name}： ズタンプを読み込んだアイテムの名前</li>
+		<li>${object.owner.firstname}： アイテムの登録者の名前（名）</li>
+		<li>${object.owner.lastname}： アイテムの登録者の名前（姓）</li>
+		<li>${object.owner.city}： アイテムの登録者の所在地</li>
+		<li>${ztamp.name}： ズタンプの名前</li>
+		<li>${ztamp.owner.lastname}： ズタンプの登録者の名前（姓）.</li>
+		<li>${ztamp.owner.firstname}： ズタンプの登録者の名前（名）</li>
+		<li>${ztamp.owner.city}：ズタンプの登録者の所在地</li>
+		</ul>
+		<br/>
+<u>注記： </u><br/>
+変数 ${hours}, ${hours24}, ${minutes}, ${seconds} は十進数になります。<br/>複数の変数を組み合わせることもできます。<br/>
+<u>例： </u><br/>
+「<strong> こんにちは、${ztamp.owner.firstname} 。今は ${hours} 時 ${minutes} 分です。これから今日の天気予報をお伝えします</strong>」これがこう聞こえます<br/>
+「<strong>こんにちは、健一。今は8時12分です。これから今日の天気予報をお伝えします</strong>」</p>"]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA["Communication, Messages"]]></fr>
+		<en><![CDATA["Communication, Messages"]]></en>
+		<it><![CDATA["Comunicazione, Messaggi"]]></it>
+		<es><![CDATA["Comunicación, Mensajes"]]></es>
+		<de><![CDATA["Kommunikation, Nachrichten"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["コミュニケーション、メッセージ"]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+	</list></dico>
+
+	<files><list>
+		<!-- <entry name="media/audio/intro" fileName="intro.m3" /> -->
+	</list></files>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"message"</key>
+		<type>"TextArea"</type>
+		<datatype>"text"</datatype>
+		<maxlength>1000</maxlength>
+		<cols>80</cols>
+		<rows>4</rows>
+		<required>true</required>
+		<repeatable>true</repeatable>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Message"]]></fr>
+			<en><![CDATA["Message"]]></en>
+			<it><![CDATA["Messaggio"]]></it>
+			<es><![CDATA["Mensaje"]]></es>
+			<de><![CDATA["Nachricht"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["メッセージ"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Texte à lire"]]></fr>
+			<en><![CDATA["Text to speech"]]></en>
+			<it><![CDATA["Testo da leggere"]]></it>
+			<es><![CDATA["Texto que hay que leer"]]></es>
+			<de><![CDATA["Zu lesender Text"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["しゃべらせたい内容"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"voice"</key>
+		<type>"Popup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<source>"view_tts_voices"</source>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Voix"]]></fr>
+			<en><![CDATA["Voice"]]></en>
+			<it><![CDATA["Voce"]]></it>
+			<es><![CDATA["Voz"]]></es>
+			<de><![CDATA["Stimme"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["音声"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Choisissez la langue et la voix avec laquelle vous voulez qu'il lise le message."]]></fr>
+			<en><![CDATA["Select the language and voice you want the message to be read with."]]></en>
+			<it><![CDATA["Scegli la lingua e la voce che desideri leggano il tuo messaggio."]]></it>
+			<es><![CDATA["Elige la lengua y la voz que quieres que te lean el mensaje."]]></es>
+			<de><![CDATA["Sie die Sprache und die Stimme, mit der die Nachricht gelesen werden soll."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["しゃべらせたい内容の言語と音声を選択してください"]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map><value>"FR-Anastasie"</value><label>"FR - Anastasie"</label></map></item>
+			<item><map><value>"FR-Archibald"</value><label>"FR - Archibald"</label></map></item>
+			<item><map><value>"FR-Gertrude"</value><label>"FR - Gertrude"</label></map></item>
+			<item><map><value>"FR-Maxence"</value><label>"FR - Maxence"</label></map></item>
+			<item><map><value>"UK-Edwin"</value><label>"UK - Edwin"</label></map></item>
+			<item><map><value>"UK-Leonard"</value><label>"UK - Leonard"</label></map></item>
+			<item><map><value>"UK-Mistermuggles"</value><label>"UK - Mister muggles"</label></map></item>
+			<item><map><value>"UK-Penelope"</value><label>"UK - Penelope"</label></map></item>
+			<item><map><value>"UK-Shirley"</value><label>"UK - Shirley"</label></map></item>
+			<item><map><value>"US-Bethany"</value><label>"US - Bethany"</label></map></item>
+			<item><map><value>"US-Billye"</value><label>"US - Billye"</label></map></item>
+			<item><map><value>"US-Clarence"</value><label>"US - Clarence"</label></map></item>
+			<item><map><value>"US-Darleen"</value><label>"US - Darleen"</label></map></item>
+			<item><map><value>"US-Liberty"</value><label>"US - Liberty"</label></map></item>
+			<item><map><value>"US-Lilian"</value><label>"US - Lilian"</label></map></item>
+			<item><map><value>"AU-Colleen"</value><label>"AU - Colleen"</label></map></item>
+			<item><map><value>"AU-Jon"</value><label>"AU - Jon"</label></map></item>
+			<item><map><value>"ES-Alfonsina"</value><label>"ES - Alfonsina"</label></map></item>
+			<item><map><value>"ES-Baltasar"</value><label>"ES - Baltasar"</label></map></item>
+			<item><map><value>"ES-Bertrana"</value><label>"ES - Bertrana"</label></map></item>
+			<item><map><value>"ES-Dunixe"</value><label>"ES - Dunixe"</label></map></item>
+			<item><map><value>"ES-Emilia"</value><label>"ES - Emilia"</label></map></item>
+			<item><map><value>"ES-Rosalia"</value><label>"ES - Rosalia"</label></map></item>
+			<item><map><value>"IT-Assunta"</value><label>"IT - Assunta"</label></map></item>
+			<item><map><value>"IT-Ugo"</value><label>"IT - Ugo"</label></map></item>
+			<item><map><value>"BE-Hendrik"</value><label>"BE - Hendrik"</label></map></item>
+			<item><map><value>"BE-Minna"</value><label>"BE - Minna"</label></map></item>
+			<item><map><value>"BR-Lygia"</value><label>"BR - Lygia"</label></map></item>
+			<item><map><value>"CA-Antonine"</value><label>"CA - Antonine"</label></map></item>
+			<item><map><value>"CA-Felix"</value><label>"CA - Felix"</label></map></item>
+			<item><map><value>"CN-Pan"</value><label>"CN - Pan"</label></map></item>
+			<item><map><value>"CZ-Zdenech"</value><label>"CZ - Zdenech"</label></map></item>
+			<item><map><value>"DE-Otto"</value><label>"DE - Otto"</label></map></item>
+			<item><map><value>"DK-Karen"</value><label>"DK - Karen"</label></map></item>
+			<item><map><value>"DK-Pia"</value><label>"DK - Pia"</label></map></item>
+			<item><map><value>"EG-Nabil"</value><label>"EG - Nabil"</label></map></item>
+			<item><map><value>"EG-Nayla"</value><label>"EG - Nayla "</label></map></item>
+			<item><map><value>"GR-Antonis"</value><label>"GR - Antonis"</label></map></item>
+			<item><map><value>"IE-Orla"</value><label>"IE - Orla"</label></map></item>
+			<item><map><value>"IN-Nima"</value><label>"IN - Nima"</label></map></item>
+			<item><map><value>"IN-Sangeeta"</value><label>"IN - Sangeeta"</label></map></item>
+			<item><map><value>"JP-Tamura"</value><label>"JP - Tamura"</label></map></item>
+			<item><map><value>"KR-Choe"</value><label>"KR - Choe"</label></map></item>
+			<item><map><value>"NL-Femke"</value><label>"NL - Femke"</label></map></item>
+			<item><map><value>"NL-Max"</value><label>"NL - Max"</label></map></item>
+			<item><map><value>"NL-Renate"</value><label>"NL - Renate"</label></map></item>
+			<item><map><value>"NO-Cora"</value><label>"NO - Cora"</label></map></item>
+			<item><map><value>"NO-Sigrid"</value><label>"NO - Sigrid"</label></map></item>
+			<item><map><value>"PL-Ignacy"</value><label>"PL - Ignacy"</label></map></item>
+			<item><map><value>"PT-Celia"</value><label>"PT - Celia"</label></map></item>
+			<item><map><value>"RU-Bella"</value><label>"RU - Bella"</label></map></item>
+			<item><map><value>"SE-Hjalmar"</value><label>"SE - Hjalmar"</label></map></item>
+			<item><map><value>"SE-Maj"</value><label>"SE - Maj"</label></map></item>
+			<item><map><value>"SE-Selma"</value><label>"SE - Selma"</label></map></item>
+			<item><map><value>"TH-Boon-mee"</value><label>"TH - Boon-mee"</label></map></item>
+			<item><map><value>"TR-Asli"</value><label>"TR - Asli"</label></map></item>
+			<item><map><value>"YUE-Baibo"</value><label>"YUE - Bai bo"</label></map></item>
+			<item><map><value>"ZA-Wilbur"</value><label>"ZA - Wilbur"</label></map></item>
+		</list></items>
+	</map></item>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

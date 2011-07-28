@@ -1,0 +1,37 @@
+application=webui
+
+[search_testVioletItem]
+url=objects/search
+post_data=<map><session>"165c3:4aba0034:a3f751a68ea68a0875fa2e789bf5858d1372e718"</session><query><map><name>"testVioletItem"</name></map></query></map>
+regex=<string>Solipsiste</string>
+
+[object_setVisible]
+url=objects/setPreferences/ee51O45962ac2
+post_data=<map><session>"165c3:4aba0034:a3f751a68ea68a0875fa2e789bf5858d1372e718"</session><preferences><map><visible>true</visible><visible>true</visible><private>false</private></map></preferences></map>
+regex=null
+
+[people_setVisible]
+url=people/setPreferences/165c3U46a09063
+post_data=<map><session><string>165c3:4aba0899:eebbecd0c6c64718298f66e04d0339b6386e608d</string></session><preferences><map><visible>true</visible></map></preferences></map>
+regex=.*
+
+[search_Solipsiste_sans_sessionId]
+url=objects/search
+post_data=<map><query><map><name>"Solipsiste"</name></map></query></map>
+regex=<string>Solipsiste</string>
+
+[search_Solipsiste_par Shoshak]
+url=objects/search
+post_data=<map><session>"1f6bf:4aba0309:f48e61b0b5a2cdd4cb1aca9162789a5424b0ffb8"</session><query><map><name>"Solipsiste"</name></map></query></map>
+regex=<string>Solipsiste</string>
+      
+[search_2_v2_from_parisFR]
+url=objects/search/ ?session="1f6bf:4aba0309:f48e61b0b5a2cdd4cb1aca9162789a5424b0ffb8"
+post_data=<map><count>2</count><query><map><city>"Paris"</city><country>"FR"</country><hw_type>"violet.nabaztag.tagtag"</hw_type></map></query></map>
+regex= .*
+
+[search_object_who_doesntexist]
+url=objects/search
+post_data=<map><query><map><name>DoesntExist</name></map></query></map>
+regex=<list />
+

@@ -1,0 +1,14 @@
+MESSAGE
+
+
+Diese Nachricht hat Ihnen FIRST_NAME LAST_NAME mit seinem Ztamp OBJ_SENDER per OBJ_READER gesendet.
+
+--- Diese Nachricht wurde erstellt von APPLICATION by CREATOR ---
+
+
+
+++ EINIGE VIELLEICHT NICHT GANZ UNWICHTIGE DINGE ++
+- Zum Senden dieser Nachricht hat FIRST NAME seinen Ztamp OBJ_SENDER einfach OBJ_READER gezeigt.
+- Entdecken Sie, was man alles mit ganz normalen Alltagsgegenständen machen kann: http://www.violet.net
+
+-- Violet. Let All Things Be Connected --

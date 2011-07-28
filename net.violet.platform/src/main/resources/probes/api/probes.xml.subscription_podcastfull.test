@@ -1,0 +1,11 @@
+application=webui
+
+
+[create_podcastfull]
+url=subscriptions/create
+post_data=<map><application_id><string>3f9A08bd21fe</string></application_id><object_id><string>10a7aO90ddb8a0</string></object_id><settings><list><item><map><value><string>http://feeds.feedburner.com/LesPodcastsDeLaGrosseRadio</string></value><key><string>podcast_url</string></key></map></item><item><map><value><string>Podcast Name</string></value><key><string>podcast_name</string></key></map></item><item><map><value><string>Bruno</string></value><key><string>podcast_tts_language</string></key></map></item></list></settings><scheduling><list><item><map><wednesday><map><time_h>1</time_h><time_m>1</time_m></map></wednesday><type><string>Daily</string></type></map></item></list></scheduling></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>
+
+
+
+

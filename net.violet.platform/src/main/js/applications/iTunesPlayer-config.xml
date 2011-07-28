@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/fmS9LAmGJb -->
+
+	<name>"net.violet.js.itunesplayer"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"music"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>3000</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"iTunesPlayer"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Jouer vos chansons avec iTunes"]]></fr>
+		<en><![CDATA["Play your songs with iTunes"]]></en>
+		<it><![CDATA["Ascolta le tue canzoni con iTunes"]]></it>
+		<es><![CDATA["Escuchar tus canciones con iTunes"]]></es>
+		<de><![CDATA["Spielen Sie Ihre Musik mit iTunes ab"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["iTunes での音楽再生"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p> Jouez vos listes de lecture, artistes ou albums favoris avec iTunes, en présentant un Ztamp ou un Nano:ztag à votre Mir:ror. <br/>
+Exemple : Posez votre bougie parfumée munie d'un Ztamp sur votre Mir:ror et comme par enchantement votre playlist « Mes meilleurs slows » sera diffusée. Associez chacun de vos Nano:ztag à une liste de lecture adaptée à sa couleur. Montrez votre souvenir ramené d'Inde pour jouer cet album de sitar qui vous rappelle vos vacances. Et si le Nounours de votre enfant chantait des comptines ?</p>"]]></fr>
+		<en><![CDATA["<p>Listen to your favourite playlists, artists or albums with iTunes, simply by showing your Mir:ror a Ztamp or a Nano:ztag. <br/>
+Example: Place a fragrant candle fitted with a Ztamp on your Mir:ror, and as if by magic, your My best slow numbers playlist will start playing. Assign each of your Nano:ztags a playlist to match its colour. Show it your souvenir trinket from India to play that sitar album that reminds you of your vacation. And why not make your kid’s Teddy bear sing nursery rhymes?</p>
+"]]></en>
+		<it><![CDATA["<p> Ascolta le tue playlists, gli artisti e gli album preferiti con iTunes, mostrando uno Ztamp o un Nano:ztag al tuo Mir:ror. <br/>Esempio: appoggia la tua candela profumata munita di Ztamp sul Mir:ror, e come per incanto partirà la tua playlist "I migliori lenti". Associa a ciascuno dei dei tuoi Nano:ztag una playlist adatta al colore. Mostra al Mir:ror il ricordino portato dall'India per ascoltare l'album di sitar che ti ricorda le vacanze. E se l'orsacchiotto di tuo figlio cantasse le filastrocche?</p>
+"]]></it>
+		<es><![CDATA["<p> Escucha tus listas de lecturas, tus artistas o álbumes favoritos con iTunes, presentándole un Ztamp o un Nano:ztag a tu Mir:ror. <br/>
+Ejemplo: Coloca una vela perfumada con un Ztamp en tu Mir:ror y como por obra de magia se difundirá tu playlist « Mis mejores slows ». Vincula cada uno de tus Nano:ztag a una lista de lectura adaptada a su color. Muéstrale el souvenir que has traído de India para que se interprete este álbum de cítara que te recordará tus vacaciones. ¿Y, que te parece si el Osito de tu hijo cantase cuentos infantiles?</p>
+"]]></es>
+		<de><![CDATA["<p> Spielen Sie Ihre bevorzugten Playlisten, Interpreten oder Alben mit iTunes ab, indem Sie Ihrem Mir:ror einfach einen Ztamp oder einen Nano:ztag zeigen. <br/>
+Beispiel: Stellen Sie Ihre mit einem Ztamp versehene Duftkerze auf Ihren Mir:ror und wie von Zauberhand wird Ihre Playlist « Meine Chill-Out Charts» abgespielt. Verknüpfen Sie jeden Ihrer  Nano:ztags mit einer auf seine Farbe abgestimmten Songliste. Zeigen Sie Ihr Souvenir aus Indien, um das Sitar-Album aufzulegen, das Ihnen Ihren Urlaub in Erinnerung ruft. Und lassen Sie den Teddybär Ihres Kindes Abzählreime singen.</p>
+"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ミラーにズタンプやナノズタグをかざすだけで、お気に入りの音楽をiTunesで再生することができます。<br/>
+		たとえばアロマキャンドルにズタンプを貼り、火を付ける前にミラーにかざすとリラクゼーションミュージックが流れる。音楽のジャンルをナバズタグの色で区別する。外国のお土産と一緒に現地のサウンドもプレゼントする。テディベアに子守唄を歌わせる。こんないろいろなことができてしまいます。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p><strong>Jouer de la musique</strong><br/>
+Tapez le nom de la liste de lecture ou de l'artiste ou de l'album ou du morceau qui seront joués à chaque fois que vous montrerez le Ztamp ou le Nano:ztag. Vous pouvez saisir plusieurs noms dans chaque champ en les séparant par une virgule. <br/>
+Si vous tapez seulement une partie du nom, Itunes vous jouera tous les titres correspondants à votre demande. Par exemple, si vous entrez le mot « love », iTunes jouera tous les morceaux de votre bibliothèque contenant « love »<br/>
+Si vous ne tapez rien, le Ztamp démarrera la lecture de toute votre bibliothèque iTunes. <br/>
+Cochez la case <i>Aléatoire</i> pour une lecture dans un ordre aléatoire des titres inclus dans votre sélection. Cochez la case <i>en boucle</i>, pour que la lecture reprenne au début lorsque tous les titres ont été joués. <br/></p>
+<p><strong>Contrôler iTunes</strong><br/>
+Vous pouvez également programmer des Ztamps ou des Nano:ztags pour effectuer d'autres actions sur iTunes : Arrêter/Reprendre la lecture en cours ou Passer au morceau suivant ou passer au morceau précédent ou quitter iTunes.<br/></p>
+<p>Chacune de ces actions doit être programmée sur un Ztamp ou un Nano:ztag différent.<br/>
+Suggestion : collez des Ztamps sur les différentes faces d'un même objet cubique pour en faire l'objet contrôlant iTunes. <br/>
+Ce service fonctionne uniquement sur un Mir:ror relié à un ordinateur sur lequel le logiciel iTunes est installé.</p>"]]></fr>
+		<en><![CDATA["<p><strong>Playing music</strong><br/>
+Enter the name of the playlist or artist or album or track to be played every time you show the matching Ztamp or Nano:ztag. You can enter multiple names in each field, separated by commas. <br/>
+If you only enter part of the name, iTunes will play all matching tracks. For instance, if you enter the word love, iTunes will play all titles in your music library containing love.<br/>
+If you enter nothing, the Ztamp will start playing your entire iTunes library. <br/>
+Check the <i>Shuffle</i>box to play the tracks in your selection in random order. Check the <i>Repeat</i>box to start playback again from the beginning once all titles have been played. <br/>
+<Strong>Controlling iTunes</strong> <br/>
+You can also program the Ztamps or Nano:ztags to perform other actions in iTunes: Stop/Resume playback in progress or Skip to the next track or previous track, or quit iTunes.
+<br/>
+Each of these actions must be programmed on a different Ztamp or Nano:ztag. Tip: stick Ztamps on different sides of the same cube-shaped object to make it an iTunes controller. <br/>
+This service only works with a Mir:ror connected to a computer on which the iTunes software is present.</p>
+"]]></en>
+		<it><![CDATA["<p><strong>Ascoltare musica</strong><br/>Digita il nome della playlist, dell'artista, dell'album o del pezzo che verranno riprodotti ogni volta che mostrerai il Nano:ztag o lo Ztamp al Mir:ror. Potrai inserire più di un nome in ogni campo, separando con virgole.<br/>Se digiti solo una parte di nome, iTunes riprodurrà tutti i titoli corrispondenti. Se, ad esempio, scriverai "love", iTunes riprodurrà tutti i pezzi dell'archivio contenenti "love".<br/>Se non scrivi niente, lo Ztamp avvierà la lettura di tutta la biblioteca iTunes. <br/>Scegli la modalità <i>Shuffle</i> per una lettura in ordine casuale dei titoli inclusi nella selezione. Scegli la modalità <i>Repeat</i>, affinchè la lettura ricominci una volta terminati i pezzi<strong>Controllare iTunes</strong><br/>E' possibile programmare gli Ztamp o i Nano:stags per avviare altre azioni su iTunes: fermare/riprendere la lettura in corso, passare al pezzo precedente o successivo, chiudere il programma.<br/>Ognuna di queste azioni deve essere programmata su uno Ztamp o su un Nano:ztag diverso. Suggerimento: incolla vari Ztamp sulle varie facce di un oggetto cubico e fanne l'oggetto che controlla iTunes. <br/>Questo servizio funziona unicamente su un Mir:ror collegato a un computer in cui è installato iTunes.</p>
+"]]></it>
+		<es><![CDATA["<p><strong>Difundir música </strong><br/>
+Escribe el nombre de la lista de lectura o del artista o del álbum o de la música que se interpretará cada vez que le muestres el Ztamp o el Nano:ztag. Puedes escribir varios nombres en cada campo, separándolos por una coma <br/>
+Si sólo escribes una parte del nombre, Itunes interpretará todos los títulos que  corresponden a tu pedido. Por ejemplo, si escribes la palabra « love », iTunes interpretará todas las música que contienen la palabra « love » en tu biblioteca <br/>
+Si no escribes nada, el Ztamp iniciará la lectura de toda tu biblioteca iTunes. <br/>
+Marca el casillero <i>Aleatorio</i> para una lectura de los títulos de tu selección en orden aleatorio. Marca el casillero <i>recomenzar</i>, para que una vez reproducidos todos los títulos la lectura recomience. <br/>
+<strong>Controlar iTunes</strong><br/>
+También puedes programar los Ztamps o los Nano:ztags para que se efectúen otras acciones en iTunes : Parar/Recomenzar la lectura en curso o Pasar al trozo siguiente o al precedente, o salir de iTunes.
+<br/>
+Se deben programar cada una de estas acciones en un Ztamp o un Nano:ztag diferente. Sugerencia: pega Ztamps en las diferentes caras de un mismo objeto cúbico para hacer el objeto que controla iTunes. <br/>
+Este servicio sólo funciona en un Mir:ror conectado a un ordenador en el cuan se ha instalado en software iTunes.</p>
+"]]></es>
+		<de><![CDATA["<p><strong> Musikwiedergabe </strong><br/>
+Geben Sie den Namen der Songliste, des Künstlers, des Albums oder des Stückes ein, die bei jedem Zeigen des Ztamps oder des Nano:ztags abgespielt werden sollen. Sie können in jedem Feld mehrere durch Kommata getrennte Namen eingeben. <br/>
+Wenn Sie nur einen Teil des Namens eingeben, spielt iTunes alle mit diesem Begriff übereinstimmende Titel ab. Geben Sie zum Beispiel das Wort « Love » ein, gibt iTunes alle Stücke Ihrer Bibliothek, die « Love » beinhalten, wieder.<br/>
+Wenn Sie nichts eingeben, startet der Ztamp Ihre gesamte iTunes Bibliothek. <br/>
+Kreuzen Sie das Kästchen <i>Zufällige Wiedergabe</i> an, um die Titel Ihrer Auswahl in zufälliger Reihenfolge abzuspielen. Kreuzen Sie das Kästchen <i>Wiederholen</i> an, damit alle Titel nach Ende der Wiedergabeliste erneut abgespielt werden. <br/>
+<strong>iTunes steuern</strong><br/>
+Sie können darüber hinaus Ztamps oder Nano:ztags zum Ausführen anderer Funktionen auf iTunes vor einstellen: Stopp/Wiedergabe des aktuellen Musikstückes oder Weiter oder Vorheriger oder iTunes beenden.<br/>
+Jede dieser Funktionen muss auf einem unterschiedlichen Ztamp oder Nano:ztag voreingestellt werden. Vorschlag: heften Sie die Ztamps auf verschiedene Seiten eines würfelförmigen Gegenstandes und machen sie ihn so zu einem iTunes-Steuerungsobjekt.<br/>
+Dieser Dienst funktioniert ausschließlich mit einem Mir:ror, der an einen Computer angeschlossen ist, auf dem iTunes installiert wurde.</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>使い方<strong>ズタンプやナノズタグをかざした時に再生される音楽のキーワードを入力します。それはアーティスト名でもアルバム名でも曲のタイトルでも構いません。いくつかの名前を入力したいときは半角コンマ（,）で区切ってください。<br/>
+		そのキーワードに「愛」という文字を入力した場合、iTunes に登録されている「愛」という文字が含まれた曲がすべて順番に再生されます。<br/>
+		キーワードを入力しなかった場合は、登録されている曲のどれかが再生されます。<br/>
+		<u>Shuffle</u>をチェックした場合、選択した音楽がランダムで再生されます。<br/>
+		<u>Repeat</u>をチェックした場合、すべての曲の再生が終わるとまた始めから曲が再生されます。<br/>
+		<strong>iTune の操作</strong><br/>
+		ズタンプやナノズタグを使って、曲の再生や停止、スキップなどの操作を行うこともできます。<br/>
+		それぞれの動作ごとに別のズタンプやナバズタグが必要になります。例えば棒のようなものに両端にズタンプを貼り、それぞれに別の機能をもたせればコントローラのようなものを作ることができます。<br/>
+		この機能を利用するには、iTunesがインストールされたコンピュータにミラーが接続されている必要があります。</p>"]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+	<item><map>
+		<key>"action"</key>
+		<type>"Popup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Action"]]></fr>
+			<en><![CDATA["Action"]]></en>
+			<it><![CDATA["Azione"]]></it>
+			<es><![CDATA["Acción"]]></es>
+			<de><![CDATA["Funktion"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["コントロール"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Sélectionnez l'action à exécuter par iTunes lors de la lecture du Ztamp"]]></fr>
+			<en><![CDATA["Select the action to be performed by iTunes when the Ztamp is read"]]></en>
+			<it><![CDATA["Seleziona l'azione che iTunes deve eseguire alla lettura dello Ztamp"]]></it>
+			<es><![CDATA["Selecciona la acción que iTunes tiene que ejecutar durante la lectura del Ztamp"]]></es>
+			<de><![CDATA["Wählen Sie die Funktion aus, die iTunes nach Lesen des Ztamp ausführen soll"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["ズタンプを使用した時の動作の選択してください"]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map>
+				<value>"play"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Démarrer la lecture"]]></fr>
+					<en><![CDATA["Start playback"]]></en>
+					<it><![CDATA["Avviare la lettura"]]></it>
+					<es><![CDATA["Iniciar la lectura "]]></es>
+					<de><![CDATA["Wiedergabe"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["再生"]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"toggle"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Arrêter/Reprendre"]]></fr>
+					<en><![CDATA["Stop/Resume"]]></en>
+					<it><![CDATA["Pausa/Riprendere"]]></it>
+					<es><![CDATA["Parar/Recomenzar"]]></es>
+					<de><![CDATA["Stopp/Wiedergabe"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["一時停止/再開"]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"previous"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Morceau précédent"]]></fr>
+					<en><![CDATA["Previous track"]]></en>
+					<it><![CDATA["Pezzo precedente"]]></it>
+					<es><![CDATA["Música precedente"]]></es>
+					<de><![CDATA["Vorheriger"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["前へ"]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"next"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Morceau suivant"]]></fr>
+					<en><![CDATA["Next track"]]></en>
+					<it><![CDATA["Pezzo successivo"]]></it>
+					<es><![CDATA["Música siguiente"]]></es>
+					<de><![CDATA["Weiter"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["次へ"]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"quit"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Arrêter et quitter iTunes"]]></fr>
+					<en><![CDATA["Stop and quit iTunes"]]></en>
+					<it><![CDATA["Stoppare e chiudere iTunes"]]></it>
+					<es><![CDATA["Parar y salir de iTunes"]]></es>
+					<de><![CDATA["Stopp und Beenden von iTunes"]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA["iTunesの終了"]]></ja>
+				</map></label>
+			</map></item>
+
+		</list></items>
+	</map></item>
+
+	<item><map>
+		<key>"playlist"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>false</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Liste de lecture"]]></fr>
+			<en><![CDATA["Playlist"]]></en>
+			<it><![CDATA["Playlist"]]></it>
+			<es><![CDATA["Lista de lectura"]]></es>
+			<de><![CDATA["Playlist"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["プレイリスト"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Entrez le nom ou une partie du nom de votre liste de lecture"]]></fr>
+			<en><![CDATA["Enter a name or part of a name for your Playlist"]]></en>
+			<it><![CDATA["Inserisci il nome o una parte del nome della tua playlist"]]></it>
+			<es><![CDATA["Entra el nombre o una parte del nombre de tu lista de lectura"]]></es>
+			<de><![CDATA["Geben Sie den Namen oder einen Teil des Namens Ihrer Playlist ein"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["プレイリストの名前を入力してください"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"artistname"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>false</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Artiste"]]></fr>
+			<en><![CDATA["Artist"]]></en>
+			<it><![CDATA["Artista"]]></it>
+			<es><![CDATA["Artista"]]></es>
+			<de><![CDATA["Interpret"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["アーティスト"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Entrez le nom ou une partie du nom de l'artiste"]]></fr>
+			<en><![CDATA["Enter the name or part of the name for the artist"]]></en>
+			<it><![CDATA["Inserisci il nome o una parte del nome dell'artista"]]></it>
+			<es><![CDATA["Entra el nombre o una parte del nombre del artista"]]></es>
+			<de><![CDATA["Geben Sie den Namen oder einen Teil des Namens des Interpreten ein"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["アーティストの名前を入力してください"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"albumname"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>false</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Album"]]></fr>
+			<en><![CDATA["Album"]]></en>
+			<it><![CDATA["Album"]]></it>
+			<es><![CDATA["Álbum"]]></es>
+			<de><![CDATA["Album"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["アルバム"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Entrez le nom ou une partie du nom de l'album"]]></fr>
+			<en><![CDATA["Enter the name or part of the name for the Album"]]></en>
+			<it><![CDATA["Inserisci il nome o una parte del nome dell'album"]]></it>
+			<es><![CDATA["Entra el nombre o una parte del nombre del álbum"]]></es>
+			<de><![CDATA["Geben Sie den Namen oder einen Teil des Namens des Albums ein"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["アルバムのタイトルを入力してください"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"trackname"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>false</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Chanson"]]></fr>
+			<en><![CDATA["Track"]]></en>
+			<it><![CDATA["Canzone"]]></it>
+			<es><![CDATA["Canción"]]></es>
+			<de><![CDATA["Song"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["曲"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Entrez le nom ou une partie du nom du morceau à jouer"]]></fr>
+			<en><![CDATA["Enter the name or part of the name for the Track to be played"]]></en>
+			<it><![CDATA["Inserisci il nome o una parte del nome della canzone da riprodurre"]]></it>
+			<es><![CDATA["Entra el nombre o una parte del nombre de la canción "]]></es>
+			<de><![CDATA["Geben Sie den Namen oder einen Teil des Namens des Musikstückes ein"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["再生したい曲のタイトルを入力してください"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"random"</key>
+		<type>"RadioGroup"</type>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Lecture aléatoire"]]></fr>
+			<en><![CDATA["Shuffle playback"]]></en>
+			<it><![CDATA["modalità Shuffle"]]></it>
+			<es><![CDATA["Lectura aleatoria"]]></es>
+			<de><![CDATA["Zufällige Wiedergabe"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["ランダム再生"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Activer ou désactiver la lecture aléatoire"]]></fr>
+			<en><![CDATA["Activate or disable shuffle playback "]]></en>
+			<it><![CDATA["Attivare o disattivare la modalità Shuffle"]]></it>
+			<es><![CDATA["Activar o desactivar la lectura aleatoria"]]></es>
+			<de><![CDATA["Zufällige Wiedergabe ein- oder ausschalten"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["曲をランダムに再生します"]]></ja>
+		</map></description>
+		<default_value>"false"</default_value>
+
+		<items><list>
+			<item><map>
+				<type>"RadioButton"</type>
+				<label>"js/YES"</label>
+				<value>"true"</value>
+			</map></item>
+			<item><map>
+				<type>"RadioButton"</type>
+				<label>"js/NO"</label>
+				<value>"false"</value>
+			</map></item>
+		</list></items>
+	</map></item>
+
+	<item><map>
+		<key>"repeat"</key>
+		<type>"RadioGroup"</type>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Lecture en boucle"]]></fr>
+			<en><![CDATA["Repeat playback "]]></en>
+			<it><![CDATA["Modalità repeat"]]></it>
+			<es><![CDATA["Lectura reinicializada"]]></es>
+			<de><![CDATA["Wiederholen"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["連続再生"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Activer ou désactiver la lecture en boucle"]]></fr>
+			<en><![CDATA["Activate or disable repeat playback "]]></en>
+			<it><![CDATA["Attivare o disattivare la modalità Repeat"]]></it>
+			<es><![CDATA["Activar o desactivar la lectura reinicializada"]]></es>
+			<de><![CDATA["Wiederholen ein- oder ausschalten"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["曲を繰り返し再生します"]]></ja>
+		</map></description>
+		<default_value>"false"</default_value>
+
+		<items><list>
+			<item><map>
+				<type>"RadioButton"</type>
+				<label>"js/YES"</label>
+				<value>"true"</value>
+			</map></item>
+			<item><map>
+				<type>"RadioButton"</type>
+				<label>"js/NO"</label>
+				<value>"false"</value>
+			</map></item>
+		</list></items>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

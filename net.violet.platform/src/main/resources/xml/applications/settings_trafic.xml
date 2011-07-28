@@ -1,0 +1,47 @@
+<map>
+<settings>
+<list>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"start"</key>
+		<label>"srv_traffic/start_point"</label>
+		<items>
+			<list>
+			<item><map><type>"PopupItem"</type><label>"Porte de la Chapelle"</label><separator>false</separator><enabled>true</enabled><value>"Chapelle"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte de Bagnolet"</label><separator>false</separator><enabled>true</enabled><value>"Bagnolet"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte de Bercy"</label><separator>false</separator><enabled>true</enabled><value>"Bercy"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte d'Italie"</label><separator>false</separator><enabled>true</enabled><value>"Italie"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte d'Orléans"</label><separator>false</separator><enabled>true</enabled><value>"Orleans"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte d'Auteuil"</label><separator>false</separator><enabled>true</enabled><value>"Auteuil"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte de Maillot"</label><separator>false</separator><enabled>true</enabled><value>"Maillot"</value></map></item>
+			</list>
+		</items>
+	</map>
+	</item>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"end"</key>
+		<label>"srv_traffic/to_point"</label>
+		<items>
+			<list>
+			<item><map><type>"PopupItem"</type><label>"Porte de la Chapelle"</label><separator>false</separator><enabled>true</enabled><value>"Chapelle"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte de Bagnolet"</label><separator>false</separator><enabled>true</enabled><value>"Bagnolet"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte de Bercy"</label><separator>false</separator><enabled>true</enabled><value>"Bercy"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte d'Italie"</label><separator>false</separator><enabled>true</enabled><value>"Italie"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte d'Orléans"</label><separator>false</separator><enabled>true</enabled><value>"Orleans"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte d'Auteuil"</label><separator>false</separator><enabled>true</enabled><value>"Auteuil"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Porte de Maillot"</label><separator>false</separator><enabled>true</enabled><value>"Maillot"</value></map></item>
+			</list>
+		</items>
+	</map>
+	</item>
+	
+	
+
+</list>
+</settings>
+</map>

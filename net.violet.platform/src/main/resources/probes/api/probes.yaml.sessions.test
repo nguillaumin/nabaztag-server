@@ -1,0 +1,17 @@
+application=webui
+
+[create]
+url=sessions/create?email="probes@violet.net"&password="violet"&expiration=TOMORROW
+content_type=text/yaml
+regex=--- (.*?)\s
+
+[update]
+content_type=text/yaml
+url=sessions/update/1f687:4b3d3b00:ae84703acb66dad00447a424f6e1113861559310
+post_data=expiration: 2010-01-01
+regex=id:
+
+[getUser]
+url=sessions/getUser/1f687:4b3d3b00:ae84703acb66dad00447a424f6e1113861559310
+content_type=text/yaml
+regex=--- !!map:PersonInformation

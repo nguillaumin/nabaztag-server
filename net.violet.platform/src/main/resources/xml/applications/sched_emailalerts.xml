@@ -1,0 +1,43 @@
+<map>
+<scheduling_masks>
+	<list>
+	<item>
+		<map>
+			<hw_type>"violet.nabaztag"</hw_type>
+			<scheduling_type>"NewContentWithKeywordAndMedia"</scheduling_type>
+			<maximum>5</maximum>
+			<minimum>0</minimum>
+		</map>
+	</item>
+
+	<item>
+		<map>
+			<hw_type>"violet.nabaztag"</hw_type>
+			<scheduling_type>"AmbiantWithKeyword"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>0</minimum>
+		</map>
+	</item>
+
+	<item>
+		<map>
+			<hw_type>"violet.daldal"</hw_type>
+			<scheduling_type>"NewContentWithKeywordAndMedia"</scheduling_type>
+			<minimum>0</minimum>
+			<maximum>5</maximum>
+		</map>
+	</item>
+
+	<item>
+		<map>
+			<hw_type>"violet.daldal"</hw_type>
+			<scheduling_type>"AmbiantWithKeyword"</scheduling_type>
+			<maximum>1</maximum>
+			<minimum>0</minimum>
+		</map>
+	</item>
+
+	</list>
+
+</scheduling_masks>
+</map>

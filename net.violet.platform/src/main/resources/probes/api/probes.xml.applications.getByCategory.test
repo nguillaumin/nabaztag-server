@@ -1,0 +1,21 @@
+application=webui
+
+[entertainement]
+url=applications/getByCategory
+post_data=<map><id>"LOC_srv_category_entertainement/title"</id><hw_type>"violet.nabaztag.tag"</hw_type></map>
+regex=violet.nabaztag.tag
+
+[daylife]
+url=applications/getByCategory
+post_data=<map><id>"LOC_srv_category_daylife/title"</id><hw_type>"violet.nabaztag.tag"</hw_type></map>
+regex=weather
+      
+[beta]
+url=applications/getByCategory
+post_data=<map><id>"LOC_srv_category_beta/title"</id><skip>10</skip></map>
+regex=.*
+
+[beta_en]
+url=applications/getByCategory
+post_data=<map><id>"LOC_srv_category_beta/title"</id><language>"fr"</language><skip>10</skip></map>
+regex= <list>

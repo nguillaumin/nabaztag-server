@@ -1,0 +1,14 @@
+MESSAGE
+
+------------------------------------------------------------------------------
+
+Ce message vous a été envoyé par FIRST_NAME LAST_NAME depuis son Ztamp OBJ_SENDER via OBJ_READER
+
+
+++ QUELQUES TRUCS QU'IL EST PEUT ETRE BON DE SAVOIR ++
+- Pour envoyer ce message, FIRST_NAME a simplement montré son Ztamp OBJ_SENDER à OBJ_READER
+- Découvrez toutes les choses qu'il est possible de faire avec de simples Objets en allant sur http://www.violet.net
+--- Ce message a été généré par l'Application "APPLICATION" ---
+
+
+-- Violet. Let All Things Be Connected --

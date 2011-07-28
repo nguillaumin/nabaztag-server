@@ -1,0 +1,20 @@
+<map>
+<settings>
+<list>
+	<item>
+	<map>
+		<type>"InputLine"</type>
+		<key>"label"</key>
+		<label>"srv_rss/title_URL"</label>
+	</map>
+	</item>
+	<item>
+	<map>
+		<type>"InputLine"</type>
+		<key>"url"</key>
+		<label>"srv_rss/feed_URL"</label>
+	</map>
+	</item>
+</list>
+</settings>
+</map>

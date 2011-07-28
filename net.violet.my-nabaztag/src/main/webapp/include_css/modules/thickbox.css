@@ -1,0 +1,143 @@
+/* CSS Document */
+
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* ---------->>> thickbox specific link and font settings <<<------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------*/
+#TB_window {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+#TB_secondLine {
+	font: 10px Arial, Helvetica, sans-serif;
+	color:#666666;
+}
+/*
+#TB_window a:link {color: #666666;}
+#TB_window a:visited {color: #666666;}
+#TB_window a:hover {color: #000;}
+#TB_window a:active {color: #666666;}
+#TB_window a:focus{color: #666666;}
+*/
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* ---------->>> thickbox settings <<<-----------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------*/
+
+#TB_overlay {
+	position: absolute;
+	z-index:100;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	min-height:100%;
+
+	background-color:white;
+	filter:alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+}
+
+#TB_window {
+	position: absolute;
+	background: #ffffff;
+	z-index: 102;
+	color:#000000;
+	display:none;
+	border: 2px solid #523F89;
+	text-align:left;
+}
+/*
+#TB_window img {
+	display:block;
+	margin: 15px 0 0 15px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+}
+*/
+#TB_caption{
+	height:25px;
+	padding:7px 30px 10px 25px;
+	float:left;
+	
+}
+
+#TB_closeWindow{
+	height:25px;
+	padding:11px 25px 10px 0;
+	float:right;
+}
+
+#TB_closeAjaxWindow{
+	padding:5px 10px 7px 0;
+	margin-bottom:1px;
+	text-align:right;
+	float:right;
+}
+
+#TB_ajaxWindowTitle{
+	float:left;
+	padding:7px 0 5px 10px;
+	margin-bottom:1px;
+	font-size:12px;
+	font-weight:bold;
+}
+
+#TB_title{
+	background-color:#CCCCCC;
+	height:27px;
+
+}
+
+#TB_ajaxContent{
+	clear:both;
+	padding:2px 6px 6px 6px;
+	/*overflow:auto;*/
+	text-align:left;
+	line-height:1.4em;
+}
+
+#TB_ajaxContent p{
+	padding:5px 0px 5px 0px;
+}
+
+#TB_load{
+	position: absolute;
+	display:none;
+	height:100px;
+	width:100px;
+	z-index:101;
+	background:white;
+}
+
+#TB_HideSelect{
+	z-index:99;
+	position:absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	border:none;
+	filter:alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+}
+
+#TB_iframeContent{
+	border:none;
+	clear:both;
+}
+
+#TB_closeWindowButton span{
+	display:none;
+}
+#TB_closeWindowButton {
+	display:block;
+	width:12px;
+	height:13px;
+	background-image:url(../../include_img/closeWin.gif);
+	background-repeat:no-repeat;
+}

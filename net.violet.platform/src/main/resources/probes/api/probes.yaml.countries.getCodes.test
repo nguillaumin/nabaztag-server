@@ -1,0 +1,5 @@
+application=webui
+
+url=countries/getCodes
+content_type=text/yaml
+regex=- FR

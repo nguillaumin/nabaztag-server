@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.applications.getProfile
+content_type=text/json
+regex="errors":\["InvalidParameter",?"NoSuchApplication",?\],.*"method_class":"GET"

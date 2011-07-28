@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/XaolVBUxsx -->
+	<name>"net.violet.js.remember"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"daylife"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>10</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"Remember"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Se souvenir de l’heure et de la date"]]></fr>
+		<en><![CDATA["Remembering the time and date"]]></en>
+		<it><![CDATA["Ricordarsi del giorno e dell'ora"]]></it>
+		<es><![CDATA["Recordar la hora y la fecha"]]></es>
+		<de><![CDATA["Erinnerung an Uhrzeit und Datum"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["日時の記憶"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Votre Ztamp vous dit quand il a été vu pour la dernière fois. <br/>
+Exemple : Quand avez-vous pris de l’aspirine pour la dernière fois ? Quand avez-vous utilisé votre marteau ? Quand avez-vous lu ce livre pour la dernière fois ?</p>"]]></fr>
+		<en><![CDATA["<p>Your Ztamp tells you when it was last seen. <br/>
+Example: When did you last take an aspirin tablet? When did you use your hammer? When was the last time you read this book?</p>"]]></en>
+		<it><![CDATA["<p>Il tuo Ztamp ti comunica quando è stato visto l'ultima volta<br/>
+Esempio : Quando hai preso l'aspirina l'ultima volta? Quando hai utilizzato il martello? Qual è stata l'ultima volta che hai letto questo libro?"]]></it>
+		<es><![CDATA["<p>Tu Ztamp te dice cuando fue la última vez que lo has visto. <br/>
+Ejemplo: ¿Cuándo has tomado la última aspirina? ¿Cuándo has utilizado tu martillo? ¿Cuándo fue la última vez que has leído este libro?</p>"]]></es>
+		<de><![CDATA["<p>Ihr Ztamp teilt Ihnen mit, wann er das letzte Mal gesehen wurde. <br/>
+Beispiel: Wann haben Sie das letzte Mal Aspirin genommen? Wann haben Sie Ihren Hammer benutzt? Wann haben Sie dieses Buch zum letzten Mal gelesen?</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>もっとも最近そのズタンプが使われた日時を知ることができます。<br/>
+		たとえば、前にいつ頭痛薬を飲んだのか。じょうろを使った日時や本を読んだ日時も知ることができます。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>A chaque fois que vous montrez votre Ztamp (ou Nano:ztag) à un Mir:ror ou un Nabaztag:tag, l'application vous dit la date et l'heure à laquelle il a été vu la dernière fois sous la forme : <i>« il y a 2 heures »</i> si l'évènement a eu lieu le jour même, ou <i>« le mardi 7 octobre à 18h13 »</i> s'il a eu lieu avant aujourd'hui.<br/>
+Vous pouvez personnaliser le message en ajoutant un texte qui sera dit avant ou après la date et l'heure. Entrez par exemple : <i>« Tu as pris ton médicament»</i> pour obtenir <i>« Tu as pris ton médicament il y a 2 heures »</i> ou <i> « Tu as pris ton médicament, le mardi 7 octobre à 18h13 »</i>.</p>"]]></fr>
+		<en><![CDATA["<p>Every time you show your Ztamp (or Nano:ztag) to a Mir:ror or Nabaztag:tag, the application tells you the date and time it was last detected, either as: <i>"2 hours ago"</i> if the event occurred on that same day, or as: <i>"on Tuesday October 7th at 6:13 pm"</i> if the event occurred on a previous day.<br/>
+You can personalize the message by adding text to be spoken before or after the date and time.<br/>
+For instance, you can enter: <i>"You took your medication"</i> and <i>"remember, no more than 3 a day"</i> in order to obtain <i>"You took your medication 2 hours ago, remember, no more than 3 a day"</i> or <i> "You took your medication on Tuesday October 7th at 6:13 pm,remember, no more than 3 a day"</i>.</p>"]]></en>
+		<it><![CDATA["<p>Ogni volta che mostri uno Ztamp (o un Nano:ztag) a un Mir:ror o a un Nabaztag:tag, l'applicazione ti dice la data e l'ora in cui è stato visto l'ultima volta, in questo modo: <i>"Da due ore"</i> se è avvenuto il giorno stesso, o <i>" martedì 7 ottobre alle 18.13"</i> se è successo nei giorni precedenti:<br/>
+Il messaggio può essere personalizzato aggiungendo un testo che verrà letto prima e dopo la data e l'ora. Ad esempio, aggiungendo : <i>« Hai preso la medicina»</i> poi <i>« non bisogna prenderne più di tre al giorno» </i> otterrai <i>"Hai preso la medicina da due ore non bisogna prenderne più di tre al giorno" </i> oppure <i> "Hai preso la medicina martedì 7 ottobre alle 18.13 non bisogna prenderne più di tre al giorno" </i>.</p>"]]></it>
+		<es><![CDATA["<p>Cada vez que presentas tu Ztamp (o Nano: ztag) a un Mir: ror o a un Nabaztag: tag, la aplicación te comunica la fecha y la hora en que la has visto por última vez bajo la forma: <i>"hace 2 horas" </i> si el hecho se produjo ese día, o <i>"el martes 7 de octubre a 18H13" </i> si se produjo anteayer.<br/>
+Puedes personalizar el mensaje agregando un texto que se emitirá antes y después de la hora. Entra por ejemplo: <i>" Has tomado tu medicamento"</i> y <i>"no hay que tomar más de 3 por día"  para obtener <i>"Hace 2 horas que has tomado tu medicamento, no hay que tomar más de 3 por día"</i> o <i>"Has tomado tu medicamento el martes 7 de octubre a las 18H13 no hay que tomar más de 3 por día"</i>.</p>"]]></es>
+		<de><![CDATA["<p>Jedes Mal, wenn Sie Ihren Ztamp (oder Nano:ztag) einem Mir:ror oder einem Nabaztag:tag zeigen, teilt Ihnen die Applikation das Datum und die Uhrzeit seiner letzten Erkennung folgendermaßen mit: <i>« vor 2 Stunden »</i> falls das Ereignis am selben Tag stattfindet oder <i>« Dienstag, 7. Oktober um 18 Uhr 13 »</i> falls es vor dem heutigen Datum lag.<br/>
+Sie können die Nachricht mit einem Text personalisieren, der mit dem Datum und der Uhrzeit angesagt wird. Geben Sie zum Beispiel vor bzw. nach Datum und Uhrzeit ein: <i>«Du hast Dein Medikament »</i> und <i>« genommen ».</i> Sie erhalten <i>« Du hast Dein Medikament vor 2 Stunden genommen»</i> oder <i> «Du hast Dein Medikament Dienstag, den 7. Oktober um 18 Uhr 13 genommen»</i>.</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>1回前にズタンプやナノズタグをミラーやナバズタグ：タグにかざした日時を教えてくれます。例えば、1回前が同じ日だったら<i>"2 hours ago"</i>、数日前だったら<i>"on Tuesday October 7th at 6:13 pm"</i>などと伝えてくれます。<br/>
+		伝えられる日時の前後に文章をつけ加えることもできます。<br/>
+		例えば、日時の前に「この薬を」、後に「に飲みました。1日３錠までです」という文章を加えれば、「この薬を<i> 2 hours ago </i>に飲みました。１日３錠までです」と伝えてくれます。</p>"]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA[""]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"introduction"</key>
+		<type>"InputLine"</type>
+		<type>"TextArea"</type><!-- Should be TextArea when it will be supported -->
+		<datatype>"text"</datatype>
+		<maxlength>1000</maxlength>
+		<cols>80</cols>
+		<rows>3</rows>
+		<required>false</required>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Texte préliminaire"]]></fr>
+			<en><![CDATA["Preliminary text"]]></en>
+			<it><![CDATA["Testo preliminare"]]></it>
+			<es><![CDATA["Texto de introdución"]]></es>
+			<de><![CDATA["Einführungstext"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["日時の前に読まれる文章"]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["La phrase qui sera dite avant la date et l'heure]]></fr>
+			<en><![CDATA["Text that will be prepended to the timestamp"]]></en>
+			<it><![CDATA["Frase che verrà detta prima di data e ora"]]></it>
+			<es><![CDATA["Texto que se emitirá antes de la hora."]]></es>
+			<de><![CDATA["Der Satz, der vor Datum und Uhrzeit angesagt wird"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["日時がの前に読み上げれられる文章を入力してください"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"conclusion"</key>
+		<type>"InputLine"</type>
+		<type>"TextArea"</type><!-- Should be TextArea when it will be supported -->
+		<datatype>"text"</datatype>
+		<maxlength>1000</maxlength>
+		<cols>80</cols>
+		<rows>3</rows>
+		<required>false</required>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Texte complémentaire"]]></fr>
+			<en><![CDATA["Additional text"]]></en>
+			<it><![CDATA["Testo complementare"]]></it>
+			<es><![CDATA["Texto complementario"]]></es>
+			<de><![CDATA["Zusätzlicher Text"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["日時の後に読まれる文章"]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["La phrase qui sera ajoutée après l'indication de la date."]]></fr>
+			<en><![CDATA["Text that will be added after the timestamp to form a sentence."]]></en>
+			<it><![CDATA["Frase che sarà aggiunta dopo l'indicazione della data."]]></it>
+			<es><![CDATA["texto que se emitirá despues de la hora."]]></es>
+			<de><![CDATA["Der Satz, der nach der Datumsangabe hinzugefügt wird."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["日時の後に読み上げれられる文章を入力してください"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"voice"</key>
+		<type>"Popup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<source>"view_tts_voices"</source>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Voix"]]></fr>
+			<en><![CDATA["Voice"]]></en>
+			<it><![CDATA["Voce"]]></it>
+			<es><![CDATA["Voz"]]></es>
+			<de><![CDATA["Stimme"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["音声"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Choisissez la langue et la voix avec laquelle vous voulez qu'il lise le message."]]></fr>
+			<en><![CDATA["Select the language and voice you want the message to be read with."]]></en>
+			<it><![CDATA["Scegli la lingua e la voce che desideri leggano il tuo messaggio."]]></it>
+			<es><![CDATA["Elige la lengua y la voz que quieres que te lean el mensaje."]]></es>
+			<de><![CDATA["Sie die Sprache und die Stimme, mit der die Nachricht gelesen werden soll."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["読み上げられる文章の言語と音声を選択してください"]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map><value>"FR-Anastasie"</value><label>"FR - Anastasie"</label></map></item>
+			<item><map><value>"FR-Archibald"</value><label>"FR - Archibald"</label></map></item>
+			<item><map><value>"FR-Gertrude"</value><label>"FR - Gertrude"</label></map></item>
+			<item><map><value>"FR-Maxence"</value><label>"FR - Maxence"</label></map></item>
+			<item><map><value>"UK-Edwin"</value><label>"UK - Edwin"</label></map></item>
+			<item><map><value>"UK-Leonard"</value><label>"UK - Leonard"</label></map></item>
+			<item><map><value>"UK-Mistermuggles"</value><label>"UK - Mister muggles"</label></map></item>
+			<item><map><value>"UK-Penelope"</value><label>"UK - Penelope"</label></map></item>
+			<item><map><value>"UK-Shirley"</value><label>"UK - Shirley"</label></map></item>
+			<item><map><value>"US-Bethany"</value><label>"US - Bethany"</label></map></item>
+			<item><map><value>"US-Billye"</value><label>"US - Billye"</label></map></item>
+			<item><map><value>"US-Clarence"</value><label>"US - Clarence"</label></map></item>
+			<item><map><value>"US-Darleen"</value><label>"US - Darleen"</label></map></item>
+			<item><map><value>"US-Liberty"</value><label>"US - Liberty"</label></map></item>
+			<item><map><value>"US-Lilian"</value><label>"US - Lilian"</label></map></item>
+			<item><map><value>"AU-Colleen"</value><label>"AU - Colleen"</label></map></item>
+			<item><map><value>"AU-Jon"</value><label>"AU - Jon"</label></map></item>
+			<item><map><value>"ES-Alfonsina"</value><label>"ES - Alfonsina"</label></map></item>
+			<item><map><value>"ES-Baltasar"</value><label>"ES - Baltasar"</label></map></item>
+			<item><map><value>"ES-Bertrana"</value><label>"ES - Bertrana"</label></map></item>
+			<item><map><value>"ES-Dunixe"</value><label>"ES - Dunixe"</label></map></item>
+			<item><map><value>"ES-Emilia"</value><label>"ES - Emilia"</label></map></item>
+			<item><map><value>"ES-Rosalia"</value><label>"ES - Rosalia"</label></map></item>
+			<item><map><value>"IT-Assunta"</value><label>"IT - Assunta"</label></map></item>
+			<item><map><value>"IT-Ugo"</value><label>"IT - Ugo"</label></map></item>
+			<item><map><value>"BE-Hendrik"</value><label>"BE - Hendrik"</label></map></item>
+			<item><map><value>"BE-Minna"</value><label>"BE - Minna"</label></map></item>
+			<item><map><value>"BR-Lygia"</value><label>"BR - Lygia"</label></map></item>
+			<item><map><value>"CA-Antonine"</value><label>"CA - Antonine"</label></map></item>
+			<item><map><value>"CA-Felix"</value><label>"CA - Felix"</label></map></item>
+			<item><map><value>"CN-Pan"</value><label>"CN - Pan"</label></map></item>
+			<item><map><value>"CZ-Zdenech"</value><label>"CZ - Zdenech"</label></map></item>
+			<item><map><value>"DE-Otto"</value><label>"DE - Otto"</label></map></item>
+			<item><map><value>"DK-Karen"</value><label>"DK - Karen"</label></map></item>
+			<item><map><value>"DK-Pia"</value><label>"DK - Pia"</label></map></item>
+			<item><map><value>"EG-Nabil"</value><label>"EG - Nabil"</label></map></item>
+			<item><map><value>"EG-Nayla"</value><label>"EG - Nayla "</label></map></item>
+			<item><map><value>"GR-Antonis"</value><label>"GR - Antonis"</label></map></item>
+			<item><map><value>"IE-Orla"</value><label>"IE - Orla"</label></map></item>
+			<item><map><value>"IN-Nima"</value><label>"IN - Nima"</label></map></item>
+			<item><map><value>"IN-Sangeeta"</value><label>"IN - Sangeeta"</label></map></item>
+			<item><map><value>"JP-Tamura"</value><label>"JP - Tamura"</label></map></item>
+			<item><map><value>"KR-Choe"</value><label>"KR - Choe"</label></map></item>
+			<item><map><value>"NL-Femke"</value><label>"NL - Femke"</label></map></item>
+			<item><map><value>"NL-Max"</value><label>"NL - Max"</label></map></item>
+			<item><map><value>"NL-Renate"</value><label>"NL - Renate"</label></map></item>
+			<item><map><value>"NO-Cora"</value><label>"NO - Cora"</label></map></item>
+			<item><map><value>"NO-Sigrid"</value><label>"NO - Sigrid"</label></map></item>
+			<item><map><value>"PL-Ignacy"</value><label>"PL - Ignacy"</label></map></item>
+			<item><map><value>"PT-Celia"</value><label>"PT - Celia"</label></map></item>
+			<item><map><value>"RU-Bella"</value><label>"RU - Bella"</label></map></item>
+			<item><map><value>"SE-Hjalmar"</value><label>"SE - Hjalmar"</label></map></item>
+			<item><map><value>"SE-Maj"</value><label>"SE - Maj"</label></map></item>
+			<item><map><value>"SE-Selma"</value><label>"SE - Selma"</label></map></item>
+			<item><map><value>"TH-Boon-mee"</value><label>"TH - Boon-mee"</label></map></item>
+			<item><map><value>"TR-Asli"</value><label>"TR - Asli"</label></map></item>
+			<item><map><value>"YUE-Baibo"</value><label>"YUE - Bai bo"</label></map></item>
+			<item><map><value>"ZA-Wilbur"</value><label>"ZA - Wilbur"</label></map></item>
+		</list></items>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+
+</map>
+

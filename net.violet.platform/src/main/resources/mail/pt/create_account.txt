@@ -1,0 +1,15 @@
+﻿You now have a Violet.net account. Violet.net is your entry point to the Internet of Things.
+ 
+Keep this message for future reference: it contains information you need to join the network.  
+ 
+Your Violet.net account:
+Login: EMAIL
+Password: PASSWORD
+ 
+ 
+++ A FEW THINGS YOU MIGHT WANT TO KNOW ++
+- To get going in your new life with your Object, don’t forget to check out our quick guides: http://www.violet.net/tour
+- To assign applications to your Object, log on to Violet.net and go to the directory of Applications.
+- Remember to personalize your profile: it’s your ID card for the network.
+ 
+-- Violet. Let All Things Be Connected --

@@ -1,0 +1,29 @@
+<map>
+<settings>
+<list>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"voix"</key>
+		<label>"Voix Nathan"</label>
+		<items>
+			<list>
+				<item>
+				<map>
+					<type>"PopupItem"</type>
+					<label>"Voix 1"</label>
+					<separator>false</separator>
+					<enabled>true</enabled>
+					<value>"Voix 1"</value>
+				</map>
+				</item>
+			</list>
+		</items>
+	</map>
+	</item>
+	
+
+</list>
+</settings>
+</map>

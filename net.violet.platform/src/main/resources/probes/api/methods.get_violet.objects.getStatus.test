@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.objects.getStatus
+content_type=text/json
+regex="errors":\["InvalidParameter",?"NoSuchObject",?\],.*"method_class":"GET"

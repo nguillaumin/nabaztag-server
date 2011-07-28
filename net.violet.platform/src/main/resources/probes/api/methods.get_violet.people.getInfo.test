@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.people.getInfo
+content_type=text/json
+regex="errors":\["InvalidParameter",?"NoSuchPerson",?\],.*"method_class":"GET"

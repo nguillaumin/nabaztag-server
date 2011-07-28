@@ -1,0 +1,5 @@
+application=webui
+
+url=voices/synthetize
+post_data=<map><text><string>probes test</string></text><voice><string>Julie</string></voice></map>
+regex=broadcast/broad/

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/kEucp3Yqf6 -->
+	<name>"net.violet.js.filelauncher"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>800</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"FileLauncher"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Ouvrir un fichier"]]></fr>
+		<en><![CDATA["Open a file"]]></en>
+		<it><![CDATA["Aprire un file"]]></it>
+		<es><![CDATA["Abrir un archivo"]]></es>
+		<de><![CDATA["Öffnen einer Datei "]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["ファイルを開く"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Indiquez un fichier sur votre ordinateur. A chaque fois qu'il sera détecté, le Ztamp ouvrira ce fichier en utilisant le logiciel correspondant.<br/>
+Exemple : Montrez le dossier cartonné qui contient les documents d'un client à Mir:ror, il ouvrira le fichier Excel des comptes correspondants.</p>"]]></fr>
+		<en><![CDATA["Identify a file on your computer. Every time it is detected, the Ztamp will launch that file with the appropriate application.<br/>
+Example: Show the Mir:ror a paper folder containing a client's documents, and it will launch the Excel spreadsheet containing the corresponding account."]]></en>
+		<it><![CDATA["<p>Indica un file del tuo computer, ogni volta che mostrerai lo Ztamp questi aprirà il file corrispondente.<br>
+Ad esempio: Mostra al Mir:ror una cartellina di documenti scritti di un tuo cliente, aprirà il file dei conti corrispondenti a quel determinqto cliente.</p>
+"]]></it>
+		<es><![CDATA["Indica un archivo en tu ordenador. Cada vez que se le detectará, el Ztamp abrirá ese archivo usando el software correspondiente. <br/>
+Ejemplo: muéstrale el expediente en cartón que contiene los documentos de un cliente de Mir:ror; abrirá el archivo Excel de las cuentas correspondienes"]]></es>
+		<de><![CDATA["<p>Geben Sie eine Datei auf Ihrem Computer an. Jedes Mal, wenn der Ztamp erkannt wird, öffnet er diese Datei mit dem entsprechenden Programm.<br/>
+Beispiel: Wenn Sie Mir:ror eine Papierakte mit Kundenunterlagen zeigen, öffnet er die Exceldatei der jeweiligen Kundenkonten.</p>
+"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ズタンプでコンピュータ上にあるファイルを開くことができ、アプリケーションも起動させることができます。<br/>たとえば、会社で報告書類のファイルにズタンプを貼ります。そのファイルをミラーにかざすと報告書類に使用している Excel ファイルが開く、そんな使い方ができます。</p>"]]></ja>
+	</map></description>
+
+<instructions><map>
+		<fr><![CDATA["<p>Si votre fichier se trouve sur le bureau (desktop) de votre ordinateur, entrer seulement son nom complet (comprenant son extension .doc, .xls etc.).<br/>
+Si le fichier se trouve ailleurs sur votre ordinateur, saisissez le chemin complet d'accès au fichier
+(ex : <em>C:\Documents and Settings\Alain\ Ma musique\Au clair de la lune.mp3</em>)<br/>
+Si vous avez plusieurs fichiers à ouvrir, ajoutez plusieurs fois cette application au même Ztamp.<br/>
+Fonctionne uniquement sur un Mir:ror relié à l'ordinateur sur lequel se trouvent les fichiers concernés.</p>"]]></fr>
+		<en><![CDATA["<p>If the file is located on your computer's desktop, simply enter its full name (including file extension - .doc, .xls etc.).<br/>
+If the file is located elsewhere, enter the full file path (e.g.<em> C:\Documents and Settings\Alain\My music\Au clair de la lune.mp3</em>)
+If you want to open multiple files, add the application several times to the same Ztamp.<br/>
+Only works with the Mir:ror connected to the computer on which the files are located.</p>"]]></en>
+		<it><![CDATA["<p>Come si fa? <br/><ul><li>Se il file si trova sul Desktop, inserisci solamente il nome completo del file (compresa la sua estensione .doc, .xls etc.).</li><li>Se il file si trova altrove, allora devi inserire l'indirizzo completo (es: <em>C:\Documents and Settings\Marco\La mia Musica\Via con me.mp3</em>)</li><li>Se hai più file da aprire, aggiungi più volte quest'aplicazione allo stesso Ztamp.</li></ul><p>Funziona solamente su un Mir:ror collegato ad un computer sul quale si trovano i relativi files.</p>"]]></it>
+		<es><![CDATA["<p>Si tu archivo se encuentra sobre el programa de organización de escritorio (desktop) de tu ordenador, entra sólo su nombre completo, (incluida su extensión .doc, xls., etc.). <br/>
+			Si el archivo se encuentraen otro lugar de tu ordenador, introduce el camino completo de acceso al archivo (por ejemplo: <em>C:\Documents and Settings\Alain\ Mi música\Al claro de luna.mp3</em>).<br/>
+			<li>Si debes abrir varios archivos, añade varias veces esta aplicación al mismo Ztamp. <br/>
+			Funciona únicamente en Mir:ror conectado al ordenador en el cual se encuentran los archivos concernidos.</p>"]]></es>
+		<de><![CDATA["<p>Wie funktioniert das? <br/>
+<ul>
+<li>Befindet sich Ihre Datei auf dem Schreibtisch (desktop) Ihres Computers, geben Sie einfach den vollständigen Namen ein (mit der Dateinamenerweiterung .doc, .xls etc.).</li>
+<li>Befindet sich die Datei an einem anderen Ort auf Ihrem Computer, geben Sie den vollständigen Dateipfad ein (Bsp: <em>C:\Dokumente und Einstellungen\Eva\ Meine Musik\Creep.mp3</em>)</li>
+<li>Wollen Sie mehrere Dateien öffnen, fügen Sie diese Applikation mehrmals zum gleichen Ztamp hinzu.</li>
+</ul>
+<p>Funktioniert ausschließlich mit einem Mir:ror, der mit dem Computer verbunden ist, auf dem sich die entsprechenden Dateien befinden.</p>
+"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ファイルがコンピュータのデスクトップ上にある場合は、ファイル名のみ（.doc、.xlsなどの拡張子を含む）入力してください。<br/>
+		デスクトップ上にない場合は、ファイルの置き場所のフルパスを入力してください。（たとえば
+		、<em>C:\Documents and Settings\Alain\My music\Au clair de la lune.mp3 </em>）<br/>
+		同じズタンプで複数のファイルを開くこともできます。<br/>
+		ミラーとミラーが接続されているコンピュータ上のファイルのみ利用できます。</p>"]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"path"</key>
+		<type>"TextArea"</type>
+		<rows>2</rows>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Chemin"]]></fr>
+			<en><![CDATA["Path"]]></en>
+			<it><![CDATA["Radice"]]></it>
+			<es><![CDATA["Ruta"]]></es>
+			<de><![CDATA["Pfad"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["パス"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Chemin du fichier à lancer"]]></fr>
+			<en><![CDATA["Path to file to be launched"]]></en>
+			<it><![CDATA["Radice del file da aprire"]]></it>
+			<es><![CDATA["Ruta del fichero que hay que lanzar"]]></es>
+			<de><![CDATA["Pfad der zu öffnenden Datei"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["開きたいファイルのパス"]]></ja>
+		</map></description>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

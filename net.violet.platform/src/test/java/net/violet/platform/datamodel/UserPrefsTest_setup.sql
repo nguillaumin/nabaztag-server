@@ -1,0 +1,5 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+INSERT INTO `userprefs` VALUES (27852,'layout_violet');
+
+SET FOREIGN_KEY_CHECKS = 1;

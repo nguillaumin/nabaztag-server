@@ -1,0 +1,21 @@
+application=webui
+
+[get]
+url=timezones/get
+content_type=text/yaml
+regex=- Europe/Paris
+
+[getCurrentOffset]
+url=timezones/getCurrentOffset/Poland
+content_type=text/yaml
+regex=60
+
+[getByOffset]
+url=timezones/getByOffset?id=60
+content_type=text/yaml
+regex=Europe/Paris
+
+[getByCountry]
+url=timezones/getByCountry/GB
+content_type=text/yaml
+regex=Europe/London

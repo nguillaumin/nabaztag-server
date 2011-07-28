@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.journal.removeEntries
+content_type=text/json
+regex="errors":\["InvalidParameter","NoSuchSubscription",?\],.*"method_class":"DELETE"

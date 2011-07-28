@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<name>"net.violet.js.slideshow"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"SlideShow"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr>"Défilé d'images"</fr>
+		<en>"Slide Show"</en>
+	</map></title>
+
+	<description><map>
+		<fr>"Choisissez une série d'images à faire défiler à la lecture du ztamp."</fr>
+		<en>"Select a list of pictures to launch a slideshow on ztamp detection."</en>
+	</map></description>
+
+	<instructions><map>
+		<fr>"Note : Cette application ne fonctionne qu'avec le mir:ror relié à votre ordinateur."</fr>
+		<en>"Note : This application only works with the mir:ror."</en>
+	</map></instructions>
+
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+  </map></item>
+	<!-- application can be installed on ztamp removal -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+  </map></item>
+</list></scheduling_masks>
+
+
+</map>

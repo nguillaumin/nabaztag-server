@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.dico.update
+content_type=text/json
+regex="errors":\["InvalidParameter",?\],.*"method_class":"UPDATE"

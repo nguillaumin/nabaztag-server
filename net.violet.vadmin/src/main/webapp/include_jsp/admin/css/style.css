@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {margin:0; padding:0;}
+.clear {clear:both;}
+
+body {width:100%; font-family:Arial, Helvetica, sans-serif; font-size:1em; background-color:#f5f5f5;}
+a {color:#000;}
+a:hover {text-decoration:none;}
+
+.error {color:red; font-weight:bold;}
+
+/* Log in page */
+/*.field {display:block; margin-bottom:5px;}
+.field label {display:block; float:left; width:180px;}*/
+
+
+/* Error log in */
+
+
+
+#navigation {float:left; width:13%; position:fixed; background-color:#E8EDFF; height:100%; padding-top:20px; border-right:1px solid #B9C9FE;}
+#navigation .nav-prim {margin:0 0 20px 10px;}
+#navigation .nav-prim h2 {font-weight:bold; font-size:1em; border-bottom:1px solid #ddd;}
+#navigation .nav-prim ul {margin-left:15px; font-size:0.9em; list-style-type:none;}
+#navigation .nav-prim li {margin:4px 0;}
+
+#content {width:87%; float:right; padding:20px 0;}
+* html #content {width:83%;}
+#content fieldset {width:80%; margin:20px auto; padding:10px; border:1px solid #B9C9FE; background-color:#f9f9f9;}
+#content fieldset h3 {font-size:1em; font-weight:bold; text-align:center; background-color:#f5f5f5; padding:10px 0; margin-bottom:15px; border-bottom:1px solid #ddd;}
+#content fieldset legend {padding:5px; font-weight:bold; color:#000;}
+#content fieldset .field {margin:10px 0;}
+#content fieldset .field p {margin:5px 0 5px 265px; font-size:0.9em;}
+#content fieldset .field span {width:250px; display:block; float:left; text-align:right; padding-right:15px;}
+#content fieldset .field input[type="text"] {width:200px;}
+#content fieldset .field input[type="password"] {width:200px;}
+#content fieldset .field textarea {width:65%; height:8em;}
+#content fieldset .call2action {padding-bottom:5px;padding-left:5px;padding-right:5px;padding-top:5px;text-align:center; clear:both;}
+#content fieldset .call2action input {background-color:#CCDC00;color:#FFF;padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:10px; cursor:pointer;}
+
+
+#content fieldset .field.info {width:100%;}
+#content fieldset .field.info span {width:50%; font-weight:bold; color:#888;}
+#content fieldset .field.info .error {margin-left:52%;}
+
+#content fieldset .update {margin-left:52%;}
+
+#content .results {margin:20px auto; width:82%;}
+#content .results table {width:100%; text-align:center;}
+#content .results table a {display:block; text-decoration:underline;}
+#content .results table a:hover {text-decoration:none;}
+#content .results table thead th {background-color:#B9C9FE; padding:10px 2px;}
+#content .results table tbody {background-color:#E8EDFF;}
+#content .results table tbody td {padding:2px;}
+
+#content .message {text-align:center; margin:10px 0;}
+#content .back {text-align:right; margin:20px 20px 20px 0;}
+#content .picture {height: 100px; align: center;}
+
+#login, #refused {width:30%; margin:10px auto; padding:30px;}
+#login {border:2px solid #B9C9FE; background-color:#F9F9F9;}
+#refused {border:2px solid red; text-align:center;}
+
+#internationalization ul li {display: inline;}=======
+
+/* Dico */
+
+.dico .edit-dico label {display:block; float:left; height:200px; margin-right:10px; font-weight:bold; text-transform:uppercase;}
+.dico .edit-dico textarea {width:870px; height:200px;font-family:trebuchet MS;font-size:0.8em;}

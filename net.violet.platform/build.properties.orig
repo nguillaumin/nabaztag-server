@@ -1,0 +1,17 @@
+# Svn tasks properties
+svn.username=tomcat
+svn.password=c36cb0fe8078ca8fe89ac521b45e4883
+
+# Compilation properties
+exclude.from.classpath=commons-el.jar,jasper*.jar,jsp-api.jar,naming*.jar, jakarta-oro*, asm*, catalina-ant.jar
+exclude.from.warlib=servlet-api.jar,mysql-connector*, cobertura*, junit*
+include.in.war.jsp=*.jsp,FR/*.jsp,images/*,js/*.js, js/lib/*.js,processing.html,css/*.css
+include.in.war.bin=**/*.mid,**/*.vasm
+
+# WAR properties
+war.filename=OS.war
+
+PROBESDIR=/usr/local/tomcat/violet/Probes
+DBENGINEDIR=/usr/local/tomcat/violet/DBEngine
+COMMONDIR=/usr/local/tomcat/violet/Common
+CONTENTHANDLERDIR=/usr/local/tomcat/violet/ContentHandler

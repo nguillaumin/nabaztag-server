@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.subscriptions.create
+content_type=text/json
+regex="errors":\["InvalidParameter",?"NoSuchApplication",?"NoSuchObject",?\],.*"method_class":"CREATE"

@@ -1,0 +1,12 @@
+---
+man:
+  countries:
+  - France
+  - Germany
+  - Japan
+  name: DOE
+  surname: John
+ysn: true
+pi: 3.14159265
+title: I'm The Echo
+japanesetitle: 株式会社リコー 新着情報

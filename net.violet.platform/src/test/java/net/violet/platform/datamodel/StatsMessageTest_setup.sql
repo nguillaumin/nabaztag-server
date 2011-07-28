@@ -1,0 +1,5 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+INSERT INTO `stats_message` VALUES (1, '1010', '1111', NOW(), 'API', 4);
+
+SET FOREIGN_KEY_CHECKS = 1;

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+	<app><map>
+		<!-- application + application_profile -->
+		<!-- http://etherpad.com/G1f2GVJ9Ij -->
+		<name>"net.violet.js.facebookstatus"</name>
+		<author>"dev-js@violet.net"</author>
+		<category>"communication"</category>
+		<class>"native"</class>
+		<language>"JAVASCRIPT"</language>
+		<apiVersion>"0.8"</apiVersion>
+		<opensource>false</opensource>
+		<interactive>false</interactive>
+		<visible>true</visible>
+		<removable>true</removable>
+		<rank>3000</rank>
+		<credentials><map>
+			<!-- Creates application_credentials entry -->
+			<public_key>"FacebookStatus"</public_key>
+			<private_key>"private"</private_key>
+		</map></credentials>
+		<title><map>
+			<fr><![CDATA["Facebook Status"]]></fr>
+			<en><![CDATA["Facebook Status"]]></en>
+			<it><![CDATA["Facebook Status"]]></it>
+			<es><![CDATA["Facebook Status"]]></es>
+			<de><![CDATA["Facebook Status"]]></de>
+			<pt><![CDATA["Facebook Status"]]></pt>
+			<ja><![CDATA["Facebook Status"]]></ja>
+		</map></title>
+		<description><map>
+			<fr><![CDATA["<p>Facebook Status</p>"]]></fr>
+			<en><![CDATA["<p>Facebook Status</p>"]]></en>
+			<it><![CDATA["<p>Facebook Status</p>"]]></it>
+			<es><![CDATA["<p>Facebook Status</p>"]]></es>
+			<de><![CDATA["<p>Facebook Status</p>"]]></de>
+			<pt><![CDATA["<p>Facebook Status</p>"]]></pt>
+			<ja><![CDATA["<p>Facebook Status</p>"]]></ja>
+		</map></description>
+		<instructions><map>
+			<fr><![CDATA["<p>Instruction to Facebook Status</p>"]]></fr>
+			<en><![CDATA["<p>Instruction to Facebook Status</p>"]]></en>
+			<it><![CDATA["<p>Instruction to Facebook Status</p>"]]></it>
+			<es><![CDATA["<p>Instruction to Facebook Status</p>"]]></es>
+			<de><![CDATA["<p>Instruction to Facebook Status</p>"]]></de>
+			<pt><![CDATA["<p>Instruction to Facebook Status</p>"]]></pt>
+			<ja><![CDATA["<p>Instruction to Facebook Status</p>"]]></ja>
+		</map></instructions>
+	</map></app>
+	<resources><map/></resources>
+	<settings><list>
+		<item><map>
+			<key>"status"</key>
+			<type>"TextArea"</type>
+			<datatype>"text"</datatype>
+			<maxlength>1000</maxlength>
+			<cols>80</cols>
+			<rows>6</rows>
+			<default_value>"I am Happy"</default_value>
+			<label><map>
+				<!-- Dico key in the form : app/<appName>/settings/<key> -->
+				<fr><![CDATA["Message"]]></fr>
+				<en><![CDATA["Message"]]></en>
+				<it><![CDATA["Messaggio"]]></it>
+				<es><![CDATA["Mensaje"]]></es>
+				<de><![CDATA["Nachricht"]]></de>
+				<pt><![CDATA[""]]></pt>
+				<ja><![CDATA[""]]></ja>
+			</map></label>
+			<description><map>
+				<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+				<fr><![CDATA["Le corps du mail (vous pouvez utiliser les variables de remplacement ${var})"]]></fr>
+				<en><![CDATA["Message body (${var} replacement variables can be used)"]]></en>
+				<it><![CDATA["Corpo del messaggio(puoi utilizzare le variabili di sostituzione ${var}) "]]></it>
+				<es><![CDATA["El cuerpo principal del correo (puedes usar las variables de reemplazo ${var})"]]></es>
+				<de><![CDATA["Der Inhalt der E-Mail (Sie können die Ersetzungsvariablen benutzen ${var})"]]></de>
+				<pt><![CDATA[""]]></pt>
+				<ja><![CDATA[""]]></ja>
+			</map></description>
+		</map></item>
+	</list></settings>
+	<scheduling_masks><list>
+		<!-- application can be installed on ztamp detection -->
+		<item><map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampDetection"</event>
+			<label>"LOC_events/ZtampDetection"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map></item>
+		<!-- application can be installed on ztamp removal -->
+		<item><map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampRemoval"</event>
+			<label>"LOC_events/ZtampRemoval"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map></item>
+	</list></scheduling_masks>
+</map>

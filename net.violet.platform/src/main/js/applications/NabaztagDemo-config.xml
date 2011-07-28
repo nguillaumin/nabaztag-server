@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/F3K7RoxbNY -->
+	<name>"net.violet.js.nabaztagdemo"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"lifestyle"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>200</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"NabaztagDemo"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Nabaztag fait son show"]]></fr>
+		<en><![CDATA["Nabaztag makes the show"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["Vous avez des amis chez vous ? Vous voulez leur montrer ce que Nabaztag sait faire ? Laissez Nabaztag faire son show."]]></fr>
+		<en><![CDATA["Got friends for dinner? Want to show them what Nabaztag can do? Simply let Nabaztag do the job."]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+
+		</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["Indiquez seulement la langue de votre choix (anglais ou français). Nabaztag choisira au hasard quelle démonstration il va jouer."]]></fr>
+		<en><![CDATA["Just tell in which language you prefer to listen Nabaztag make it's self introduction. Nabaztag will choose randomly which demo he will play."]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA["Démo"]]></fr>
+		<en><![CDATA["Demo"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+
+	<item><map>
+		<key>"lang"</key>
+		<type>"Popup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Langue"]]></fr>
+			<en><![CDATA["Lang"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA["Stimme"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Choisissez la langue dans laquelle vous voulez entendre Nabaztag faire son show."]]></fr>
+			<en><![CDATA["Choose in which language you want Nabaztag to do his self introduction."]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map><value>"fr"</value><label>"Français"</label></map></item>
+			<item><map><value>"en"</value><label>"English"</label></map></item>
+		</list></items>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

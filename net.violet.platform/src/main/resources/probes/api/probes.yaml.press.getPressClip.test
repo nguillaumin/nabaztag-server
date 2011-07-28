@@ -1,0 +1,7 @@
+application=webui
+
+[getNews]
+url=press/getPressClip
+content_type=text/yaml
+post_data=@constants/site.getInfo.yml
+regex=PressInformation

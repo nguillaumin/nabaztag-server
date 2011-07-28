@@ -1,0 +1,69 @@
+<map>
+<settings>
+<list>
+
+	<item>
+	<map>
+		<type>"InputLine"</type>
+		<key>"host"</key>
+		<label>"srv_mail/incoming_server"</label>
+	</map>
+	</item>
+
+	<item>
+	<map>
+		<type>"InputLine"</type>
+		<key>"login"</key>
+		<label>"srv_mail/account_name"</label>
+	</map>
+	</item>
+
+	<item>
+	<map>
+		<type>"InputLine"</type>
+		<key>"password"</key>
+		<label>"srv_mail/password"</label>
+		<password>true</password>
+	</map>
+	</item>
+	
+	<item>
+	<map>
+		<type>"CheckBox"</type>
+		<key>"secure"</key>
+		<label>"srv_mail/protocol_ssl"</label>
+		<value>"1"</value>
+	</map>
+	</item>
+	
+	<item>
+	<map>
+		<type>"RadioGroup"</type>
+		<key>"type"</key>
+		<label>"srv_mail/protocol"</label>
+		<items>
+			<list>
+				<item>
+				<map>
+					<type>"RadioButton"</type>
+					<value>"pop"</value>
+					<label>"srv_mail/protocol_pop"</label>
+				</map>
+				</item>
+				
+				<item>
+				<map>
+				<type>"RadioButton"</type>
+					<value>"imap"</value>
+					<label>"srv_mail/protocol_imap"</label>
+				</map>
+				</item>
+			
+			</list>
+		</items>
+	</map>
+	</item>
+
+</list>
+</settings>
+</map>

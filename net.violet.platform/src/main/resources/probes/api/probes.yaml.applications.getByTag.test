@@ -1,0 +1,12 @@
+application=webui
+
+[getByLang]
+url=applications/getTagCloudForLang/fr
+content_type=text/yaml
+regex= id: (.*?)\s
+
+[getByTag]
+url=applications/getByTag/GROUP_1
+content_type=text/yaml
+post_data=language: fr
+regex=!!map:ApplicationInformation

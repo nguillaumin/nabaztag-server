@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<data-sources />
+
+	<form-beans>
+		<form-bean name="myAdminauthentificationForm" type="net.violet.vadmin.forms.AdminAuthentificationForm" />
+		<form-bean name="myAdminHomeForm" type="net.violet.vadmin.forms.AdminHomeForm" />
+		<form-bean name="myAdminChangeLocaleForm" type="net.violet.vadmin.forms.AdminChangeLocaleForm" />
+		<form-bean name="myAdminSearchObjectForm" type="net.violet.vadmin.forms.AdminSearchObjectForm" />
+		<form-bean name="myAdminApplicationForm" type="net.violet.vadmin.forms.AdminApplicationForm" />
+		<form-bean name="myAdminDicoForm" type="net.violet.vadmin.forms.AdminDicoForm">
+			<form-property name="values" type="java.util.LinkedList" />
+		</form-bean>
+		<form-bean name="myAdminAddPressForm" type="net.violet.vadmin.forms.AdminAddPressForm" />
+		<form-bean name="myAdminAddNewsForm" type="net.violet.vadmin.forms.AdminAddNewsForm" />
+		<form-bean name="myAdminAddStoreForm" type="net.violet.vadmin.forms.AdminAddStoreForm" />
+		<form-bean name="myAdminAddWeatherForm" type="net.violet.vadmin.forms.AdminAddWeatherForm" />
+		<form-bean name="myAdminSearchNewsForm" type="net.violet.vadmin.forms.AdminSearchNewsForm" />
+		<form-bean name="myAdminSearchPressForm" type="net.violet.vadmin.forms.AdminSearchPressForm" />
+		<form-bean name="myAdminSearchStoreForm" type="net.violet.vadmin.forms.AdminSearchStoreForm" />
+
+		<form-bean name="bookSplitterForm" type="net.violet.vadmin.forms.BookSplitterForm" />
+	</form-beans>
+
+	<global-exceptions />
+
+	<global-forwards>
+		<forward name="adminrefused" path="/include_jsp/admin/adminrefused.jsp" />
+		<forward name="goHome" path="/action/adminHome.do" />
+		<forward name="authentification" path="/include_jsp/admin/authentification.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+
+		<!-- BOOK SPLITTER -->
+		<action path="/action/bookSplitter" 
+				type="net.violet.vlisp.action.BookSplitterAction"
+				name="bookSplitterForm" 
+				scope="request" 
+				validate="true" 
+				input="/bookSplitter.jsp">
+		</action>
+
+		<action path="/action/admin"
+				type="net.violet.vadmin.actions.AdminAuthentificationAction" 
+				name="myAdminauthentificationForm"
+				scope="request" 
+				validate="false" 
+				parameter="dispatch"
+				input="/include_jsp/admin/authentification.jsp">
+		</action>
+
+
+		<action path="/action/adminHome"
+				type="net.violet.vadmin.actions.AdminHomeAction"
+				name="myAdminHomeForm" 
+				scope="request" 
+				validate="false"
+				input="/include_jsp/admin/home.jsp">
+			<forward name="adminrefused" path="/include_jsp/admin/adminrefused.jsp" />
+		</action>
+
+		<action path="/action/adminSearchObject"
+				type="net.violet.vadmin.actions.AdminSearchObjectAction"
+				name="myAdminSearchObjectForm"
+				scope="request" 
+				validate="true" 
+				parameter="dispatch"
+				input="/include_jsp/admin/object/searchObject.jsp">
+		</action>
+
+		<action path="/action/adminSearchApplication"
+				type="net.violet.vadmin.actions.AdminSearchApplicationAction" 
+				name="myAdminApplicationForm"
+				scope="request" 
+				validate="true" 
+				parameter="dispatch"
+				input="/include_jsp/admin/application/searchApplication.jsp">
+				<forward name="listen" path="/include_jsp/admin/application/listen.jsp" />
+		</action>
+
+		<action path="/action/adminAddApplication"
+				type="net.violet.vadmin.actions.AdminAddApplicationAction" 
+				name="myAdminApplicationForm"
+				scope="request"
+				validate="true" 
+				parameter="dispatch"
+				input="/include_jsp/admin/application/addApplication.jsp">
+				<forward name="listen" path="/include_jsp/admin/application/listen.jsp" />
+		</action>
+		
+		<action path="/action/adminRankApplication"
+				type="net.violet.vadmin.actions.AdminRankApplicationAction" 
+				name="myAdminApplicationForm"
+				scope="request"
+				validate="true" 
+				parameter="dispatch"
+				input="/include_jsp/admin/application/rankApplication.jsp">
+		</action>
+
+		<action path="/action/adminAddDico" 
+				type="net.violet.vadmin.actions.AdminDicoAction"
+				name="myAdminDicoForm" 
+				scope="request" 
+				validate="true" 
+				parameter="dispatch"
+				input="/include_jsp/admin/dico/addDico.jsp">
+		</action>
+
+		<action path="/action/adminSearchDico" 
+				type="net.violet.vadmin.actions.AdminDicoAction"
+				name="myAdminDicoForm" 
+				scope="request" 
+				validate="true" 
+				parameter="dispatch"
+				input="/include_jsp/admin/dico/searchDico.jsp">
+		</action>
+
+		<action path="/action/adminExportDico" 
+				type="net.violet.vadmin.actions.AdminDicoAction"
+				name="myAdminDicoForm" scope="request" validate="true" parameter="dispatch"
+				input="/include_jsp/admin/dico/exportDico.jsp">
+		</action>
+
+		<action path="/action/adminImportDico" 
+				type="net.violet.vadmin.actions.AdminDicoAction"
+				name="myAdminDicoForm" scope="request" validate="true" parameter="dispatch"
+				input="/include_jsp/admin/dico/importDico.jsp">
+		</action>
+
+		<action path="/action/adminAddPress" 
+				type="net.violet.vadmin.actions.AdminAddPressAction"
+				name="myAdminAddPressForm" scope="request" validate="true" parameter="dispatch"
+				input="/include_jsp/admin/press/addPress.jsp">
+		</action>
+
+		<action path="/action/adminAddNews" 
+				type="net.violet.vadmin.actions.AdminAddNewsAction"
+				name="myAdminAddNewsForm" scope="request" validate="true" parameter="dispatch"
+				input="/include_jsp/admin/news/addNews.jsp">
+		</action>
+
+		<action path="/action/adminAddStore" 
+				type="net.violet.vadmin.actions.AdminAddStoreAction"
+				name="myAdminAddStoreForm" scope="request" validate="true" parameter="dispatch"
+				input="/include_jsp/admin/store/addStore.jsp">
+		</action>
+
+		<action path="/action/adminSearchPress" 
+				type="net.violet.vadmin.actions.AdminSearchPressAction"
+				name="myAdminSearchPressForm" scope="request" validate="true"
+				parameter="dispatch" input="/include_jsp/admin/press/searchPress.jsp">
+		</action>
+
+		<action path="/action/adminSearchNews" 
+				type="net.violet.vadmin.actions.AdminSearchNewsAction"
+				name="myAdminSearchNewsForm" 
+				scope="request" 
+				validate="true"
+				parameter="dispatch" 
+				input="/include_jsp/admin/news/searchNews.jsp">
+		</action>
+
+		<action path="/action/adminSearchStore" 
+				type="net.violet.vadmin.actions.AdminSearchStoreAction"
+				name="myAdminSearchStoreForm" 
+				scope="request" 
+				validate="true"
+				parameter="dispatch" 
+				input="/include_jsp/admin/store/searchStore.jsp">
+		</action>
+
+		<action path="/action/adminAddWeather" 
+				type="net.violet.vadmin.actions.AdminAddWeatherAction"
+				name="myAdminAddWeatherForm" 
+				scope="request" 
+				validate="true"
+				parameter="dispatch" 
+				input="/include_jsp/admin/weather/addWeather.jsp">
+		</action>
+		
+		<action path="/action/adminChangeLocale" 
+				type="net.violet.vadmin.actions.AdminChangeLocaleAction"
+				name="myAdminChangeLocaleForm" 
+				scope="request" 
+				validate="true"
+				parameter="dispatch" 
+				input="/include_jsp/admin/home.jsp">
+		</action>
+
+	</action-mappings>
+
+	<!--   Message Resources Definition -->
+	<message-resources parameter="net.violet.vadmin.resources.admin" null="false" />
+
+
+</struts-config>

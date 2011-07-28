@@ -1,0 +1,17 @@
+#leftcontent #bloc-DernierAnnuaire li,
+#rightcontent #bloc-DernierAnnuaire li {margin:0; padding:0}
+
+.nabThem { position:relative; }
+.nabThem div.nabNameInfo { font-size:13px; font-weight:bold; }
+.nabThem div.otherInfos { font-size:10px;}
+.nabThem div.nabInfo {height:45px}
+.nabThem .prev { background: url(../../include_img/widgets/nabthem/prev.gif) no-repeat; width:9px; height:24px; text-indent:-5000px;}
+.nabThem .next { background: url(../../include_img/widgets/nabthem/next.gif) no-repeat; width:9px; height:24px;  text-indent:-5000px;}	
+
+.nabThem button { margin-top:5px; }
+.nabThem .message { margin-top:5px; text-align:center;}
+
+.nabThem .message textarea { border:1px solid #888; background:#EEE}
+.nabThem .message textarea.error { background:#FFB}
+
+.nabThem .link-contener { padding:8px 0 5px 0;}

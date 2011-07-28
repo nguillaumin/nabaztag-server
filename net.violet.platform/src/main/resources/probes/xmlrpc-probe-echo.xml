@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+	<methodName>violet.test.echo</methodName>
+	<params>
+		<param>
+			<value>
+				<struct>
+					<member>
+						<name>format</name>
+						<value><string>yaml</string></value>
+					</member>
+					<member>
+						<name>TITLE</name>
+						<value><string>I'm the ECHO</string></value>
+					</member>
+					<member>
+						<name>PI</name>
+						<value><double>3.14159265</double></value>
+					</member>
+					<member>
+						<name>ysn</name>
+						<value><boolean>1</boolean></value>
+					</member>
+					<member>
+						<name>MAN</name>
+						<value>
+							<struct>
+								<member>
+									<name>Name</name>
+									<value><string>DOE</string></value>
+								</member>
+								<member>
+									<name>Surname</name>
+									<value><string>John</string></value>
+								</member>
+								<member>
+									<name>Countries</name>
+									<value>
+										<array>
+											 <data>
+													<value><string>France</string></value>
+													<value><string>Germany</string></value>
+													<value><string>Japan</string></value>
+													<value><string>Eire</string></value>
+											</data>
+										</array>
+									</value>
+								</member>
+							</struct>
+						</value>
+					</member>
+				</struct>
+			</value>
+		</param>
+	</params>
+</methodCall>

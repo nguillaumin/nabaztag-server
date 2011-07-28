@@ -1,0 +1,31 @@
+--- 
+object_id: 10b0eO4150540f
+settings: 
+  - &id1 value: !!str 1
+    &id2 key: unit
+  - *id1: Nmeteo.FRANCE.Paris.weather
+    *id2: source
+  - *id1: en-US
+    *id2: language
+scheduling: 
+  - &id4 Friday: &id3
+      &id5 time_h: &id6 17
+      &id7 time_m: 30
+    &id8 Tuesday: *id3
+    &id10 Thursday: *id3
+    &id11 type: &id12 Daily
+    &id13 Wednesday: *id3
+    &id14 Monday: *id3
+    &id15 Saturday: *id3
+    &id16 Sunday: *id3
+  - *id4: &id9
+      *id5: *id6
+      *id7: 0
+    *id8: *id9
+    *id10: *id9
+    *id11: *id12
+    *id13: *id9
+    *id14: *id9
+    *id15: *id9
+    *id16: *id9
+application_id: 37eA91e0c42f

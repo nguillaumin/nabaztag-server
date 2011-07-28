@@ -1,0 +1,8 @@
+---
+store:
+  address: !!str 78, Updated Av. 
+  zipcode: !!str UP708
+  status: !!str prefered
+  url: !!str http://www.updated.com
+  rank: !!str 2
+  comment: !!str updated

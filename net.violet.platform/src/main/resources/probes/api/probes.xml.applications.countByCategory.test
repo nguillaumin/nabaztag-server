@@ -1,0 +1,24 @@
+application=webui
+
+[beta]
+url=applications/countByCategory
+post_data=<map><id>"LOC_srv_category_beta/title"</id></map>
+regex=[1-9]*[0-9]+
+
+[beta_en-GB]
+url=applications/countByCategory
+post_data=<map><id>"LOC_srv_category_beta/title"</id><language>"en-GB"</language></map>
+regex=  <message>
+    <string>invalid or unexpected language code</string>
+  </message>
+
+[beta_fr]
+url=applications/countByCategory
+post_data=<map><id>"LOC_srv_category_beta/title"</id><language>"fr"</language></map>
+regex=[1-9]*[0-9]+
+
+[music_it_v2]
+url=applications/countByCategory
+post_data=<map><id>"LOC_srv_category_music/title"</id><hw_type>"violet.nabaztag.tagtag"</hw_type><language>"it"</language></map>
+regex= 4
+

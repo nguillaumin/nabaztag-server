@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/z2rzfFR4ql -->
+	<name>"net.violet.js.sleepmaster"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>800</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"SleepMaster"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Endormir Nabaztag"]]></fr>
+		<en><![CDATA["Make Nabaztag go to sleep"]]></en>
+		<es><![CDATA[""]]></es>
+		<it><![CDATA[""]]></it>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>De la poudre de perlimpinpin pour votre lapinpin. Montrez votre Ztamp ou votre Nano:ztag à votre Nabaztag:tag et il ira instantanément se coucher. Pour le réveiller, montrez votre ztamp à un Mir:ror.</p>"]]></fr>
+		<en><![CDATA["<p>Show your Ztamp or Nano:ztag to your Nabaztag:tag and he will immediately go to sleep. To wake him up, show your Ztamp to a Mir:ror.</p>"]]></en>
+		<es><![CDATA[""]]></es>
+		<it><![CDATA[""]]></it>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Pour déterminer quel Lapin envoyer se coucher ou réveiller, indiquez-le dans la section 'Jouer l'application sur'.<br/>En fonction de son état actuel, Nabaztag se réveillera ou s'endormira.<br/>Fonctionne avec Mir:ror et Nabaztag:tag (pour envoyer uniquement un Nabaztag se coucher).</p>"]]></fr>
+		<en><![CDATA["<p>To tell what Nabaztag to send to sleep, indicate it in the section 'Play application on'.<br/>According to the current state of the Rabbit, he will go to sleep or wake up.<br/>Works only with Mir:ror and Nabaztag:tag (only to send a Nabaztag to sleep)</p>"]]></en>
+		<es><![CDATA[""]]></es>
+		<it><![CDATA[""]]></it>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA["Nabaztag, Sommeil, Réveil"]]></fr>
+		<en><![CDATA["Nabaztag, Sleep, Wake"]]></en>
+		<it><![CDATA["Nabaztag"]]></it>
+		<es><![CDATA["Nabaztag"]]></es>
+		<de><![CDATA["Nabaztag"]]></de>
+		<pt><![CDATA["Nabaztag"]]></pt>
+		<ja><![CDATA["Nabaztag"]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+		<item><map>
+			<key>"willAwake"</key>
+			<fr><![CDATA["${object.name} va maintenant se réveiller !"]]></fr>
+			<en><![CDATA["${object.name} will now awake !"]]></en>
+			<it><![CDATA["${object.name} !"]]></it>
+			<es><![CDATA["${object.name} !"]]></es>
+			<de><![CDATA["${object.name} !"]]></de>
+			<pt><![CDATA["${object.name} !"]]></pt>
+			<ja><![CDATA["${object.name} !"]]></ja>
+		</map></item>
+		<item><map>
+			<key>"willSleep"</key>
+			<fr><![CDATA["${object.name} va maintenant s'endormir !"]]></fr>
+			<en><![CDATA["${object.name} will now go to sleep !"]]></en>
+			<it><![CDATA["${object.name} !"]]></it>
+			<es><![CDATA["${object.name} !"]]></es>
+			<de><![CDATA["${object.name} !"]]></de>
+			<pt><![CDATA["${object.name} !"]]></pt>
+			<ja><![CDATA["${object.name} !"]]></ja>
+		</map></item>
+		<item><map>
+			<key>"willNotDoAnything"</key><!-- feedback for a disconnected nabaztag -->
+			<fr><![CDATA["${object.name} n'est pas connecté !"]]></fr>
+			<en><![CDATA["${object.name} is not connected !"]]></en>
+			<it><![CDATA["${object.name} !"]]></it>
+			<es><![CDATA["${object.name} !"]]></es>
+			<de><![CDATA["${object.name} !"]]></de>
+			<pt><![CDATA["${object.name} !"]]></pt>
+			<ja><![CDATA["${object.name} !"]]></ja>
+		</map></item>
+		<item><map>
+			<key>"cannotSleep"</key><!-- feedback for an object that do not sleep -->
+			<fr><![CDATA["${object.name} ne peut pas s'endormir !"]]></fr>
+			<en><![CDATA["${object.name} cannot sleep !"]]></en>
+			<it><![CDATA["${object.name} !"]]></it>
+			<es><![CDATA["${object.name} !"]]></es>
+			<de><![CDATA["${object.name} !"]]></de>
+			<pt><![CDATA["${object.name} !"]]></pt>
+			<ja><![CDATA["${object.name} !"]]></ja>
+		</map></item>
+		<item><map>
+			<key>"onWakeUp"</key><!-- what nabaztag says when he wakes up -->
+			<fr><![CDATA["Waaouu.. Ca alors ! J'ai dormi longtemps ??"]]></fr>
+			<en><![CDATA["Waaouuu..??? I'm alive !!"]]></en>
+			<it><![CDATA["${object.name} !"]]></it>
+			<es><![CDATA["${object.name} !"]]></es>
+			<de><![CDATA["${object.name} !"]]></de>
+			<pt><![CDATA["${object.name} !"]]></pt>
+			<ja><![CDATA["${object.name} !"]]></ja>
+		</map></item>
+
+	</list></dico>
+
+	<files><list>
+		<!-- <entry name="media/audio/intro" fileName="intro.m3" /> -->
+	</list></files>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<!-- <item><map>
+		<key>"targetID"</key>
+		<type>"ObjectPicker"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<name><map>
+			<fr><![CDATA["Destinataire"]]></fr>
+			<en><![CDATA["To"]]></en>
+			<es><![CDATA["Destinatario"]]></es>
+			<it><![CDATA["Destinatario"]]></it>
+			<de><![CDATA["An"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+
+		</map></name>
+		<description><map>
+			<fr><![CDATA["Sélectionnez le destinataire."]]></fr>
+			<en><![CDATA["Select the recipient"]]></en>
+			<es><![CDATA["Selecciona el destinatario."]]></es>
+			<it><![CDATA["Seleziona il destinatario"]]></it>
+			<de><![CDATA["Wählen Sie den Empfänger aus."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+	</map></item>-->
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

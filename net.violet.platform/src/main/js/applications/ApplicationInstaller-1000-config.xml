@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<name>"net.violet.js.applicationinstaller-1000"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>false</visible>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"ApplicationInstaller-1000"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr>"Installation d'applications"</fr>
+		<en>"Application Installer"</en>
+	</map></title>
+
+	<description><map>
+		<fr>"Cette application est lancée quand aucune autre n'est présente sur un ztamp."</fr>
+		<en>"This application is launched when no other is tied to a ztamp."</en>
+	</map></description>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+</list></settings>
+
+<scheduling_masks><list><!-- This application cannot be installed ! -->
+</list></scheduling_masks>
+
+
+</map>

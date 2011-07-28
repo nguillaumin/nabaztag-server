@@ -1,0 +1,3 @@
+application=webui
+url=sessions/update/1f687:4b3d3b00:ae84703acb66dad00447a424f6e1113861559310?expiration=2010-01-01
+regex=<string>1f687:.*:.*</string>

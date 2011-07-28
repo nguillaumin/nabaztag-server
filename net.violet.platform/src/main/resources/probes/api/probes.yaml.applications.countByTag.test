@@ -1,0 +1,12 @@
+application=webui
+
+[getByLang]
+url=applications/getTagCloudForLang/fr
+content_type=text/yaml
+regex= id: (.*?)\s
+
+[countByTag]
+url=applications/countByTag/GROUP_1
+content_type=text/yaml
+post_data=language: fr
+regex=[1-9]*[0-9]{1,2}

@@ -1,0 +1,15 @@
+﻿Votre message:
+
+MESSAGE
+
+à FIRST_NAME LAST_NAME
+a bien été envoyé
+sur son Objet OBJ_RECIPIENT
+
+
+
+++ QUELQUES TRUCS QU'IL EST PEUT ETRE BON DE SAVOIR ++
+- Il existe plein de manières différentes d'envoyer des messages. Vous pouvez par exemple envoyer des messages avec votre propre voix, envoyer des chansons en MP3 ou des cartes postales sonores... Avec Violet vous inventez des formes inédites de communication.
+- Vous ne souhaitez plus recevoir de notifications quand vos messages ont été envoyés ? Rendez-vous dans les préférences de votre compte.
+
+-- Violet. Let All Things Be Connected --

@@ -1,0 +1,13 @@
+application=webui
+
+[set_Preferences]
+url=people/setPreferences
+content_type=text/yaml
+post_data=@yaml/people.preferences.yml
+regex=~
+
+[get_Perferences]
+url=people/getPreferences
+content_type=text/yaml
+post_data=@yaml/people.preferences.yml
+regex=PersonPreferences

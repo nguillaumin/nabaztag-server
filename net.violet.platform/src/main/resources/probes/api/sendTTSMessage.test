@@ -1,0 +1,4 @@
+application=webui
+url=messages/sendTTSMessage
+post_data=<map><session>"17bd6:10495cba1:d1713a48a796462eca913de45f197f859e871d13"</session><recipients><list><item>"ec2fO7982fa80"</item></list></recipients><text><string>Salut</string></text><voice><string>Julie</string></voice></map>
+regex=null

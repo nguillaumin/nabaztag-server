@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.news.getNews
+content_type=text/json
+regex="errors":\["InvalidParameter",?"NoSuchProduct",?\],.*"method_class":"GET"

@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.objects.setName
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?"NameAlreadyExists",?"NoSuchObject",?\],.*"method_class":"UPDATE"

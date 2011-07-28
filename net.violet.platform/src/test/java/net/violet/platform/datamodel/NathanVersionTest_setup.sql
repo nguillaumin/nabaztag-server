@@ -1,0 +1,7 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+INSERT INTO `user` VALUES (97238,'nobnbacjegdcgelixxx','private','lp@violet.net',2,63643,0,0,1,1,'6748273',0,1,1191538602,1191505059,0,'','FF0000',NULL,1,30,1,'firstName','lastName');
+INSERT INTO `object` VALUES (63643,'0013d3849ab6','private',97238,1191505098,4,1193842802,0,0,0,0,0,0,0,120,'fr/Les Landes',0,0, 30);
+
+
+SET FOREIGN_KEY_CHECKS = 1;

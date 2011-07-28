@@ -1,0 +1,10 @@
+application=webui
+
+[create_twitter]
+url=subscriptions/create
+post_data=<map><application_id><string>387Aa28214ce</string></application_id><object_id><string>10a7aO90ddb8a0</string></object_id><settings><list><item><map><value><string>testsViolet</string></value><key><string>login</string></key></map></item><item><map><value><string>vioolet</string></value><key><string>password</string></key></map></item><item><map><value><string>1</string></value><key><string>language</string></key></map></item></list></settings><scheduling><list><item><map><type><string>InteractionTrigger</string></type></map></item></list></scheduling></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>
+
+
+
+ 

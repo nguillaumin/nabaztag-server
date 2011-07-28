@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.objects.getDefaultPictures
+content_type=text/json
+regex="errors":\["InvalidParameter",?\],.*"method_class":"GET"

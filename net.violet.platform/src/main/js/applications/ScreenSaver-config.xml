@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/FiZVo73rfk -->
+	<name>"net.violet.js.screensaver"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>500</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"ScreenSaver"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Lancer l'économiseur d'écran "]]></fr>
+		<en><![CDATA["Launch the Screen Saver"]]></en>
+		<it><![CDATA["Attivare lo Screen saver "]]></it>
+		<es><![CDATA["Lanza un economizador de pantalla"]]></es>
+		<de><![CDATA["Den Bildschirmschoner aktivieren"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["スクリーンセーバーの起動"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Montrez un Ztamp au Mir:ror et l'économiseur d'écran habituel de l'ordinateur démarrera. <br/>
+Exemple: Masquez d'un geste anodin ce qui apparaît sur votre écran en posant simplement une tasse de café ztampée sur le Mir:ror.</p>"]]></fr>
+		<en><![CDATA["Show the Mir:ror a Ztamp, and the computer's usual screensaver will launch.<br/>
+Example: quickly conceal what's up on your screen with something as simple as putting your Ztamp coffee mug down on the Mir:ror."]]></en>
+		<it><![CDATA["<p>Mostra uno Ztamp al Mir:ror e si avvier à il tuo Screen saver. <br/>
+Esempio: Camuffa con un gesto da prestigiatore quello che apparirà sul tuo computer. Posando una tazzina da caffé sul Mir:ror si attiverà lo Screen saver.</p>
+"]]></it>
+		<es><![CDATA["<p>Presenta un Ztamp al Mir:ro y se iniciará el economizador habitual de pantalla en el ordenador. <br/>
+Ejemplo: cubre lo que aparece sobre tu pantalla con un gesto insignificante, colocando simplemente una taza de café ztampeada sobre el Mir:ror.</p> "]]></es>
+		<de><![CDATA["<p>Zeigen Sie Mir:ror einen Ztamp. Der gewohnte Bilschirmschoner des Computers wird gestartet. <br/>
+Beispiel: Schützen Sie mit einer unverfänglichen Geste Ihren Bildschirminhalt vor fremden Blicken, indem Sie einfach eine mit einem Ztamp versehene Kaffeetasse auf den Mir:ror stellen.</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ズタンプをミラーにかざすと、いつも使っているスクリーンセーバーを起動させることができます。<br/>
+		たとえば、急な用事で席をはずしたいときにマグカップをミラーに載せるだけで、スクリーンセーバーが起動します。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Vous n'avez rien à faire, il suffit d'ajouter cette application à un Ztamp ou un Nano:ztag. Assurez-vous préalablement qu'un économiseur d'écran est bien activé sur votre ordinateur. <br/>
+Ce service fonctionne uniquement sur un Mir:ror relié à un ordinateur.</p>"]]></fr>
+		<en><![CDATA["There's nothing much to do: simply add this application to a Ztamp or Nano:ztag. Just make sure a screen saver is actually activated on your computer. This service only works with a Mir:ror connected to a computer.<br/>
+This service only works with a Mir:ror connected to a computer."]]></en>
+		<it><![CDATA["<p>Non devi fare nulla, devi solo aggiungere quest'Applicazione a uno Ztamp o un Nano:ztag. Assicurati che sul tuo computer sia attivo lo Screen saver. <br/>Questo servizio funziona unicamente su un Mir:ror collegato ad un computer.</p>"]]></it>
+		<es><![CDATA["<p>No tienes que hacer nada, alcanza con añadir esta aplicación a un Ztamp o a un Nano:ztag. Previamente verifica que hay un economizador de pantalla activado en tu ordenador.<br/>
+Este servicio funciona únicamente con un Mir:ror conectado a un ordenador.</p>"]]></es>
+		<de><![CDATA["<p>Sie müssen nichts tun. Fügen Sie diese Applikation einfach zu einem Ztamp oder einem Nano:ztag hinzu. Vergewissern Sie sich vorab, dass der Bildschirmschoner auf Ihrem Computer aktiviert ist. <br/>
+Dieser Dienst funktioniert ausschließlich mit einem an einen Computer angeschlossenen Mir:ror.</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>特に設定する項目はありません。<br/>ズタンプやナノズタグにこのアプリケーションを追加するだけで、即座にコンピュータのスクリーンセーバーを立ち上げることができます。<br/>
+		ミラーとミラーが接続されているコンピュータでのみ利用できます。</p>"]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

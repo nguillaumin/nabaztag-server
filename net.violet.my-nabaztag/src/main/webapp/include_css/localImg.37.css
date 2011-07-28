@@ -1,0 +1,31 @@
+/* OFF */	
+#mainBigMenu a.myMessages{width:111px; height:84px; background: url(../include_img/layout/1/bt_messagesOFF.png) no-repeat;}
+* html #mainBigMenu a.myMessages{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_messagesOFF.png', sizingMethod='crop');}
+
+#mainBigMenu a.myNablife {width:98px; height:84px; background: url(../include_img/layout/1/bt_nablifeOFF.png) no-repeat;}
+* html #mainBigMenu a.myNablife{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_nablifeOFF.png', sizingMethod='crop');}
+
+#mainBigMenu a.myTerrier {width:114px; height:84px; background: url(../include_img/layout/1/bt_terrierOFF.png) no-repeat;}
+* html #mainBigMenu a.myTerrier{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_terrierOFF.png', sizingMethod='crop');}
+
+#mainBigMenu a.myTools {width:82px; height:84px; background: url(../include_img/layout/1/bt_outilsOFF.png) no-repeat;}
+* html #mainBigMenu a.myTools{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_outilsOFF.png', sizingMethod='crop');}
+
+#mainBigMenu a.myHelp  {width:54px; height:84px; background: url(../include_img/layout/1/bt_aideOFF.png) no-repeat;}
+* html #mainBigMenu a.myHelp{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_aideOFF.png', sizingMethod='crop');}
+
+/* ON */
+#mainBigMenu a.myMessagesON{width:111px; height:84px; background: url(../include_img/layout/1/bt_messagesON.png) no-repeat;}
+* html #mainBigMenu a.myMessagesON{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_messagesON.png', sizingMethod='crop');}
+
+#mainBigMenu a.myNablifeON {width:98px; height:84px; background: url(../include_img/layout/1/bt_nablifeON.png) no-repeat;}
+* html #mainBigMenu a.myNablifeON{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_nablifeON.png', sizingMethod='crop');}
+
+#mainBigMenu a.myTerrierON {width:114px; height:84px; background: url(../include_img/layout/1/bt_terrierON.png) no-repeat;}
+* html #mainBigMenu a.myTerrierON{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_terrierON.png', sizingMethod='crop');}
+
+#mainBigMenu a.myToolsON {width:82px; height:84px; background: url(../include_img/layout/1/bt_outilsON.png) no-repeat;}
+* html #mainBigMenu a.myToolsON{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_outilsON.png', sizingMethod='crop');}
+
+#mainBigMenu a.myHelpON  {width:54px; height:84px; background: url(../include_img/layout/1/bt_aideON.png) no-repeat;}
+* html #mainBigMenu a.myHelpON {background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/1/bt_aideON.png', sizingMethod='crop');}

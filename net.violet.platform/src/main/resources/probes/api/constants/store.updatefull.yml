@@ -1,0 +1,10 @@
+---
+store:
+  address: !!str 78, Reupdated Av. 
+  zipcode: !!str RP708
+  name: !!str Reupdated
+  type: !!str physical
+  status: !!str network
+  url: !!str http://www.reupdated.com
+  rank: !!str 12
+  comment: !!str reupdated

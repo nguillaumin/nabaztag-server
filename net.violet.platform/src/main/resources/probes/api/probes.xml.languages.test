@@ -1,0 +1,26 @@
+application=webui
+
+[getSiteLanguages]
+url=languages/getSiteLanguages
+regex= <item>
+    <string>fr</string>
+  </item>
+
+[getTTSLanguages]
+url=languages/getTTSLanguages
+regex= <item>
+    <string>fr-FR</string>
+  </item>
+
+[getASRLanguages]
+url=languages/getASRLanguages
+regex= <item>
+    <string>fr-FR</string>
+  </item>
+
+[getObjectLanguages]
+url=languages/getObjectLanguages
+regex= <item>
+    <string>fr-FR</string>
+      </item>
+

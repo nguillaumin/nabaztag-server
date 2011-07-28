@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<data-sources />
+  
+ 	<form-beans>
+ 		<form-bean name="BlocForm" type="net.violet.mynabaztag.form.BlocForm" />  
+ 		
+ 		<form-bean name="myAddFriendForm" type="net.violet.mynabaztag.form.MyAddFriendForm" />
+ 		
+ 		<form-bean name="myAnnuaireForm" type="net.violet.mynabaztag.form.MyAnnuaireForm"/>
+		<form-bean name="myAnnuaireResultForm" type="net.violet.mynabaztag.form.MyAnnuaireResultForm"/> 
+		
+		<form-bean name="myHomePasswordForm" type="net.violet.mynabaztag.form.MyHomePasswordForm" />
+		
+		<form-bean name="myLastRabbitsForm" type="net.violet.mynabaztag.form.MyLastRabbitsForm" />
+		
+		<form-bean name="myListeMp3Form" type="net.violet.mynabaztag.form.MyListeMp3Form"/>
+		
+		<form-bean name="myMailsListForm" type="net.violet.mynabaztag.form.MyMailsListForm"/>  
+		<form-bean name="myMailsCreateForm" type="net.violet.mynabaztag.form.MyMailsCreateForm"/>  
+ 		
+ 		<form-bean name="myManageMp3Form" type="net.violet.mynabaztag.form.MyManageMp3Form"/> 
+		
+		<form-bean name="myMessagesForm" type="net.violet.mynabaztag.form.MyMessagesForm"/>
+		<form-bean name="myMessagesTTSForm" type="net.violet.mynabaztag.form.MyMessagesTTSForm"/>
+		<form-bean name="myMessagesVocalForm" type="net.violet.mynabaztag.form.MyMessagesVocalForm"/>
+		<form-bean name="myMessagesSendTTSForm" type="net.violet.mynabaztag.form.MyMessagesSendTTSForm"/>
+		<form-bean name="myMessagesSendVocalForm" type="net.violet.mynabaztag.form.MyMessagesSendVocalForm"/>
+		<form-bean name="myMessagesMp3Form" type="net.violet.mynabaztag.form.MyMessagesMp3Form"/>
+		<form-bean name="myMessagesSendMp3Form" type="net.violet.mynabaztag.form.MyMessagesSendMp3Form"/>
+		<form-bean name="myMessagesClinForm" type="net.violet.mynabaztag.form.MyMessagesClinForm"/>	  
+		<form-bean name="myMessagesClinChoiceForm" type="net.violet.mynabaztag.form.MyMessagesClinChoiceForm"/>
+		<form-bean name="myMessagesSendClinForm" type="net.violet.mynabaztag.form.MyMessagesSendClinForm"/>
+		<form-bean name="myMessagesBiblioForm" type="net.violet.mynabaztag.form.MyMessagesBiblioForm"/>	  
+		<form-bean name="myMessagesBiblioChoiceForm" type="net.violet.mynabaztag.form.MyMessagesBiblioChoiceForm"/>	  
+		<form-bean name="myMessagesSendBiblioForm" type="net.violet.mynabaztag.form.MyMessagesSendBiblioForm"/>
+		<form-bean name="myMessagesNabshareForm" type="net.violet.mynabaztag.form.MyMessagesNabshareForm"/>	  
+		<form-bean name="myMessagesNabshareChoiceForm" type="net.violet.mynabaztag.form.MyMessagesNabshareChoiceForm"/>
+		<form-bean name="myMessagesListForm" type="net.violet.mynabaztag.form.MyMessagesListForm"/>	
+		
+		<form-bean name="myNablifeForm" type="net.violet.mynabaztag.form.MyNablifeForm" />
+		
+		<form-bean name="myNabaztalandHomeForm" type="net.violet.mynabaztag.form.MyNabaztalandHomeForm" />
+		<form-bean name="myNabaztalandSubscribeForm" type="net.violet.mynabaztag.form.MyNabaztalandSubscribeForm" />
+		<form-bean name="myNabaztalandHistoForm" type="net.violet.mynabaztag.form.MyNabaztalandHistoForm" /> 
+		<form-bean name="myNabaztalandCreateForm" type="net.violet.mynabaztag.form.MyNabaztalandCreateForm" />
+		<form-bean name="myNabaztalandUploadForm" type="net.violet.mynabaztag.form.MyNabaztalandUploadForm" />
+		
+		<form-bean name="myNbReceivedMessagesForm" type="net.violet.mynabaztag.form.MyNbReceivedMessagesForm"/>
+		
+		<form-bean name="myProfilForm" type="net.violet.mynabaztag.form.MyProfilForm"/> 
+		
+		<form-bean name="mySessionForm" type="net.violet.mynabaztag.form.MySessionForm"/>
+		
+		<form-bean name="myServicesHomeForm" type="net.violet.mynabaztag.form.MyServicesHomeForm" />
+		<form-bean name="mySrvMeteoFreeForm" type="net.violet.mynabaztag.form.MySrvMeteoFreeForm"/>
+		<form-bean name="mySrvHumeurForm" type="net.violet.mynabaztag.form.MySrvHumeurForm" />
+		<form-bean name="mySrvTaichiForm" type="net.violet.mynabaztag.form.MySrvTaichiForm" />
+		<form-bean name="mySrvBilanForm" type="net.violet.mynabaztag.form.MySrvBilanForm" />
+		<form-bean name="mySrvTrafficForm" type="net.violet.mynabaztag.form.MySrvTrafficForm" />
+		<form-bean name="mySrvAirForm" type="net.violet.mynabaztag.form.MySrvAirForm" />
+		<form-bean name="mySrvGoogleForm" type="net.violet.mynabaztag.form.MySrvGoogleForm" />
+		<form-bean name="mySrvBourseFreeForm" type="net.violet.mynabaztag.form.MySrvBourseFreeForm" />
+		<form-bean name="mySrvBourseFullForm" type="net.violet.mynabaztag.form.MySrvBourseFullForm" />
+		<form-bean name="mySrvReveilFreeForm" type="net.violet.mynabaztag.form.MySrvReveilFreeForm" />
+		<form-bean name="mySrvReveilFullForm" type="net.violet.mynabaztag.form.MySrvReveilFullForm" />
+		<form-bean name="mySrvClockForm" type="net.violet.mynabaztag.form.MySrvClockForm" />
+		<form-bean name="mySrvClockUploadForm" type="net.violet.mynabaztag.form.MySrvClockUploadForm" />
+		<form-bean name="mySrvRssFreeForm" type="net.violet.mynabaztag.form.MySrvRssFreeForm" />
+		<form-bean name="mySrvRssFullForm" type="net.violet.mynabaztag.form.MySrvRssFullForm" />
+		<form-bean name="mySrvPodcastFreeForm" type="net.violet.mynabaztag.form.MySrvPodcastFreeForm" />
+		<form-bean name="mySrvPodcastFullForm" type="net.violet.mynabaztag.form.MySrvPodcastFullForm" />
+		<form-bean name="mySrvDialogForm" type="net.violet.mynabaztag.form.MySrvDialogForm" />
+		<form-bean name="mySrvSoundForm" type="net.violet.mynabaztag.form.MySrvSoundForm" />
+		<form-bean name="mySrvWebRadioFreeConfigForm" type="net.violet.mynabaztag.form.MySrvWebRadioFreeConfigForm" />
+		<form-bean name="mySrvWebRadioFreePlayerForm" type="net.violet.mynabaztag.form.MySrvWebRadioFreePlayerForm" />
+		<form-bean name="mySrvTwitterForm" type="net.violet.mynabaztag.form.MySrvTwitterForm" />
+		<form-bean name="mySrvGmailForm" type="net.violet.mynabaztag.form.MySrvGmailForm" />
+		<form-bean name="mySrvPlayerForm" type="net.violet.mynabaztag.form.MySrvPlayerForm" />
+		
+		<form-bean name="mySrvNathanConfigForm" type="net.violet.mynabaztag.form.MyNathanConfigForm" />
+		<form-bean name="mySrvNathanCreateForm" type="net.violet.mynabaztag.form.MyNathanCreateForm" />
+		<form-bean name="mySrvNathanHomeForm" type="net.violet.mynabaztag.form.MyNathanHomeForm" />
+		
+		<form-bean name="myTerrierForm" type="net.violet.mynabaztag.form.MyTerrierForm"/>
+		<form-bean name="myTerrierFriendsForm" type="net.violet.mynabaztag.form.MyTerrierFriendsForm" />
+		<form-bean name="myTerrierBlackListForm" type="net.violet.mynabaztag.form.MyTerrierBlackListForm" />
+		<form-bean name="myTerrierRabbitForm" type="net.violet.mynabaztag.form.MyTerrierRabbitForm" />
+		<form-bean name="myTerrierMyselfForm" type="net.violet.mynabaztag.form.MyTerrierMyselfForm" />
+		<form-bean name="myTerrierInfoForm" type="net.violet.mynabaztag.form.MyTerrierInfoForm" />
+		<form-bean name="myTerrierCompteForm" type="net.violet.mynabaztag.form.MyTerrierCompteForm" />
+		<form-bean name="myTerrierAffichageForm" type="net.violet.mynabaztag.form.MyTerrierAffichageForm" />
+		<form-bean name="myTerrierAlerteForm" type="net.violet.mynabaztag.form.MyTerrierAlerteForm" />
+		<form-bean name="myTerrierPriveForm" type="net.violet.mynabaztag.form.MyTerrierPriveForm" />
+		<form-bean name="myTerrierSignatureForm" type="net.violet.mynabaztag.form.MyTerrierSignatureForm" />
+		<form-bean name="myTerrierEditRabbitImageForm" type="net.violet.mynabaztag.form.MyTerrierEditRabbitImageForm" />
+		<form-bean name="myTerrierEditCommentForm" type="net.violet.mynabaztag.form.MyTerrierEditCommentForm" />
+		<form-bean name="myTerrierCoucheForm" type="net.violet.mynabaztag.form.MyTerrierCoucheForm" />
+		
+		<form-bean name="myToolsForm" type="net.violet.mynabaztag.form.MyToolsForm"/>
+		<form-bean name="myToolsApiForm" type="net.violet.mynabaztag.form.MyToolsApiForm"/>
+		<form-bean name="myToolsNabgetsForm" type="net.violet.mynabaztag.form.MyToolsNabgetsForm"/>
+		
+		<form-bean name="myUserPrefsForm" type="net.violet.mynabaztag.form.MyUserPrefsForm"/>
+		
+	</form-beans>
+	
+	
+	<global-exceptions />
+	
+	
+	<global-forwards>
+		<forward name="goAddFriend" path="/action/myAddFriend.do"/>
+		<forward name="goAnnuaire" path="/action/myAnnuaire.do"/>
+		<forward name="goAnnuaireResult" path="/action/myAnnuaireResult.do"/>
+		<forward name="goBloc" path="/action/myBlocList.do"/>
+		<forward name="goEditRabbitImage" path="/action/myTerrierEditRabbitImage.do" />
+		<forward name="goEditComment" path="/action/myTerrierEditComment.do" />
+		<forward name="goHome" path="/action/myNablife.do" />
+		<forward name="goListeMp3" path="/action/myListeMp3.do"/>
+		<forward name="goManageMp3" path="/action/myManageMp3.do"/>
+		<forward name="goMailsList" path="/action/myMailsList.do"/>
+		<forward name="goMailsCreate" path="/action/myMailsCreate.do"/>
+		<forward name="goMessages" path="/action/myMessages.do"/>
+		<forward name="goMessagesTTS" path="/action/myMessagesTTS.do"/>
+		<forward name="goMessagesVocal" path="/action/myMessagesVocal.do"/>
+		<forward name="goMessagesSendTTS" path="/action/myMessagesSendTTS.do"/>
+		<forward name="goMessagesSendVocal" path="/action/myMessagesSendVocal.do"/>
+		<forward name="goMessagesMp3" path="/action/myMessagesMp3.do"/>
+		<forward name="goMessagesSendMp3" path="/action/myMessagesSendMp3.do"/>
+		<forward name="goMessagesClin" path="/action/myMessagesClin.do"/>    
+		<forward name="goMessagesClinChoice" path="/action/myMessagesClinChoice.do"/>   
+		<forward name="goMessagesSendClin" path="/action/myMessagesSendClin.do"/>     
+		<forward name="goMessagesBiblio" path="/action/myMessagesBiblio.do"/>    
+		<forward name="goMessagesBiblioChoice" path="/action/myMessagesBiblioChoice.do"/>           
+		<forward name="goMessagesSendBiblio" path="/action/myMessagesSendBiblio.do"/>
+		<forward name="goMessagesNabshare" path="/action/myMessagesNabshare.do"/>    
+		<forward name="goMessagesNabshareChoice" path="/action/myMessagesNabshareChoice.do"/>
+		<forward name="goMessagesList" path="/action/myMessagesList.do"/>
+		<forward name="goNabcastHome" path="/action/myNabaztalandHome.do"/>
+		<forward name="goNabcastHisto" path="/action/myNabaztalandHisto.do"/>
+		<forward name="goNabcastSubscribe" path="/action/myNabaztalandSubscribe.do"/>
+		<forward name="nabcastNeedARabbit" path="/include_jsp/myNablife/nabcastNeedARabbit.jsp" />
+		<forward name="nabcastNeedUserLogged" path="/include_jsp/myNablife/nabcastNeedUserLogged.jsp" />
+		<forward name="nabcastBadNabcastId" path="/include_jsp/myNablife/nabcastBadNabcastId.jsp"/>
+		<forward name="nablifeServiceBadShortcut" path="/include_jsp/myNablife/serviceBadShortcut.jsp"/>
+		<forward name="goNablife" path="/action/myNablife.do" />
+		<forward name="goNabcastCreate" path="/action/myNabaztalandCreate.do" />
+		<forward name="goNabcastUpload" path="/action/myNabaztalandUpload.do" />
+		<forward name="goProfil" path="/action/myProfil.do"/>
+		<forward name="goRssFreeConfig" path="/action/srvRssFreeConfig.do?dispatch=load" />
+		<forward name="goSession" path="/action/mySession.do"/>
+		<forward name="goServicesHome" path="/action/myServicesHome.do"/>
+		<forward name="goServicesFreeHome" path="/action/myServicesHome.do?tab=free"/>
+		<forward name="goServicesFullHome" path="/action/myServicesHome.do?tab=full"/>
+		<forward name="srvMeteoFree" path="/action/srvMeteoFree.do"/>  
+		<forward name="srvHumeur" path="/action/srvHumeur.do" />
+		<forward name="srvTaichi" path="/action/srvTaichi.do" />
+		<forward name="srvBilan" path="/action/srvBilan.do" />
+		<forward name="srvTraffic" path="/action/srvTraffic.do" />
+		<forward name="srvAir" path="/action/srvAir.do"/>
+		<forward name="srvGoogle" path="/action/srvGoogle.do"/>
+		<forward name="srvBourseFree" path="/action/srvBourseFree.do"/>
+		<forward name="srvBourseFull" path="/action/srvBourseFull.do"/>
+		<forward name="srvBourseFullConfig" path="/action/srvBourseFullConfig.do"/>
+		<forward name="srvReveilFree" path="/action/srvReveilFree.do"/>
+		<forward name="srvReveilFull" path="/action/srvReveilFull.do"/>
+		<forward name="srvClock" path="/action/srvClock.do?dispatch=load"/>
+		<forward name="srvDialog" path="/action/srvDialog.do"/>
+		<forward name="srvSound" path="/action/srvSound.do"/>
+		<forward name="srvPodcastFree" path="servicePodcastFree" />
+		<forward name="srvResultSearch" path="serviceResultSearch" />
+		<forward name="goSession" path="/action/mySession.do" />
+		<forward name="goTerrier" path="/action/myTerrier.do"/>
+		<forward name="goTerrierFriends" path="/action/myTerrierFriends.do"/>
+		<forward name="goTerrierBlackList" path="/action/myTerrierBlackList.do"/>
+		<forward name="goTerrierRabbit" path="/action/myTerrierRabbit.do"/>
+		<forward name="goTerrierMyself" path="/action/myTerrierMyself.do"/>
+		<forward name="goTerrierInfo" path="/action/myTerrierInfo.do" />
+		<forward name="goTerrierSignature" path="/action/myTerrierSignature.do" />
+		<forward name="goTerrierCouche" path="/action/myTerrierCouche.do" />
+		<forward name="goTools" path="/action/myTools.do" />
+		<forward name="goToolsApi" path="/action/myToolsApi.do" />
+		<forward name="goToolsNabgets" path="/action/myToolsNabgets.do" />
+		<forward name="goWebRadioFree" path="/action/srvWebRadioFree.do?dispatch=load" />
+		
+		<forward name="goPasswordRecovery" path="/action/myHomePassword.do" />
+		
+		<forward name="login" path="/action/mySession.do" />	
+		<forward name="manageDico" path="/action/manageDico.do" />
+		<forward name="mustHaveV2" path="/include_jsp/reponses/genericV2.jsp" />
+		<forward name="empty" path="/include_jsp/utils/inc_empty.jsp" />
+		<forward name="genericNoRabbit" path="/include_jsp/reponses/genericNoRabbit.jsp" />
+		<forward name="genericNoRabbitMessages" path="/include_jsp/reponses/genericNoRabbitMessages.jsp" />
+		<forward name="goUserPrefs" path="/action/myUserPrefs.do"/>
+		
+		<forward name="adminrefused" path="/include_jsp/admin/adminrefused.jsp"/>
+
+  </global-forwards>
+   
+    
+  <action-mappings>
+  
+  <action path="/action/myHomePassword"
+			type="net.violet.mynabaztag.action.MyHomePasswordAction"
+			name="myHomePasswordForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myHome/inc_password.jsp">
+	</action>
+  
+  
+	<!--  ANNUAIRE --> 
+    <action path="/action/myAnnuaire"
+    		type="net.violet.mynabaztag.action.MyAnnuaireAction"
+    		name="myAnnuaireForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myMessage/inc_myAnnuaire.jsp">
+    </action>
+    
+    <action path="/action/myAnnuaireResult"
+    		type="net.violet.mynabaztag.action.MyAnnuaireResultAction"
+    		name="myAnnuaireResultForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myMessage/inc_myAnnuaireResult.jsp">
+    </action>
+    <!-- FIN ANNUAIRE -->
+    
+  
+  	<!-- Blocs --> 
+  	<action path="/action/Bloc"
+  			type="net.violet.mynabaztag.action.BlocAction"
+  			name="BlocForm"
+  			scope="request"
+  			validate="false"
+  			input="/include_jsp/blocs/blocError.jsp">
+  			<forward name="Error" path="/include_jsp/blocs/blocError.jsp" />
+  			<forward name="UpdateMac" path="/include_jsp/blocs/blocUpdateMac.jsp" />
+  			<forward name="generic" path="/include_jsp/blocs/blocGenerique.jsp" />
+  			<forward name="friends" path="/include_jsp/blocs/blocFriends.jsp" />
+  			<forward name="DernierAnnuaire" path="/include_jsp/blocs/blocDernierAnnuaire.jsp" /> 
+  			<forward name="MyNabcast" path="/include_jsp/blocs/blocMyNabcast.jsp" /> 
+  			<forward name="MyServices" path="/include_jsp/blocs/blocMyServices.jsp" />
+  			<forward name="DecouvrirNabaztag" path="/include_jsp/blocs/blocDecouvrirNabaztag.jsp" />  			
+  			<forward name="nablives" path="/include_jsp/blocs/blocNablives.jsp" />
+  	</action>
+  	<!-- FIN BLOCS -->
+  	
+  
+  	<!-- HOME -->
+	<action path="/action/myHome"
+		forward="/action/myNablife.do">
+	</action>
+  	<!-- FIN HOME -->
+  	
+  	<!-- MESSAGES --> 
+    <action path="/action/myMessages"
+    		type="net.violet.mynabaztag.action.MyMessagesAction"
+    		name="myMessagesForm"
+    		scope="request"
+    		validate="false"
+    		input="/myMessages.jsp">
+    		<forward name="shuffle" path="/include_jsp/myMessage/ajax_shuffleObject.jsp" />
+    		<forward name="message" path="/include_jsp/myMessage/ajax_getNomMessage.jsp" />
+  	</action>
+  	
+	<action path="/action/myMessagesTTS"
+			type="net.violet.mynabaztag.action.MyMessagesTTSAction"
+			name="myMessagesTTSForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myMessage/inc_myMessagesTTS.jsp">
+	</action>
+  	
+  	<action path="/action/myMessagesVocal"
+			type="net.violet.mynabaztag.action.MyMessagesVocalAction"
+			name="myMessagesVocalForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myMessage/inc_myMessagesVocal.jsp">
+	</action>
+	
+	<action path="/action/myMessagesSendVocal"
+			type="net.violet.mynabaztag.action.MyMessagesSendVocalAction"
+			name="myMessagesSendVocalForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/reponses/myMessageSendVocal.jsp">
+ 			<forward name="messages" path="/include_jsp/reponses/myMessageSendVocal.jsp" />
+ 			<forward name="playIt" path="/include_jsp/reponses/myMessageListenVocal.jsp" />
+    </action>
+    
+	<action path="/action/myMessagesSendTTS"
+			type="net.violet.mynabaztag.action.MyMessagesSendTTSAction"
+			name="myMessagesSendTTSForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/reponses/myMessageSendTTS.jsp">
+ 			<forward name="messages" path="/include_jsp/reponses/myMessageSendTTS.jsp" />
+			<forward name="playIt" path="/include_jsp/reponses/myMessageListenTTS.jsp" />
+    </action>
+    
+	<action path="/action/myMessagesMp3"
+			type="net.violet.mynabaztag.action.MyMessagesMp3Action"
+			name="myMessagesMp3Form"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myMessage/inc_myMessagesMp3.jsp">
+	</action>
+		
+	<action	path="/action/myMessagesHomeReceived"
+			type="net.violet.mynabaztag.action.MyMessagesListAction"
+			name="MyMessagesListForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myHome/inc_myHomeReceived.jsp">
+	</action>
+		
+	<action path="/action/myMessagesSendMp3"
+			type="net.violet.mynabaztag.action.MyMessagesSendMp3Action"
+			name="myMessagesSendMp3Form"
+			scope="request"
+			validate="false"
+			input="/include_jsp/reponses/myMessageSendMp3.jsp">
+ 			<forward name="messages" path="/include_jsp/reponses/myMessageSendMp3.jsp" />
+ 			<forward name="playIt" path="/include_jsp/reponses/myMessageListenMp3.jsp" />
+    </action>
+	
+    <action path="/action/myMessagesClin"
+    		type="net.violet.mynabaztag.action.MyMessagesClinAction"
+    		name="myMessagesClinForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myMessage/inc_myMessagesClin.jsp">
+    </action>
+	
+  	<action path="/action/myMessagesClinChoice"
+  			type="net.violet.mynabaztag.action.MyMessagesClinChoiceAction"
+  			name="myMessagesClinChoiceForm"
+  			scope="request"
+  			validate="false"
+  			input="/include_jsp/myMessage/inc_myMessagesClinChoice.jsp">
+  	</action>
+ 	
+	<action path="/action/myMessagesSendClin"
+			type="net.violet.mynabaztag.action.MyMessagesSendClinAction"
+			name="myMessagesSendClinForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/reponses/myMessageSendClin.jsp">
+ 			<forward name="messages" path="/include_jsp/reponses/myMessageSendClin.jsp" />
+ 			<forward name="playIt" path="/include_jsp/reponses/myMessageListenClin.jsp" />
+    </action>    
+    
+	<action path="/action/myMessagesBiblio"
+			type="net.violet.mynabaztag.action.MyMessagesBiblioAction"
+			name="myMessagesBiblioForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myMessage/inc_myMessagesBiblio.jsp">
+	</action>
+    
+	<action path="/action/myMessagesBiblioChoice"
+			type="net.violet.mynabaztag.action.MyMessagesBiblioChoiceAction"
+			name="myMessagesBiblioChoiceForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myMessage/inc_myMessagesBiblioChoice.jsp">
+	</action>
+ 	
+	<action path="/action/myMessagesSendBiblio"
+			type="net.violet.mynabaztag.action.MyMessagesSendBiblioAction"
+			name="myMessagesSendBiblioForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/reponses/myMessageSendBiblio.jsp">
+ 			<forward name="messages" path="/include_jsp/reponses/myMessageSendBiblio.jsp" />
+ 			<forward name="playIt" path="/include_jsp/reponses/myMessageListenBiblio.jsp" />
+    </action>        
+    
+	<action path="/action/myMessagesNabshare"
+			type="net.violet.mynabaztag.action.MyMessagesNabshareAction"
+			name="myMessagesNabshareForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myMessage/inc_myMessagesNabshare.jsp">
+	</action>
+    
+	<action path="/action/myMessagesNabshareChoice"
+			type="net.violet.mynabaztag.action.MyMessagesNabshareChoiceAction"
+			name="myMessagesNabshareChoiceForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myMessage/inc_myMessagesNabshareChoice.jsp">
+			<forward name="shuffleNabshare" path="/include_jsp/myMessage/ajax_shuffleNabshare.jsp" />
+	</action>
+  
+	<action path="/action/myMessagesList"
+			type="net.violet.mynabaztag.action.MyMessagesListAction"
+			name="myMessagesListForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myMessage/myMessageListBiblio.jsp">
+ 			<forward name="home_received" path="/include_jsp/myMessage/myMessagesReceived.jsp" />
+ 			<forward name="received" path="/include_jsp/myMessage/inc_myMessagesReceived.jsp" />
+ 			<forward name="home_sent" path="/include_jsp/myMessage/myMessagesSent.jsp" />
+ 			<forward name="sent" path="/include_jsp/myMessage/inc_myMessagesSent.jsp" />
+ 			<forward name="home_archived" path="/include_jsp/myMessage/myMessagesArchived.jsp" />
+ 			<forward name="archived" path="/include_jsp/myMessage/inc_myMessagesArchived.jsp" />	
+    </action> 
+    <!-- FIN MESSAGES -->
+  
+  
+  	<!-- NABAZTALAND --> 
+ 	<action path="/action/myNabaztalandHome"
+  			type="net.violet.mynabaztag.action.MyNabaztalandHomeAction"
+  			name="myNabaztalandHomeForm"
+  			scope="request"
+  			validate="false"
+  			input="/include_jsp/myNablife/inc_nabaztalandHome.jsp">
+	</action> 	
+ 	
+ 	<action path="/action/myNabaztalandHisto"
+  			type="net.violet.mynabaztag.action.MyNabaztalandHistoAction"
+  			name="myNabaztalandHistoForm"
+  			scope="request"
+  			validate="false"
+  			input="/action/myNabaztalandHome.do">
+  			<forward name="home" path="/action/myNabaztalandHome.do" />
+  			<forward name="histo" path="/include_jsp/myNablife/inc_nabaztalandHisto.jsp" />
+	</action> 	
+
+	<action path="/action/myNabaztalandSubscribe"
+  			type="net.violet.mynabaztag.action.MyNabaztalandSubscribeAction"
+  			name="myNabaztalandSubscribeForm"
+  			scope="request"
+  			validate="false"
+  			input="/action/myNabaztalandHome.do">
+  			<forward name="error" path="/action/myNabaztalandHome.do" />
+  			<forward name="subscribe" path="/include_jsp/myNablife/inc_nabaztalandSubscribe.jsp" />
+	</action> 	
+	
+	
+	<action path="/action/myNabaztalandCreate"
+			type="net.violet.mynabaztag.action.MyNabaztalandCreateAction"
+			name="myNabaztalandCreateForm"
+			scope="request"
+			validate="false"
+			input="/action/myNabaztalandCreate.do">
+			<forward name="error" path="/action/myNabaztalandHome.do" />
+			<forward name="createoredit" path="/include_jsp/myNablife/inc_nabaztalandCreate.jsp" />
+	</action>
+ 	
+ 	<action path="/action/myNabaztalandUpload"
+			type="net.violet.mynabaztag.action.MyNabaztalandUploadAction"
+			name="myNabaztalandUploadForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myNablife/inc_nabaztalandUpload.jsp">
+			<forward name="home" path="/action/myNablife.do" />
+			<forward name="errorload" path="/action/myNablife.do" />
+			<forward name="same" path="/action/myNabaztalandUpload.do" />
+ 	</action>
+	<!-- FIN NABAZTALAND -->
+  
+  
+ 	 <!-- NABLIFE -->
+	<action path="/action/myNablife"
+			type="net.violet.mynabaztag.action.MyNablifeAction"
+			name="myNablifeForm"
+			scope="request"
+			validate="false"
+			input="/myNablife.jsp">
+			<forward name="myNablifeListSearchResults" path="/myNablifeListSearchResults.jsp" />
+	</action>
+	
+
+	<action path="/action/myNablifeResultSearch"
+			type="net.violet.mynabaztag.action.MyNablifeResultSearchAction"
+			name="myNablifeForm"
+			scope="request"
+			validate="false"
+			input="serviceResultSearch">
+	</action>
+	<!-- FIN NABLIFE -->
+  
+  
+	<!-- SERVICES --> 
+	
+	<action path="/action/myMailsList"
+			type="net.violet.mynabaztag.action.MyMailsListAction"
+			name="myMailsListForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myNablife/myMails/inc_myMailsList.jsp">
+	</action>
+	
+	<action path="/action/myMailsCreate"
+			type="net.violet.mynabaztag.action.MyMailsCreateAction"
+			name="myMailsCreateForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myNablife/myMails/inc_myMailsCreate.jsp">
+	</action>
+	
+ 	<action path="/action/myServicesHome"
+  			type="net.violet.mynabaztag.action.MyServicesHomeAction"
+  			name="myServicesHomeForm"
+  			scope="request"
+  			validate="false"
+  			input="/include_jsp/myNablife/inc_allServices.jsp">
+	</action> 	
+ 	
+ 	<action path="/action/srvMeteoFree"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceMeteoFree">
+	</action>
+	
+ 	<action path="/action/srvMeteoFreeConfig"
+  			type="net.violet.mynabaztag.action.MySrvMeteoFreeAction"
+  			name="mySrvMeteoFreeForm"
+  			scope="request"
+  			validate="false"
+  			parameter="dispatch"
+  			input="/include_jsp/mySrv/inc_meteo_free.jsp">
+	</action>
+
+	<action path="/action/srvConseil"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceConseil">
+	</action>
+	
+	<action path="/action/srvFacebook"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceFacebook">
+	</action>
+
+	<action path="/action/srvHumeur"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceHumeur">
+	</action>
+ 	
+ 	<action path="/action/srvHumeurConfig"
+ 			type="net.violet.mynabaztag.action.MySrvHumeurAction"
+ 			name="mySrvHumeurForm"
+ 			scope="request"
+ 			validate="false"
+ 			parameter="dispatch"
+ 			input="/include_jsp/mySrv/inc_humeur.jsp">
+ 	</action>
+ 	
+	<action path="/action/srvTaichi"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceTaichi">
+	</action>
+ 	
+ 	<action path="/action/srvTaichiConfig"
+ 			type="net.violet.mynabaztag.action.MySrvTaichiAction"
+ 			name="mySrvTaichiForm"
+ 			scope="request"
+ 			validate="false"
+ 			parameter="dispatch"
+ 			input="/include_jsp/mySrv/inc_taichi.jsp">
+ 	</action>
+
+	<action path="/action/srvBilan"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceBilan">
+	</action>
+
+ 	<action path="/action/srvBilanConfig"
+ 			type="net.violet.mynabaztag.action.MySrvBilanAction"
+ 			name="mySrvBilanForm"
+ 			scope="request"
+ 			validate="false"
+ 			parameter="dispatch"
+ 			input="/include_jsp/mySrv/inc_bilan.jsp">
+ 	</action>
+
+	<action path="/action/srvTraffic"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceTraffic">
+	</action>
+	
+ 	<action path="/action/srvTrafficConfig"
+ 			type="net.violet.mynabaztag.action.MySrvTrafficAction"
+ 			name="mySrvTrafficForm"
+ 			scope="request"
+ 			validate="false"
+ 			parameter="dispatch"
+ 			input="/include_jsp/mySrv/inc_traffic.jsp">
+ 	</action>
+
+	<action path="/action/srvAir"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceAir">
+	</action>
+
+	<action path="/action/srvAirConfig"
+			type="net.violet.mynabaztag.action.MySrvAirAction"
+			name="mySrvAirForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/mySrv/inc_air.jsp">
+	</action>
+
+	<action path="/action/srvGoogle"
+			type="net.violet.mynabaztag.action.MySrvGoogleAction"
+			name="mySrvGoogleForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/mySrv/inc_google.jsp">
+	</action>
+
+	<action path="/action/srvBourseFree"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceBourseFree">
+	</action>
+	
+	<action path="/action/srvBourseFreeConfig"
+			type="net.violet.mynabaztag.action.MySrvBourseFreeAction"
+			name="mySrvBourseFreeForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/mySrv/inc_bourse_free.jsp">
+	</action>
+
+	<action path="/action/srvBourseFull"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceBourseFull">
+	</action>
+	
+	<action path="/action/srvBourseFullConfig"
+			type="net.violet.mynabaztag.action.MySrvBourseFullAction"
+			name="mySrvBourseFullForm"
+			scope="request"
+			validate="true"
+			parameter="dispatch"
+			input="/include_jsp/mySrv/inc_bourse_full.jsp">
+	</action>
+
+	<action path="/action/srvReveilFree"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceReveilFree">
+	</action>
+	
+	<action path="/action/srvReveilFreeConfig"
+			type="net.violet.mynabaztag.action.MySrvReveilFreeAction"
+			name="mySrvReveilFreeForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/mySrv/inc_reveil_free.jsp">
+	</action>
+	
+	<action path="/action/srvReveilFull"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceReveilFull">
+	</action>
+	
+ 	<action path="/action/srvReveilFullConfig"
+			type="net.violet.mynabaztag.action.MySrvReveilFullAction"
+			name="mySrvReveilFullForm"
+			scope="request"
+			validate="true"
+			parameter="dispatch"
+			input="/include_jsp/mySrv/inc_reveil_full.jsp">
+	</action>
+	
+	<action path="/action/srvSound"
+			type="net.violet.mynabaztag.action.MySrvSoundAction"
+			name="mySrvSoundForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/mySrv/inc_srv_sound.jsp">
+	</action>
+	
+	<action path="/action/srvClock"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceClock">
+	</action>
+	
+	<action path="/action/srvClockConfig"
+			type="net.violet.mynabaztag.action.MySrvClockAction"
+			name="mySrvClockForm"
+			scope="request"
+			validate="true"
+			input="/include_jsp/myServices/clock/configClock.jsp">
+	</action>
+	
+	<action path="/action/srvClockUpload"
+			type="net.violet.mynabaztag.action.MySrvClockAction"
+			name="mySrvClockUploadForm"
+			scope="request"
+			validate="true"
+			input="/include_jsp/myServices/clock/uploadClock.jsp">
+	</action>
+
+	<action path="/action/srvDialog"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceDialog">
+	</action>
+	
+	<action path="/action/srvDialogConfig"
+			type="net.violet.mynabaztag.action.MySrvDialogAction"
+			name="mySrvDialogForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/mySrv/inc_dialog.jsp">
+			<forward name="genericOK" path="/include_jsp/reponses/genericOK.jsp" />
+	</action>
+
+	<action path="/action/srvTwitter"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceTwitter">
+	</action>
+	
+	<action path="/action/srvTwitterConfig"
+			type="net.violet.mynabaztag.action.MySrvTwitterAction"
+			name="mySrvTwitterForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/myServices/twitterConfig.jsp">
+	</action>
+
+	<action path="/action/srvFlickr"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceFlickr">
+	</action>
+	
+	<action path="/action/srvFlickrConfig"
+			type="net.violet.mynabaztag.action.MySrvFlickrAction"
+			name="mySrvFlickrForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/myServices/flickrConfig.jsp">
+	</action>
+	
+	<action path="/action/srvGmail"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceGmail">
+	</action>
+	
+	<action path="/action/srvGmailConfig"
+			type="net.violet.mynabaztag.action.MySrvGmailAction"
+			name="mySrvGmailForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/myServices/gmailConfig.jsp">
+	</action>
+
+	<action path="/action/srvPlayer"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="servicePlayer">
+	</action>
+	
+	<action path="/action/srvPlayerConfig"
+			type="net.violet.mynabaztag.action.MySrvPlayerAction"
+			name="mySrvPlayerForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/myServices/playerConfig.jsp">
+	</action>
+	
+	<action path="/action/srvNathan"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceNathan">
+	</action>
+	
+	<action path="/action/srvNathanHome"
+			type="net.violet.mynabaztag.action.MyNathanHomeAction"
+			name="mySrvNathanHomeForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/myServices/nathanHome.jsp">
+			<forward name="searchResult" path="/include_jsp/myServices/nathanSearch.jsp" />
+			<forward name="myVersions" path="/include_jsp/myServices/nathanVersions.jsp" />
+			<forward name="selection" path="/include_jsp/myServices/nathanSelection.jsp" />
+	</action>
+	
+	<action path="/action/srvNathanCreate"
+			type="net.violet.mynabaztag.action.MyNathanCreateAction"
+			name="mySrvNathanCreateForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/myServices/nathanCreate.jsp">
+			<forward name="goToConfig" path="/action/srvNathanConfig.do?dispatch=load" />
+	</action>
+	
+	<action path="/action/srvNathanConfig"
+			type="net.violet.mynabaztag.action.MyNathanConfigAction"
+			name="mySrvNathanConfigForm"
+			scope="request"
+			validate="false"
+			parameter="dispatch"
+			input="/include_jsp/myServices/nathanConfig.jsp">
+			<forward name="goToVersions" path="/action/srvNathanHome.do?dispatch=load" />
+	</action>
+	
+	<action path="/action/srvRssFree"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceRssFree">
+	</action>
+	
+	<action path="/action/srvRssFreeConfig"
+			type="net.violet.mynabaztag.action.MySrvRssFreeAction"
+			name="mySrvRssFreeForm"
+			scope="request"
+			validate="true"
+			parameter="dispatch"
+			input="/include_jsp/myServices/rss/rssFreeConfig.jsp">
+	</action>
+	
+	<action path="/action/srvRssFull"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceRssFull">
+	</action>
+	
+	<action path="/action/srvRssFullConfig"
+			type="net.violet.mynabaztag.action.MySrvRssFullAction"
+			name="mySrvRssFullForm"
+			scope="request"
+			validate="true"
+			parameter="dispatch"
+			input="/include_jsp/myServices/rss/rssFullConfig.jsp">
+			<forward name="edit" path="/include_jsp/myServices/rss/rssFullEdit.jsp" />
+	</action>
+	
+	<action path="/action/srvPodcastFree"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="servicePodcastFree">
+	</action>
+	
+	<action path="/action/srvPodcastFreeConfig"
+			type="net.violet.mynabaztag.action.MySrvPodcastFreeAction"
+			name="mySrvPodcastFreeForm"
+			scope="request"
+			validate="true"
+			parameter="dispatch"
+			input="/include_jsp/myServices/podcast/podcastFreeConfig.jsp">
+	</action>
+	
+	<action path="/action/srvPodcastFull"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="servicePodcastFull">
+	</action>
+	
+	<action path="/action/srvPodcastFullConfig"
+			type="net.violet.mynabaztag.action.MySrvPodcastFullAction"
+			name="mySrvPodcastFullForm"
+			scope="request"
+			validate="true"
+			parameter="dispatch"
+			input="/include_jsp/myServices/podcast/podcastFullConfig.jsp">
+			<forward name="edit" path="/include_jsp/myServices/podcast/podcastFullEdit.jsp" />
+	</action>
+	
+	<action path="/action/srvResult"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceResultSearch">
+	</action>
+	
+	<action path="/action/srvShortcutState"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceShortcutState">
+	</action>
+	
+	<action path="/action/srvWebRadioFree"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="serviceWebRadioFree">
+	</action>
+	
+	<action path="/action/srvWebRadioFreeConfig"
+			type="net.violet.mynabaztag.action.MySrvWebRadioFreeAction"
+			name="mySrvWebRadioFreeConfigForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myServices/webRadio/webRadioFreeConfig.jsp">
+	</action>
+
+	<action path="/action/srvWebRadioFreePlayer"
+			type="net.violet.mynabaztag.action.MySrvWebRadioFreeAction"
+			name="mySrvWebRadioFreePlayerForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myServices/webRadio/webRadioFreePlayer.jsp">
+			<forward name="genericOK" path="/include_jsp/reponses/genericOK.jsp" />
+	</action>
+	<!-- FIN SERVICES -->
+  
+  
+  	<!--  TERRIER --> 
+    <action path="/action/myTerrier"
+    		type="net.violet.mynabaztag.action.MyTerrierAction"
+    		name="myTerrierForm"
+    		scope="request"
+    		validate="false"
+    		input="/myTerrier.jsp">
+    </action>
+    
+	<action path="/action/myManageMp3"
+			type="net.violet.mynabaztag.action.MyManageMp3Action"
+			name="myManageMp3Form"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myTerrier/inc_myUploadMp3.jspp">
+    		<forward name="upload_mp3" path="/include_jsp/myTerrier/inc_myUploadMp3.jsp" />
+    		<forward name="mp3_reponse" path="/include_jsp/reponses/inc_myManageMp3Reponse.jsp" />
+    </action>
+ 
+    <action path="/action/myListeMp3"
+    		type="net.violet.mynabaztag.action.MyListeMp3Action"
+    		name="myListeMp3Form"
+    		scope="request"
+    		validate="false"
+    		input="/inc_myListeMp3.jsp">
+    		<forward name="liste_mp3" path="/include_jsp/myTerrier/inc_myListeMp3.jsp" />
+    		<forward name="edit_mp3" path="/include_jsp/myTerrier/inc_myMp3Edit.jsp" />
+    </action>
+    
+    <action	path="/action/myTerrierRabbit"
+    		type="net.violet.mynabaztag.action.MyTerrierRabbitAction"
+    		name="myTerrierRabbitForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myTerrier/inc_myTerrierRabbit.jsp">
+    </action>
+    
+    <action path="/action/myTerrierProfil"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="profil">
+	</action>
+    
+    <action path="/action/myTerrierMyself"
+    		type="net.violet.mynabaztag.action.MyTerrierMyselfAction"
+    		name="myTerrierMyselfForm"
+    		scope="request"
+    		validate="false"
+    		parameter="dispatch"
+    		input="/include_jsp/myTerrier/inc_myTerrierMyself.jsp">
+    </action>
+    
+    <action path="/action/myTerrierSignature"
+    		type="net.violet.mynabaztag.action.MyTerrierSignatureAction"
+    		name="myTerrierSignatureForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myTerrier/inc_myTerrierSignature.jsp">
+    		<forward name="ma_signature" path="/include_jsp/myTerrier/inc_myTerrierSignature.jsp" />
+    </action>
+
+  	<action path="/action/myTerrierEditRabbitImage"
+  			type="net.violet.mynabaztag.action.MyTerrierEditRabbitImageAction"
+  			name="myTerrierEditRabbitImageForm"
+  			scope="request"
+  			validate="false"
+  			input="/include_jsp/myTerrier/inc_myTerrierEditRabbitImage.jsp">
+			<forward name="edit" path="/include_jsp/myTerrier/inc_myTerrierEditRabbitImage.jsp" />
+			<forward name="modify_ok" path="/include_jsp/reponses/terrierUploadPhotoReponse.jsp" />
+  	</action>
+  	
+    <action path="/action/myTerrierCouche"
+    		type="net.violet.mynabaztag.action.MyTerrierCoucheAction"
+    		name="myTerrierCoucheForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myTerrier/inc_myTerrierCouche.jsp">
+    </action>
+    
+     <!-- action correspondant a la page amis dans le terrier -->
+	 <action path="/action/myTerrierFriends"
+			type="org.apache.struts.actions.ForwardAction"
+			scope="request"
+			parameter="friends">
+	</action>
+	 
+	 <!--  partie "friendsList" de la page amis dans le terrier -->
+	 <!--  ATTENTION : myTerrierFriendsList utilise l'action MyTerrierFriendsAction -->
+	<action path="/action/myTerrierFriendsList"
+  			type="net.violet.mynabaztag.action.MyTerrierFriendsAction"
+  			name="myTerrierFriendsForm"
+  			scope="request"
+  			validate="false"
+  			parameter="dispatch"
+  			input="/include_jsp/myTerrier/friends/friendsList.jsp">
+  	</action>  	
+
+	<!--  partie "blackList" de la page amis dans le terrier -->
+	<action path="/action/myTerrierBlackList"
+  			type="net.violet.mynabaztag.action.MyTerrierBlackListAction"
+  			name="myTerrierBlackListForm"
+  			scope="request"
+  			validate="false"
+  			input="/include_jsp/myTerrier/friends/blackList.jsp">
+  	</action>
+	
+	
+	<action path="/action/myTerrierInfo"
+    		type="org.apache.struts.actions.ForwardAction"
+    		scope="request"
+    		parameter="preferences">
+    </action>
+    
+    <action path="/action/myTerrierCompte"
+    		type="net.violet.mynabaztag.action.MyTerrierCompteAction"
+    		name="myTerrierCompteForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myTerrier/preferences/account.jsp">
+    </action>
+    
+    <action path="/action/myTerrierAffichage"
+    		type="net.violet.mynabaztag.action.MyTerrierAffichageAction"
+    		name="myTerrierAffichageForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myTerrier/preferences/display.jsp">
+    </action>
+    
+    <action path="/action/myTerrierAlerte"
+    		type="net.violet.mynabaztag.action.MyTerrierAlerteAction"
+    		name="myTerrierAlerteForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myTerrier/preferences/infos_alerts.jsp">
+    </action>
+    
+    <action path="/action/myTerrierPrive"
+    		type="net.violet.mynabaztag.action.MyTerrierPriveAction"
+    		name="myTerrierPriveForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myTerrier/preferences/privacy.jsp">
+    </action>
+    <!-- FIN TERRIER -->
+  	
+  	<action path="/action/myLastRabbits"
+  			type="net.violet.mynabaztag.action.MyLastRabbitsAction"
+  			name="myLastRabbitsForm"
+  			scope="request"
+  			validate="false"
+  			input="/include_jsp/utils/get_last_rabbits_xml.jsp">
+  	</action>
+  
+	<action path="/action/myUserPrefs"
+			type="net.violet.mynabaztag.action.MyUserPrefsAction"
+			name="myUserPrefsForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/utils/inc_userPrefs.jsp">
+	</action>
+	
+  	<action path="/action/manageDico"
+			type="net.violet.mynabaztag.action.ManageDicoAction"
+			name="manageDicoForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/manageDico.jsp">
+	</action>
+
+	<action path="/action/myShortcutState"
+			type="net.violet.mynabaztag.action.MyShortcutStateAction"
+			name="myNablifeForm"
+			scope="request"
+			validate="false"
+			input="serviceShortcutState">
+	</action>
+	
+ 	<action path="/action/mySession"
+ 			type="net.violet.mynabaztag.action.MySessionAction"
+ 			name="mySessionForm"
+ 			scope="request"
+ 			validate="false"
+ 			input="/action/myMessages.do">
+    		<forward name="login" path="/login.jsp" />
+    		<forward name="bad_login" path="/action/mySession.do?bad_login=1" />
+    		<forward name="good_login" path="/good_login.jsp" />
+    		<forward name="messages" path="/action/myMessages.do" />
+			<forward name="home" path="/action/myNablife.do" />    	
+    </action>
+
+	<action path="/action/myNbReceivedMessages"
+ 			type="net.violet.mynabaztag.action.MyNbReceivedMessagesAction"
+ 			name="myNbReceivedMessagesForm"
+ 			scope="request"
+ 			validate="false"
+ 			input="/myNbReceivedMessages.jsp">	
+    </action>
+
+	<action path="/action/myProfil"
+			type="net.violet.mynabaztag.action.MyProfilAction"
+			name="myProfilForm"
+			scope="request"
+			validate="false"
+			input="/include_jsp/myMessage/inc_myProfil.jsp">
+	</action>
+    
+    
+  	<action path="/action/myAddFriend"
+  			type="net.violet.mynabaztag.action.MyAddFriendAction"
+  			name="myAddFriendForm"
+  			scope="request"
+  			validate="false"
+  			input="/include_jsp/myMessage/myAddFriend.jsp">
+  			<forward name="success_add_friend" path="/include_jsp/myMessage/myAddFriend.jsp" />
+  	</action>
+	
+	<!-- MyTools -->
+	<action path="/action/myTools"
+    		type="net.violet.mynabaztag.action.MyToolsAction"
+    		name="myToolsForm"
+    		scope="request"
+    		validate="false"
+    		input="/myTools.jsp">
+    </action>
+    
+    <action path="/action/myToolsApi"
+    		type="net.violet.mynabaztag.action.MyToolsApiAction"
+    		name="myToolsApiForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myTools/inc_myToolsApi.jsp">
+    </action>
+    
+    <!-- FIN TOOLS/API -->
+    
+    <action path="/action/myZtampsListAction"
+    		type="net.violet.mynabaztag.action.MyZtampsListAction"
+    		name="myZtampsListForm"
+    		scope="request"
+    		validate="false"
+    		input="/include_jsp/myZtamps/listZtamps.jsp">
+    </action>
+    
+    
+  </action-mappings>
+  
+	<message-resources parameter="mresource" null="false"/>
+	<message-resources parameter="net.violet.mynabaztag.ressources.myErrors"/>
+	
+		<!-- Tiles Configuration -->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-parser-validate" value="true" />
+	</plug-in>
+  
+  </struts-config>

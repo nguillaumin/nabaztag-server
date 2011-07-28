@@ -1,0 +1,47 @@
+#global { background: url(../layout_blue/img/headerTop.gif)  repeat-x top; background-color:#F2F2F2}
+
+.tabNavContener {background:url(../layout_blue/img/mainTabBack.gif) right top;}
+ul.tabNav {background:url(../layout_blue/img/mainTabBack.gif) left top;}
+ul.tabNav li.active {background:url(../layout_blue/img/mainTabActif.gif) bottom right no-repeat;}
+ul.tabNav li {float: left; background:url(../layout_blue/img/mainTabInactif.gif) bottom right no-repeat; }
+ul.tabNav li.last { background:url(../layout_blue/img/mainTabInactif-shadow.gif) bottom right no-repeat; }
+ul.tabNav li.active_last{background:url(../layout_blue/img/mainTabActif-shadow.gif) bottom right no-repeat;}
+
+ul.tabNav li.disabled {background:url(../layout_blue/img/mainTabInactif.gif) bottom right no-repeat;}
+ul.tabNav li.disabled_last{background:url(../layout_blue/img/mainTabInactif-shadow.gif) bottom right no-repeat;}
+ul.tabNav li.disabled_last a, ul.tabNav li.disabled a {color:#aaa}
+
+.genericList li,
+#contentMesAmis ul.liens li,
+.blocListPeople ul.entry li.pseudo,
+.blocListPeople ul.entry-full li.pseudo
+#contentMesAmis ul.liens li,
+#contentSeConnecter ul.demos li,
+.blocListPeople ul.entry-full li.annuaire,
+.nabcastHisto .lesSons li { background:url(../layout_blue/img/puceBlogEntry.gif) no-repeat; background-position:1px 5px; }
+
+.toggleMode-open {background: url(../layout_blue/img/blockClose.gif);}
+.toggleMode-close {background: url(../layout_blue/img/blockOpen.gif);}
+.genericBigList li, #contentSeConnecter li {background:url(../layout_blue/img/bigpuce.gif) no-repeat; }
+
+#contentCreerCompte .createAccountLeft,
+.specialBlockSelected,
+.srv-list-entries li.selected,
+#contentCreerCompte .createAccountLeft   {background:url(../layout_blue/img/backSpecialBlock2.gif);}
+
+
+.main-cadre-top  { background:url(../layout_blue/img/cartouche-top.gif) top left no-repeat; }
+.main-cadre-top h2 {background:url(../layout_blue/img/cartouche-top.gif) top right no-repeat;}
+
+.formButton-outside {background:url(../layout_blue/img/buttons_left.gif); }
+.formButton-outside a {background:url(../layout_blue/img/buttons_right.gif) right; font-size:15px;}
+
+/* bouton customise */
+div.generic-button {background: url(../layout_blue/img/buttons_left.gif) 0% 50%;}
+div.generic-button div div {background: url(../layout_blue/img/buttons_right.gif) 100% 50% no-repeat;}
+
+#bloc-generic-register li {background: url(../layout_blue/img/wizard_progress_bar_back.gif) 0% 50% repeat-y; }
+#bloc-generic-register li.reg-weAreHere {background: url(../layout_blue/img/wizard_progress_bar_selected.gif) 0% 50% repeat-x; }
+
+/* fixed layout */
+div#header { background:#F2F2F2 url(../layout_blue/img/header-background.gif) no-repeat; }

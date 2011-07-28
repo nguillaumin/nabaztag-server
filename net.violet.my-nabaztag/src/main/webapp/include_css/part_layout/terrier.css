@@ -1,0 +1,109 @@
+
+div.myTerrier .token {font-size: 14px; font-weight: bold;}
+
+/* =contentProfil
+----------------------------------------------- 
+*/
+#contentProfil .twoCol-left	{ width:66%; }
+#contentProfil .twoCol-left textarea { width:100%;  }
+#contentProfil .twoCol-right{ width:34%; padding-top:21px; margin:0; }
+#contentProfil .twoCol-right .uploader-link { position:relative; }
+#contentProfil .twoCol-right table { width:100px; height:100px; border:1px solid #E2E2E2; }
+#contentProfil .twoCol-right td { vertical-align:middle; background:#eee;}
+#contentProfil #pictureLoader	{background:white; border:1px solid #666; width:270px; height:70px; position:absolute; padding:8px; left:20px; top:0;  display:none; z-index:500;}
+#contentProfil #pictureLoader	.closebt { position:absolute; top:4px; right:4px; }
+#contentProfil .email span { line-height:18px; font-size:15px; font-weight:bold;}
+
+/* =rabbit-state
+----------------------------------------------- 
+*/
+div.myTerrier .flat-block div.rabbit-state { width: 119px; text-align: center; position: absolute; top: 33px; left: 7px; }
+div.myTerrier .flat-block span.rabbit-state {display:block; font-weight: bold;}
+div.myTerrier .flat-block .rabbit-nabname {display:none;}
+
+/* =skin-selector
+----------------------------------------------- 
+*/
+ul.skin-selector { list-style-type:none; padding:0 0  0 207px; margin:0}
+ul.skin-selector li { float:left;}
+ul.skin-selector li a {display:block;}
+ul.skin-selector li a {width:16px; height:16px; border:1px solid black; margin-right:5px;}
+ul.skin-selector li a.selected {width:24px; height:24px; border:2px solid black; margin-right:5px;}
+ul.skin-selector li span {display:none;}
+ul.skin-selector li.layout_green a { background: url(../../include_css/layout_green/img/headerTop.gif)  repeat-x center;}
+ul.skin-selector li.layout_blue a { background: url(../../include_css/layout_blue/img/headerTop.gif)  repeat-x center;}
+ul.skin-selector li.layout_orange a { background: url(../../include_css/layout_orange/img/headerTop.gif)  repeat-x center;}
+ul.skin-selector li.layout_pink a { background: url(../../include_css/layout_pink/img/headerTop.gif)  repeat-x center;}
+ul.skin-selector li.layout_violet a { background: url(../../include_css/layout_violet/img/headerTop.gif)  repeat-x center;}
+ul.skin-selector li.layout_yellow a { background: url(../../include_css/layout_yellow/img/headerTop.gif) repeat-x center;}
+
+/* =#spoken-lang-profil
+----------------------------------------------- 
+*/
+#spoken-lang-profil { margin:0; padding:0; list-style-type:none; }
+#spoken-lang-profil label {border:none; line-height:20px; white-space:nowrap; background:white;}
+#spoken-lang-profil li {margin:0; padding:0; display:block; float:left; width:32%; background:white;}
+
+/* =#maMusique
+----------------------------------------------- 
+*/
+div.myTerrier .maMusique {margin-bottom:5px; overflow:hidden;}
+div.myTerrier .maMusique ul{margin:0; overflow:hidden; padding:3px; list-style:none; clear:both; width:93%; margin-right:5px; margin-top:5px; display:block;}
+div.myTerrier .maMusique li{float:left; margin:0; padding:0;}
+div.myTerrier .maMusique span.selected {color:#C1D300;}
+div.myTerrier .maMusique .edit_options{display:none; width:100%; }
+div.myTerrier .maMusique li.nom 		{white-space:nowrap; width:78%; overflow:hidden; margin-left:3px;}
+div.myTerrier .maMusique li.edit		{width:5%}
+div.myTerrier .maMusique li.play		{position:absolute; right:25px; top:2px;}
+div.myTerrier .maMusique li.delete		{position:absolute; right:5px; top:2px;}
+div.myTerrier .maMusique .nameMp3Input {width:95%; background:#FAFFC5; border:1px solid black; padding:2px; margin-bottom:5px;}
+div.myTerrier .maMusique li.edit span {display:none;}
+div.myTerrier .maMusique li.edit a			{ display:block; width:12px; height:13px; background:url(../../include_img/puces/closedArrow.gif) no-repeat 0 2px; }
+div.myTerrier .maMusique li.edit a.selected	{background:url(../../include_img/puces/openedArrow.gif) }
+div.myTerrier .maMusique li.delete a	{color:#B50073;  margin-left:10px;}
+div.myTerrier .maMusique li.play a	{ }
+div.myTerrier .maMusique .moreMp3Options {padding-left:15px; }
+div.myTerrier .maMusique .moreMp3Options textarea { width:90%;}
+div.myTerrier .maMusique .moreMp3Options select { width:60%;}
+div.myTerrier .maMusique input {float : left}
+
+/* =colorChoice
+----------------------------------------------- 
+*/
+.colorChoice  { list-style:none;}
+.colorChoice li {float:left; margin-right:1px;}
+.colorChoice li span {display:none;}
+.colorChoice a {width:24px; height:18px; display:block;}
+
+/* =#idTerrierSignature
+----------------------------------------------- 
+*/
+#idTerrierSignature select { width:248px} 
+
+/* =#friends-contener
+----------------------------------------------- 
+*/
+div#friends-contener input { width:325px;}
+div#friends-contener input.genericBt {width:auto;}
+
+
+/* =listeAmis
+----------------------------------------------- 
+*/
+.actionFriends select { margin-left:5px; }
+.listeAmis {float:left; margin:10px; display: block; }
+.listeAmis .amis {position:relative; float: left; margin-left: auto; margin-right: auto; width: 150px; height: 240px; margin-right:5px; margin-bottom:5px; padding:6px; border:1px solid #CCC; background-color:#FFF}
+.listeAmis .selected {border:1px solid #999; background:#ffe}
+.listeAmis .pseudo{color:#41326d; font-size:13px; font-weight:bold;}
+.listeAmis {position:relative;}
+.listeAmis .liens { position:absolute; bottom:15px;}
+.listeAmis .photo {border:1px solid #555}
+
+div#black-contener .listeAmis .checkboxFriends,
+div#friends-contener .listeAmis .checkboxFriends { position:absolute; right:5px; top:5px; width:auto; }
+
+.listeAmis {position:relative;}
+.listeAmis ul.liens {list-style:none; margin:0; padding:0;}
+.listeAmis ul.liens li {  text-align:left; margin:0; padding:0 0 0 12px; background:url(../../include_img/puces/puceBlogEntry.gif) no-repeat; background-position:1px 5px; }
+.listeAmis .liens { position:absolute; bottom:15px;}
+.listeAmis .photo {border:1px solid #555}

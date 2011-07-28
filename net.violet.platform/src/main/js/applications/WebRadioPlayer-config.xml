@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/Z0kPWbcOID -->
+	<name>"net.violet.js.webradioplayer"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"music"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>1000</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"WebRadioPlayer"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Jouer une radio Internet"]]></fr>
+		<en><![CDATA["Play an Internet radio"]]></en>
+		<it><![CDATA["Trasmetti una Internet Radio"]]></it>
+		<es><![CDATA["Play an Internet radio"]]></es>
+		<de><![CDATA["Play an Internet radio"]]></de>
+		<pt><![CDATA["Play an Internet radio"]]></pt>
+		<ja><![CDATA["インターネットラジオの再生"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Joue une radio Internet de votre choix. Trouvez l'adresse de son serveur d'émission et entrez la dans l'application.</p> "]]></fr>
+		<en><![CDATA["<p>Plays your chosen Internet Radio. Find the address of the server from where it is broadcasted and enter it in the application.</p>"]]></en>
+		<it><![CDATA["<p>Manda in streaming la tua Internet Radio preferita. Cerca l'indirizzo del server e inseriscilo nell'apposito campo dell'Applicazione.</p>"]]></it>
+		<es><![CDATA["Plays your chosen Internet Radio. Find the address of the server from where it is broadcasted and enter it in the application."]]></es>
+		<de><![CDATA["Plays your chosen Internet Radio. Find the address of the server from where it is broadcasted and enter it in the application."]]></de>
+		<pt><![CDATA["Plays your chosen Internet Radio. Find the address of the server from where it is broadcasted and enter it in the application."]]></pt>
+		<ja><![CDATA["インターネットラジオ番組を再生することができます。番組が放送されているサーバーのアドレスを設定してください。"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Si vous connaissez l’URL du serveur qui émet la radio, entrez la simplement dans le champ <i>Adresse du serveur d’émission </i>.<br/>
+Attention, l’adresse du serveur émettant la radio N’EST PAS l’adresse de la page web de la  radio. Vous devez rechercher sur le site web de la radio l’information indiquant l’adresse du serveur d’émission. Certaines radios ne permettent l’écoute qu’à travers leur propre lecteur de radio et uniquement à partir de leur site web. Vous ne pourrez pas utiliser ces radios là ici.<br/>
+Les radios indiquent souvent l’adresse réelle du serveur d’émission dans un fichier de type PLS ou M3U. Recherchez le fichier PLS ou M3U d’une radio et copiez le sur votre ordinateur. Ouvrez ce fichier avec l’application <i>Bloc Note</i> sur un PC ou <i>Text Edit</i> sur Mac, vous y trouverez la ou les adresses des serveurs d’émission. L’adresse d’un serveur commence par <i>http://</i>. Copiez l’adresse ou une des adresses dans le champ <i>Adresse du serveur</i>.<br/>
+Afin de fonctionner correctement, la Radio doit émettre en MP3. Si vous souhaitez écouter votre radio sur un Nabaztag :tag il est préférable de choisir une radio qui émet à un débit inférieur ou égal à 96kbs.</p>
+</p><br/>
+<p><b>Bon à savoir</b><br/>
+Si vous cochez en même temps les deux cases <i>Quand je montre mon objet</i> et <i>Quand je retire mon objet</i> la lecture de la radio se déclenchera lorsque vous poserez votre Objet Ztampé ou votre Nano:ztag sur votre Mir:ror et continuera à jouer aussi longtemps que l’objet est posé sur le Mir:ror. Pour arrêter la radio, retirez simplement l’objet de dessus le Mir:ror.</p>
+"]]></fr>
+
+		<en><![CDATA["<p>If you know the URL of the server that broadcasts the radio, simply enter it in the  <i>Address of broadcasting server </i> field.<br/>
+Attention, the address of the server that broadcasts the radio IS NOT the address of the web page of the radio station. You will need to look on the radio station’s website and find the information providing you the address of the server. Please note that some Radios only allow you to listen to their programs using their own player on their own website. You will not be able to use these radios with this application as the address of the Radio is not accessible. <br/>
+Often, stations give the real address of the server broadcasting their Radio in a PLS or M3U type file. Look for files ending with .M3U or .PLS.  Copy the file on your computer and open it with a text editing application such as <i>Wordpad</i> on a PC or <i>Text Edit</i> on a Mac. The file contains the address(es) of the broadcasting server(s). Server addresses start with <i>http://</i>. Copy one of these in the <i>Address of the broadcasting server </i> field.<br/>
+This application works best with Radios streaming in the MP3 format. If you want to listen to your Radio on a Nabaztag:tag, choose a source that broadcasts at a rate below or equal to 96 Kbs.</p>
+<p><br/>
+<b>Good to know</b><br/>
+If you check both <i>When I show my object</i> and <i>When I remove my objects</i> options the Radio will start playing when you will put your ztamped object or Nano:ztag on your Mir:ror and will continue playing as long as the object is sitting there. To stop the Radio, simply remove the Object from the Mir:ror. <br/> </p>"]]></en>
+
+		<it><![CDATA["<p>Se conosci la URL del server che trasmette la radio, inseriscila nel campo  <i>Indirizzo del server </i>.<br/>Attenzione, l'indirizzo del server che trasmette la radio NON é l'indirizzo della webpage della radio. Devi cercare bene nel sito della radio l'indirizzo del server. Ricorda che alcune stazioni Radio consentono l'ascolto solo grazie ad un player installato sul loro sito. Non potrai quindi inserire quelle stazioni radio.. <br/>Sovente delle radio danno l'indirizzo del server come file PLS M3U. Cerca quindi i file che finiscono con .M3U o .PLS.  Copia il file sul tuo computere aprilo con un text editing, <i>Wordpad</i> su PC o <i>Text Edit</i> su Mac. Questo file contiene gli indirizzi dei server che trasmetotno la radio (possono essere 1 o più di 1).Gli indirizzi dei server iniziano con <i>http://</i>.Copia uno di questi indirizzi e incollalo nel campo <i>Indirizzi dei server</i> field.<br/> Questa Applicazione funziona bene con le webradio che trasmettono in formato MP3This application works best with Radios streaming in the MP3 format. If yo. Se desideri ascoltare la radio sul Nabaztag:tag, scegli lasorgenete che trasmette a 96 Kbs o inferiore.</p><p><br/><b>Buono da sapersi</b><br/>se spunti sia<i>Quando mostro il mio Oggetto</i> che <i>Quando tolgo i mio Oggetto</i> la Radio si avvierà quando mostrerai il tuo Oggetto Ztampato o Nano:ztag sul tuo Mir:ror e continuerà fino a quando l'Oggetto rimarrà sul mir:ror . Per stoppare la Radio, rimuovi l'Oggetto dal mir:ror.</p>"]]></it>
+
+		<es><![CDATA["<p>If you know the URL of the server that broadcasts the radio, simply enter it in the  <i>Address of broadcasting server </i> field.<br/>
+Attention, the address of the server that broadcasts the radio IS NOT the address of the web page of the radio station. You will need to look on the radio station’s website and find the information providing you the address of the server. Please note that some Radios only allow you to listen to their programs using their own player on their own website. You will not be able to use these radios with this application as the address of the Radio is not accessible. <br/>
+Often, stations give the real address of the server broadcasting their Radio in a PLS or M3U type file. Look for files ending with .M3U or .PLS.  Copy the file on your computer and open it with a text editing application such as <i>Wordpad</i> on a PC or <i>Text Edit</i> on a Mac. The file contains the address(es) of the broadcasting server(s). Server addresses start with <i>http://</i>. Copy one of these in the <i>Address of the broadcasting server </i> field.<br/>
+This application works best with Radios streaming in the MP3 format. If you want to listen to your Radio on a Nabaztag:tag, choose a source that broadcasts at a rate below or equal to 96 Kbs.</p>
+<p><br/>
+<b>Good to know</b><br/>
+If you check both <i>When I show my object</i> and <i>When I remove my objects</i> options the Radio will start playing when you will put your ztamped object or Nano:ztag on your Mir:ror and will continue playing as long as the object is sitting there. To stop the Radio, simply remove the Object from the Mir:ror. <br/> </p>"]]></es>
+
+		<de><![CDATA["<p>If you know the URL of the server that broadcasts the radio, simply enter it in the  <i>Address of broadcasting server </i> field.<br/>
+Attention, the address of the server that broadcasts the radio IS NOT the address of the web page of the radio station. You will need to look on the radio station’s website and find the information providing you the address of the server. Please note that some Radios only allow you to listen to their programs using their own player on their own website. You will not be able to use these radios with this application as the address of the Radio is not accessible. <br/>
+Often, stations give the real address of the server broadcasting their Radio in a PLS or M3U type file. Look for files ending with .M3U or .PLS.  Copy the file on your computer and open it with a text editing application such as <i>Wordpad</i> on a PC or <i>Text Edit</i> on a Mac. The file contains the address(es) of the broadcasting server(s). Server addresses start with <i>http://</i>. Copy one of these in the <i>Address of the broadcasting server </i> field.<br/>
+This application works best with Radios streaming in the MP3 format. If you want to listen to your Radio on a Nabaztag:tag, choose a source that broadcasts at a rate below or equal to 96 Kbs.</p>
+<p><br/>
+<b>Good to know</b><br/>
+If you check both <i>When I show my object</i> and <i>When I remove my objects</i> options the Radio will start playing when you will put your ztamped object or Nano:ztag on your Mir:ror and will continue playing as long as the object is sitting there. To stop the Radio, simply remove the Object from the Mir:ror. <br/> </p>"]]></de>
+
+		<pt><![CDATA["<p>If you know the URL of the server that broadcasts the radio, simply enter it in the  <i>Address of broadcasting server </i> field.<br/>
+Attention, the address of the server that broadcasts the radio IS NOT the address of the web page of the radio station. You will need to look on the radio station’s website and find the information providing you the address of the server. Please note that some Radios only allow you to listen to their programs using their own player on their own website. You will not be able to use these radios with this application as the address of the Radio is not accessible. <br/>
+Often, stations give the real address of the server broadcasting their Radio in a PLS or M3U type file. Look for files ending with .M3U or .PLS.  Copy the file on your computer and open it with a text editing application such as <i>Wordpad</i> on a PC or <i>Text Edit</i> on a Mac. The file contains the address(es) of the broadcasting server(s). Server addresses start with <i>http://</i>. Copy one of these in the <i>Address of the broadcasting server </i> field.<br/>
+This application works best with Radios streaming in the MP3 format. If you want to listen to your Radio on a Nabaztag:tag, choose a source that broadcasts at a rate below or equal to 96 Kbs.</p>
+<p><br/>
+<b>Good to know</b><br/>
+If you check both <i>When I show my object</i> and <i>When I remove my objects</i> options the Radio will start playing when you will put your ztamped object or Nano:ztag on your Mir:ror and will continue playing as long as the object is sitting there. To stop the Radio, simply remove the Object from the Mir:ror. <br/> </p>"]]></pt>
+
+		<ja><![CDATA["<p>ラジオ番組が放送されているサーバのURLが分かっているなら、「<strong>放送サーバーのアドレス</strong>」欄にURLを入力するだけです。<br/>
+注意：ここに入力するアドレスは、ラジオ局のウェブサイトのURLではありません。個人が自分のプレーヤーで聴けるようにアドレスが公開されている場合は、ラジオ局のウェブサイトのどこかに、サーバーのアドレスの記載があるはずです。ラジオ局のウェブサイト上でしか放送を聞くことができないようになっている場合には、このアプリケーションでラジオ番組を聞くことはできません。<br/>
+ラジオ局が放送サーバーのアドレスを、PLS か M3U フォーマットで公開している場合があります。公開されているファイルの拡張子（ファイル名の最後の部分）が「.M3U」か「.PLS」であることを確認してください。このファイルをパソコンにダウンロードし（例えばWindows の場合は「ワードパッド」のような）テキストエディタでファイルを開いてください。そのファイルにはいくつかの放送サーバーのアドレスが記載されているはずです。アドレスは「http://」で始まるものです。そのアドレスをコピーして「<strong>放送サーバーのアドレス< /strong>」欄に貼りつけてください。<br/>
+このアプリケーションはMP3フォーマットのストリーミング放送を再生することができます。ナバズタグ：タグでラジオを再生したい場合は96kbs以下のレートの放送を選択してください。</p>
+<p><br/>
+<b>ヒント</b><br/>
+「<strong> アイテムをかざした時</strong>」「<strong>アイテムを取り除いた時</strong>」の両方にチェックを入れた場合、ミラーの上にズタンプ、またはナノズタグを載せた時にラジオが再生され、ミラーの上から取り除いた時に再生を止めることができます。<br/> </p>"]]></ja>
+
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+	<item><map>
+		<key>"name"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Nom de la station"]]></fr>
+			<en><![CDATA["Name of the Radio station"]]></en>
+			<it><![CDATA["Nome della stazione Radio"]]></it>
+			<es><![CDATA["Name of the Radio station"]]></es>
+			<de><![CDATA["Name of the Radio station"]]></de>
+			<pt><![CDATA["Name of the Radio station"]]></pt>
+			<ja><![CDATA["ラジオ局の名称"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Ce nom est affiché lorsque vous écouter la Radio"]]></fr>
+			<en><![CDATA["This name is displayed when you listen to the station"]]></en>
+			<it><![CDATA["Questo é il nome che verrà visualizzato quando ascolterai questa Radio"]]></it>
+			<es><![CDATA["This name is displayed when you listen to the station"]]></es>
+			<de><![CDATA["This name is displayed when you listen to the station"]]></de>
+			<pt><![CDATA["This name is displayed when you listen to the station"]]></pt>
+			<ja><![CDATA["このラジオ局の番組を再生する時にこの名称が表示されます"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"url"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Adresse du serveur d’émission"]]></fr>
+			<en><![CDATA["Address of broadcasting server"]]></en>
+			<it><![CDATA["Indirizzi dei server"]]></it>
+			<es><![CDATA["Address of broadcasting server"]]></es>
+			<de><![CDATA["Address of broadcasting server"]]></de>
+			<pt><![CDATA["Address of broadcasting server"]]></pt>
+			<ja><![CDATA["放送サーバーのアドレス"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Tapez l'url du fichier PLS ou M3U"]]></fr>
+			<en><![CDATA["Enter the URL contained in the .PLS or .M3U file"]]></en>
+			<it><![CDATA["Inserisci la URL contenuta nei files .PLS o .M3U"]]></it>
+			<es><![CDATA["Enter the URL contained in the .PLS or .M3U file"]]></es>
+			<de><![CDATA["Enter the URL contained in the .PLS or .M3U file"]]></de>
+			<pt><![CDATA["Enter the URL contained in the .PLS or .M3U file"]]></pt>
+			<ja><![CDATA["「PLSファイル」か「M3Uファイル」を含むURLの入力"]]></ja>
+		</map></description>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+		<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampDetection"</event>
+			<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+		<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampRemoval"</event>
+			<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.notifications.add
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?"NoSuchApplication",?"NoSuchObject",?"NoSuchSubscription",?"NotificationAlreadyExists",?"Unsupported",?\],.*"method_class":"CREATE"

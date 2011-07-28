@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.applications.uploadResource
+content_type=text/json
+regex="errors":\["InternalError",?"InvalidParameter",?"NoSuchApplication",?\],.*"method_class":"CREATE"

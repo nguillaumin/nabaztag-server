@@ -1,0 +1,10 @@
+application=webui
+
+[create_gmail]
+url=subscriptions/create
+post_data=<map><application_id><string>384A6ee06d24</string></application_id><object_id><string>10a7aO90ddb8a0</string></object_id><settings><list><item><map><value><string>$1210292.pop</string></value><key><string>source</string></key></map></item><item><map><value><string>marfab_fr</string></value><key><string>login</string></key></map></item><item><map><value><string>f</string></value><key><string>password</string></key></map></item><item><map><value><string>pop.mail.yahoo.fr</string></value><key><string>host</string></key></map></item><item><map><value><string>pop</string></value><key><string>type</string></key></map></item></list></settings><scheduling><list><item><map><wednesday><map><time_h>1</time_h><time_m>1</time_m></map></wednesday><type><string>Daily</string></type></map></item></list></scheduling></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>
+
+
+
+ 

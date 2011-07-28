@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.notifications.reject
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidNotification",?"InvalidParameter",?"InvalidSession",?"NoSuchNotification",?"NoSuchSubscription",?"Unsupported",?\],.*"method_class":"CREATE"

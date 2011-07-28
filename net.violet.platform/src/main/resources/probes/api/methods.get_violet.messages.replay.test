@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.messages.replay
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?"NoSuchMessage",?\],.*"method_class":"UPDATE"

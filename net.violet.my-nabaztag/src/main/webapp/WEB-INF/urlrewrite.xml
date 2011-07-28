@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+
+<urlrewrite>
+
+  <rule enabled="true">
+    <name>Shortcut rule for services</name>
+    <note>This rule is used to redirect shortcut services requests</note>
+    <from>/([_a-zA-Z]+)$</from>
+    <to type="redirect">/action/myNablife.do?service=$1</to>
+  </rule>
+  
+
+  <rule enabled="true">
+    <name>Shortcut rule for nabcasts</name>
+    <note>This rule is used to redirect shortcut nabcasts requests</note>
+    <from>/n/([_a-zA-Z]+)$</from>
+    <to type="redirect">/action/myNablife.do?nabcast=$1</to>
+  </rule>
+
+</urlrewrite>
+

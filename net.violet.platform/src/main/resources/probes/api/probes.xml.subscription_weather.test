@@ -1,0 +1,9 @@
+application=webui
+
+
+[create_weather]
+url=subscriptions/create
+post_data=<map><application_id><string>37eA91e0c42f</string></application_id><object_id><string>10b0eO4150540f</string></object_id><settings><list><item><map><value><string>C</string></value><key><string>unit</string></key></map></item><item><map><value><string>Nmeteo.FRANCE.Paris.weather</string></value><key><string>source</string></key></map></item><item><map><value><string>2</string></value><key><string>language</string></key></map></item></list></settings><scheduling><list><item><map><type><string>Ambiant</string></type></map></item></list></scheduling></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>
+
+

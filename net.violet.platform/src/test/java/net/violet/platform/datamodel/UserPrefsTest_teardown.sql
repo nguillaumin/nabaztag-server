@@ -1,0 +1,5 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+DELETE FROM `userprefs` WHERE userprefs_id = 27852;
+
+SET FOREIGN_KEY_CHECKS = 1;

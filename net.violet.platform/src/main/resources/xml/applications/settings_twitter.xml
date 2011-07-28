@@ -1,0 +1,75 @@
+<map>
+<settings>
+<list>
+
+	<item>
+	<map>
+		<type>"InputLine"</type>
+		<key>"login"</key>
+		<label>"srv_twitter/login"</label>
+	</map>
+	</item>
+
+	<item>
+	<map>
+		<type>"InputLine"</type>
+		<key>"password"</key>
+		<label>"srv_twitter/password"</label>
+		<password>true</password>
+	</map>
+	</item>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"language"</key>
+		<label>"srv_rss/feed_lang"</label>
+		<items>
+			<list>
+			
+			<item><map><type>"PopupItem"</type><label>"Français"</label><separator>false</separator><enabled>true</enabled><value>"fr-FR"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"English (US)"</label><separator>false</separator><enabled>true</enabled><value>"en-US"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"English (UK)"</label><separator>false</separator><enabled>true</enabled><value>"en-GB"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Deutsch"</label><separator>false</separator><enabled>true</enabled><value>"de-DE"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Español"</label><separator>false</separator><enabled>true</enabled><value>"es-ES"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Italiano"</label><separator>false</separator><enabled>true</enabled><value>"it-IT"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Ελλάδα"</label><separator>false</separator><enabled>true</enabled><value>"gr-GR"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"ﺎﻠﻠﻏﺓ ﺎﻠﻋﺮﺒﻳﺓ"</label><separator>false</separator><enabled>true</enabled><value>"ar"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Flemish"</label><separator>false</separator><enabled>true</enabled><value>"nl-BE"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Português"</label><separator>false</separator><enabled>true</enabled><value>"pt-PT"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"čeština"</label><separator>false</separator><enabled>true</enabled><value>"cs-CZ"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Dansk"</label><separator>false</separator><enabled>true</enabled><value>"da-DK"</value></map></item>
+        <item><map><type>"PopupItem"</type><label>"Nederlands"</label><separator>false</separator><enabled>true</enabled><value>"nl-NL"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Suomi"</label><separator>false</separator><enabled>true</enabled><value>"fi-FI"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Islenska"</label><separator>false</separator><enabled>true</enabled><value>"is-IS"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Østnorsk"</label><separator>false</separator><enabled>true</enabled><value>"no-NO"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Svenska"</label><separator>false</separator><enabled>true</enabled><value>"sv-SE"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Türkçe"</label><separator>false</separator><enabled>true</enabled><value>"tr-TR"</value></map></item>
+        <item><map><type>"PopupItem"</type><label>"Словари"</label><separator>false</separator><enabled>true</enabled><value>"ru-RU"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"język polski"</label><separator>false</separator><enabled>true</enabled><value>"pl-PL"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Português do Brasil"</label><separator>false</separator><enabled>true</enabled><value>"pt-BR"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Catalan"</label><separator>false</separator><enabled>true</enabled><value>"ca-ES"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"日本 (Japan)"</label><separator>false</separator><enabled>true</enabled><value>"ja-JP"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"Français (CA)"</label><separator>false</separator><enabled>true</enabled><value>"fr-CA"</value></map></item>
+        <item><map><type>"PopupItem"</type><label>"ประเทศไทย (Thai)"</label><separator>false</separator><enabled>true</enabled><value>"th-TH"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"粤语 (Cantonais)"</label><separator>false</separator><enabled>true</enabled><value>"zh-yue"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"官话 (Mandarin)"</label><separator>false</separator><enabled>true</enabled><value>"zh-cnm-CN"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"English (AU)"</label><separator>false</separator><enabled>true</enabled><value>"en-AU"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"English (IE)"</label><separator>false</separator><enabled>true</enabled><value>"en-IE"</value></map></item>
+        <item><map><type>"PopupItem"</type><label>"English (IN)"</label><separator>false</separator><enabled>true</enabled><value>"en-IN"</value></map></item>
+        <item><map><type>"PopupItem"</type><label>"English (ZA)"</label><separator>false</separator><enabled>true</enabled><value>"en-ZA"</value></map></item>
+        <item><map><type>"PopupItem"</type><label>"Español (MX)"</label><separator>false</separator><enabled>true</enabled><value>"es-MX"</value></map></item>
+        <item><map><type>"PopupItem"</type><label>"Basque"</label><separator>false</separator><enabled>true</enabled><value>"eu-ES"</value></map></item>
+        <item><map><type>"PopupItem"</type><label>"한국말 (Korea)"</label><separator>false</separator><enabled>true</enabled><value>"ko-KR"</value></map></item>
+        <item><map><type>"PopupItem"</type><label>"हिनदी (Hindi)"</label><separator>false</separator><enabled>true</enabled><value>"35hi-IN"</value></map></item>
+			
+			</list>
+		</items>
+	</map>
+	</item>
+	
+	
+
+</list>
+</settings>
+</map>

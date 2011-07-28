@@ -1,0 +1,5 @@
+application=webui
+
+url=categories/get
+content_type=text/yaml
+regex=\s- LOC_srv_category_[a-z]{4,15}/title\s

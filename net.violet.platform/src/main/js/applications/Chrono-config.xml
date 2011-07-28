@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/bzV76kPyky -->
+	<name>"net.violet.js.chrono"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"daylife"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>50</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"Chrono"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Chronomètre"]]></fr>
+		<en><![CDATA["Chronograph"]]></en>
+		<it><![CDATA["Cronometrare il tempo"]]></it>
+		<es><![CDATA["Cronometrar el tiempo transcurrido"]]></es>
+		<de><![CDATA["Zeitmesser"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["クロノグラフ "]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Votre Ztamp vous dit combien de temps s'est écoulé entre deux événements. <br/>
+ Exemple : Collez un Ztamp sur votre carte orange, il vous dira combien de temps vous avez mis pour aller de chez vous à chez votre ami. Un autre sur votre paquet de cigarettes et il vous dira pendant combien de temps vous tenez sans fumer. Prenez un Nano:ztag et demandez lui de chronométrer tout et n'importe quoi.</p>"]]></fr>
+		<en><![CDATA["<p>Your Ztamp tells you how many time elapsed between two events. <br/>
+Example: Stick a Ztamp on your transport card, it will tell you how many time is needed to go from your house to your friend's place. Stick another one on your cigarets to know how many time you can stand without smoking. Pick a Nano:ztag to count anything you'd like.</p>"]]></en>
+		<it><![CDATA["<p>Il tuo Ztamp puo’ misurare e dirti quanto tempo é passato tra due eventi. <br/>Per esempio: se incolli uno Ztamp sulle chiavi della macchina,ti potrà dire quanto tempo hai impiegato per andare da casa tua a quella dei tuoi amici. Altro esempio: se incolli uno Ztamp sul tuo pacchetto di sigarette, ti potrà dire quanto tempo hai tenuto senza fumare. Prendi un Nano:ztag e chiedigli di cronometrare tutto quello che vuoi.</p>"]]></it>
+		<es><![CDATA["<p>Tu Ztamp te dice cuanto tiempo ha pasado entre dos acontecimientos.<br/>
+Ejemplo: Pega Ztamp en tu tarjeta de trasponte, te dirá cuanto tiempo te insumirá para ir desde tu casa a la casa de un amigo. Pega otro sobre tu paquete de cigarrillos y te dirá cuanto tiempo has logrado pasar sin fumar. Toma un Nano:ztag y pídele de cronometrar cualquier cosa.
+</p>"]]></es>
+		<de><![CDATA["<p>Ihr Ztamp misst, wieviel Zeit zwischen zwei Ereignissen vergangen ist. <br/>
+Beispiel: Heften Sie einen Ztamp auf Ihre Monatskarte; er teilt Ihnen mit, wie lange Sie von zu Hause zu Ihrem Bekannten gebraucht haben. Und einen zweiten auf Ihre Zigarettenpackung; er informiert Sie umgehend, wie lange Sie es aushalten, nicht zu rauchen.Nehmen Sie einen Nano:ztag und tragen Sie ihm auf, die Zeit für Sie zu messen.
+</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>そのズタンプを使ってから、また使うまでの時間を計ってくれます。<br/>
+例えば、郵便物にズタンプを貼っておけば、自分の家から送り先の友人の家に届くまでどれくらいの時間がかかったのか知ることができます。またライターにズタンプを貼っておき、タバコを吸う前にナバズタグにかざしてみると、タバコを我慢できた時間を知ることもできます。いろいろ計ってみましょう。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>A chaque fois que vous montrez votre Objet Ztampé à un Mir:ror ou un Nabaztag:tag, le chronomètre se met en route et vous entendez "Top chrono".<br/> Pour l'arrêter, repassez le Ztamp devant n'importe lequel de vos Objets, et il vous dira le temps exact qui s'est passé depuis la première fois qu'il a été vu.<br/>
+Si vous repasser le Ztamp, le compteur se réinitialisera et recommencera à compter.<br/>
+Cette application fonctionne sur n'importe quel Mir:ror ou Nabaztag:tag.</p>"]]></fr>
+		<en><![CDATA["<p>Every time you show your Ztamp to a Mir:ror or Nabaztag:tag, the chronometer starts and tells you "Steady, Go".<br/>
+To stop, show the ztamp anew in front of any of your objects, and he'll tell you the exact time that elapsed since the first time he was seen.<br/>
+If you show your ztamp again, the counter will be reseted and will restart counting.<br/>
+This application works with any Mir:ror or Nabaztag:tag</p>"]]></en>
+		<it><![CDATA["<p>Ogni volta che mostri uno dei tuoi oggetti Ztampati al Mir:ror o al Nabaztag:tag, il cronometro si avvia e sentirai “top crono”.<br/>Per fermarlo, ripassa l’oggetto Ztampato sul mir:ror: ti dirà esattamente quanto tempo é passato dalla volta precedente.<br/>Se ripassi lo Ztamp, il contatore si rimette a zero e rinizierà a contare. Tale applicazione funziona su tutti i Mir:ror e Nabaztag:tag. </p>"]]></it>
+		<es><![CDATA["<p>Cada vez que tu presentas tu Objeto con un Ztamp a un Mir:ror o un Nabaztag:tag, el cronómetro se activa y tu escuchas "Top cronómetro".<br/> Para interrumpirlo, vuelva a pasar el Ztamp en frente de cualquiera de tus Objetos y te informará el tiempo exacto que ha transcurrido desde la primera vez que lo ha visto.<br/>
+Si vuelvas a pasar el Ztamp, el contador se activará nuevamente y recomenzará a contar.<br/>
+Esta aplicación funciona con cualquier Mir:ror o Nabaztag:tag.</p>"]]></es>
+		<de><![CDATA["<p>Jedes Mal, wenn Sie Ihren mit einem Ztamp versehenen Gegenstand einem Mir:ror zeigen, wird der Zeitmesser aktiviert und Sie hören "Fertig, Los!".<br/> Um ihn zu stoppen, führen Sie den Ztamp erneut an Ihren Mir:ror (oder Nabaztag:tag) heran; er teilt Ihnen die genaue Zeit mit, die seit seiner ersten Erkennung vergangen ist.<br/>
+Beim erneuten Zeigen des Ztamp wird der Zähler zurückgesetzt und fängt von vorne an zu zählen.<br/>
+Diese Applikation funktioniert mit jedem Mir:ror oder Nabaztag:tag</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ズタンプをミラーかナバズタグ：タグにかざすと、「計測開始！」の合図と共に計測がスタートします。<br/>
+もう１度ズタンプをかざすと計測はストップされ、最初にかざしてから経過した正確な時間を伝えてくれます。<br/>
+さらにもう１度ズタンプをかざすと、経過時間はリセットされ、再度計測が始まります。<br/>
+このアプリケーションはミラーかナバズタグ：タグで動作します。</p>"]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!--Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA[""]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+		<item><map>
+			<key>"TTS"</key>
+			<fr><![CDATA["Top Chrono"]]></fr>
+			<en><![CDATA["Steady ! Go"]]></en>
+			<it><![CDATA["Top crono"]]></it>
+			<es><![CDATA["Top cronómetro"]]></es>
+			<de><![CDATA["Fertig ! Los"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["計測　開始！"]]></ja>
+		</map></item>
+
+	</list></dico>
+
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+	<item><map>
+		<key>"voice"</key>
+		<type>"Popup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<source>"view_tts_voices"</source>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Voix"]]></fr>
+			<en><![CDATA["Voice"]]></en>
+			<it><![CDATA["Voce"]]></it>
+			<es><![CDATA["Voz"]]></es>
+			<de><![CDATA["Stimme"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["音声"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Choisissez la langue et la voix avec laquelle vous voulez qu'il lise le message."]]></fr>
+			<en><![CDATA["Select the language and voice you want the message to be read with."]]></en>
+			<it><![CDATA["Scegli la lingua e la voce che desideri per leggere il tuo messaggio."]]></it>
+			<es><![CDATA["Elige la lengua y la voz que quieres que te lean el mensaje."]]></es>
+			<de><![CDATA["Wählen Sie die Sprache und die Stimme aus, mit der die Nachricht gelesen werden soll."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["メッセージを読み上げるときの言語と音声を選択してください。"]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map><value>"FR-Anastasie"</value><label>"FR - Anastasie"</label></map></item>
+			<item><map><value>"FR-Archibald"</value><label>"FR - Archibald"</label></map></item>
+			<item><map><value>"FR-Gertrude"</value><label>"FR - Gertrude"</label></map></item>
+			<item><map><value>"FR-Maxence"</value><label>"FR - Maxence"</label></map></item>
+			<item><map><value>"UK-Edwin"</value><label>"UK - Edwin"</label></map></item>
+			<item><map><value>"UK-Leonard"</value><label>"UK - Leonard"</label></map></item>
+			<item><map><value>"UK-Mistermuggles"</value><label>"UK - Mister muggles"</label></map></item>
+			<item><map><value>"UK-Penelope"</value><label>"UK - Penelope"</label></map></item>
+			<item><map><value>"UK-Shirley"</value><label>"UK - Shirley"</label></map></item>
+			<item><map><value>"US-Bethany"</value><label>"US - Bethany"</label></map></item>
+			<item><map><value>"US-Billye"</value><label>"US - Billye"</label></map></item>
+			<item><map><value>"US-Clarence"</value><label>"US - Clarence"</label></map></item>
+			<item><map><value>"US-Darleen"</value><label>"US - Darleen"</label></map></item>
+			<item><map><value>"US-Liberty"</value><label>"US - Liberty"</label></map></item>
+			<item><map><value>"US-Lilian"</value><label>"US - Lilian"</label></map></item>
+			<item><map><value>"AU-Colleen"</value><label>"AU - Colleen"</label></map></item>
+			<item><map><value>"AU-Jon"</value><label>"AU - Jon"</label></map></item>
+			<item><map><value>"ES-Alfonsina"</value><label>"ES - Alfonsina"</label></map></item>
+			<item><map><value>"ES-Baltasar"</value><label>"ES - Baltasar"</label></map></item>
+			<item><map><value>"ES-Bertrana"</value><label>"ES - Bertrana"</label></map></item>
+			<item><map><value>"ES-Dunixe"</value><label>"ES - Dunixe"</label></map></item>
+			<item><map><value>"ES-Emilia"</value><label>"ES - Emilia"</label></map></item>
+			<item><map><value>"ES-Rosalia"</value><label>"ES - Rosalia"</label></map></item>
+			<item><map><value>"IT-Assunta"</value><label>"IT - Assunta"</label></map></item>
+			<item><map><value>"IT-Ugo"</value><label>"IT - Ugo"</label></map></item>
+			<item><map><value>"BE-Hendrik"</value><label>"BE - Hendrik"</label></map></item>
+			<item><map><value>"BE-Minna"</value><label>"BE - Minna"</label></map></item>
+			<item><map><value>"BR-Lygia"</value><label>"BR - Lygia"</label></map></item>
+			<item><map><value>"CA-Antonine"</value><label>"CA - Antonine"</label></map></item>
+			<item><map><value>"CA-Felix"</value><label>"CA - Felix"</label></map></item>
+			<item><map><value>"CN-Pan"</value><label>"CN - Pan"</label></map></item>
+			<item><map><value>"CZ-Zdenech"</value><label>"CZ - Zdenech"</label></map></item>
+			<item><map><value>"DE-Otto"</value><label>"DE - Otto"</label></map></item>
+			<item><map><value>"DK-Karen"</value><label>"DK - Karen"</label></map></item>
+			<item><map><value>"DK-Pia"</value><label>"DK - Pia"</label></map></item>
+			<item><map><value>"EG-Nabil"</value><label>"EG - Nabil"</label></map></item>
+			<item><map><value>"EG-Nayla"</value><label>"EG - Nayla "</label></map></item>
+			<item><map><value>"GR-Antonis"</value><label>"GR - Antonis"</label></map></item>
+			<item><map><value>"IE-Orla"</value><label>"IE - Orla"</label></map></item>
+			<item><map><value>"IN-Nima"</value><label>"IN - Nima"</label></map></item>
+			<item><map><value>"IN-Sangeeta"</value><label>"IN - Sangeeta"</label></map></item>
+			<item><map><value>"JP-Tamura"</value><label>"JP - Tamura"</label></map></item>
+			<item><map><value>"KR-Choe"</value><label>"KR - Choe"</label></map></item>
+			<item><map><value>"NL-Femke"</value><label>"NL - Femke"</label></map></item>
+			<item><map><value>"NL-Max"</value><label>"NL - Max"</label></map></item>
+			<item><map><value>"NL-Renate"</value><label>"NL - Renate"</label></map></item>
+			<item><map><value>"NO-Cora"</value><label>"NO - Cora"</label></map></item>
+			<item><map><value>"NO-Sigrid"</value><label>"NO - Sigrid"</label></map></item>
+			<item><map><value>"PL-Ignacy"</value><label>"PL - Ignacy"</label></map></item>
+			<item><map><value>"PT-Celia"</value><label>"PT - Celia"</label></map></item>
+			<item><map><value>"RU-Bella"</value><label>"RU - Bella"</label></map></item>
+			<item><map><value>"SE-Hjalmar"</value><label>"SE - Hjalmar"</label></map></item>
+			<item><map><value>"SE-Maj"</value><label>"SE - Maj"</label></map></item>
+			<item><map><value>"SE-Selma"</value><label>"SE - Selma"</label></map></item>
+			<item><map><value>"TH-Boon-mee"</value><label>"TH - Boon-mee"</label></map></item>
+			<item><map><value>"TR-Asli"</value><label>"TR - Asli"</label></map></item>
+			<item><map><value>"YUE-Baibo"</value><label>"YUE - Bai bo"</label></map></item>
+			<item><map><value>"ZA-Wilbur"</value><label>"ZA - Wilbur"</label></map></item>
+		</list></items>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>
+

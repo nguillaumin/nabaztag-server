@@ -1,0 +1,7 @@
+application=webui
+
+[create]
+url=applications/update
+content_type=text/yaml
+post_data=@yaml/update_appli.yml
+regex=id: (.*?)\s

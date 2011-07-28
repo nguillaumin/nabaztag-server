@@ -1,0 +1,11 @@
+application=webui
+
+
+[create_air]
+url=subscriptions/create
+post_data=<map><application_id><string>37fAd120246f</string></application_id><object_id><string>10a7aO90ddb8a0</string></object_id><settings><list><item><map><value><string>air.paris.today</string></value><key><string>source</string></key></map></item></list></settings><scheduling><list><item><map><Wednesday><map><time_h>10</time_h><time_m>10</time_m></map></Wednesday><type><string>Daily</string></type></map></item></list></scheduling></map>
+regex= <id>\s*<string>(.*?)</string>\s*</id>
+
+deletee_air]
+url=subscriptions/delete/GROUP_1
+regex=

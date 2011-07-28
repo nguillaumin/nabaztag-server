@@ -1,0 +1,72 @@
+<map>
+<settings>
+<list>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"source"</key>
+		<label>"srv_air/choose_city"</label>
+		<items>
+			<list>
+			<item><map><type>"PopupItem"</type><label>"city_air/paris"</label><separator>false</separator><enabled>true</enabled><value>"air.paris.today"</value></map></item>
+			<item><map><type>"PopupItem"</type><label>"city_air/london"</label><separator>false</separator><enabled>true</enabled><value>"air.london.today"</value></map></item>
+			<item><map><type>"PopupItem"</type><label>"city_air/rome"</label><separator>false</separator><enabled>true</enabled><value>"air.rome.today"</value></map></item>
+			<item><map><type>"PopupItem"</type><label>"city_air/bruxelles"</label><separator>false</separator><enabled>true</enabled><value>"air.belgique.Bruxelles.today"</value></map></item>
+			<item><map><type>"PopupItem"</type><label>"city_air/anvers"</label><separator>false</separator><enabled>true</enabled><value>"air.belgique.Anvers.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/gand"</label><separator>false</separator><enabled>true</enabled><value>"air.belgique.Gand.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/liege"</label><separator>false</separator><enabled>true</enabled><value>"air.belgique.Liege.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/charleroi"</label><separator>false</separator><enabled>true</enabled><value>"air.belgique.Charleroi.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/atlanta"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Atlanta.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/boston"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Boston.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/chicago"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Chicago.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/cleveland"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Cleveland.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/dallas"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Dallas.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/denver"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Denver.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/detroit"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Detroit.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/la-inland"</label><separator>false</separator><enabled>true</enabled><value>"air.us.LosAngeles.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/la-metro"</label><separator>false</separator><enabled>true</enabled><value>"air.us.LosAngelesMetroandInlandOrange.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/miami"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Miami.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/minneapolis"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Minneapolis.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/newyork"</label><separator>false</separator><enabled>true</enabled><value>"air.us.New-York.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/philadelphia"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Philadelphia.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/phoenix"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Phoenix.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/richmond"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Richmond.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/saint-louis"</label><separator>false</separator><enabled>true</enabled><value>"air.us.SaintLouis.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/san-diego-coast"</label><separator>false</separator><enabled>true</enabled><value>"air.us.SanDiegoCoast.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/san-diego-foothills"</label><separator>false</separator><enabled>true</enabled><value>"air.us.SanDiegoFoothills.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/san-diego-mesa"</label><separator>false</separator><enabled>true</enabled><value>"air.us.SanDiegoMesaandInlandValley.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/san-francisco"</label><separator>false</separator><enabled>true</enabled><value>"air.us.SanFrancisco.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/seattle"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Seattle-Bellevue-KentValley.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/saint-louis-metro-east"</label><separator>false</separator><enabled>true</enabled><value>"air.us.StLouis.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/tampa"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Tampa.today"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"city_air/washington"</label><separator>false</separator><enabled>true</enabled><value>"air.us.Washington.today"</value></map></item>
+			</list>
+		</items>
+	</map>
+	</item>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"language"</key>
+		<label>"srv_weather/language"</label>
+		<items>
+			<list>
+			<item><map><type>"PopupItem"</type><label>"Français"</label><separator>false</separator><enabled>true</enabled><value>"fr-FR"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"English (US)"</label><separator>false</separator><enabled>true</enabled><value>"en-US"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"English (UK)"</label><separator>false</separator><enabled>true</enabled><value>"en-GB"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Deutsch"</label><separator>false</separator><enabled>true</enabled><value>"de-DE"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Español"</label><separator>false</separator><enabled>true</enabled><value>"es-ES"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Italiano"</label><separator>false</separator><enabled>true</enabled><value>"it-IT"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Português"</label><separator>false</separator><enabled>true</enabled><value>"pt-BR"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Japanese"</label><separator>false</separator><enabled>true</enabled><value>"ja-JP"</value></map></item>
+			
+			</list>
+		</items>
+	</map>
+	</item>
+
+</list>
+</settings>
+</map>

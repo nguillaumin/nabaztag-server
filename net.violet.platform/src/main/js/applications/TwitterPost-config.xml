@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/jQNfeBWpAT -->
+
+	<name>"net.violet.js.twitterpost"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"communication"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>1400</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"TwitterPost"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Envoyer des messages sur Twitter"]]></fr>
+		<en><![CDATA["Send Twitter messages"]]></en>
+		<it><![CDATA["Invia dei messaggi su Twitter"]]></it>
+		<es><![CDATA["Envía mensajes hacia Twitter"]]></es>
+		<de><![CDATA["Nachrichten über Twitter senden "]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["Twitter （つぶやきの送信）"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Entrez un texte, insérez dedans des parties variables. A chaque fois que le Ztamp sera vu, votre texte sera envoyé sur Twitter. <br/>
+Exemple : Mettez un Ztamp sur votre mug habituel. Il se chargera d'informer le monde entier que vous êtes une fois de plus en train de faire une pause au bureau.</p>
+"]]></fr>
+		<en><![CDATA["Enter text including variable elements. Every time the Ztamp is seen, your text will be sent to Twitter.<br/>
+Example: affix a Ztamp to your usual coffee mug. It will let the whole world know that you're having (yet another) break from work."]]></en>
+		<it><![CDATA["<p> Inserisci un testo con delle variabili. Ogni volta che lo Ztamp verrà riconosciuuto, il tuo testo verrà pubblicato su Twitter. <br/>Esempio: Metti uno Ztamp sulla tua tazza, si incaricherà di informare il mondo intero che sei in pausa caffé .</p>
+"]]></it>
+		<es><![CDATA["<p>Entra un texto, insértalo dentro de las partes variables. Cada vez que se verá Ztamp, se enviará tu texto a Twitter. <br/>
+			Ejemplo, Pon un Ztamp en tu taza habitual. Este se encargará de informar al mundo entero que una vez más estás interrumpiendo tu trabajo en la oficina.</p>"]]></es>
+		<de><![CDATA["<p> Geben Sie einen Text ein und fügen Sie Variablen hinzu. Bei jeder Erkennung des Ztamp wird Ihr Text über Twitter gesendet. <br/>
+Beispiel: Heften Sie einen Ztamp auf Ihre gewöhnliche Kaffeetasse. Sie übernimmt die Aufgabe, die gesamte Welt darüber in Kenntnis zu setzen, dass Sie schon wieder in der Büropause sind.</p> "]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ズタンプをかざした時に Twitter につぶやきを投稿することができます。変数を利用すればその都度、違った文章を投稿することもできます。<br/>たとえば、ズタンプを貼ったマグカップにより、世界中の人々に、ただいま休憩中と知らせることもできます。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["Entrez le détail de votre compte sur Twitter.<br/>
+Saisissez le texte que vous voulez envoyer sur Twitter.<br/>
+Si vous le souhaitez, vous pouvez insérer des variables dans le texte. Elles se mettront à jour automatiquement au moment de l'envoi.<br/>
+Ces variables sont :
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Heure de détection du Ztamp</li>
+<li> ${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : Les mêmes variables horaires, mais préfixées d'un zéro s'il le faut. Ex : '02' au lieu de '2'.</li>
+<li>${object.name} : nom de l'objet ayant lu le Ztamp. </li>
+<li>${object.owner.firstname} : prénom du propriétaire de l'objet</li>
+<li>${object.owner.lastname} : nom du propriétaire de l'objet</li>
+<li>${object.owner.city} : ville du propriétaire de l'objet</li>
+<li>${ztamp.name} : nom du Ztamp</li>
+<li>${ztamp.owner.lastname} : nom du propriétaire du Ztamp</li>
+<li>${ztamp.owner.firstname} : prénom du propriétaire du Ztamp.</li>
+<li>${ztamp.owner.city} : ville du propriétaire du Ztamp</li>
+</ul>
+Exemple. Saisissez le texte suivant :<br/>
+<em>J'ai été surpris avec ${ztamp.name} par ${object.name} en train de faire une pause café.</em><br/>
+Le message envoyé sera<br/>
+<em>J'ai été surprise avec Mon Mug Snoopy par le Mirror du Bureau en train de faire une pause café.</em><br/>
+Note : Twitter Ignore un deuxième message lorsqu'il est identique au précédent.
+Il est donc nécessaire d'insérer au moins une variable afin que Twitter publie chacun des messages."]]></fr>
+
+		<en><![CDATA["Enter your Twitter account details.<br/>
+Enter the text you want to post on Twitter.<br/>
+<br/>
+If you wish, you may insert variables in the message. They will automatically update when the text is sent.<br/>
+Available variables are:
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Time the Ztamp was detected</li>
+<li>${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : The same time parts, but with a leading zero if needed. Ex : '02' instead of '2'.</li>
+<li>${object.name}: Name of the object that has read the Ztamp.</li>
+<li>${object.owner.firstname}: First name of the object's owner.</li>
+<li>${object.owner.lastname}: Last name of the object's owner.</li>
+<li>${object.owner.city}: City where the object's owner lives.</li>
+<li>${ztamp.name}: name of the detected Ztamp.</li>
+<li>${ztamp.owner.lastname}: Last name of the Ztamp's owner.</li>
+<li>${ztamp.owner.firstname}: First name of the Ztamp's owner.</li>
+<li>${ztamp.owner.city}: City where the Ztamp's owner lives.</li>
+</ul>
+Example: Enter the following text:<br/>
+<em>I was spotted with ${ztamp.name} by ${object.name} having yet another coffee break at ${HOURS}:${MINUTES} ${AMPM}.</em><br/>
+The following message will be send:<br/>
+<em>I was spotted with My Snoopy Mug by The Office Mirror having yet another coffee break at 04:08 PM.</em><br/>
+<br/>
+Note: Twitter ignores any message identical to the previous one. You must therefore insert at least one variable in order to post each message on Twitter."]]></en>
+
+		<it><![CDATA["<p>Inserisci i dettagli del tuo account Twitter.<br/>
+Inserisci il testo che desideri venga pubblicato su Twitter.<br/>
+Se lo desideri puoi inserire delle variabili nel testo, si aggiorneranno automaticamente ogni volta..<br/>
+Le variabili sono :
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}: Ora di riconoscimento dello Ztamp</li>
+<li> ${object.name}: Nome dell'oggetto che ha letto lo Ztamp. </li>
+<li> ${object.owner.firstname}: Nome del proprietario dell'oggetto</li>
+<li> ${object.owner.lastname}: Cognome del proprietario dell'oggetto</li>
+<li> ${object.owner.city}: Città dove risiede il proprietario dell'oggetto </li>
+<li> ${ztamp.name}: Nome dello Ztamp</li>
+<li> ${ztamp.owner.lastname}: Cognome del proprietario dello Ztamp </li>
+<li> ${ztamp.owner.firstname}: Nome del proprietario dello Ztamp. </li>
+<li> ${ztamp.owner.city}: Città dove risiede il proprietario dello Ztamp</li>
+</ul>
+Esempio. Inserisci il seguente testo:<br/>
+<em> ${ztamp.name} mi ha sorpreso a fare l'ennesima pausa caffé in compagnia di ${object.name}.</em><br/>
+Il messaggio inviato sarà<br/>
+<em> Il Mir:ror dell' ufficio mi ha sorpreso a fare l'ennesima pausa caffé in compagnia di Mug Snoopy.</em><br/>
+Nota: Twitter ignora il secondo messaggio se è identico al precedente,
+è quindi necessario inserire almeno una variabile affinché Twitter pubblichi tutti i tuoi messaggi. </p>"]]></it>
+
+		<es><![CDATA["<p>Entra el detalle de tu cuenta en Twitter.<br/>
+Escribe el texto que quieres enviqar a Twitter.<br/>
+Si así lo deseas, puedes insertar variables en el texto. En el momento del envío, actualizarán automáticamente. <br/>
+Estas variables son:
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Hora de detección del Ztamp</li>
+<li>${object.name} : nombre del objeto que leyó el Ztamp.</li>
+<li>${object.owner.firstname} : nombre del propietario del objeto</li>
+<li>${object.owner.lastname} : apellido del propietario del objeto</li>
+<li>${object.owner.city} : ciudad del propietario del objeto</li>
+<li>${ztamp.name} : nombre del Ztamp</li>
+<li>${ztamp.owner.lastname} : apellido del propietario del Ztamp</li>
+<li>${ztamp.owner.firstname} : nombre del propietario del Ztamp.</li>
+<li>${ztamp.owner.city} : ciudad del propietario del Ztamp</li>
+</ul>
+Note : las variables ${hours}, ${hours24}, ${minutes}, ${seconds}, ${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} sólo insertan la cifra. <br/>
+Ejemplo. Escriba el texto que sigue:<br/>
+<em>Me sorprendió que ${ztamp.name} ${object.name} esté tomando café.</em><br/>
+El mensaje enviado será:<br/>
+<em>Me han sorprendido con Mi Taza Snoopy por el Espejo de la Oficina cuando estaba tomando un café. </em><br/>
+Nota : Twitter ignora el segundo mensaje cuando éste es idéntico al precedente. Por lo tanto, es necesario insertar por  lo menos una variables para que Twitter publique cada uno de los  mensajes. </p>"</"]]></es>
+
+		<de><![CDATA["<p>Geben Sie die Details Ihres Twitter-Kontos an.<br/>
+Geben Sie den Text ein, den Sie über Twitter senden wollen.<br/>
+Auf Wunsch können Sie Variablen in den Text einfügen. Sie werden beim Versenden automatisch aktualisiert.<br/>
+Folgende Variablen stehen zur Verfügung:
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Uhrzeit der Erkennung des Ztamp </li>
+<li> ${object.name} : Name des Objektes, das den Ztamp gelesen hat. </li>
+<li> ${object.owner.firstname} : Vorname des Objektbesitzers</li>
+<li> ${object.owner.lastname} : Name des Objektbesitzers</li>
+<li> ${object.owner.city} : Stadt des Objektbesitzers</li>
+<li> ${ztamp.name} : Name des Ztamps</li>
+<li> ${ztamp.owner.lastname} : Name des Ztamp-Besitzers</li>
+<li> ${ztamp.owner.firstname} : Vorname des Ztamp-Besitzers. </li>
+<li> ${ztamp.owner.city} : Stadt des Ztamp-Besitzers</li>
+</ul>
+Beispiel. Geben Sie den folgenden Text ein:<br/>
+<em>Ich wurde mit ${ztamp.name} von ${object.name} bei meiner Kaffeepause überrascht.</em><br/>
+Die Nachricht wird wie folgt gesendet<br/>
+<em> Ich wurde mit Meiner Snoopy Tasse von dem Mir:ror des Büros bei meiner Kaffeepause überrascht.</em><br/>
+Anmerkung: Twitter ignoriert eine zweite Nachricht, wenn Sie identisch mit der vorherigen ist. Es ist entsprechend erforderlich, mindestens eine Variable einzufügen; damit Twitter jede Nachricht sendet. </p>"]]></de>
+
+		<pt><![CDATA[""]]></pt>
+
+		<ja><![CDATA["<p>このアプリケーションを利用するためには、Twitter のアカウントが必要になります。<br/>
+Twitter に投稿したい文章を入力します。<br/><br/>文章中に変数を組み込むことも可能で、以下の変数を使うことができます。<br/>
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}： このズタンプが使われた時間</li>
+<li>${object.name}： ズタンプを読み込んだアイテムの名前</li>
+<li>${object.owner.firstname}： アイテムの登録者の名前（名）</li>
+<li>${object.owner.lastname}： アイテムの登録者の名前（姓）</li>
+<li>${object.owner.city}： アイテムの登録者の所在地</li>
+<li>${ztamp.serial}： ズタンプのシリアルナンバー</li>
+<li>${ztamp.owner.lastname}： ズタンプの登録者の名前（姓）.</li>
+<li>${ztamp.owner.firstname}： ズタンプの登録者の名前（名）</li>
+<li>${ztamp.owner.city}：ズタンプの登録者の所在地</li>
+</ul>
+<br/>
+たとえば、「<strong>${ztamp.name} とまた休憩しているところを ${object.name} に見つかりました</strong>」という文章は、「<strong>お気に入りのマグカップ とまた休憩しているところをオフィスのミラー に見つかりました</strong>」と投稿されます。<br/><br/>
+注記：<br/>Twitter では同じ内容のつぶやきは連続して投稿できませんので、文章内に変数を入れておいた方がよいでしょう。</p>"]]></ja>
+
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA["Mail, Communication, Messages"]]></fr>
+		<en><![CDATA["Mail, Communication, Messages"]]></en>
+		<it><![CDATA["Mail, Comunicazione, Messaggi"]]></it>
+		<es><![CDATA["Correo, Comunicación, Mensaje"]]></es>
+		<de><![CDATA["Email, Kommunikation, Nachrichten"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["メール、コミュニケーション、メッセージ"]]></ja>
+</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+	</list></dico>
+
+	<files><list>
+		<!-- <entry name="media/audio/intro" fileName="intro.m3" /> -->
+	</list></files>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"login"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Compte"]]></fr>
+			<en><![CDATA["Login"]]></en>
+			<it><![CDATA["Account"]]></it>
+			<es><![CDATA["Cuenta"]]></es>
+			<de><![CDATA["Konto"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["ユーザー名"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Votre compte Twitter"]]></fr>
+			<en><![CDATA["Your Twitter login"]]></en>
+			<it><![CDATA["Il tuo account Twitter"]]></it>
+			<es><![CDATA["Tu cuenta Twitter"]]></es>
+			<de><![CDATA["Ihr Twitter-Konto"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["Twitterにログインする時のユーザー名です"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"pwd"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<password>true</password>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Mot de passe"]]></fr>
+			<en><![CDATA["Password"]]></en>
+			<it><![CDATA["Password"]]></it>
+			<es><![CDATA["Contraseña"]]></es>
+			<de><![CDATA["Passwort"]]></de>
+			<pt>"Password"</pt>
+			<ja><![CDATA["パスワード"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Mot de passe de votre compte Twitter."]]></fr>
+			<en><![CDATA["Your Twitter account password."]]></en>
+			<it><![CDATA["Password di Twitter"]]></it>
+			<es><![CDATA["Contraseña de tu cuenta Twitter"]]></es>
+			<de><![CDATA["Passwort Ihres Twitter-Kontos"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["Twitterにログインする時のパスワードです"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"message"</key>
+		<type>"TextArea"</type><!-- Should be TextArea when it will be supported -->
+		<datatype>"text"</datatype>
+		<maxlength>1000</maxlength>
+		<cols>80</cols>
+		<rows>6</rows>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Messages"]]></fr>
+			<en><![CDATA["Messages"]]></en>
+			<it><![CDATA["Messaggio"]]></it>
+			<es><![CDATA["Mensajes "]]></es>
+			<de><![CDATA["Nachrichten"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["メッセージ"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Texte du message à poster. (vous pouvez utiliser les variables de remplacement ${var}."]]></fr>
+			<en><![CDATA["Text of message to post. (you can include variables with ${var} syntax.)"]]></en>
+			<it><![CDATA["Testo del messaggio da twittare. (le variabili di sostituzione ${} possono venir utilizzate qui)"]]></it>
+			<es><![CDATA["Texto del mensaje que hay que enviqr (puedes utilizar las variables de reemplazo "${var}."]]></es>
+			<de><![CDATA["Text der zu postenden Nachricht. (Sie können die Variablen benuten) "]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["メッセージの内容がTwitterに投稿されます。変数（${**}）を利用することができます。"]]></ja>
+		</map></description>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

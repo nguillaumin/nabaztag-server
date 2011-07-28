@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.messages.sendMusicMessage
+content_type=text/json
+regex="errors":\["BlackListed",?"Forbidden",?"InternalError",?"InvalidParameter",?"InvalidSession",?"NoSuchItem",?"NoSuchObject",?"NoSuchPerson",?"ParentalFilter",?\],.*"method_class":"CREATE"

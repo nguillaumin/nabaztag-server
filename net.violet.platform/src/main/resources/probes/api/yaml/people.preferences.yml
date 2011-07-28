@@ -1,0 +1,17 @@
+--- 
+preferences: !!map:PersonPreferences
+  timezone: Europe/London
+  emails: []
+  newsletter: &id2 false
+  time_format: 24
+  notify_played: &id1 true
+  language: fr
+  spoken_languages: 
+    - fr-FR
+    - pl-PL
+    - ca-ES
+  visible: *id1
+  notify_added_as_contact: *id2
+  must_approve_contact_request: *id1
+session: 1f687:4ae319f7:d722e3873092ebc94755b07f94f997e6fe18ddee
+id: 1f687U31f0b49f

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+	<app><map>
+		<!-- application + application_profile -->
+		<!-- http://etherpad.com/lrHNoqO9dy -->
+
+		<name>"net.violet.js.playmediacontent"</name>
+		<author>"dev-js@violet.net"</author>
+		<category>"tools"</category>
+		<class>"native"</class>
+		<language>"JAVASCRIPT"</language>
+		<apiVersion>"0.8"</apiVersion>
+		<opensource>false</opensource>
+		<interactive>false</interactive>
+		<visible>true</visible>
+		<removable>true</removable>
+		<rank>900</rank> <!-- the greatest numbers will be ranked first -->
+
+		<credentials><map>
+			<!-- Creates application_credentials entry -->
+			<public_key>"PlayMediaContent"</public_key>
+			<private_key>"private"</private_key>
+		</map></credentials>
+
+		<title><map>
+			<fr><![CDATA["Jouer un son ou afficher une image"]]></fr>
+			<en><![CDATA["Play a sound or display a picture"]]></en>
+			<es><![CDATA["Interpretar un sonido y presentar una imagen"]]></es>
+			<it><![CDATA["Visualizzare un’immagine o metti della musica"]]></it>
+			<de><![CDATA["Einen Sound abspielen oder ein Bild anzeigen"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["音楽再生、画像表示"]]></ja>
+		</map></title>
+
+		<description><map>
+			<fr><![CDATA["<p>A chaque fois que le Ztamp ou le Nano:ztag sera détecté, il jouera le fichier son ou l’image de votre bibliothèque Violet.net que vous avez indiqué.<br/>
+	Exemple : Ajoutez une chanson d’amour et votre photo à un Nano:ztag puis offrez le à l’élu(e) de votre cœur. Ajoutez un Ztamp sur le faire part de naissance de votre dernier né pour que vos amis puissent l’entendre gazouiller et voir la plus récente de ses photos officielles. Démarrez l’exécution des applications de votre Ztamp par une petite musique agréable.</p>"]]></fr>
+			<en><![CDATA["<p>Every time the Ztamp or Nano:ztag is detected, it will play the music file or display the pics you've selected in your Violet.net library.<br/>
+	Examples: Add a love song and a photo of your face to a Nano:ztag, and give it to your sweetheart every day she'll hear the song or see the picture she's inspired you to pick. Stick a Ztamp on your latest sprog's birth announcement and every time it's detected, your family and friends will be thrilled to hear it babble and view your latest snapshots. And you catart every launch of your Ztamps' apps with a fun musical jingle.</p>"]]></en>
+			<es><![CDATA["<p>Cada vez que se detecte el Ztamp o el Nano:ztag, éste interpretará los archivos de sonidos o de imágenes que hayas indicado en tu biblioteca Violet.net.<br/>
+	Ejemplo : Añade una canción romántica y tu foto a un Nano:ztag, luego ofrécela a tu amado (a). Añade un Ztamp para comunicarle el nacimiento de tu último vástago, de manera tal que tus amigos puedan escucharlo berrear y ver su foto más reciente. Inicia con una musiquita agradable la ejecución de las aplicaciones de tu Ztamp.</p>"]]></es>
+			<it><![CDATA["<p>Ogni volta che lo Ztamp o il Nano:ztag saranno riconosciuti, verranno lanciati il file sonoro o l'immagine della biblioteca che hai indicato.<br/> ESEMPIO: aggiungi una canzone d'amore e la tua foto a un Nano:ztag, poi donalo al tuo innamorato. Aggiungi uno Ztamp sull'annuncio di nascita del tuo bambino e i tuoi amici potranno ascoltare la sua voce e vedere le sue foto più recenti. Puoi scegliere di associare un sottofondo musicale all'esecuzione delle applicazioni.</p>"]]></it>
+			<de><![CDATA["<p>Wählen Sie eine Datei aus Ihrer violet.net-Bibliothek (MP3, Foto) aus. Bei jeder Erkennung des Ztamp oder des Nano:ztag wird Ihre Musik abgespielt bzw. werden die Fotos Ihrer Wahl angezeigt.<br/>
+	Beispiel: Fügen Sie ein Liebeslied und Ihr Foto zu einem Nano:ztag hinzu und schenken Sie ihm Ihrem/Ihrer Auserwählten. Heften Sie einen Ztamp auf die Geburtsanzeige Ihres Neugeborenen und teilen Sie mit Ihren Freunden seine ersten Laute und die letzten Schnappschüsse. Öffnen Sie die Applikationen Ihrer Ztamp mit einer sanften Hintergrundmusik</p>"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["<p>Violet.net のコレクションに保管されている音声ファイルを再生したり、画像ファイルを表示することができます。<br/>たとえば、あなたの写真と愛を込めた音楽をナノズタグに登録し、恋人にプレゼントすることができます。もしかしたら、毎日ナノズタグを使って音楽を聴きながらうっとりと写真を眺めてくれるかもしれません。他にもパーティの招待状に最近のスナップ写真を登録したズタンプを貼って送れば、受け取った相手も分かりやすいのではないでしょうか。</p>"]]></ja>
+		</map></description>
+
+		<instructions><map>
+			<fr><![CDATA["<p>Sélectionnez un fichier parmi ceux que vous avez chargé dans <em><strong>Ma bibliothèque</strong></em> <em>Audio</em> ou <em>Image</em> sur violet.net.<br/>
+	Si vous souhaitez jouer ou afficher plusieurs fichiers, ajoutez plusieurs fois cette application au même Ztamp.<br/>
+	Modifiez les fichiers contenus sur le Ztamp aussi souvent que vous le souhaitez et pilotez à distance les objets de vos proches.<br/>
+	Les fichiers son sont joués par l’ordinateur attaché au Mir:ror et par Nabaztag:tag, les fichiers image ne peuvent être vus qu’à partir d’un Mir:ror. </p>"]]></fr>
+			<en><![CDATA["<p>Select a media file from <em><strong>My library</strong></em> <em>Audio</em> or <em>Image</em> on violet.net.<br/>
+	If you'd like to play or display multiple files, add the application to the same Ztamp several times.<br/>
+	Modify files on the Ztamp as often as you want and remotely control your friends' and family's objects.</p>"]]></en>
+			<es><![CDATA["<p>Elige un archivo entre los que has cargado en <em><strong>Mi biblioteca</strong></em> <em>Audio</em> o <em>Imagen</em> en violet.net.<br/>
+	Si deseas enviar varios archivos, añade varias veces esta aplicación al mismo Ztamp.<br/>
+	Modifica las archivos contenidos en el Ztamp tantas veces como lo desees y controla a distancia los objetos de tu familia y de tus amigos.<br/>
+	El ordenador adjunto al Mir:ror y el Nabaztag:tag interpretan los archivos de sonido. Sólo se pueden visualizar los archivos de imágenes a partir de un Mir:ror.</p>"]]></es>
+			<it><![CDATA["<p>Seleziona una cartella tra quelle che hai caricato in <em><strong>Mia biblioteca</strong></em> <em>Audio</em> o<em>Immagini</em> su violet.net.<br/>Se desideri aggiungere più cartelle, puoi aggiungere più volte l’applicazione allo stesso Ztamp.<br/>Puoi modificare le cartelle dello Ztamp tutte le volte che vuoi per comandare a distanza gli oggetti dei tuoi cari.<br/>File audio sono trasmessi dal computer collegato al Mir:ror e dal Nabaztag:tag, mentre le immagini sono visualizzate solamente attraverso il Mir:ror</p>"]]></it>
+			<de><![CDATA["<p>Wählen Sie eine Ihrer hochgeladenen Dateien aus <em><strong>Meine Bibliothek</strong></em> <em>Audio</em> oder <em>Image</em> auf violet.net aus.<br/>
+	Wollen Sie mehrere Dateien abspielen oder anzeigen, verknüpfen Sie diese Applikation entsprechend oft mit demselben Ztamp.<br/>
+	Die Audio-Dateien werden von dem mit dem Mir:ror verbundenen Computer und von Nabaztag:tag abgespielt; die Bilddateien werden ausschließlich mittels eines Mir:ror angezeigt."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["<p>Violet.net の<strong>コレクション</strong>から<strong>音楽</strong>や<strong>画像</strong>のファイルを選択してください。<br/>
+			同じズタンプで複数のファイルを登録することもできます。<br/>
+			ズタンプを家族や友人にあげた後でも内容を変更できますので、時々画像を変えてみるのも面白いかもしれません。</p>"]]></ja>
+		</map></instructions>
+
+		<tags><map>
+			<!-- Applications tags are a comma separated list of words in a given language -->
+			<fr><![CDATA["Communication, Messages"]]></fr>
+			<en><![CDATA["Communication, Messages"]]></en>
+			<it><![CDATA["Comunicazione, Messaggi"]]></it>
+			<es><![CDATA["Comunicación, Mensajes"]]></es>
+			<de><![CDATA["Kommunikation, Nachrichten"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["コミュニケーション、メッセージ"]]></ja>
+		</map></tags>
+
+	</map></app>
+
+	<resources><map>
+		<!-- Entries in the dico -->
+		<dico><list>
+		</list></dico>
+
+		<files><list>
+				<!-- <entry name="media/audio/intro" fileName="intro.m3" /> -->
+		</list></files>
+	</map></resources>
+
+	<settings><list>
+		<!-- List of parameters to display in the settings -->
+		<item><map>
+			<key>"mediaFileID"</key>
+			<type>"MediaPicker"</type>
+			<datatype>"text"</datatype>
+			<required>true</required>
+			<default_value>""</default_value>
+			<label><map>
+				<!-- Dico key in the form : app/<appName>/settings/<key> -->
+				<fr><![CDATA["Contenu multimédia"]]></fr>
+				<en><![CDATA["Multimedia content"]]></en>
+				<es><![CDATA["Contenidos multimedia"]]></es>
+				<it><![CDATA["Contenuto multimediale"]]></it>
+				<de><![CDATA["Multimedianachricht"]]></de>
+				<pt><![CDATA[""]]></pt>
+				<ja><![CDATA["ファイル"]]></ja>
+			</map></label>
+			<description><map>
+				<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+				<fr><![CDATA["Sélectionnez le fichier de votre librairie à jouer."]]></fr>
+				<en><![CDATA["Select the file to be played from your library."]]></en>
+				<es><![CDATA["Selecciona el archivo de la biblioteca."]]></es>
+				<it><![CDATA["Seleziona il file da inviare tra quelli della tua Biblioteca."]]></it>
+				<de><![CDATA["Wählen Sie die Datei aus Ihrer Bibliothek aus."]]></de>
+				<pt><![CDATA[""]]></pt>
+				<ja><![CDATA["コレクションからファイルを選択してください。"]]></ja>
+			</map></description>
+		</map></item>
+	</list></settings>
+
+	<scheduling_masks><list>
+		<!-- application can be installed on ztamp detection -->
+		<item><map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampDetection"</event>
+			<label>"LOC_events/ZtampDetection"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map></item>
+		<!-- application can be installed on ztamp removal -->
+		<item><map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampRemoval"</event>
+			<label>"LOC_events/ZtampRemoval"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map></item>
+	</list></scheduling_masks>
+
+</map>

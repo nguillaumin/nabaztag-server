@@ -1,0 +1,314 @@
+<project name="OS" default="compile.project">
+
+	<!-- Load properties from external file -->
+	<property file="build.properties" />
+
+	<!-- Dynamic path properties -->
+	<property name="src.dir" value="${basedir}/net" description="Location of the project sources"/>
+	<property name="config.dir" value="${basedir}/config" description="Location of the configuration files"/>
+	<property name="lib.dir" value="${basedir}/lib" description="Location of the project libraries"/>
+
+	<property name="build.dir" value="${basedir}/build" description="" />
+	
+	<property name="web.dir" value="${build.dir}/WEB-INF" description="" />
+	<property name="web.conf.dir" value="${web.dir}/conf" description="" />
+	<property name="classes.dest" value="${web.dir}/classes" description="Destination directory for project classes"/>
+
+	<property name="test.src.dir" value="${basedir}/test" description="Location of the test sources"/>
+	<property name="test.classes.dest" value="${basedir}/build_test/classes" description="Destination directory for tests classes"/>
+	<property name="test.report.dir" value="${basedir}/build_test/reports/junit" />
+	
+	<!-- Clean Targets -->
+	<target name="clean.compile">
+		<delete dir="${classes.dest}" />
+		<delete dir="${test.classes.dest}" />
+	</target>	
+
+	<target name="create.project.dir">
+		<mkdir dir="${classes.dest}" />
+	</target>
+	
+	
+	<path id="Xlib.path" >
+		<fileset dir="${COMMONDIR}/lib" excludes="${exclude.from.classpath}"/>
+		<fileset dir="${DBENGINEDIR}/lib" excludes="${exclude.from.classpath}"/>
+	</path>
+	
+	<!-- Subversion Targets -->
+	<path id="svn.classpath" description="The classpath containing the ant libraries to use svn tasks.">
+		<pathelement location="${COMMONDIR}/lib/svnant.jar" />
+		<pathelement location="${COMMONDIR}/lib/svnClientAdapter.jar" />
+		<pathelement location="${COMMONDIR}/lib/svnjavahl.jar" />
+	</path>
+
+	<taskdef resource="svntask.properties" classpathref="svn.classpath" description="Loads svn ant tasks properties"/>
+	
+	<target name="svn.up" depends="set.server" unless="prod">
+		<echo message="Retrieving last updates from subversion repository..." />
+		<svn username="${svn.username}" password="${svn.password}">
+			<update dir="${basedir}" />
+		</svn>
+	</target>
+	
+	
+	<!-- Compilation Targets -->
+	<target name="DBEngine.compile" description="gets the DBEngine built">
+		<echo message="===== START BUILDING DBENGINE =====" />
+		<ant antfile="${DBENGINEDIR}/build.xml" inheritAll="false" target="up.and.compile" >
+			<property name="classes.dest" value="${classes.dest}"/>
+			<property name="COMMONDIR" value="${COMMONDIR}"/>
+			<property name="PROBESDIR" value="${PROBESDIR}"/>
+			<property name="server" value="${server}"/>
+		</ant>	
+	</target>
+
+	<target name="ContentHandler.compile" description="gets the ContentHandler built">
+		<echo message="===== START BUILDING ContentHandler =====" />
+		<ant antfile="${CONTENTHANDLERDIR}/build.xml" inheritAll="false" target="up.and.compile" >
+			<property name="classes.dest" value="${classes.dest}"/>
+			<property name="COMMONDIR" value="${COMMONDIR}"/>
+			<property name="server" value="${server}"/>
+		</ant>	
+	</target>
+	
+	<target name="compile.project" description="Compiles the project sources." depends="clean.compile,set.server,create.project.dir,DBEngine.compile,ContentHandler.compile,copy.config" >
+		<javac srcdir="${src.dir}" destdir="${classes.dest}" debug="on" nowarn="on" >
+			<classpath>
+				<fileset dir="${lib.dir}" excludes="${exclude.from.classpath}"/>
+				<path refid="Xlib.path" />
+			</classpath>
+		</javac>
+	</target>
+	
+	<target name="compile.tests" description="Compiles the test sources." depends="compile.project">
+		<mkdir dir="${test.classes.dest}" />
+		
+		<ant antfile="${CONTENTHANDLERDIR}/build.xml" inheritAll="false" target="compile.tests" >
+			<property name="test.classes.dest" value="${test.classes.dest}"/>
+			<property name="COMMONDIR" value="${COMMONDIR}"/>
+			<property name="server" value="${server}"/>
+		</ant>
+		
+		<!-- Copie des fichiers non-java dans build/WEB-INF/classes genre vasm et mid -->
+		<copy todir="${test.classes.dest}/net" includeEmptyDirs="false" overwrite="true">
+			<fileset dir="${src.dir}">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+		<javac srcdir="${test.src.dir}" destdir="${test.classes.dest}" debug="on" nowarn="on" >
+			<classpath>
+				<fileset dir="${lib.dir}" excludes="${exclude.from.classpath}"/>
+				<pathelement location="${classes.dest}" />
+				<path refid="Xlib.path" />
+			</classpath>
+		</javac>
+	</target>
+	
+	<target name="up.and.compile" depends="svn.up, compile.project" />
+	
+	<!-- WAR file Targets -->
+	<target name="build.war" description="Builds the WAR file." depends="compile.project">
+		<echo message="===== START BUILDING WAR FILE =====" />
+	    <delete file="${build.dir}/${war.filename}"/>
+	    <war destfile="${build.dir}/${war.filename}" webxml="${web.dir}/web.xml" duplicate="fail">
+			<fileset dir="${build.dir}" includes="${include.in.war.jsp}"/>
+	    	<webinf dir="${web.dir}" />
+	    	<classes dir="${basedir}" includes="${include.in.war.bin}"/>
+	      	<lib dir="${lib.dir}" excludes="${exclude.from.classpath},${exclude.from.warlib}" />
+	      	<lib dir="${DBENGINEDIR}/lib" excludes="${exclude.from.classpath},${exclude.from.warlib}" />
+	      	<lib dir="${COMMONDIR}/lib" excludes="${exclude.from.classpath},${exclude.from.warlib}" />
+	      	<metainf dir="${build.dir}/META-INF"/>
+	    </war>
+      	<echo message="===== END BUILDING WAR FILE =====" />
+	</target>
+	
+	<!-- Copy Targets -->
+	<target name="copy.config" depends="create.project.dir,set.server">
+		
+		<ant antfile="${CONTENTHANDLERDIR}/build.xml" inheritAll="false" target="copy.config" >
+			<property name="classes.dest" value="${classes.dest}"/>
+			<property name="COMMONDIR" value="${COMMONDIR}"/>
+			<property name="server" value="${server}"/>
+		</ant>
+		
+		<echo message="Copie des fichiers de configuration from '${config.dir}' for '${server}'"/>
+		<copy todir="${classes.dest}" overwrite="true">
+			<fileset dir="${config.dir}" casesensitive="yes" includes="constante-*.properties"/>
+		</copy>
+		<copy file="${config.dir}/web${server}.xml" tofile="${web.dir}/web.xml" overwrite="true" />
+		<copy file="${config.dir}/constante.properties${server}" tofile="${classes.dest}/constante.properties" overwrite="true" />
+		<copy file="${config.dir}/cache.ccf" tofile="${classes.dest}/cache.ccf" overwrite="true" />
+		<copy file="${config.dir}/log4j.properties${server}" tofile="${classes.dest}/log4j.properties" overwrite="true" />
+		<copy file="${config.dir}/log4j-crawlers.properties${server}" tofile="${classes.dest}/log4j-crawlers.properties" overwrite="true" />
+		<copy file="${config.dir}/log4j-cli.properties" tofile="${classes.dest}/log4j-cli.properties" overwrite="true" />
+		<copy file="${config.dir}/ttsserver.xml" tofile="${classes.dest}/ttsserver.xml" overwrite="true" />
+		<copy file="${config.dir}/rome.properties" tofile="${classes.dest}/rome.properties" overwrite="true" />
+		<copy file="${config.dir}/ttsserver${server}.xml" tofile="${classes.dest}/ttsserver.xml" overwrite="true" />
+		<copy file="${config.dir}/jgroups-config${server}.xml" tofile="${classes.dest}/jgroups-config.xml" overwrite="true" />
+		<copy file="${config.dir}/nabaztagv1.properties" tofile="${web.conf.dir}/nabaztagv1.properties" overwrite="true" />
+		<copy file="${config.dir}/nabaztagv2.properties" tofile="${web.conf.dir}/nabaztagv2.properties" overwrite="true" />
+		<copy file="${config.dir}/services.properties" tofile="${web.conf.dir}/services.properties" overwrite="true" />
+		<copy file="${config.dir}/jabber_components_list.properties${server}" tofile="${classes.dest}/jabber_components_list.properties" overwrite="true" />
+	</target>
+	
+	
+	<target name="get.hostname">
+	    <property environment="env"/>
+		<condition property="hostname" value="${env.HOSTNAME}">
+			<isset property="env.HOSTNAME"/>
+		</condition>
+		<condition property="hostname" value="${env.HOST}">
+			<isset property="env.HOST"/>
+		</condition>
+		<exec executable="hostname" outputProperty="hostname" />
+	</target>
+
+	<target name="set.server" unless="server" depends="get.hostname" description="Sets the server prefix according to the current machine.">
+		<condition property="server" value="PROD">
+			<or>
+				<equals arg1="${hostname}" arg2="angora" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="beveren" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="hotot" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="satin" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="thuringue" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="zibeline" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="bouscat" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="saxe" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="orylag" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="martre" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="renard" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="havane" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="parapluie" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="flandres" trim="true" casesensitive="false" />
+			</or>
+		</condition>
+			
+		<condition property="prod">
+			<isset property="server"/>
+		</condition>
+			
+		<condition property="server" value="S">
+			<equals arg1="${hostname}" arg2="silence" trim="true" casesensitive="false" />
+			
+		</condition>
+				
+		<condition property="server" value="PP">
+			<or>
+				<equals arg1="${hostname}" arg2="mauve" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="pourpre" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="prune" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="mug" trim="true" casesensitive="false" />
+				<equals arg1="${hostname}" arg2="lavande" trim="true" casesensitive="false" />
+			</or>
+		</condition>
+			
+		<condition property="server" value="">
+			<not>
+				<isset property="server"/>
+			</not>
+		</condition>
+	</target>
+
+	<!-- JUnit reports publication -->
+	<target name="tests" depends="compile.tests">
+		
+		<delete dir="${test.report.dir}" />
+		<mkdir dir="${test.report.dir}" />
+		
+		<junit fork="yes" printsummary="no" haltonfailure="no" failureproperty="junit.failure.db">
+	    	<jvmarg value="-Xmx2048m" />
+
+			<classpath>
+				<fileset dir="${lib.dir}" />
+				<path refid="Xlib.path" />
+				<pathelement location="${classes.dest}" />
+				<pathelement location="${test.classes.dest}" />
+				<pathelement location="${test.src.dir}" />
+			</classpath>	
+			
+			<formatter type="xml" />
+
+			<sysproperty key="silence" value="true"/>
+	        <sysproperty key="net.violet.platform.datamodel.factories.impl" value="net.violet.platform.datamodel.factories.implementations.FactoryImpl"/>
+	        <sysproperty key="log4j.configuration" value="log4j-cli.properties"/>
+
+			<batchtest fork="yes" todir="${test.report.dir}">
+				<fileset dir="${test.src.dir}">
+					<include name="**/datamodel/*Test.java" />
+					<include name="**/datamodel/factories/implementations/*Test.java" />
+					<include name="**/daemons/crawlers/gestion/*Test.java" />
+					<exclude name="**/DBTest.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+
+		<junit fork="yes" printsummary="no" haltonfailure="no" failureproperty="junit.failure">
+	    	<jvmarg value="-Xmx2048m" />
+
+			<classpath>
+				<fileset dir="${lib.dir}" />
+				<path refid="Xlib.path" />
+				<pathelement location="${classes.dest}" />
+				<pathelement location="${test.classes.dest}" />
+				<pathelement location="${src.dir}" />
+			</classpath>	
+
+			<formatter type="xml" />
+
+			<sysproperty key="silence" value="true"/>
+	        <sysproperty key="net.violet.platform.datamodel.factories.impl" value="net.violet.platform.datamodel.factories.mock.FactoryMock"/>
+	        <sysproperty key="log4j.configuration" value="log4j-cli.properties"/>
+
+			<batchtest fork="yes" todir="${test.report.dir}">
+				<fileset dir="${test.src.dir}">
+					<include name="**/*Test.java" />
+					<!-- Classes de base (ou autre) qui ne sont pas des tests -->
+					<exclude name="**/ActionTest.java" />
+					<exclude name="**/CrawlerTest.java" />
+					<exclude name="**/datamodel/*.java" />
+					<exclude name="**/datamodel/factories/implementations/*.java" />
+					<exclude name="**/daemons/crawlers/gestion/*Test.java" />
+					<exclude name="**/CacheNodeTest.java" />
+					<exclude name="**/VioletApiComponentTest.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+
+		<!-- Generate Junit report -->
+		<delete dir="${test.report.dir}/html" />
+		<mkdir dir="${test.report.dir}/html" />
+		<junitreport todir="${test.report.dir}">
+			<fileset dir="${test.report.dir}">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="${test.report.dir}/html" />
+		</junitreport>
+
+	    <antcall target="archive.reports"/>
+
+		<!-- Erreur si un test a échoué. -->
+		<fail message="JUnit datamodel tests failed" if="junit.failure.db"/>
+		<fail message="JUnit tests failed" if="junit.failure"/>
+	</target>
+		
+	<target name="archive.reports" if="reports.archive.dir">
+		<!-- Copy report -->
+		<tstamp>
+			<format property="now" pattern="yyyy.MM.dd_kk:mm:ss" locale="en" />
+		</tstamp>
+		
+	    <copy todir="${reports.archive.dir}/${now}">
+	        <fileset dir="${test.report.dir}"/>
+	    </copy>
+	    <exec executable="/usr/bin/unlink">
+		   	<arg value="${reports.archive.dir}/_latest"/>
+		</exec>
+	    <exec executable="/bin/ln">
+		   	<arg value="-s"/>
+		   	<arg value="${reports.archive.dir}/${now}"/>
+		   	<arg value="${reports.archive.dir}/_latest"/>
+		</exec>
+	</target>
+
+</project>
+

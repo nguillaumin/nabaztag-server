@@ -1,0 +1,3 @@
+application=webui
+url=sessions/create?email="test_login@violet.net"&password="violet"&expiration=TOMORROW
+regex=<string>1f688:.*:.*</string>

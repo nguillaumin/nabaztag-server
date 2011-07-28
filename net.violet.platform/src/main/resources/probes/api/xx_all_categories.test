@@ -1,0 +1,67 @@
+application=webui
+
+[daylife1]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_daylife/title</string></id></map>
+regex= .*
+
+[daylife2]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_news/title</string></id></map>
+regex= .*
+
+[daylife3]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_finance/title</string></id></map>
+regex= .*
+
+[daylife5]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_entertainement/title</string></id></map>
+regex= .*
+
+[daylife9]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_culture/title</string></id></map>
+regex= .*
+
+[daylife15]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_music/title</string></id></map>
+regex= .*
+
+[daylife20]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_sports/title</string></id></map>
+regex= .*
+
+[daylife22]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_science/title</string></id></map>
+regex= .*
+
+[daylife23]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_lifestyle/title</string></id></map>
+regex= .*
+
+[daylife24]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_kids/title</string></id></map>
+regex= .*
+
+[daylife25]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_callback/title</string></id></map>
+regex= .*
+
+[daylife26]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_perso/title</string></id></map>
+regex= .*
+
+[daylife27]
+url=applications/getByCategory
+post_data=<map><id><string>LOC_srv_category_beta/title</string></id></map>
+regex= .*
+

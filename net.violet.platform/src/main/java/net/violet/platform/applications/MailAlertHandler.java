@@ -1,0 +1,275 @@
+package net.violet.platform.applications;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import net.violet.common.StringShop;
+import net.violet.platform.api.callers.APICaller;
+import net.violet.platform.api.exceptions.InvalidSchedulingsException;
+import net.violet.platform.api.exceptions.InvalidSettingException;
+import net.violet.platform.api.exceptions.MissingSettingException;
+import net.violet.platform.datamodel.Application;
+import net.violet.platform.datamodel.SchedulingType;
+import net.violet.platform.datamodel.Source;
+import net.violet.platform.datamodel.factories.Factories;
+import net.violet.platform.dataobjects.ApplicationData;
+import net.violet.platform.dataobjects.SubscriptionData;
+import net.violet.platform.dataobjects.VObjectData;
+import net.violet.platform.schedulers.KeywordHandler;
+import net.violet.platform.util.CipherTools;
+import net.violet.platform.util.MailTools;
+
+public class MailAlertHandler implements ApplicationHandler, SettingsEditor {
+
+	private static final ApplicationData MAIL_APPLICATION = ApplicationData.getData(Application.NativeApplication.MAIL.getApplication());
+
+	public static final String TYPE = "type";
+	public static final String LOGIN = "login";
+	public static final String PASSWORD = "password";
+	public static final String HOST = "host";
+	public static final String SECURE = "secure";
+
+	public static final String SOURCE = "source";
+	public static final String ID_LAST_NEWS = "id_last_news";
+
+	public static final String KEYWORD = "keyword";
+	public static final String MEDIA = "media";
+
+	private static final String SOURCE_KEYWORD = "source_keyword";
+
+	public static final String FILTER = "filter";
+	public static final String NEW_CONTENT_FLAG = "new_content.flag";
+
+	public SubscriptionData create(VObjectData object, Map<String, Object> settings) {
+		final SubscriptionData theSubscription = SubscriptionData.create(MailAlertHandler.MAIL_APPLICATION, object);
+		try {
+		return createUpdateEverything(theSubscription, settings);
+		} catch (final Exception e) {
+			theSubscription.delete();
+		}
+		return null;
+	}
+
+	private SubscriptionData createUpdateEverything(SubscriptionData subscription, Map<String, Object> settings) {
+		final Map<String, Object> theSettings = new HashMap<String, Object>(settings);
+
+		final String uncipheredLogin = theSettings.remove(MailAlertHandler.LOGIN).toString();
+		final String uncipheredPassword = theSettings.remove(MailAlertHandler.PASSWORD).toString();
+		theSettings.put(MailAlertHandler.LOGIN, CipherTools.cipher(uncipheredLogin));
+		theSettings.put(MailAlertHandler.PASSWORD, CipherTools.cipher(uncipheredPassword));
+		theSettings.put(MailAlertHandler.ID_LAST_NEWS, "0");
+
+		final Object secure = theSettings.get(MailAlertHandler.SECURE);
+		if ((secure != null) && !StringShop.EMPTY_STRING.equals(secure.toString()) && MailAlertHandler.SECURE.equals(secure.toString())) {
+			theSettings.put(MailAlertHandler.SECURE, "1");
+		}
+
+		final String mainSource = "$" + subscription.getId() + StringShop.POINT + theSettings.get(MailAlertHandler.TYPE);
+		if (Factories.SOURCE.findByPath(mainSource) == null) {
+			Factories.SOURCE.createNewSource(mainSource, 0);
+		}
+		theSettings.put(MailAlertHandler.SOURCE, mainSource);
+
+		if (theSettings.containsKey(MailAlertHandler.SOURCE_KEYWORD)) {
+			final String keywordSource = mainSource + "." + theSettings.remove(MailAlertHandler.SOURCE_KEYWORD);
+			if (Factories.SOURCE.findByPath(keywordSource) == null) { // it's a new keyword source, we may have to remove the old one
+				for (final Source aSource : Factories.SOURCE.findByRootPath(mainSource + ".")) {
+					aSource.delete();
+				}
+				Factories.SOURCE.createNewSource(keywordSource, 0);
+			}
+		} else { // no ambiant source, we can remove the old one
+			for (final Source aSource : Factories.SOURCE.findByRootPath(mainSource + ".")) {
+				aSource.delete();
+			}
+		}
+
+		subscription.setSettings(theSettings);
+		return subscription;
+	}
+
+	public void update(SubscriptionData subscription, Map<String, Object> settings) {
+		createUpdateEverything(subscription, settings);
+	}
+
+	public void checkSettings(VObjectData object, Map<String, Object> settings) throws InvalidSettingException, MissingSettingException {
+
+		if (!settings.containsKey(MailAlertHandler.TYPE)) {
+			throw new MissingSettingException(MailAlertHandler.TYPE);
+		}
+		if (!settings.containsKey(MailAlertHandler.LOGIN)) {
+			throw new MissingSettingException(MailAlertHandler.LOGIN);
+		}
+		if (!settings.containsKey(MailAlertHandler.PASSWORD)) {
+			throw new MissingSettingException(MailAlertHandler.PASSWORD);
+		}
+		if (!settings.containsKey(MailAlertHandler.HOST)) {
+			throw new MissingSettingException(MailAlertHandler.HOST);
+		}
+
+		for (final SubscriptionData aSubscription : SubscriptionData.findByApplicationAndObject(MailAlertHandler.MAIL_APPLICATION, object)) {
+			final Map<String, Object> subSettings = aSubscription.getSettings();
+			final String theHost = subSettings.get(MailAlertHandler.HOST).toString();
+			final String theLogin = subSettings.get(MailAlertHandler.LOGIN).toString();
+			if (theHost.equals(settings.get(MailAlertHandler.HOST)) && theLogin.equals(settings.get(MailAlertHandler.LOGIN))) {
+				throw new InvalidSettingException(MailAlertHandler.LOGIN, StringShop.EMPTY_STRING);
+			}
+		}
+
+		String type = settings.get(MailAlertHandler.TYPE).toString();
+		if (!type.equals("pop") && !type.equals("imap")) {
+			throw new InvalidSettingException(MailAlertHandler.TYPE, type);
+		}
+
+		if ("1".equals(settings.get(MailAlertHandler.SECURE)) || MailAlertHandler.SECURE.equals(settings.get(MailAlertHandler.SECURE))) {
+			type += "s";
+		}
+
+		if (MailTools.checkNbMail(settings.get(MailAlertHandler.HOST).toString(), settings.get(MailAlertHandler.LOGIN).toString(), settings.get(MailAlertHandler.PASSWORD).toString(), type) < 0) {
+			throw new InvalidSettingException(settings.get(MailAlertHandler.HOST).toString() + net.violet.common.StringShop.SPACE + settings.get(MailAlertHandler.LOGIN).toString() + net.violet.common.StringShop.SPACE + type, "Invalid account");
+		}
+
+	}
+
+	private void deleteSources(SubscriptionData subscription) {
+		final Object sourceSetting = subscription.getSettings().get(MailAlertHandler.SOURCE);
+		if ((sourceSetting != null) && sourceSetting.toString().startsWith(StringShop.DOLLAR)) {
+			for (final Source aSource : Factories.SOURCE.findByRootPath(sourceSetting.toString())) {
+				aSource.delete();
+			}
+		}
+	}
+
+	public void delete(SubscriptionData subscription) {
+		deleteSources(subscription);
+		subscription.delete();
+	}
+
+	public Map<String, Object> getUISettings(SubscriptionData subscription, APICaller inApiCaller) {
+		final Map<String, Object> theSettings = new HashMap<String, Object>();
+		for (final Entry<String, Object> aSetting : subscription.getSettings().entrySet()) {
+			if (aSetting.getKey().equals(MailAlertHandler.PASSWORD)) {
+				theSettings.put(MailAlertHandler.PASSWORD, CipherTools.uncipher(aSetting.getValue().toString()));
+			} else if (aSetting.getKey().equals(MailAlertHandler.LOGIN)) {
+				theSettings.put(MailAlertHandler.LOGIN, CipherTools.uncipher(aSetting.getValue().toString()));
+			} else {
+				theSettings.put(aSetting.getKey(), aSetting.getValue());
+			}
+		}
+
+		return theSettings;
+	}
+
+	public String getSubscriptionInformation(SubscriptionData subscription) {
+		return null;
+	}
+
+	private static boolean isValid(Object inSetting) {
+		return !((inSetting == null) || StringShop.EMPTY_STRING.equals(inSetting.toString()) || "null".equals(String.valueOf(inSetting)));
+	}
+
+	/**
+	 * The MailAlertHandler has two specific scheduling types. However, it is very lenient and can perform some operations to 
+	 * edit invalid schedulings and make them correct.
+	 */
+	public void editSettings(VObjectData object, Map<String, Object> settings, List<Map<String, Object>> schedulings, String callerApiKey, boolean updateSubscription) {
+		if ((schedulings != null) && !schedulings.isEmpty()) {
+
+			for (final Map<String, Object> aScheduling : schedulings) {
+
+				if (aScheduling.get("type").equals(SchedulingType.SCHEDULING_TYPE.AmbiantWithKeyword.getLabel())) {
+					if (!MailAlertHandler.isValid(aScheduling.get(KeywordHandler.KEYWORD))) { // an ambiantWithKeyword without KW is just ambiant 
+						aScheduling.put("type", SchedulingType.SCHEDULING_TYPE.Ambiant.getLabel());
+						aScheduling.remove(KeywordHandler.KEYWORD);
+					} else {
+						settings.put(MailAlertHandler.SOURCE_KEYWORD, aScheduling.get(KeywordHandler.KEYWORD)); //we'll need an extra source for KW
+					}
+
+				} else if (aScheduling.get("type").equals(SchedulingType.SCHEDULING_TYPE.NewContentWithKeywordAndMedia.getLabel())) {
+
+					if (!MailAlertHandler.isValid(aScheduling.get(KeywordHandler.KEYWORD))) { // a NewContentWKWAM without keyword is a NewContent
+						aScheduling.put("type", SchedulingType.SCHEDULING_TYPE.NewContent.getLabel());
+						aScheduling.remove(KeywordHandler.KEYWORD);
+					}
+				}
+
+			}
+		}
+	}
+
+	// The method/class below are just temporary, they are used as adapter by MyNabaztag project
+
+	public static class SettingsBuilder {
+
+		private final String login;
+		private final String password;
+		private final String protocol;
+		private final String server;
+		private final boolean secure;
+
+		private final List<Map<String, String>> keywordsWithPosition;
+
+		public SettingsBuilder(String login, String password, String protocol, String server, boolean secure) {
+			this.login = login;
+			this.password = password;
+			this.protocol = protocol;
+			this.server = server;
+			this.secure = secure;
+
+			this.keywordsWithPosition = new ArrayList<Map<String, String>>();
+		}
+
+		public void addKeywordWithPosition(String keyword, String musicId, int position) {
+			this.keywordsWithPosition.add(position, Collections.singletonMap(keyword, musicId));
+		}
+
+		public List<Map<String, String>> getKeywordsWithPosition() {
+			return this.keywordsWithPosition;
+		}
+
+		public String getLogin() {
+			return this.login;
+		}
+
+		public String getPassword() {
+			return this.password;
+		}
+
+		public String getProtocol() {
+			return this.protocol;
+		}
+
+		public String getServer() {
+			return this.server;
+		}
+
+		public boolean isSecure() {
+			return this.secure;
+		}
+	}
+
+	public SubscriptionData createOrUpdateServiceSubscription(SubscriptionData inSubscription, VObjectData objectData, SettingsBuilder inSettings, List<Map<String, Object>> inSchedulings) throws InvalidSettingException, InvalidSchedulingsException, MissingSettingException {
+
+		final Map<String, Object> theSettings = new HashMap<String, Object>();
+		theSettings.put(MailAlertHandler.HOST, inSettings.getServer());
+		theSettings.put(MailAlertHandler.LOGIN, inSettings.getLogin());
+		theSettings.put(MailAlertHandler.TYPE, inSettings.getProtocol());
+		theSettings.put(MailAlertHandler.PASSWORD, inSettings.getPassword());
+
+		if (inSettings.isSecure()) {
+			theSettings.put(MailAlertHandler.SECURE, "secure");
+		}
+
+		if (inSubscription == null) {
+			return SubscriptionManager.createSubscription(MailAlertHandler.MAIL_APPLICATION, objectData, theSettings, inSchedulings, null);
+		}
+
+		SubscriptionManager.updateSubscription(inSubscription, theSettings, inSchedulings, null);
+		return inSubscription;
+	}
+
+}

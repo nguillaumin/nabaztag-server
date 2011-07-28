@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="CrawlerCtl" name="Crawlers">
+
+	<!-- Load properties from external file -->
+	<property file="build.properties" />
+	
+	<path id="Crawlers.classpath">
+        <pathelement location="build/WEB-INF/classes"/>
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${COMMONDIR}/lib" excludes="${exclude.from.classpath}"/>
+		<fileset dir="${DBENGINEDIR}/lib" excludes="${exclude.from.classpath}"/>
+	</path>
+	
+    <target name="CrawlerCtl">
+        <java classname="net.violet.platform.daemons.shell.CrawlerCtl" failonerror="true" fork="yes">
+            <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+            <sysproperty key="crawler" value="${crawler}" />
+            <sysproperty key="hostname" value="${hostname}" />
+            <sysproperty key="port" value="${port}" />
+            <arg line="-p ${crawler.shell.port} ${crawler.shell.cmd} ${crawler.class} ${crawler.argline}"/>
+            <classpath refid="Crawlers.classpath"/>
+        </java>
+	</target>
+	<target name="CrawlerVirtualObject"> 
+		<property name="crawler.class" value="net.violet.platform.xmpp.vo.ServiceWatcher"/> 
+		<property name="crawler.argline" value="${virtual.object.serial}"/> 
+		<antcall target="CrawlerCtl"/> 
+        </target> 
+	<target name="CrawlerFixBadBooks">
+	    <java classname="net.violet.platform.daemons.crawlers.gestion.CrawlerFixBadBooks" failonerror="true" fork="yes">
+		    <jvmarg line="-Djava.net.preferIPv4Stack=true -mx768m"/>
+		    <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+		    <sysproperty key="crawler" value="${daemon}" />
+		    <sysproperty key="hostname" value="${hostname}" />
+		    <classpath refid="Crawlers.classpath"/>
+		    <arg line=""/>
+		</java>
+	</target>
+	<target name="DaemonJabberXmlRpcManagerPacket">
+	        <java classname="net.violet.platform.xmpp.JabberXmlRpcManagerPacket" failonerror="true" fork="yes">
+	            <jvmarg line="-Djava.net.preferIPv4Stack=true -mx768m"/>
+	            <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+	            <sysproperty key="crawler" value="${daemon}" />
+	        	<sysproperty key="hostname" value="${hostname}" />
+	            <classpath refid="Crawlers.classpath"/>
+	            <arg line="sources int rfid asr ptt itmode"/>
+	        </java>
+	</target>
+	<target name="DaemonJabberPlatformManagerPacket">
+        <java classname="net.violet.platform.xmpp.JabberPlatformManagerPacket" failonerror="true" fork="yes">
+            <jvmarg line="-Djava.net.preferIPv4Stack=true -mx768m"/>
+            <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+            <sysproperty key="crawler" value="${daemon}" />
+        	<sysproperty key="hostname" value="${hostname}" />
+            <classpath refid="Crawlers.classpath"/>
+            <arg line="sources int rfid asr ptt itmode"/>
+        </java>
+    </target>
+    <target name="DaemonJabberPlatformManagerPacketExt">
+        <java classname="net.violet.platform.xmpp.JabberPlatformManagerPacket" failonerror="true" fork="yes">
+            <jvmarg line="-Djava.net.preferIPv4Stack=true -mx768m"/>
+            <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+            <sysproperty key="crawler" value="${daemon}" />
+            <sysproperty key="hostname" value="${hostname}" />
+            <classpath refid="Crawlers.classpath"/>
+            <arg line="sources int rfid asr ptt itmode"/>
+        </java>
+    </target>
+    <target name="DaemonJabberComponentManagerApiPacket">
+    	<java classname="net.violet.platform.xmpp.JabberComponentManagerPacket" failonerror="true" fork="yes">
+	    <jvmarg line="-Djava.net.preferIPv4Stack=true -mx768m"/>
+    	<sysproperty key="com.sun.management.jmxremote.port" value="15223" />
+    	<sysproperty key="com.sun.management.jmxremote.authenticate" value="true" />
+    	<sysproperty key="com.sun.management.jmxremote.ssl" value="false" />
+    	<sysproperty key="com.sun.management.jmxremote.password.file" value="/usr/local/tomcat/management/management.passwd" />
+    	<sysproperty key="com.sun.management.jmxremote.access.file" value="/usr/local/tomcat/management/management.access" />
+	    <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+	    <sysproperty key="crawler" value="${daemon}" />
+	    <sysproperty key="hostname" value="${hostname}" />
+	    <classpath refid="Crawlers.classpath"/>
+	    <arg line="xmpp.api.violet.net"/>
+	</java>
+    </target>
+	<target name="DaemonJabberComponentManagerAppletPacket">
+	    	<java classname="net.violet.platform.xmpp.JabberComponentManagerPacket" failonerror="true" fork="yes">
+		    <jvmarg line="-Djava.net.preferIPv4Stack=true -mx768m"/>
+	    	<sysproperty key="com.sun.management.jmxremote.port" value="15224" />
+	    	<sysproperty key="com.sun.management.jmxremote.authenticate" value="true" />
+	    	<sysproperty key="com.sun.management.jmxremote.ssl" value="false" />
+	    	<sysproperty key="com.sun.management.jmxremote.password.file" value="/usr/local/tomcat/management/management.passwd" />
+	    	<sysproperty key="com.sun.management.jmxremote.access.file" value="/usr/local/tomcat/management/management.access" />
+	    	<sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+		    <sysproperty key="crawler" value="${daemon}" />
+		    <sysproperty key="hostname" value="${hostname}" />
+		    <classpath refid="Crawlers.classpath"/>
+		    <arg line="xmpp.applet.violet.net"/>
+	</java>
+	</target>
+	<target name="DaemonJabberComponentManagerObjectsPacket">
+	    	<java classname="net.violet.platform.xmpp.JabberComponentManagerPacket" failonerror="true" fork="yes">
+		    <jvmarg line="-Djava.net.preferIPv4Stack=true -mx768m"/>
+	    	<sysproperty key="com.sun.management.jmxremote.port" value="15225" />
+		    <sysproperty key="com.sun.management.jmxremote.authenticate" value="true" />
+	    	<sysproperty key="com.sun.management.jmxremote.ssl" value="false" />
+	    	<sysproperty key="com.sun.management.jmxremote.password.file" value="/usr/local/tomcat/management/management.passwd" />
+	    	<sysproperty key="com.sun.management.jmxremote.access.file" value="/usr/local/tomcat/management/management.access" />
+		    <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+		    <sysproperty key="crawler" value="${daemon}" />
+		    <sysproperty key="hostname" value="${hostname}" />
+		    <classpath refid="Crawlers.classpath"/>
+		    <arg line="xmpp.objects.violet.net"/>
+	</java>
+    </target>
+	<target name="DaemonJabberComponentManagerPlatformPacket">
+	    	<java classname="net.violet.platform.xmpp.JabberComponentManagerPacket" failonerror="true" fork="yes">
+		    <jvmarg line="-Djava.net.preferIPv4Stack=true -mx768m"/>
+	    	<sysproperty key="com.sun.management.jmxremote.port" value="15226" />
+	        <sysproperty key="com.sun.management.jmxremote.authenticate" value="true" />
+	    	<sysproperty key="com.sun.management.jmxremote.ssl" value="false" />
+	    	<sysproperty key="com.sun.management.jmxremote.password.file" value="/usr/local/tomcat/management/management.passwd" />
+	    	<sysproperty key="com.sun.management.jmxremote.access.file" value="/usr/local/tomcat/management/management.access" />
+		    <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+		    <sysproperty key="crawler" value="${daemon}" />
+		    <sysproperty key="hostname" value="${hostname}" />
+		    <classpath refid="Crawlers.classpath"/>
+		    <arg line="xmpp.platform.violet.net"/>
+	</java>
+    </target>
+	<target name="DaemonTTSServer">
+        <java classname="net.violet.platform.voice.server.TTSServerImpl" failonerror="true" fork="yes">
+            <jvmarg line="-Djava.net.preferIPv4Stack=true -mx1024m"/>
+		    <sysproperty key="com.sun.management.jmxremote.port" value="15556" />
+            <sysproperty key="com.sun.management.jmxremote.authenticate" value="true" />
+            <sysproperty key="com.sun.management.jmxremote.ssl" value="false" />
+            <sysproperty key="com.sun.management.jmxremote.password.file" value="/usr/local/tomcat/management/management.passwd" />
+            <sysproperty key="com.sun.management.jmxremote.access.file" value="/usr/local/tomcat/management/management.access" />
+            <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+            <sysproperty key="crawler" value="${daemon}" />
+            <sysproperty key="hostname" value="${hostname}" />
+            <classpath refid="Crawlers.classpath"/>
+            <arg line=""/>
+        </java>
+    </target>
+    <target name="DaemonShell">
+        <java classname="net.violet.platform.daemons.shell.CrawlerShell" failonerror="true" fork="yes">
+            <jvmarg line="-Djava.net.preferIPv4Stack=true -mx2048m"/>
+            <sysproperty key="log4j.configuration" value="log4j-crawlers.properties" />
+            <sysproperty key="crawler" value="${daemon}-${port}" />
+            <sysproperty key="hostname" value="${hostname}" />
+            <sysproperty key="port" value="${port}" />
+		    <sysproperty key="com.sun.management.jmxremote.port" value="1${port}" />
+            <sysproperty key="com.sun.management.jmxremote.authenticate" value="true" />
+            <sysproperty key="com.sun.management.jmxremote.ssl" value="false" />
+            <sysproperty key="com.sun.management.jmxremote.password.file" value="/usr/local/tomcat/management/management.passwd" />
+            <sysproperty key="com.sun.management.jmxremote.access.file" value="/usr/local/tomcat/management/management.access" />
+            <classpath refid="Crawlers.classpath"/>
+            <arg line="${port}"/>
+        </java>
+    </target>
+	<target name="virtualobject" description="Cible pour lancer un objet virtuel dans un shell" depends="get.hostname">
+		<!-- paramètre: serial: serial de l'objet -->
+		<fail message="Préciser le serial de l'objet du crawler avec -Dserial=X" unless="serial" />
+		<!-- paramètre: port: port du shell -->
+		<fail message="Préciser le port du shell avec -Dport=X" unless="port" />
+		<!-- paramètre: command: commande pour le shell -->
+		<fail message="Préciser la commande avec -Dcommand=X" unless="command" />
+		<property name="crawler.shell.cmd" value="${command}" />
+		<property name="crawler.shell.port" value="${port}" />
+		<property name="virtual.object.serial" value="${serial}" />
+		<property name="crawler" value="VirtualObject${port}" />
+		<antcall target="CrawlerVirtualObject" />
+	</target>
+	<target name="startDaemon" description="Cible pour lancer un demon" depends="get.hostname">
+		<!-- paramètre: daemon: nom du demon -->
+		<fail message="Préciser le nom du demon avec -Ddaemon=X" unless="daemon" />
+    		<property name="port" value="5556"/><!-- valeur par défaut pour le port -->
+		<!-- on détermine si le fichier du pid est toujours là -->
+		<property name="daemon.pid.path" value="/var/run/crawlers/${daemon}${port}.pid"/>
+		<available file="${daemon.pid.path}" property="daemon.pid.present" />
+		<fail message="Le demon tourne toujours (?), en tous cas le fichier pid est toujours présent (${daemon.pid.path})" if="daemon.pid.present" />
+		<!-- écriture du pid -->
+		<mkdir dir="/var/run/crawlers/" />
+		<exec executable="sh">
+			<arg value="-c" />
+			<arg value="echo -n $PPID > ${daemon.pid.path}" />
+		</exec>
+		<!-- lancement du demon -->
+		<antcall target="Daemon${daemon}" />
+		<!-- suppression du fichier -->
+		<delete failonerror="false" file="${daemon.pid.path}"/>
+	</target>
+	<target name="stopDaemon" description="Cible pour arrêter un daemon">
+		<!-- paramètre: daemon: nom du demon -->
+		<fail message="Préciser le nom du demon avec -Ddaemon=X" unless="daemon" />
+    		<property name="port" value="5556"/><!-- valeur par défaut pour le port -->
+		<!-- on détermine si le fichier du pid est toujours là -->
+		<property name="daemon.pid.path" value="/var/run/crawlers/${daemon}${port}.pid"/>
+		<available file="${daemon.pid.path}" property="daemon.pid.present" />
+		<fail message="Le demon ne tourne pas, en tous cas le fichier pid n'est pas là (${daemon.pid.path})" unless="daemon.pid.present" />
+		<!-- lecture du pid -->
+		<loadfile srcFile="${daemon.pid.path}" property="daemon.pid" />
+		<exec executable="sh">
+			<arg value="-c" />
+			<arg value="kill ${daemon.pid}" />
+		</exec>
+		<delete file="${daemon.pid.path}"/>
+	</target>
+	
+    <target name="get.hostname" depends="get.hostname.env,get.hostname.cmd">
+    	<echo message="-${hostname}-" />
+    </target>
+
+    <target name="get.hostname.env">
+    	<property environment="env"/>
+	<condition property="hostname" value="${env.HOSTNAME}">
+		<isset property="env.HOSTNAME"/>
+	</condition>
+	<condition property="hostname" value="${env.HOST}">
+		<isset property="env.HOST"/>
+	</condition>
+    </target>
+
+    <target name="get.hostname.cmd" unless="hostname">
+    	<exec executable="hostname" outputProperty="hostname" />
+    </target>
+</project>

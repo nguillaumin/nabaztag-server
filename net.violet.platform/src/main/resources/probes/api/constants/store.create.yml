@@ -1,0 +1,12 @@
+---
+store:
+  address: !!str probes create
+  zipcode: !!str probes create
+  name: !!str probes create
+  type: !!str physical
+  status: !!str normal
+  url: !!str http://www.create.com
+  rank: !!str 1
+  comment: !!str probes create
+  city: !!str Paris
+  country: !!str FR

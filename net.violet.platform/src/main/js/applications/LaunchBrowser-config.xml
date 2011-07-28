@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/ttcrds2H7Q -->
+	<name>"net.violet.js.launchbrowser"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>700</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"LaunchBrowser"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Ouvrir une page Web"]]></fr>
+		<en><![CDATA["Open a web page"]]></en>
+		<it><![CDATA["Aprire una pagina Web"]]></it>
+		<es><![CDATA["Abrir una página Web"]]></es>
+		<de><![CDATA["Eine Webseite öffnen"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["ウェブサイトを開く"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Entrez l'adresse (URL) d'une page sur le Web. A chaque fois qu'il sera détecté, le Ztamp lancera votre navigateur habituel et affichera la page. <br/>
+Exemple : Le matin, avant de partir de chez vous, posez les clefs de voiture ztampées pour afficher la carte du trafic routier dans votre région. Liez vos livres à la page Wikipedia de l'auteur, vos disques avec le site du Groupe...<br/>
+</p>"]]></fr>
+
+		<en><![CDATA["<p>Enter a web page address (URL). Every time it is detected, the Ztamp will launch this page in your default browser.<br/>
+Example: before you leave the house in the morning, show the Mir:ror your ztamped car keys to display a map of current traffic conditions in your area. Link your books to their author's Wikipedia page, your records to the Band's official website...<br/>
+</p>"]]></en>
+
+		<it><![CDATA["<p>Inserisci l'indirizzo (URL)di una pagina attiva sul web. Ogni volta che verrà riconosciuto, lo Ztamp aprirà il browser per mostrarti il sito. <br/>Esempio: alla mattina, prima di partire, poggia il portachiavi della tua macchina sul Mir:ror, ti verrà mostrata la carta del traffico stradale della tua regione. Collega i tuoi libri alle pagine Wikipedia con le biografie degli autori, i tuoi CD ai siti dei cantanti...</p>"]]></it>
+
+		<es><![CDATA["<p>Entra la dirección (URL) de una página en el Web. Cada vez que será detectada, el Ztamp lanzará tu navegador habitual y visualizará la página. <br/>
+Ejemplo: de mañana ante de salir de tu casa, pon las llaves del coche ztampeadas para visualizar el mapa de los caminos en tu región. Vincula tus libros a la página Wikipedia del autor, tus discos con el sitio del Grupo...<br/>
+</p>"]]></es>
+
+		<de><![CDATA["<p>Geben Sie die Adresse (URL) einer Webseite ein. Jedes Mal, wenn der Ztamp erkannt wird, startet er den gewohnten Webbrowser und zeigt die Seite an. <br/>
+Beispiel: Zeigen Sie morgens, bevor Sie das Haus verlassen, Ihre mit einem Ztamp versehenen Autoschlüssel, um die Straßenverkehrskarte Ihrer Region anzuzeigen. Verbinden Sie Ihre Bücher mit der Wikipedia-Seite des Autoren, Ihre CDs mit der Seite der Band…<br/>
+</p>"]]></de>
+
+		<pt><![CDATA[""]]></pt>
+
+		<ja><![CDATA["<p>ウェブサイトのアドレス（URL）を登録しておくと、ズタンプを使ったときにブラウザが起動し、そのウェブサイトが開かれます。<br/>
+		たとえば、出勤する前にズタンプを貼った車のキーをミラーにかざすと、渋滞情報のページが開いたり、本に Wikipedia をリンクさせたり、CDにアーティストのオフィシャルサイトをリンクさせたり。いろいろリンクさせてみましょう。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Indiquez l'adresse de la page Web (URL) que vous souhaitez ouvrir. Si vous souhaitez ouvrir plusieurs pages, ajoutez plusieurs fois cette application au même Ztamp. <br/>
+Vous pouvez utiliser dans cette URL les variables suivantes<br/>
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Heure de l'envoi du message. </li>
+<li> ${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : Les mêmes parties de l'heure, mais préfixée d'un zéro s'il le faut. Ex : '02' au lieu de '2'.</li>
+<li> ${object.name} : nom de l'objet ayant lu le Ztamp. </li>
+<li> ${object.owner.firstname} : prénom du propriétaire de l'objet.</li>
+<li> ${object.owner.lastname} : nom du propriétaire de l'objet. </li>
+<li> ${object.owner.city} : ville du propriétaire de l'objet. </li>
+<li> ${ztamp.name} : nom du Ztamp.</li>
+<li> ${ztamp.serial} : numéro de série du Ztamp.</li>
+<li> ${ztamp.owner.lastname} : nom du propriétaire du Ztamp. </li>
+<li> ${ztamp.owner.firstname} : prénom du propriétaire du Ztamp. </li>
+<li> ${ztamp.owner.city} : ville du propriétaire du Ztamp. </li>
+</ul>
+Ex : <code>http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}</code><br/>
+Note : si une des variables insérée comporte des espaces, par ex : <em>mon parapluie jaune, </em>ces espaces seront remplacés par %20 : <em>mon%20parapluie%20jaune</em><br/>
+Fonctionne uniquement sur Mir:ror. </p>"]]></fr>
+
+		<en><![CDATA["Enter the address (URL) for the Web page you want to open. If you want to open multiple pages, add the application several times to the same Ztamp.<br/>
+You may use the following variables in the URL:
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}: Time message was sent.</li>
+<li>${HOURS}, ${HOURS24}, ${MINUTES}, ${SECONDS} : The same time parts, but with a leading zero. Ex : '02' instead of '2'.</li>
+<li>${object.name}: Name of the object that has read the Ztamp.</li>
+<li>${object.owner.firstname}: First name of the object owner.</li>
+<li>${object.owner.lastname}: Last name of the object owner.</li>
+<li>${object.owner.city}: City where the object owner lives.</li>
+<li>${ztamp.name}: Ztamp name.</li>
+<li>${ztamp.serial}: Ztamp serial number.</li>
+<li>${ztamp.owner.lastname}: Last name of the Ztamp owner.</li>
+<li>${ztamp.owner.firstname}: First name of the Ztamp owner.</li>
+<li>${ztamp.owner.city}: City where the Ztamp owner lives.</li>
+</ul>
+Example : http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>
+Note : if one of the variables inserted contains spaces, e.g. <em>my yellow umbrella, </em>, the spaces will be replaced with %20: <em>my%20yellow%20umbrella, </em><br/>
+Only works with the Mir:ror."]]></en>
+
+		<it><![CDATA["<p>Indica l'indirizzo della pagina (URL) che desideri aprire. Se desideri aprire più pagine, aggiungi più volte quest'Applicazione allo stesso Ztamp. <br/>Per questa URL puoi utilizzare le seguenti variabili: <br/><ul><li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM}: Ora d'invio del messaggio. </li><li> ${object.name}: Nome dell'oggetto che ha visto lo Ztamp. </li><li> ${object.owner.firstname}: Nome del proprietario dell'oggetto.</li><li> ${object.owner.lastname}: Cognome del proprietario dell'oggetto. </li><li> ${object.owner.city}: Città dove risiede il proprietario dell'oggetto. </li><li> ${ztamp.name}: Nome dello Ztamp. </li><li> ${ztamp.owner.lastname}: Cognome del proprietario dello Ztamp. </li><li> ${ztamp.owner.firstname}: Nome del proprietario dello Ztamp. </li><li> ${ztamp.owner.city}: Città dove risiede il proprietario dello Ztamp.</li></ul>Ex :http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>Nota: se una delle variabili inserite comporta degli spazi, ad esempio: <em>il mio ombrello giallo </em>questi spazi  vengono sostituiti da %20 : <em>il%20mio%20 ombrello%20 giallo</em><br/>Funziona esclusivamente sul Mir:ror.</p>"]]></it>
+
+		<es><![CDATA["<p>Indica la direccion de la página Web (URL) que deseas abrir. Si deseas abrir varias páginas, añade esta aplicación al mismo Ztamp varias veces. <br/>
+En esta URL, puedes usar las variables que siguen :<br/>
+<ul>
+<li>${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Hora del envío del mensaje.</li>
+<li>${object.name} : nombre del objeto que haya leído el Ztamp.</li>
+<li>${object.owner.firstname} : nombre del propietario del objeto. </li>
+<li>${object.owner.lastname} : apellido del propietario del objeto.</li>
+<li>${object.owner.city} :ciudad del propietario del objeto.</li>
+<li>${ztamp.name} : nombre del Ztamp.</li>
+<li>${ztamp.owner.lastname} : apellido del propietario del Ztamp.</li>
+<li>${ztamp.owner.firstname} : nombre del propietario del Ztamp.</li>
+<li>${ztamp.owner.city} : ciudad del propietario del Ztamp.</li>
+</ul>
+Ex : http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>
+Nota : si una de las variables insertadas lleva espacios, por ejemplo: <em>mi paraguas amarillo</em>, esos espacios serán reemplazados por %20 :<em>mi%20paraguas%20amarillo</em><br/>
+Únicamente funciona con Mir:ror.</p>"]]></es>
+
+		<de><![CDATA["<p>Geben Sie die Adresse der zu öffnenden Webseite (URL) ein. Wollen Sie mehrere Dateien öffnen, fügen Sie diese Applikation mehrmals zum gleichen Ztamp hinzu. <br/>
+Sie können in dieser URL folgende Variablen benutzen :<br/>
+<ul>
+<li> ${hours}, ${hours24}, ${minutes}, ${seconds}, ${AMPM} : Uhrzeit des Emailversands. </li>
+<li> ${object.name} : Name des Objektes, das den Ztamp gelesen hat. </li>
+<li> ${object.owner.firstname} : Vorname des Objektbesitzers.</li>
+<li> ${object.owner.lastname} : Name des Objektbesitzers. </li>
+<li> ${object.owner.city} : Stadt des Objektbesitzers. </li>
+<li> ${ztamp.name} : Name des Ztamps. </li>
+<li> ${ztamp.owner.lastname} : Name des Ztamp-Besitzers. </li>
+<li> ${ztamp.owner.firstname} : Vorname des Ztamp-Besitzers. </li>
+<li> ${ztamp.owner.city} : Stadt des Ztamp-Besitzers. </li>
+</ul>
+Bsp :http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>
+Anmerkung : Falls eine der eingefügten Variablen Leerzeichen enthält, zum Bsp : <em>mein gelber Regenschirm, </em>werden diese Leerzeichen ersetzt durch %20 : <em>mein%20gelber%20Regenschirm</em><br/>
+Funktioniert ausschließlich mit Mir:ror.</p>"]]></de>
+
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>開きたいウェブサイトのアドレス（URL）を入力します。<br/>同じズタンプで複数のウェブサイトを開くこともできます。<br/>
+以下の変数を使うことができます。<br/>
+<ul>
+<li>${hours}、${minutes}、${seconds}： メッセージが送信された時間</li>
+<li>${object.name}： ズタンプを読み込んだアイテムの名前</li>
+<li>${object.owner.firstname}： アイテムの登録者の名前（名）</li>
+<li>${object.owner.lastname}： アイテムの登録者の名前（姓）</li>
+<li>${object.owner.city}： アイテムの登録者の所在地</li>
+<li>${ztamp.name}： ズタンプの名前</li>
+<li>${ztamp.serial}： ズタンプのシリアル番号</li>
+<li>${ztamp.owner.lastname}： ズタンプの登録者の名前（姓）.</li>
+<li>${ztamp.owner.firstname}： ズタンプの登録者の名前（名）</li>
+<li>${ztamp.owner.city}：ズタンプの登録者の所在地</li>
+</ul>
+<br/>
+時間の変数は十進数になります。<br/>
+もし変数内にスペースを使いたい場合は、スペースを「%20」に置き換えてください。たとえば「<strong>my yellow umbrella</strong>」は「<strong>my%20yellow%20umbrella< /strong>となります。<br/>
+変数を使ったURLの例：http://www.myapplication.com/call?object=${ztamp.name}&city=${object.owner.city}<br/>
+このアプリケーションはミラーでのみ利用できます。
+</p>"]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"url"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["URL"]]></fr>
+			<en><![CDATA["URL"]]></en>
+			<it><![CDATA["URL"]]></it>
+			<es><![CDATA["URL"]]></es>
+			<de><![CDATA["URL"]]></de>
+			<pt><![CDATA["URL"]]></pt>
+			<ja><![CDATA["URL"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Tapez l'url à ouvrir dans un navigateur chaque fois que le ztamp est détecté"]]></fr>
+			<en><![CDATA["Enter the URL to open in a browser every time the Ztamp is detected"]]></en>
+			<it><![CDATA["la URL da aprire ogni volta che lo Ztamp verrà riconosciuto"]]></it>
+			<es><![CDATA["Escribe en un navegador el URL que hay que abrir cada vez que se detecte el Ztamp"]]></es>
+			<de><![CDATA["Geben Sie die zu öffnende URL bei jeder Erkennung des Ztamp in einen Browser ein"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["ズタンプをかざした時にブラウザで開きたいウェブサイトのURLを入力してください"]]></ja>
+		</map></description>
+	</map></item>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

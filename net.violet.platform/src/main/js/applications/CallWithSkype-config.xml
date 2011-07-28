@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/Fugx2sW5gG -->
+	<name>"net.violet.js.callwithskype"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"communication"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>500</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"CallWithSkype"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Appeler quelqu'un avec Skype"]]></fr>
+		<en><![CDATA["Calling someone with Skype"]]></en>
+		<it><![CDATA["Telefonare a qualcuno con Skype"]]></it>
+		<es><![CDATA["Llamar a alguien con Skype"]]></es>
+		<de><![CDATA["Jemanden über Skype anrufen"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["Skype （電話をかける）"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p> Téléphonez directement à quelqu'un à travers le service Skype en montrant simplement un objet Ztampé ou un Nano:ztag à un Mir:ror<br/>
+Exemple : Montrez la photo ztampée de votre maman à Mir:ror, aussitôt le téléphone sonnera chez elle. Associez chacun de vos Nano:ztags à un de vos amis et posez le sur votre Mir:ror pour lui parler. </p>
+"]]></fr>
+		<en><![CDATA["<p> Phone someone directly through the Skype service simply by showing Mir:ror a Ztamped object or Nano:ztag <br/>
+Example: Show a ztamped photograph of your mother to Mir:ror, and her phone will instantly ring. Assign a friend or relative to each of your Nano:ztags – all you need to do to talk to them is put their Rabbit on your Mir:ror. </p>
+"]]></en>
+		<it><![CDATA["<p> Telefona a qualcuno grazie a  Skype, mostrando semplicemente al Mir:ror un oggetto Ztampato o un Nano:ztag <br/>Esempio: mostra al Mir:ror la foto di tua mamma e subito il suo telefono suonerà. Associa ogni Nano:ztag a un tuo amico e appoggialo sul tuo Mir:ror per parlargli. </p>
+"]]></it>
+		<es><![CDATA["<p> Para telefonear a alguien directamente mediante el servicio Skype, presentándole simplemente un objeto con un Ztamp o un Nano:ztag a un Mir:ror<br/>
+Ejemplo : Muestra la foto de tu mamá con un Ztamp a Mir:ror, inmediatamente su teléfono sonará. Vincula cada uno de tus Nano:ztags a uno de tus amigos y para hablarle, colócalo sobre tu Mir:ror. </p>
+"]]></es>
+		<de><![CDATA["<p> Rufen Sie jemanden direkt über Skype an, indem Sie dem Mir:ror einfach einen Ztamp-Gegenstand oder einen Nano:ztag zeigen <br/>
+Beispiel: Zeigen Sie dem Mir:ror das mit einem Ztamp versehene Foto Ihre Mutter; im nächsten Moment klingelt das Telefon bei ihr. Verknüpfen Sie jeden Ihrer Nano:ztags mit einem Ihrer Freunde und stellen sie ihn auf Ihren Mir:ror, um mit ihm zu sprechen. </p>
+"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>ズタンプかナノズタグをミラーにかざしたときに Skype で電話をかけることができます。<br/>
+		たとえば、ズタンプを貼った両親の写真をミラーに置くと実家と電話がつながる、ということができます。また、ナノズタグをいくつか用意し、色によって友達の電話番号を区別するという使い方もあります。"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Comment faire ? <br/>
+Cette application nécessite la présence du logiciel Skype sur l'ordinateur. Il permet
+<br/>- soit d'appeler un autre membre du réseau Skype si vous avez un compte Skype gratuit,
+<br/>- soit d'appeler n'importe quel numéro de téléphone dans le monde si vous souscrivez les formules d'abonnements payants proposées par Skype. <br/>
+Entrez simplement l'identifiant Skype du contact ou le numéro de téléphone qui sera appelé chaque fois que vous présenterez le Ztamp ou le Nano:ztag au Mir:ror. <br/>
+Entrez les numéros de téléphone précédés de + et l'indicatif du pays. Exemple pour la France, pour appeler le 01 55 25 52 50, indiquez +33 1 55 25 52 50.<br/>
+Il est conseillé de paramétrer le logiciel Skype afin qu'il soit toujours lancé et connecté lorsque l'ordinateur est allumé. Si tel est le cas, lorsque le Ztamp est présenté, l'appel du correspondant est aussitôt lancé. Sinon, le Ztamp lancera le logiciel Skype de votre ordinateur et attendra que vous validiez vos identifiants et mot de passe avant de pouvoir lancer l'appel du correspondant.<br/>
+Ce service fonctionne uniquement sur un Mir:ror relié à un ordinateur sur lequel le logiciel Skype a été installé.</p>
+"]]></fr>
+		<en><![CDATA["How does this work? <br/>
+This application requires the presence of Skype software on your computer. It allows you:
+<br/> - either to call another member of the Skype network, if you hold a free Skype account,
+<br/>- or to call any phone number in the world, if you have subscribed to one of Skype's pay calling plans. <br/>
+Simply enter a Skype contact username or a phone number, and it will be called every time you show the Ztamp or Nano:ztag to the Mir:ror. <br/>
+Enter your phone numbers preceded by a plus sign (+) and the country code. For instance, to call French number 01 55 25 52 50, enter +33 1 55 25 52 50.<br/>
+We recommend you set the Skype application so that it automatically launches and connects every time you start up your computer. If so, the call will be made immediately when the Ztamp is shown. Otherwise, the Ztamp will need to launch the Skype software on your computer and wait until you have entered your username and password before it can make the call.<br/>
+This service only works with a Mir:ror connected to a computer on which Skype software is present.</p>
+"]]></en>
+		<it><![CDATA["<p>Come funziona ? <br/>L’Applicazione ha bisogno che il programma Skype sia installato sul computer e permette:<br/>- di chiamare un altro membro di Skype se hai un account gratuito, <br/>- oppure  di chiamare un numero di telefono tradizionale in qualsiasi parte del mondo, se hai sottoscritto uno degli abbonamenti a pagamento proposti da Skype.<br/>Digita un nome Skype o un numero di telefono e, ogni volta che mostrerai lo Ztamp o il Nano:ztag al Mir:ror il tuo contatto verrà chiamato. Inserisci i numeri telefonici preceduti da + e il prefisso del paese. Ad esempio, per la Francia, per chiamare 01 55 25 52 50, digita +33 1 55 25 52 50.<br/> Si consiglia di configurare Skype in modo che venga sempre avviato ogni volta che accendi il computer. In questo modo, mostrando lo Ztamp, la chiamata verrà subito inoltrata. In caso contrario, lo Ztamp lancerà il programma e aspetterà che tu inserisca username e password prima di chiamare il tuo contatto.<br/>Questo servizio funziona solo per un Mir:ror collegato ad un computer dove Skype è installato.</p>
+"]]></it>
+		<es><![CDATA["<p>¿Qué hay que hacer? <br/>
+Esta aplicación exige que el software Skype esté instalado en tu ordenador. Si tienes una cuenta Skype gratuita, te permite: <br/>
+- tanto llamar a otro miembro de la red Skype, <br/>
+- como llamar a cualquier número de teléfono en el mundo si te abonas a los abonos pagos propuestos por Skype. <br/>
+Simplemente entra el identificador Skype del contacto o del número de teléfono que se llamará cada vez que le presentes el Ztamp o le Nano:ztag al Mir:ror. <br/>
+Entra los  números de teléfono precedidos por + y el código de identificación del país. Por ejemplo, para llamar hacia Francia, para llamar al  número 01 55 25 52 50, indica +33 1 55 25 52 50.<br/>
+Se aconseja introducir  los parámetros del software, para que siempre sea lanzado y esté conectado cuando el ordenador está encendido,. Si es así, cuando se le presente el Ztamp, se lanzará inmediatamente la llamada correspondiente. De lo contrario, el Ztamp lanzará el software Skype desde tu ordenador y esperará que tu valides los identificadores y la contraseña antes de que sea posible lanzar la llamada del corresponsal.<br/>
+Este servicio sólo funciona con un Mir:ror conectado a un ordenador que tiene instalado el software Skype.</p>
+"]]></es>
+		<de><![CDATA["<p>Wie mache ich das? <br/>
+Für diese Applikation muss die Skype-Software auf Ihrem Computer installiert sein. Mit ihr kann  <br/> ein anderes Mitglied des Skype-Netzwerkes angerufen werden, wenn Sie ein kostenloses Skype-Konto haben <br/>
+- oder jede Telefonnummer weltweit angewählt werden, insofern Sie ein kostenpflichtiges Skype-Zugangskonto einrichten. <br/>
+Geben Sie einfach den Skype-Benutzernamen oder die Telefonnummer des Kontaktes an, der angerufen werden soll, wenn Sie den Ztamp oder den Nano:ztag an den Mir:ror heranführen. <br/>
+Geben Sie die Telefonnummern mit vorangestelltem + und der Ländervorwahl ein. Beispiel für Frankreich: Um die Nummer 01 55 25 52 50 anzurufen, geben Sie +33 1 55 25 52 50 <br/> ein.
+Es wird empfohlen, die Skype-Software so zu konfigurieren, dass die Anwendung beim Anschalten des Computers automatisch gestartet wird. Somit wird beim Zeigen des Ztamps der Anruf an den Teilnehmer sofort ausgeführt. Andernfalls startet der Ztamp die Skype-Software auf Ihrem Computer und kann den Anruf erst nach Eingabe Ihres Benutzernamens und Passwortes starten.<br/>
+Dieser Dienst funktioniert ausschließlich mit einem Mir:ror, der an einen Computer angeschlossen ist, auf dem die Skype-Software installiert wurde.</p>
+"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>使い方</br>
+		このアプリケーションを利用するためにはコンピュータに Skype がインストールされている必要があります。<br/>
+		Skype のユーザ同士で電話をするなら通話料金はかかりませんが、Skype から一般回線に電話をつなげようとすると、有料のプランを導入する必要があります。<br/>
+		Skype のユーザ名か電話番号が分かっていれば、ズタンプやナノズタグをミラーにかざすだけで、すぐに電話がかけられます。<br/>
+		電話番号の頭についている「＋」は国番号です。たとえば、フランス国内の電話番号 01 55 25 52 50 に国番号をつけたものは、+33 1 55 25 52 50 となります。<br/>
+		コンピュータを立ち上げたときに、Skype も起動するように設定しておけば、ズタンプをかざした時にすぐに電話をかけられます。Skype が起動していないと、ズタンプをかざしてから Skype が起動し電話がかかるまで少し待たなければなりません。<br/>
+		この機能を利用するには、Skype がインストールされたコンピュータにミラーが接続されている必要があります。</p>"]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+	<item><map>
+		<key>"target"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Contact ou numéro de téléphone"]]></fr>
+			<en><![CDATA["Contact or phone number"]]></en>
+			<it><![CDATA["Contatto o numero di telefono"]]></it>
+			<es><![CDATA["Contacto o número telefónico "]]></es>
+			<de><![CDATA["Kontakt oder Telefonnummer "]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["電話番号"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Entrez l'identifiant Skype ou le numéro de téléphone de la personne à appeler"]]></fr>
+			<en><![CDATA["Enter the Skype ID or phone number of the person to call"]]></en>
+			<it><![CDATA["Inserisci il nome Skype o il numero di telefono del tuo contatto"]]></it>
+			<es><![CDATA["Entra el identificador de Skype o el  número del teléfono de  la persona que se quiera llamar. "]]></es>
+			<de><![CDATA["Geben Sie den Skype-Benutzernamen oder die Telefonnummer der anzurufenden Person ein"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["SkypeのIDか電話番号を入力してください"]]></ja>
+		</map></description>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>1</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/bxzlQar9YK -->
+	<name>"net.violet.js.applauncher"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"tools"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"AppLauncher"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Lancer une application"]]></fr>
+		<en><![CDATA["Launch an application"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["Choisissez une application à lancer en indiquant le chemin complet de l'application ou de son raccourci. En montrant votre Objet, l'application sera lancée."]]></fr>
+		<en><![CDATA["Just type the full path of a specific program or its shortcut. When you show your Object, the application will launch"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["Note : Vous pouvez cliquer-glisser l'icône de l'application dans la zone de saisie du chemin de l'application pour plus de facilité."]]></fr>
+		<en><![CDATA["Hint : You can drag'n drop the icon of the application in the path field to make your life easier when setting the application."]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+		<item><map>
+			<key>"notSupported"</key>
+			<fr><![CDATA["Je ne peux pas jouer cette application. Montrez votre objet à un mirror !"]]></fr>
+			<en><![CDATA["I can't execute this application... Show your Object to a Mirror!"]]></en>
+			<it><![CDATA["Non posso far funzionare quest'applicazione . Mostra il tuo Oggetto al Mirror"]]></it>
+			<es><![CDATA["No puedo activar esta aplicación. Muestra tu objeto a un mirror!"]]></es>
+			<de><![CDATA["Ich kann diese Applikation nicht starten. Zeigen Sie Ihr Objekt einem Mirror!"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></item>
+
+	</list></dico>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+
+	<item><map>
+		<key>"filePath"</key>
+		<type>"TextArea"</type><!-- Should be TextArea when it will be supported -->
+		<datatype>"text"</datatype>
+		<maxlength>500</maxlength>
+		<cols>80</cols>
+		<rows>2</rows>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Chemin de l'application"]]></fr>
+			<en><![CDATA["Application path"]]></en>
+			<it><![CDATA["Radice"]]></it>
+			<es><![CDATA["Ruta"]]></es>
+			<de><![CDATA["Pfad"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["(vous pouvez faire un drag and drop du fichier à lancer dans cette zone)"]]></fr>
+			<en><![CDATA["(you can drag and drop the icon of the application inside this text area)"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+
+		</map></description>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+		<supports_target>false</supports_target>
+  </map></item>
+	<!-- application can be installed on ztamp removal -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+    <minimum>0</minimum>
+    <maximum>1</maximum>
+		<supports_target>false</supports_target>
+  </map></item>
+</list></scheduling_masks>
+
+</map>

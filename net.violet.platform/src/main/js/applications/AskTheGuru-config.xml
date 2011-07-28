@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/tAxEB6tuuk -->
+	<name>"net.violet.js.asktheguru"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"lifestyle"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>200</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"AskTheGuru"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Le Gourou connaît la réponse"]]></fr>
+		<en><![CDATA["The Guru knows the answer"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["Vous vous posez des questions. C'est normal, on se pose tous des questions. Et parfois c'est difficile d'obtenir des réponses. Pensez très fort à votre question puis montrez votre Ztamp. Le Gourou a forcément une réponse."]]></fr>
+		<en><![CDATA["You ask yourself questions. We all do. And sometimes it's difficult to get the answers. Think of your questions and then show your Ztamp. The Guru has an answer."]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+
+		</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["Indiquez la langue dans laquelle vous voulez que le Gourou vous réponde."]]></fr>
+		<en><![CDATA["Indicate in which language you want the Guru to answer."]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA[""]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<dico><list>
+		<item><map>
+			<key>"bubbleText"</key>
+			<fr><![CDATA["Le Gourou réfléchit..."]]></fr>
+			<en><![CDATA["Guru meditation..."]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></item>
+	</list></dico>
+</map></resources>
+
+<settings><list>
+
+	<item><map>
+		<key>"lang"</key>
+		<type>"Popup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Langue du gourou"]]></fr>
+			<en><![CDATA["Guru's language"]]></en>
+			<it><![CDATA["Lingua"]]></it>
+			<es><![CDATA["Idioma"]]></es>
+			<de><![CDATA["Sprache"]]></de>
+			<pt><![CDATA["Língua"]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Choisissez la langue dans laquelle vous voulez que le Gourou vous réponde."]]></fr>
+			<en><![CDATA["Choose the language in which you want the Guru to answer."]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map><value>"fr"</value><label>"Français"</label></map></item>
+			<item><map><value>"en"</value><label>"English (UK)"</label></map></item>
+			<item><map><value>"us"</value><label>"English (US)"</label></map></item>
+			<item><map><value>"de"</value><label>"Deutsch"</label></map></item>
+			<item><map><value>"es"</value><label>"Español"</label></map></item>
+
+		</list></items>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

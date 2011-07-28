@@ -1,0 +1,152 @@
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+    <display-name>VioletOS</display-name>
+    <description>This is the VioletOS server application.</description>
+	<listener>
+  		<listener-class>net.violet.platform.management.ShutdownHook</listener-class>
+	</listener>
+
+  	<servlet>
+    	<servlet-name>bc</servlet-name>
+    	<servlet-class>net.violet.platform.web.BcEntryPoint</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>bc</servlet-name>
+		<url-pattern>/bc.jsp</url-pattern>
+	</servlet-mapping>
+
+  	<servlet>
+    	<servlet-name>itmode</servlet-name>
+    	<servlet-class>net.violet.platform.web.ItModeEntryPoint</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>itmode</servlet-name>
+		<url-pattern>/itmode.jsp</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+    	<servlet-name>ztampAppsServlet</servlet-name>
+    	<servlet-class>net.violet.platform.web.apps.ZtampAppsServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ztampAppsServlet</servlet-name>
+    	<url-pattern>/ztampApp</url-pattern>
+  	</servlet-mapping>
+  
+  
+  	<servlet>
+    	<servlet-name>p3</servlet-name>
+    	<servlet-class>net.violet.platform.web.PingV1EntryPoint</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>p3</servlet-name>
+		<url-pattern>/FR/p3.jsp</url-pattern>
+	</servlet-mapping>
+
+  	<servlet>
+    	<servlet-name>p7</servlet-name>
+    	<servlet-class>net.violet.platform.web.PingDalDalEntryPoint</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>p7</servlet-name>
+		<url-pattern>/p7.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+    	<servlet-name>upload</servlet-name>
+    	<servlet-class>net.violet.platform.web.UploadEntryPoint</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>upload</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+	
+  	<servlet>
+    	<servlet-name>record</servlet-name>
+    	<servlet-class>net.violet.platform.web.VoiceHandler</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>record</servlet-name>
+		<url-pattern>/record.jsp</url-pattern>
+	</servlet-mapping>
+
+  	<servlet>
+    	<servlet-name>rfid</servlet-name>
+    	<servlet-class>net.violet.platform.web.RfidServlet</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>rfid</servlet-name>
+		<url-pattern>/rfid.jsp</url-pattern>
+	</servlet-mapping>
+	
+  <!-- Redirige vers une ressource externe en accès exclusif -->
+  <servlet>
+    <servlet-name>redirector</servlet-name>
+    <servlet-class>net.violet.platform.web.RedirectorEntryPoint</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>redirector</servlet-name>
+    <url-pattern>/redirector</url-pattern>
+  </servlet-mapping>
+	
+  <!-- nouvelle API -->
+  <servlet>
+    <servlet-name>rest</servlet-name>
+    <servlet-class>net.violet.platform.api.endpoints.RESTEndpoint</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>rest</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>xmlrpc</servlet-name>
+    <servlet-class>net.violet.platform.api.endpoints.XMLRPCEndpoint</servlet-class>
+    <init-param>
+      <param-name>enabledForExtensions</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>xmlrpc</servlet-name>
+    <url-pattern>/xmlrpc</url-pattern>
+  </servlet-mapping>
+
+  <!-- Authentification requise pour l'API -->
+  <security-constraint>
+    <display-name>Public API</display-name>
+    <web-resource-collection>
+      <web-resource-name>Public API entry points</web-resource-name>
+      <!-- Define the context-relative URL(s) to be protected -->
+      <url-pattern>/xmlrpc</url-pattern>
+      <url-pattern>/rest/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Anyone with one of the listed roles may access this area -->
+      <role-name>APPLICATION</role-name>
+      <role-name>COMPONENT</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Login configuration uses form-based authentication -->
+  <login-config>
+    <auth-method>DIGEST</auth-method>
+    <realm-name>api.violet.net</realm-name>
+  </login-config>
+
+  <!-- Security roles referenced by this web application -->
+  <security-role>
+    <role-name>APPLICATION</role-name>
+    <description>Direct application call</description>
+  </security-role>
+  <security-role>
+    <role-name>COMPONENT</role-name>
+    <description>Internal API call between components</description>
+  </security-role>
+
+</web-app>

@@ -1,0 +1,15 @@
+Il tuo messaggio  :
+
+MESSAGE
+
+Inviato a FIRST_NAME LAST_NAME
+Attraverso il suo Oggetto OBJ_RECIPIENT
+è stato riprodotto NB_TIMES volte
+
+
+
+++ QUALCOSINA CHE SAREBBE MEGLIO TU SAPESSI ++
+- Esistono svariati modi per inviare dei messaggi. Puoi inviare messaggi con la tua voce, inviare delle canzoni MP3 o delle cartoline sonore . Grazie a Violet potrai inventare nuove forme inedite di comunicazione.
+- Desideri non ricevere più le notifiche quando i tuoi messaggi vengono riprodotti ? Vai alle Impostazioni del tuo conto.
+
+-- Violet. Let All Things Be Connected --

@@ -1,0 +1,7 @@
+application=webui
+
+[with_session]
+url=messages/sendMessage
+content_type=text/yaml
+post_data=@yaml/message.sendMessage.yml
+regex=~

@@ -1,0 +1,15 @@
+<map>
+<settings>
+<list>
+
+	<item>
+	<map>
+		<type>"ObjectPicker"</type>
+		<key>"friend_object_id"</key>
+		<label>"srv_communion/enter_name"</label>
+	</map>
+	</item>
+
+</list>
+</settings>
+</map>

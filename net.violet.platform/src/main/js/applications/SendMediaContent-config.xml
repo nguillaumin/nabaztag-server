@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/JzzH8wc9O2 -->
+	<name>"net.violet.js.sendmediacontent"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"communication"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>1000</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"SendMediaContent"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Envoyer un contenu multimédia"]]></fr>
+		<en><![CDATA["Send Multimedia content"]]></en>
+		<es><![CDATA["Enviar un contenido de los medios de comunicación."]]></es>
+		<it><![CDATA["Inviare del contenuto multimediale"]]></it>
+		<de><![CDATA["Multimedia Content senden "]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["コレクションの送信"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Indiquez un fichier de votre Bibliothèque Violet.net (mp3, image) et à chaque détection du Ztamp il sera envoyé au destinataire de votre choix. <br/>
+Exemple : Posez la photo de votre amie sur votre Mir:ror, son Nabaztag lui chantera « Que je t'aime ! ».</p>"]]></fr>
+		<en><![CDATA["Select a media file from your Violet.net library (mp3, image...): it will be sent to the specified recipient every time the Ztamp is detected.<br/>
+Example: Place a photograph of your sweetheart on your Mir:ror, and her Nabaztag will sing her « I just called to say I love you! »"]]></en>
+		<es><![CDATA["<p>Indica un archivo de tu Biblioteca Violet.net (mp3, imagen) y cada vez que se detecte el Ztamp, se le enviará al destinatario que hayas elegido. <br/>Ejemplo: coloca la foto de tu amiga en tu Mir:ror, su Nabaztag le cantará  « ¡Te amo ! »</p>"]]></es>
+		<it><![CDATA["<p>Indica il file, all'interno della tua Biblioteca Violet.net (mp3, immagine), che verrà inviato ad un destinatario preciso ogni volta che lo Ztamp verrà riconosciuto. <br/>
+Esempio: Posa la foto della tua dolce metà sul tuo Mir:ror, il suo Nabaztag canterà « Trottolino amoroso ». </p>
+"]]></it>
+		<de><![CDATA["<p>Geben Sie eine Datei Ihrer Violet.net Bibliothek (mp3, Bild) an.  Bei jeder Erkennung des Ztamp wird sie an einen Empfänger Ihrer Wahl gesendet. <br/>
+Beispiel: Legen Sie das Foto Ihrer Freundin auf Ihren Mir:ror; Ihr Nabaztag singt « Je t'aime ! ». </p>
+"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>Violet.net のコレクションにあるファイルを、ズタンプをかざしたときに友達に送ることができます。<br/>たとえば、恋人の写真をミラーやナバズタグにかざした時に、恋人のナバズタグから愛を伝える音楽を流すことができます。</p>"]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Indiquez le nom du destinataire. (Vous pouvez afficher la liste de vos contacts et sélectionner parmi eux).<br/>
+Puis, indiquez le nom de celui de ses objets auquel vous voulez envoyer le contenu. <br/>
+Sélectionnez le fichier parmi ceux qui sont chargés dans votre bibliothèque Violet.net. <br/>
+Si vous souhaitez envoyer plusieurs fichiers, ajoutez plusieurs fois cette application au même Ztamp. <br/>
+Fonctionne avec Mir:ror et Nabaztag:tag.</p>"]]></fr>
+		<en><![CDATA["<p>Enter the recipient's name. (You can select it from your list of contacts).<br/>
+Next, enter the name of the object to which you want to send the content.<br/>
+Choose a file from your Violet.net library.<br/>
+If you'd like to send multiple files, add the application to the same Ztamp several times.<br/>
+Works with Mir:ror and Nabaztag:tag.</p>"]]></en>
+		<it><![CDATA["<p>Indica il destinatario. (Puoi trovarlo nella lista dei tuoi contatti).<br/>
+Indica il nome del suo oggetto al quale desideri mandare del contenuto multimediale. <br/>
+Seleziona il file da inviare tra quelli della tua Biblioteca Violet.net. <br/>
+Se desideri inviare più files, aggiungi più volte quest'applicazione allo stesso Ztamp. <br/>
+Funziona con Nabaztag:tag e Mir:ror.</p>"]]></it>
+		<es><![CDATA["<p>Indica el nombre del destinatario. (Puedes visualizar la lista de tus contactos y seleccionar entre ellos). <br/>Luego, indica el nombre de los objetos a los cuales quieres enviar el contenido.  <br/>
+Selecciona el archivo entre los que están cargados en tu biblioteca Violet.net.<br/>
+Si deseas enviar varios archivos, añade varias veces esta aplicación al mismo Ztamp.<br/>
+Fonctionne avec Mir:ror et Nabaztag:tag.</p>"]]></es>
+		<de><![CDATA["<p>Geben Sie den Empfängernamen ein. (Sie können einen Empfänger aus Ihrer Kontaktliste auswählen).<br/>
+Geben Sie dann den Namen desjenigen ihrer/seiner Objekte an, an das Sie den Content senden wollen. <br/>
+Wählen Sie eine Datei aus Ihrer Bibliothek Violet.net aus. <br/>
+Wollen Sie mehrere Dateien senden, fügen Sie diese Applikation mehrmals zum gleichen Ztamp hinzu. <br/>
+Funktioniert mit Mir:ror und Nabaztag:tag.</p>"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["<p>Violet.net のアカウントを持つ友達の名前を入力します。（フレンドリストなどから選択してください）<br/>次にファイルを送りたいアイテムの名前を入力します。<br/>同じズタンプで複数のファイルを送信することもできます。<br/>このアプリケーションは、ナバズタグ：タグとミラーで利用できます。</p>"]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!-- Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA["Communication, Messages"]]></fr>
+		<en><![CDATA["Communication, Messages"]]></en>
+		<it><![CDATA["Comunicazione, Messaggi"]]></it>
+		<es><![CDATA["Comunicación, Mensajes"]]></es>
+		<de><![CDATA["Kommunikation, Nachrichten"]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA["コミュニケーション、メッセージ"]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+	</list></dico>
+
+	<files><list>
+		<!-- <entry name="media/audio/intro" fileName="intro.m3" /> -->
+	</list></files>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"objectDestID"</key>
+		<type>"ObjectPicker"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Destinataire"]]></fr>
+			<en><![CDATA["To"]]></en>
+			<es><![CDATA["Destinatario"]]></es>
+			<it><![CDATA["Destinatario"]]></it>
+			<de><![CDATA["An"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["宛先"]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Sélectionnez le destinataire du message multimédia."]]></fr>
+			<en><![CDATA["Select the multimedia message recipient"]]></en>
+			<es><![CDATA["Selecciona el destinatario del mensaje."]]></es>
+			<it><![CDATA["Seleziona il destinatario del messaggio multimediale"]]></it>
+			<de><![CDATA["Wählen Sie den Empfänger der Multimedianachricht aus."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["ファイルを送る宛先を選択してください"]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"mediaFileID"</key>
+		<type>"MediaPicker"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Contenu multimédia"]]></fr>
+			<en><![CDATA["Multimedia content"]]></en>
+			<es><![CDATA["Contenidos multimedia"]]></es>
+			<it><![CDATA["Contenuto multimediale"]]></it>
+			<de><![CDATA["Multimedianachricht"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["ファイル"]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Sélectionnez le fichier de votre librairie à envoyer."]]></fr>
+			<en><![CDATA["Select the file to be sent from your library."]]></en>
+			<es><![CDATA["Selecciona el archivo de la biblioteca."]]></es>
+			<it><![CDATA["Seleziona il file da inviare tra quelli della tua Biblioteca."]]></it>
+			<de><![CDATA["Wählen Sie die zu sendende Bibliotheksdatei aus."]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA["コレクションからファイルを選択してください。"]]></ja>
+		</map></description>
+
+	</map></item>
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+		<supports_target>false</supports_target>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

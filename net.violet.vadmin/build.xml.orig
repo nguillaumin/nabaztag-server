@@ -1,0 +1,243 @@
+<project name="VAdmin" default="compile.project">
+
+	<!-- ===================== Property Definitions =========================== -->
+
+	<property file="build.properties" />
+
+	<!-- ==================== File and Directory Names ======================== -->
+
+	<property name="lib.dir" value="${basedir}/lib" description="Location of the project libraries"/>
+	<property name="Xlib.dir" value="${COMMONDIR}/lib" description="Location of the project libraries"/>
+	<property name="src.dir" value="${basedir}/net" description="Location of the project sources"/>
+	<property name="config.dir" value="${basedir}/config" description="Location of the configuration files"/>
+	<property name="build.dir" value="${basedir}/build" description="" />
+	<property name="web.dir" value="${build.dir}/WEB-INF" description="" />
+	<property name="web.conf.dir" value="${web.dir}/conf" description="" />
+	<property name="classes.dest" value="${web.dir}/classes" description="Destination directory for project classes"/>
+	<property name="src.dest" value="${web.dir}/src" description="Destination directory for JSP classes"/>
+	
+	<property name="OS.lib" value="${OSDIR}/lib" />
+	<property name="tomcat.lib" value="${catalina.home}/common/lib" />
+	<property name="deploy.war" value="${build.dir}/${war.filename}" />
+	<property name="web.lib" value="${web.dir}/lib" />
+	
+	<tstamp>
+		<format property="now" pattern="yyyy.MM.dd_kk:mm:ss" locale="en" />
+	</tstamp>
+
+	<path id="svn.classpath">
+		<pathelement location="${Xlib.dir}/svnant.jar" />
+		<pathelement location="${Xlib.dir}/svnClientAdapter.jar" />
+		<pathelement location="${Xlib.dir}/svnjavahl.jar" />
+	</path>
+	
+	<target name="get.hostname">
+		    <property environment="env"/>
+			<condition property="hostname" value="${env.HOSTNAME}">
+				<isset property="env.HOSTNAME"/>
+			</condition>
+			<condition property="hostname" value="${env.HOST}">
+				<isset property="env.HOST"/>
+			</condition>
+			<exec executable="hostname" outputProperty="hostname" />
+		</target>
+
+		<target name="set.server" unless="server" depends="get.hostname" description="Sets the server prefix according to the current machine.">
+			<condition property="server" value="PROD">
+				<or>
+					<equals arg1="${hostname}" arg2="angora" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="beveren" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="hotot" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="satin" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="thuringue" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="zibeline" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="bouscat" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="saxe" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="orylag" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="martre" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="renard" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="havane" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="parapluie" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="flandres" trim="true" casesensitive="false" />
+				</or>
+			</condition>
+				
+			<condition property="prod">
+				<isset property="server"/>
+			</condition>
+				
+			<condition property="server" value="S">
+				<equals arg1="${hostname}" arg2="silence" trim="true" casesensitive="false" />
+			</condition>
+					
+			<condition property="server" value="PP">
+				<or>
+					<equals arg1="${hostname}" arg2="mauve" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="pourpre" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="prune" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="mug" trim="true" casesensitive="false" />
+					<equals arg1="${hostname}" arg2="lavande" trim="true" casesensitive="false" />
+				</or>
+			</condition>
+				
+			<condition property="server" value="">
+				<not>
+					<isset property="server"/>
+				</not>
+			</condition>
+		</target>
+
+	<!-- load the svn task -->
+	<taskdef resource="svntask.properties" classpathref="svn.classpath" />
+	
+
+	<target name="svn.up">
+		<svn username="${svn.username}" password="${svn.password}">
+			<update dir="${basedir}" />
+		</svn>
+	</target>
+
+	<!-- ==================== Clean Target ==================================== -->
+
+	<target name="clean" description="Delete old classes...">
+		<delete dir="${classes.dest}" />
+		<delete dir="${src.dest}" />
+		<delete dir="${test.classes.dest}" />
+	</target>
+
+
+	<!-- ==================== Compile Target ================================== -->
+
+	<target name="OS.compile" description="gets the OS built">
+		<echo message="===== START BUILDING OS =====" />
+	    <ant antfile="${OSDIR}/build.xml" inheritAll="false" target="up.and.compile" >
+	    	<property name="classes.dest" value="${classes.dest}"/>
+	    	<property name="COMMONDIR" value="${COMMONDIR}"/>
+			<property name="PROBESDIR" value="${PROBESDIR}"/>
+			<property name="DBENGINEDIR" value="${DBENGINEDIR}"/>
+	   	</ant>	
+	</target>
+	
+	<target name="OS.compile.test" description="gets the OS built">
+		<echo message="===== START BUILDING OS TESTS =====" />
+	    <ant antfile="${OSDIR}/build.xml" inheritAll="false" target="compile.tests" >
+	    	<property name="test.classes.dest" value="${test.classes.dest}"/>
+	    	<property name="COMMONDIR" value="${COMMONDIR}"/>
+			<property name="PROBESDIR" value="${PROBESDIR}"/>
+			<property name="DBENGINEDIR" value="${DBENGINEDIR}"/>
+	   	</ant>	
+	</target>
+
+	<target name="common.compile" description="gets the common dev built">
+		<echo message="===== START BUILDING CommonDev =====" />
+	    <ant antfile="${COMMONDEVDIR}/build.xml" inheritAll="false" target="up.and.compile">
+	    	<property name="classes.dest" value="${classes.dest}"/>
+	    	<property name="lib.dir" value="${OS.lib}" />
+		</ant>
+	</target>
+	
+	
+	<target name="compile.project" depends="clean,set.server, OS.compile, common.compile, copy.config" description="Compile Java sources">
+		<echo message="===== START BUILDING VAdmin =====" />
+		<javac srcdir="${src.dir}" destdir="${classes.dest}" debug="on" nowarn="on" >
+			<classpath>
+				<fileset dir="${lib.dir}" excludes="${exclude.from.classpath}"/>
+				<fileset dir="${OS.lib}" excludes="${exclude.from.classpath}"/>
+				<fileset dir="${COMMONDEVDIR}/lib" excludes="${exclude.from.classpath}"/>
+				<fileset dir="${tomcat.lib}" includes="*.jar" />
+			</classpath>
+		</javac>
+	</target>
+		
+	<target name="copy.config" depends="set.server">
+		<!-- Copie des fichiers de configuration -->
+		<echo message="Copie des fichiers de configuration de VAdmin '${server}'"/>
+		<copy file="${config.dir}/web${server}.xml" tofile="${web.dir}/web.xml" overwrite="true" />
+				<copy file="${config.dir}/admin.constante.properties${server}" tofile="${classes.dest}/admin.constante.properties" overwrite="true" />
+	</target>
+
+	<target name="copy.resources">
+		<!-- Copie des fichiers non-java dans build/WEB-INF/classes -->
+		<copy todir="${classes.dest}/net" includeEmptyDirs="false">
+			<fileset dir="${basedir}/net">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- ==================== Compilation des JSP =============================== -->
+	<target name="compile.jsp" depends="compile.project" >
+		<taskdef classname="org.apache.jasper.JspC" name="jasper2">
+			<classpath id="jspc.classpath">
+				<fileset dir="${catalina.home}/bin">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="${catalina.home}/server/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="${tomcat.lib}">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="${java.home}/../lib/">
+					<include name="tools.jar" />
+				</fileset>
+				<fileset dir="${lib.dir}" excludes="${exclude.from.classpath}"/>
+			</classpath>
+		</taskdef>
+
+		<delete dir="${web.dir}/src/" />
+		<mkdir dir="${web.dir}/classes" />
+		<mkdir dir="${web.dir}/src" />
+
+		<jasper2 validateXml="false" uriroot="${build.dir}"
+		webXmlFragment="${web.dir}/generated_web.xml"
+		addWebXmlMappings="true"
+		outputDir="${web.dir}/src" />
+
+		<javac srcdir="${web.dir}/src" destdir="${web.dir}/classes" debug="on" deprecation="on" excludes="**/*.smap">
+			<classpath>
+				<fileset dir="${lib.dir}" excludes="${exclude.from.classpath}"/>
+				<!--fileset dir="${OS.lib}" excludes="${exclude.from.classpath}"/-->
+				<pathelement location="${classes.dest}" />
+				<pathelement location="${catalina.home}/common/classes" />
+				<fileset dir="${tomcat.lib}">
+					<include name="*.jar" />
+				</fileset>
+				<pathelement location="${catalina.home}/shared/classes" />
+				<fileset dir="${catalina.home}/shared/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="${catalina.home}/bin">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+			<include name="**" />
+			<exclude name="tags/**" />
+			<exclude name="**/inc_005fjavascripts_jsp.java" />
+			<exclude name="**/inc_005fheader_jsp.java" />
+			<exclude name="**/inc_005fcss_jsp.java" />
+			<exclude name="**/inc_005fnablifeMenu_jsp.java" />
+		</javac>
+	</target>
+
+	<!-- Build the WAR file. depends="compile.all,cssy_nabaztag,jsy_nabaztag" -->
+	  <target name="build.war" description="Builds the WAR file." depends="compile.jsp">
+        <echo message="===== START BUILDING WAR FILE =====" />
+	    <delete file="${deploy.war}"/>
+	    <war destfile="${deploy.war}" webxml="${web.dir}/web.xml" duplicate="fail">
+	      <webinf dir="${web.dir}">
+	      	<exclude name="src/" />
+	      </webinf>
+		  <classes dir="${basedir}" includes="${include.in.war.properties}" />
+	      <fileset dir="${build.dir}" includes="${include.in.war}"/>
+	      <lib dir="${lib.dir}" excludes="${exclude.from.warlib}"/>
+	      <lib dir="${OS.lib}" excludes="${exclude.from.warlib}"/>
+	      <lib dir="${Xlib.dir}" excludes="${exclude.from.warlib}"/>
+	      <lib dir="${DBENGINEDIR}/lib" excludes="${exclude.from.warlib}"/>
+	      <metainf dir="${build.dir}/META-INF"/>
+	    </war>
+        <echo message="===== END BUILDING WAR FILE =====" />
+	  </target>
+	
+</project>
+

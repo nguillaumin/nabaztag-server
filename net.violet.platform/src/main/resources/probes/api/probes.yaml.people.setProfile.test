@@ -1,0 +1,13 @@
+application=webui
+
+[set_Profile]
+url=people/setProfile
+content_type=text/yaml
+post_data=@yaml/people.profile.yml
+regex=~
+
+[get_Profile]
+url=people/getProfile
+content_type=text/yaml
+post_data=@yaml/people.profile.yml
+regex=PictureInformation

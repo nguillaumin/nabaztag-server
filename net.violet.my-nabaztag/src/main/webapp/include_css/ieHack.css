@@ -1,0 +1,105 @@
+/* bidouilles "anti bad browser" */
+
+input,select,textarea {padding:2px; }
+#loginBox a, #loginBox input{ position: relative; z-index: 1;}
+#alertBox {height:130px;}
+#MoreOptions {height: auto;}
+.specialBlock {height:1%;}
+
+.lastMessageHome {width:46%;}
+hr.clearer {margin: 0 0 -10px 0;}
+hr.spacer, div.spacer {margin: 0 0 -10px 0;}
+.ficheProfil .profil-scroller {height:121px;}
+.createNabcast li {height:24px;}
+.heureSelect-hold {padding-left:21px;}
+.corps {margin-left:2px;}
+/*.srv-list-entries ul.txt-list {height:47px;}*/
+.star-rating{left:10px;}
+.mainTabHead h2 {height:1%;}
+.contentMainTab {height:1%;}
+.flat-block, .flat-block-content-inner {height:1%;}
+.maMusique {height:1%;}
+.profilBlockLeft {height:1%;}
+.profilBlockRight {height:1%;}
+
+#mp3-sender .mp3-choice {height: 190px;}
+#mp3-sender .mp3-choice input { margin-left:25px; }
+
+.radio-chooser li {overflow: hidden; }
+.radio-chooser li.selected {overflow: hidden; }
+
+
+/*.tabSousNavContener-tr {width:96%}*/
+.heureSelect-hold {position:relative;}
+
+.tabNav li.active a:hover, .tabNav li.active_last a:hover {color:white}
+
+.srv-list-entries li.keywords ul {border:none;}
+.srv-list-entries ul li {float:left; width:90%; }
+.srv-list-entries ul ul li {clear:both;border:none;}
+/* .srv-main-config {border:1px solid red; width: expression( document.body.clientWidth < 1000 ? "630px": "auto" );} */
+
+.heureSelect-hold {float:none; background:none; padding-left:0;}  /* ie6 tu es mon pire cauchemar... au revoir l'icone de l'heure....*/
+
+
+.listItemContener table {width:95%;}
+
+
+#rabbitSelector { height:1%; width:97%;}
+
+* html .formButton-outside {width:1%;}
+* html .formButton-outside a{ white-space:nowrap;}
+
+legend {background:white;}
+
+#rechercheAnnuaire ul {display:block; position:absolute;}
+
+.main-cadre-top {height:1%; width:100%; }
+.main-cadre-contener, .srv-cadre-contener {height:1%; width:100%;}
+.main-cadre-content {height:1%;}
+.srv-inner, .srv-player {height:1%;}
+.srv-cadre-content {height:220px; }
+
+.wizard-img-indic {display:none;}
+
+.ajaxLoading {position:absolute;} /* pas de position fixed pour ie 6, tant pis pour lui*/
+
+
+
+button {width:auto; overflow:visible;}
+
+
+#bloc-homeBloc div.lapinTrans{  margin-top:-5px; background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/blocks/lapinTransp.png', sizingMethod='crop');}
+
+
+/* ********************************** */
+/* PNG POUR IE 6					  */
+/* ********************************** */
+/* logo nabaztag*/
+#header #mainLogo a{ background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/logoNabaztag.png', sizingMethod='scale');  }
+
+#loginBox {background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/header-login-background.png', sizingMethod='crop');}
+
+
+div.functions li.unlog {background:none; height:1%; width:1%; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/loginUnlog.png', sizingMethod='crop');}
+div.functions li.preference {background:none;  height:1%; width:1%;  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/loginPref.png', sizingMethod='crop');}
+div.functions li.rcv_message {background:none;  height:1%; width:1%;  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/layout/loginMailIco.png', sizingMethod='crop');  cursor:pointer;}
+
+div.functions a {position:relative; white-space:nowrap; }
+
+h1.icoTitle_Home 		{background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/icones_title/ico_terrier.png', sizingMethod='crop');}
+h1.icoTitle_Tools 		{background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/icones_title/ico_tools.png', sizingMethod='crop');}
+h1.icoTitle_Terrier 	{background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/icones_title/ico_terrier.png', sizingMethod='crop');}
+h1.icoTitle_Messages 	{background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/icones_title/ico_messages.png', sizingMethod='crop');}
+h1.icoTitle_Nablife 	{background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../include_img/icones_title/ico_nablife.png', sizingMethod='crop');}
+
+
+.srv-main-config { width:auto; margin:0}
+
+#global { width:99.5%;}
+
+div.ztamps-contener { height:128px; }
+ul.tabSousNav { top:-12px;}
+#rabbitSelector .macaddress {top:-14px;}
+
+.floatingMessage { /*\*/position: absolute; top: expression((25 + (ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop)) + 'px'); left: expression((10 + (ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft)) + 'px');}

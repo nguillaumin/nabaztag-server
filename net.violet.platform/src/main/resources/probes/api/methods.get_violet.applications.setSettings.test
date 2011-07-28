@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.applications.setSettings
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?"NoSuchApplication",?\],.*"method_class":"UPDATE"

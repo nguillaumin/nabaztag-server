@@ -1,0 +1,13 @@
+application=webui
+
+[set_tagtag]
+url=objects/setProfile
+content_type=text/yaml
+post_data=@yaml/objects.profile.yml
+regex=~
+
+[profile_tagtag]
+url=objects/getProfile
+content_type=text/yaml
+post_data=@yaml/objects.yml
+regex= ObjectProfile

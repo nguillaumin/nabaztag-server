@@ -1,0 +1,1662 @@
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <display-name>MyNabaztag</display-name>
+  <description>This is the MyNabaztag server application.</description>
+
+  <listener>
+    <listener-class>net.violet.platform.management.MyShutdownHook</listener-class>
+  </listener>
+
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <!-- module configurations -->
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <!--  Struts Tiles -->
+    <init-param>
+      <param-name>chainConfig</param-name>
+      <param-value>org/apache/struts/tiles/chain-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>definitions-parser-validate</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+  <!-- Standard Action Servlet Mapping -->
+  <!-- JSPC servlet mappings start -->
+
+    <servlet>
+        <servlet-name>org.apache.jsp.myTerrier_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.myTerrier_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.myMessages_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.myMessages_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.myNbReceivedMessages_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.myNbReceivedMessages_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.myNablife_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.myNablife_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.login_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.login_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjs.mynabaztag_005ftext_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjs.mynabaztag_005ftext_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fallServices_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.inc_005fallServices_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandSubscribe_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandSubscribe_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandHisto_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandHisto_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.nabcastNeedUserLogged_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.nabcastNeedUserLogged_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnablifeMenu_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.inc_005fnablifeMenu_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.Mynabcast_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.Mynabcast_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandUpload_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandUpload_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.nabcastNeedARabbit_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.nabcastNeedARabbit_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandHome_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandHome_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandCreate_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandCreate_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.badShortcut_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.badShortcut_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.serviceBadShortcut_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.serviceBadShortcut_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.nabcastBadNabcastId_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.nabcastBadNabcastId_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.myMails.inc_005fmyMailsCreate_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.myMails.inc_005fmyMailsCreate_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.myMails.inc_005fmyMailsList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myNablife.myMails.inc_005fmyMailsList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fcss_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005fcss_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fempty_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005fempty_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fjavascripts_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005fjavascripts_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fcleandico_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005fcleandico_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fdico_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005fdico_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fuserPrefs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005fuserPrefs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fnotlogged_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005fnotlogged_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fheader_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005fheader_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fclock_005fHC_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005fclock_005fHC_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005ftop_005fwarning_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.utils.inc_005ftop_005fwarning_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.en_002dGB.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.en_002dGB.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.de_002dDE.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.de_002dDE.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.en_002dUS.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.en_002dUS.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.uk.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.uk.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.fr.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.fr.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.de.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.de.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.it_002dIT.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.it_002dIT.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.es_002dES.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.es_002dES.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.pt_002dBR.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.pt_002dBR.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.es.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.es.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.fr_002dFR.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.fr_002dFR.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.br.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.br.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.it.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.it.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.us.nablife_home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.static_005fcontent.us.nablife_home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myHome.inc_005fpassword_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myHome.inc_005fpassword_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesVocal_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesVocal_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesBiblioChoice_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesBiblioChoice_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesNabshareChoice_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesNabshareChoice_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleNabshare_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleNabshare_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleBiblio_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleBiblio_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesClin_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesClin_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.myAddFriend_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.myAddFriend_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesBiblio_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesBiblio_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleClin_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleClin_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyProfil_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyProfil_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesNabshare_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesNabshare_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyAnnuaire_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyAnnuaire_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesArchived_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesArchived_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesTTS_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesTTS_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesReceived_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesReceived_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesSent_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesSent_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyAnnuaireResult_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyAnnuaireResult_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleObject_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleObject_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesClinChoice_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesClinChoice_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesMp3_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesMp3_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.terrierFriends_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.terrierFriends_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierEars_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierEars_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierMyself_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierMyself_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyMp3Edit_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyMp3Edit_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.terrierPreferences_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.terrierPreferences_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierFlash_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierFlash_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierCouche_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierCouche_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierEditComment_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierEditComment_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyListeMp3_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyListeMp3_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierEditRabbitImage_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierEditRabbitImage_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierSignature_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierSignature_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyUploadMp3_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyUploadMp3_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.terrierProfil_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.terrierProfil_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierBlackList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierBlackList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.preferences.infos_005falerts_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.preferences.infos_005falerts_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.preferences.privacy_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.preferences.privacy_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.preferences.display_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.preferences.display_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.preferences.account_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.preferences.account_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.friends.friendsList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.friends.friendsList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.friends.blackList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTerrier.friends.blackList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocNablives_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.blocs.blocNablives_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocGenerique_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.blocs.blocGenerique_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocDecouvrirNabaztag_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.blocs.blocDecouvrirNabaztag_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocFriends_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.blocs.blocFriends_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocDernierAnnuaire_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.blocs.blocDernierAnnuaire_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocMyServices_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.blocs.blocMyServices_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocError_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.blocs.blocError_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocMyNabcast_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.blocs.blocMyNabcast_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocUpdateMac_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.blocs.blocUpdateMac_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendVocal_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageSendVocal_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendBiblio_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageSendBiblio_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenBiblio_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageListenBiblio_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenMp3_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageListenMp3_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.terrierUploadPhotoReponse_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.terrierUploadPhotoReponse_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendClin_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageSendClin_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.genericOK_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.genericOK_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.genericV2_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.genericV2_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.genericNoRabbit_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.genericNoRabbit_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenTTS_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageListenTTS_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.genericNoRabbitMessages_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.genericNoRabbitMessages_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenVocal_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageListenVocal_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenClin_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageListenClin_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendTTS_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageSendTTS_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendMp3_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.myMessageSendMp3_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.inc_005fmyManageMp3Reponse_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.reponses.inc_005fmyManageMp3Reponse_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005freveil_005ffull_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005freveil_005ffull_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fsrv_005fsound_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fsrv_005fsound_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fhumeur_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fhumeur_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005ftrafic_005flight_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005ftrafic_005flight_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005ftaichi_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005ftaichi_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fbilan_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fbilan_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fgoogle_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fgoogle_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fdialog_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fdialog_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fair_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fair_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fbourse_005flight_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fbourse_005flight_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005freveil_005ffree_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005freveil_005ffree_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005ftraffic_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005ftraffic_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fair_005flight_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fair_005flight_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fbourse_005ffree_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fbourse_005ffree_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fmeteo_005ffree_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fmeteo_005ffree_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fmeteo_005flight_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fmeteo_005flight_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fbourse_005ffull_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.mySrv.inc_005fbourse_005ffull_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTools.inc_005fmyToolsApi_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myTools.inc_005fmyToolsApi_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanSelection_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.nathanSelection_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanSearch_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.nathanSearch_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanHome_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.nathanHome_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanCreate_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.nathanCreate_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.genericService_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.genericService_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanVersions_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.nathanVersions_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.twitterConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.twitterConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.nathanConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.flickrConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.flickrConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.playerConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.playerConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.gmailConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.gmailConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.rss.rssFullEdit_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.rss.rssFullEdit_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.rss.rssFullConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.rss.rssFullConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.rss.rssFreeConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.rss.rssFreeConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.clock.uploadClock_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.clock.uploadClock_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.clock.configClock_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.clock.configClock_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvLinks_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.templates.srvLinks_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvShortcutState_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.templates.srvShortcutState_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvResult_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.templates.srvResult_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvMainLayout_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.templates.srvMainLayout_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvDesc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.templates.srvDesc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvManual_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.templates.srvManual_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.podcast.podcastFreeConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.podcast.podcastFreeConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.podcast.podcastFullConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.podcast.podcastFullConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.podcast.podcastFullEdit_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.podcast.podcastFullEdit_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.webRadio.webRadioFreePlayer_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.webRadio.webRadioFreePlayer_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.webRadio.webRadioFreeConfig_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fjsp.myServices.webRadio.webRadioFreeConfig_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fimg.services.visuels_005fservices.rss.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fimg.services.visuels_005fservices.rss.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.include_005fimg.services.visuels_005fservices.podcast.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.include_005fimg.services.visuels_005fservices.podcast.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.profil_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.profil_jsp</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.myTerrier_jsp</servlet-name>
+        <url-pattern>/myTerrier.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.myMessages_jsp</servlet-name>
+        <url-pattern>/myMessages.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.myNbReceivedMessages_jsp</servlet-name>
+        <url-pattern>/myNbReceivedMessages.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.myNablife_jsp</servlet-name>
+        <url-pattern>/myNablife.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.login_jsp</servlet-name>
+        <url-pattern>/login.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjs.mynabaztag_005ftext_jsp</servlet-name>
+        <url-pattern>/include_js/mynabaztag_text.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fallServices_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/inc_allServices.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandSubscribe_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/inc_nabaztalandSubscribe.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandHisto_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/inc_nabaztalandHisto.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.nabcastNeedUserLogged_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/nabcastNeedUserLogged.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnablifeMenu_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/inc_nablifeMenu.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.Mynabcast_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/Mynabcast.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandUpload_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/inc_nabaztalandUpload.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.nabcastNeedARabbit_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/nabcastNeedARabbit.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandHome_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/inc_nabaztalandHome.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.inc_005fnabaztalandCreate_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/inc_nabaztalandCreate.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.badShortcut_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/badShortcut.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.serviceBadShortcut_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/serviceBadShortcut.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.nabcastBadNabcastId_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/nabcastBadNabcastId.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.myMails.inc_005fmyMailsCreate_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/myMails/inc_myMailsCreate.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myNablife.myMails.inc_005fmyMailsList_jsp</servlet-name>
+        <url-pattern>/include_jsp/myNablife/myMails/inc_myMailsList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fcss_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_css.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fempty_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_empty.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fjavascripts_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_javascripts.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fcleandico_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_cleandico.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fdico_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_dico.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fuserPrefs_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_userPrefs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fnotlogged_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_notlogged.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fheader_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_header.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005fclock_005fHC_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_clock_HC.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.utils.inc_005ftop_005fwarning_jsp</servlet-name>
+        <url-pattern>/include_jsp/utils/inc_top_warning.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.en_002dGB.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/en-GB/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.de_002dDE.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/de-DE/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.en_002dUS.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/en-US/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.uk.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/uk/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.fr.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/fr/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.de.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/de/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.it_002dIT.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/it-IT/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.es_002dES.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/es-ES/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.pt_002dBR.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/pt-BR/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.es.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/es/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.fr_002dFR.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/fr-FR/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.br.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/br/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.it.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/it/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.static_005fcontent.us.nablife_home_jsp</servlet-name>
+        <url-pattern>/include_jsp/static_content/us/nablife.home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myHome.inc_005fpassword_jsp</servlet-name>
+        <url-pattern>/include_jsp/myHome/inc_password.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesVocal_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesVocal.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesBiblioChoice_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesBiblioChoice.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesNabshareChoice_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesNabshareChoice.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleNabshare_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/ajax_shuffleNabshare.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleBiblio_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/ajax_shuffleBiblio.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesClin_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesClin.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.myAddFriend_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/myAddFriend.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesBiblio_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesBiblio.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleClin_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/ajax_shuffleClin.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyProfil_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myProfil.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesNabshare_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesNabshare.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyAnnuaire_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myAnnuaire.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesArchived_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesArchived.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesTTS_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesTTS.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesReceived_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesReceived.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesSent_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesSent.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyAnnuaireResult_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myAnnuaireResult.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.ajax_005fshuffleObject_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/ajax_shuffleObject.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesClinChoice_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesClinChoice.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myMessage.inc_005fmyMessagesMp3_jsp</servlet-name>
+        <url-pattern>/include_jsp/myMessage/inc_myMessagesMp3.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.terrierFriends_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/terrierFriends.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierEars_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myTerrierEars.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierMyself_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myTerrierMyself.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyMp3Edit_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myMp3Edit.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.terrierPreferences_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/terrierPreferences.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierFlash_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myTerrierFlash.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierCouche_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myTerrierCouche.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierEditComment_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myTerrierEditComment.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyListeMp3_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myListeMp3.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierEditRabbitImage_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myTerrierEditRabbitImage.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierSignature_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myTerrierSignature.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyUploadMp3_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myUploadMp3.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.terrierProfil_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/terrierProfil.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.inc_005fmyTerrierBlackList_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/inc_myTerrierBlackList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.preferences.infos_005falerts_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/preferences/infos_alerts.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.preferences.privacy_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/preferences/privacy.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.preferences.display_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/preferences/display.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.preferences.account_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/preferences/account.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.friends.friendsList_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/friends/friendsList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTerrier.friends.blackList_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTerrier/friends/blackList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocNablives_jsp</servlet-name>
+        <url-pattern>/include_jsp/blocs/blocNablives.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocGenerique_jsp</servlet-name>
+        <url-pattern>/include_jsp/blocs/blocGenerique.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocDecouvrirNabaztag_jsp</servlet-name>
+        <url-pattern>/include_jsp/blocs/blocDecouvrirNabaztag.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocFriends_jsp</servlet-name>
+        <url-pattern>/include_jsp/blocs/blocFriends.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocDernierAnnuaire_jsp</servlet-name>
+        <url-pattern>/include_jsp/blocs/blocDernierAnnuaire.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocMyServices_jsp</servlet-name>
+        <url-pattern>/include_jsp/blocs/blocMyServices.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocError_jsp</servlet-name>
+        <url-pattern>/include_jsp/blocs/blocError.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocMyNabcast_jsp</servlet-name>
+        <url-pattern>/include_jsp/blocs/blocMyNabcast.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.blocs.blocUpdateMac_jsp</servlet-name>
+        <url-pattern>/include_jsp/blocs/blocUpdateMac.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendVocal_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageSendVocal.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendBiblio_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageSendBiblio.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenBiblio_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageListenBiblio.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenMp3_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageListenMp3.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.terrierUploadPhotoReponse_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/terrierUploadPhotoReponse.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendClin_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageSendClin.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.genericOK_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/genericOK.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.genericV2_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/genericV2.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.genericNoRabbit_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/genericNoRabbit.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenTTS_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageListenTTS.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.genericNoRabbitMessages_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/genericNoRabbitMessages.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenVocal_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageListenVocal.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageListenClin_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageListenClin.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendTTS_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageSendTTS.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.myMessageSendMp3_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/myMessageSendMp3.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.reponses.inc_005fmyManageMp3Reponse_jsp</servlet-name>
+        <url-pattern>/include_jsp/reponses/inc_myManageMp3Reponse.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005freveil_005ffull_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_reveil_full.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fsrv_005fsound_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_srv_sound.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fhumeur_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_humeur.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005ftrafic_005flight_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_trafic_light.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005ftaichi_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_taichi.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fbilan_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_bilan.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fgoogle_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_google.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fdialog_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_dialog.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fair_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_air.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fbourse_005flight_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_bourse_light.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005freveil_005ffree_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_reveil_free.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005ftraffic_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_traffic.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fair_005flight_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_air_light.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fbourse_005ffree_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_bourse_free.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fmeteo_005ffree_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_meteo_free.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fmeteo_005flight_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_meteo_light.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.mySrv.inc_005fbourse_005ffull_jsp</servlet-name>
+        <url-pattern>/include_jsp/mySrv/inc_bourse_full.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myTools.inc_005fmyToolsApi_jsp</servlet-name>
+        <url-pattern>/include_jsp/myTools/inc_myToolsApi.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanSelection_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/nathanSelection.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanSearch_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/nathanSearch.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanHome_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/nathanHome.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanCreate_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/nathanCreate.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.genericService_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/genericService.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanVersions_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/nathanVersions.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.twitterConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/twitterConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.nathanConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/nathanConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.flickrConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/flickrConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.playerConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/playerConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.gmailConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/gmailConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.rss.rssFullEdit_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/rss/rssFullEdit.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.rss.rssFullConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/rss/rssFullConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.rss.rssFreeConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/rss/rssFreeConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.clock.uploadClock_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/clock/uploadClock.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.clock.configClock_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/clock/configClock.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvLinks_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/templates/srvLinks.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvShortcutState_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/templates/srvShortcutState.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvResult_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/templates/srvResult.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvMainLayout_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/templates/srvMainLayout.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvDesc_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/templates/srvDesc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.templates.srvManual_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/templates/srvManual.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.podcast.podcastFreeConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/podcast/podcastFreeConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.podcast.podcastFullConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/podcast/podcastFullConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.podcast.podcastFullEdit_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/podcast/podcastFullEdit.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.webRadio.webRadioFreePlayer_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/webRadio/webRadioFreePlayer.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fjsp.myServices.webRadio.webRadioFreeConfig_jsp</servlet-name>
+        <url-pattern>/include_jsp/myServices/webRadio/webRadioFreeConfig.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fimg.services.visuels_005fservices.rss.index_jsp</servlet-name>
+        <url-pattern>/include_img/services/visuels_services/rss/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.include_005fimg.services.visuels_005fservices.podcast.index_jsp</servlet-name>
+        <url-pattern>/include_img/services/visuels_services/podcast/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.profil_jsp</servlet-name>
+        <url-pattern>/WEB-INF/profil.jsp</url-pattern>
+    </servlet-mapping>
+
+<!-- JSPC servlet mappings end -->
+
+  <servlet-mapping>
+      <servlet-name>action</servlet-name>
+      <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+  <!-- Struts Tag Library Descriptors -->
+  <taglib>
+      <taglib-uri>/tags/struts-bean</taglib-uri>
+      <taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+  </taglib>
+  <taglib>
+      <taglib-uri>/tags/struts-html</taglib-uri>
+      <taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+  </taglib>
+  <taglib>
+      <taglib-uri>/tags/struts-logic</taglib-uri>
+      <taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+  </taglib>
+  <taglib>
+      <taglib-uri>/tags/struts-nested</taglib-uri>
+      <taglib-location>/WEB-INF/struts-nested.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-tiles.tld</taglib-uri>
+    <taglib-location>/WEB-INF/struts-tiles.tld</taglib-location>
+  </taglib>
+
+ </web-app>

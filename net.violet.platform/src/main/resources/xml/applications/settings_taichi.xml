@@ -1,0 +1,25 @@
+<map>
+<settings>
+<list>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"source"</key>
+		<label>"srv_taichi/choose_frequency"</label>
+		<items>
+			<list>
+			
+			<item><map><type>"PopupItem"</type><label>"srv_taichi/freq_rare"</label><separator>false</separator><enabled>true</enabled><value>"taichi.slow"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"srv_taichi/freq_normal"</label><separator>false</separator><enabled>true</enabled><value>"taichi.normal"</value></map></item>
+	<item><map><type>"PopupItem"</type><label>"srv_taichi/freq_often"</label><separator>false</separator><enabled>true</enabled><value>"taichi.fast"</value></map></item>
+			</list>
+		</items>
+	</map>
+	</item>
+	
+	
+
+</list>
+</settings>
+</map>

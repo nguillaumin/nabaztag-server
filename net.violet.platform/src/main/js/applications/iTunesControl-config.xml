@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+	<app><map>
+		<!-- application + application_profile -->
+		<!-- http://etherpad.com/TciM5hMgt3 -->
+		<name>"net.violet.js.itunescontrol"</name>
+		<author>"dev-js@violet.net"</author>
+		<category>"music"</category>
+		<class>"native"</class>
+		<language>"JAVASCRIPT"</language>
+		<apiVersion>"0.8"</apiVersion>
+		<opensource>false</opensource>
+		<interactive>false</interactive>
+		<visible>true</visible>
+		<removable>true</removable>
+		<rank>3000</rank>
+		<credentials><map>
+			<!-- Creates application_credentials entry -->
+			<public_key>"iTunesControl"</public_key>
+			<private_key>"private"</private_key>
+		</map></credentials>
+		<title><map>
+			<fr><![CDATA["Contrôler iTunes"]]></fr>
+			<en><![CDATA["iTunes Controls"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></title>
+		<description><map>
+			<fr><![CDATA["<p>Démarrer la lecture de ses morceaux iTunes, suspendre/reprendre la liste de lecture, changer de morceau, quitter iTunes... Contrôlez iTunes avec vos Objets.</p>"]]></fr>
+			<en><![CDATA["<p>Start iTunes playback, pause/resume playback, change track, quit iTunes... Control your iTunes with your Objects.</p>"]]></en>
+			<it><![CDATA["<p></p>"]]></it>
+			<es><![CDATA["<p></p>"]]></es>
+			<de><![CDATA["<p></p>"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+		<instructions><map>
+			<fr><![CDATA["<p><br/>Choisissez l'action à réaliser et si vous souhaitez qu'elle soit exécutée lorsque vous montrez ou lorsque vous retirez votre Objet du Mir:ror.<br/>Note: iTunes doit être installé sur l'ordinateur connecté au Mir:ror.</p>"]]></fr>
+			<en><![CDATA["<p><br/>Choose the action to perform and if you want it to run when you show or when you remove your Object from the Mir:ror.<br/>Note : iTunes must be installed on the computer connected to the Mir:ror.</p>"]]></en>
+			<it><![CDATA["<p><br/>Questo servizio funziona unicamente su un Mir:ror collegato a un computer in cui è installato iTunes.</p>"]]></it>
+			<es><![CDATA["<p><br/>Este servicio sólo funciona en un Mir:ror conectado a un ordenador en el cuan se ha instalado en software iTunes.</p>"]]></es>
+			<de><![CDATA["<p><br/>Dieser Dienst funktioniert ausschließlich mit einem Mir:ror, er an einen Computer angeschlossen ist, auf dem iTunes installiert wurde.</p>"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></instructions>
+	</map></app>
+	<resources><map/></resources>
+	<settings><list>
+		<!-- List of parameters to display in the settings -->
+		<item><map>
+			<key>"action"</key>
+			<type>"Popup"</type>
+			<datatype>"text"</datatype>
+			<required>true</required>
+			<default_value>""</default_value>
+			<label><map>
+				<!-- Dico key in the form : app/<appName>/settings/<key> -->
+				<fr><![CDATA["Action à réaliser"]]></fr>
+				<en><![CDATA["Action to perform"]]></en>
+				<it><![CDATA["Azione"]]></it>
+				<es><![CDATA["Acción"]]></es>
+				<de><![CDATA["Funktion"]]></de>
+				<pt><![CDATA[""]]></pt>
+				<ja><![CDATA["コントロール"]]></ja>
+			</map></label>
+			<description><map>
+				<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+				<fr><![CDATA["Sélectionnez l'action à exécuter par iTunes lors de la lecture du Ztamp"]]></fr>
+				<en><![CDATA["Select the action to be performed by iTunes when the Ztamp is read"]]></en>
+				<it><![CDATA["Seleziona l'azione che iTunes deve eseguire alla lettura dello Ztamp"]]></it>
+				<es><![CDATA["Selecciona la acción que iTunes tiene que ejecutar durante la lectura del Ztamp"]]></es>
+				<de><![CDATA["Wählen Sie die Funktion aus, die iTunes nach Lesen des Ztamp ausführen soll"]]></de>
+				<pt><![CDATA[""]]></pt>
+				<ja><![CDATA["ズタンプを使用した時の動作の選択してください"]]></ja>
+			</map></description>
+
+			<items><list>
+				<item><map>
+					<value>"play"</value>
+					<label><map>
+						<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+						<fr><![CDATA["Démarrer la lecture"]]></fr>
+						<en><![CDATA["Start playback"]]></en>
+						<it><![CDATA["Avviare la lettura"]]></it>
+						<es><![CDATA["Iniciar la lectura "]]></es>
+						<de><![CDATA["Wiedergabe"]]></de>
+						<pt><![CDATA[""]]></pt>
+						<ja><![CDATA["再生"]]></ja>
+					</map></label>
+				</map></item>
+				<item><map>
+					<value>"toggle"</value>
+					<label><map>
+						<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+						<fr><![CDATA["Arrêter/Reprendre"]]></fr>
+						<en><![CDATA["Stop/Resume"]]></en>
+						<it><![CDATA["Pausa/Riprendere"]]></it>
+						<es><![CDATA["Parar/Recomenzar"]]></es>
+						<de><![CDATA["Stopp/Wiedergabe"]]></de>
+						<pt><![CDATA[""]]></pt>
+						<ja><![CDATA["一時停止/再開"]]></ja>
+					</map></label>
+				</map></item>
+				<item><map>
+					<value>"previous"</value>
+					<label><map>
+						<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+						<fr><![CDATA["Morceau précédent"]]></fr>
+						<en><![CDATA["Previous track"]]></en>
+						<it><![CDATA["Pezzo precedente"]]></it>
+						<es><![CDATA["Música precedente"]]></es>
+						<de><![CDATA["Vorheriger"]]></de>
+						<pt><![CDATA[""]]></pt>
+						<ja><![CDATA["前へ"]]></ja>
+					</map></label>
+				</map></item>
+				<item><map>
+					<value>"next"</value>
+					<label><map>
+						<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+						<fr><![CDATA["Morceau suivant"]]></fr>
+						<en><![CDATA["Next track"]]></en>
+						<it><![CDATA["Pezzo successivo"]]></it>
+						<es><![CDATA["Música siguiente"]]></es>
+						<de><![CDATA["Weiter"]]></de>
+						<pt><![CDATA[""]]></pt>
+						<ja><![CDATA["次へ"]]></ja>
+					</map></label>
+				</map></item>
+				<item><map>
+					<value>"quit"</value>
+					<label><map>
+						<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+						<fr><![CDATA["Arrêter et quitter iTunes"]]></fr>
+						<en><![CDATA["Stop and quit iTunes"]]></en>
+						<it><![CDATA["Stoppare e chiudere iTunes"]]></it>
+						<es><![CDATA["Parar y salir de iTunes"]]></es>
+						<de><![CDATA["Stopp und Beenden von iTunes"]]></de>
+						<pt><![CDATA[""]]></pt>
+						<ja><![CDATA["iTunesの終了"]]></ja>
+					</map></label>
+				</map></item>
+
+			</list></items>
+		</map></item>
+	</list></settings>
+
+	<scheduling_masks><list>
+		<!-- application can be installed on ztamp detection -->
+		<item><map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampDetection"</event>
+			<label>"LOC_events/ZtampDetection"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map></item>
+		<!-- application can be installed on ztamp removal -->
+		<item><map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampRemoval"</event>
+			<label>"LOC_events/ZtampRemoval"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map></item>
+	</list></scheduling_masks>
+</map>

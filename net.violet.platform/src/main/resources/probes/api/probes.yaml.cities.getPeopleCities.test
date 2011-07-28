@@ -1,0 +1,5 @@
+application=webui
+
+url=cities/getPeopleCities/FR
+content_type=text/yaml
+regex=- Paris

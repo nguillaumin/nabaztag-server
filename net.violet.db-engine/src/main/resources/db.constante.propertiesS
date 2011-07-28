@@ -1,0 +1,19 @@
+
+URL_DBTESTCORE = jdbc:mysql://127.0.0.1/bdCoreTest
+
+URL_DBCORE = jdbc:mysql://127.0.0.1/bdCoreTest?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
+URL_DBCORE_W = jdbc:mysql://127.0.0.1/bdCoreTest?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
+URL_DBCORE_R = jdbc:mysql://127.0.0.1/bdCoreTest?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
+
+
+URL_DBEJABBERD = jdbc:mysql://127.0.0.1/ejabberdnabaztagcom?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
+
+URL_STATS = jdbc:mysql://127.0.0.1/bdCoreTest?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
+
+# Spread
+SPREAD_HOST = 127.0.0.1
+
+#CACHE
+TIME_TO_CLEAN = 300000
+MAX_CACHE_ABSTRACT_RECORD_ENTRIES = 80000
+MAX_CACHE_DB_COLLECTION_ENTRIES = 500

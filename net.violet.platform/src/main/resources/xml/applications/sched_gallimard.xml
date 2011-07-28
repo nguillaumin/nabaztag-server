@@ -1,0 +1,19 @@
+<map>
+<scheduling_masks>
+	<list>
+	
+	<item>
+		<map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampDetection"</event>
+			<label>"LOC_events/ZtampDetection"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map>
+	</item>
+
+	</list>
+
+</scheduling_masks>
+</map>

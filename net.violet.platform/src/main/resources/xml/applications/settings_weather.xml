@@ -1,0 +1,550 @@
+<map>
+<settings>
+<list>
+	
+	<item>
+	<map>
+		<type>"RadioGroup"</type>
+		<key>"unit"</key>
+		<label>"srv_weather/typedeg"</label>
+		<items>	
+			<list>
+	
+				<item>
+				<map>
+					<type>"RadioButton"</type>
+					<label>"srv_weather/degres"</label>
+					<value>"1"</value>
+				</map>
+				</item>
+
+				<item>
+				<map>
+					<type>"RadioButton"</type>
+					<label>"srv_weather/farenheit"</label>
+					<value>"2"</value>
+				</map>
+				</item>
+				
+			</list>
+		</items>
+	</map>
+	</item>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"source"</key>
+		<label>"srv_weather/choose_city"</label>
+		<items>
+			<list>
+			
+			<item><map><type>"PopupItem"</type><label>"source_weather/AFGHANISTAN"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Kabul"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AFGHANISTAN.Kaboul.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/ALGERIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Algiers"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALGERIE.Alger.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/ARGENTINA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Buenos Aires"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ARGENTINE.Buenos Aires.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/AUSTRALIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Adelaide"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AUSTRALIE.Adelaïde.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Brisbane"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AUSTRALIE.Brisbane.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Canberra"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AUSTRALIE.Canberra.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Hobart"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AUSTRALIE.Hobart.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Melbourne"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AUSTRALIE.Melbourne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Perth"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AUSTRALIE.Perth.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Sydney"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AUSTRALIE.Sydney.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/AUSTRIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Linz"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AUTRICHE.Linz.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Vienna"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AUTRICHE.Vienne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/BELGIUM"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Anvers"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BELGIQUE.Anvers.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Brussells"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BELGIQUE.Bruxelles.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Charleroi"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BELGIQUE.Charleroi.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Liège"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BELGIQUE.Liège.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Oostende"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BELGIQUE.Oostende.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/BOSNIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Sarajevo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BOSNIE.Sarajevo.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/BRAZIL"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rio de Janeiro"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BRESIL.Rio de Janeiro.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/BRUNEI"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Brunei"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BRUNEI.Brunei.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/BULGARIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Sofia"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BULGARIE.Sofia.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/BURKINA FASO"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Ouagadougou"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.BURKINA FASO.Ouagadougou.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/CANADA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Calgary"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CANADA.Calgary.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Charlottestown"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CANADA.Charlottetown.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Montreal"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CANADA.Montreal.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Ottawa"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CANADA.Ottawa.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Quebec"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CANADA.Quebec.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Saskatoon"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CANADA.Saskatoon.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Toronto"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CANADA.Toronto.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Vancouver"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CANADA.Vancouver.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Winnipeg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CANADA.Winnipeg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/CHILI"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Santiago"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CHILI.Santiago.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/CHINA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Hong Kong"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CHINE.Hong Kong.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Shanghai"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CHINE.Shanghai.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/COLOMBIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bogota"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.COLOMBIE.Bogota.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/CONGO"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Brazzaville"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CONGO.Brazzaville.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/CUBA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Guantanamo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CUBA.Guantanamo.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Havana"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CUBA.La Havane.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/CYPRUS"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Larnaca"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CHYPRE.Larnaca.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nicosia"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CHYPRE.Nicosie.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/CZECH REPUBLIC"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Prague"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.REPUBLIQUE TCHEQUE.Prague.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/DENMARK"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Copenhagen"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.DANEMARK.Copenhague.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/DJIBOUTI"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Djibouti"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.DJIBOUTI.Djibouti.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/ECUADOR"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Quito"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.EQUATEUR.Quito.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/EGYPT"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cairo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.EGYTPE.Le Caire.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/ESTONIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Tallinn"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESTONIE.Tallinn.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/FINLAND"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Helsinki"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FINLANDE.Helsinki.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Jyvaskyla"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FINLANDE.Jyvaskyla.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Oulu"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FINLANDE.Oulu.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Tampere"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FINLANDE.Tampere.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Turku"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FINLANDE.Turku.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/FRANCE"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Agen"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Agen.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Aix en Provence"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Aix en Provence.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Ajaccio"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Ajaccio.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Albi"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Albi.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Amiens"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Amiens.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Angers"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Angers.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Angouleme"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Angoulême.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Annecy"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Annecy.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Antibes"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Antibes.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Auxerre"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Auxerre.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Avignon"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Avignon.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bastia"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Bastia.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bayonne"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Bayonne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Belfort"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Belfort.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Besançon"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Besançon.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Blois"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Blois.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bordeaux"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Bordeaux.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Boulogne"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Boulogne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bourg-en-Bresse"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Bourg-en-Bresse.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Brest"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Brest.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Briançon"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Briançon.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Brive"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Brive.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Béziers"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Béziers.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Caen"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Caen.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cannes"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Cannes.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cayenne"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Cayenne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Chalons-en-Champagne"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Chalons en Champagne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Chambery"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Chambéry.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Charleville-Mézières"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Charleville.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Chartres"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Chartres.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cherbourg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Cherbourg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Clermont-Ferrand"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Clermont-Ferrand.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Colmar"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Colmar.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dieppe"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Dieppe.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dijon"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Dijon.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Grenoble"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Grenoble.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/La Rochelle"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.La Rochelle.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Laval"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Laval.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Le Havre"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Le Havre.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Le Mans"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Le Mans.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lille"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Lille.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Limoges"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Limoges.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lorient"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Lorient.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lyon"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Lyon.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Macon"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Macon.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Marseilles"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Marseille.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Metz"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Metz.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Monaco"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Monaco.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Montpellier"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Montpellier.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Morlaix"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Morlaix.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Mulhouse"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Mulhouse.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nancy"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Nancy.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nantes"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Nantes.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nevers"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Nevers.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nice"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Nice.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nimes"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Nîmes.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Orleans"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Orléans.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Paris"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Paris.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Pau"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Pau.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Perigueux"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Périgueux.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Perpignan"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Perpignan.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Poitiers"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Poitiers.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Quimper"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Quimper.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Reims"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Reims.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rennes"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Rennes.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rouen"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Rouen.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Saint Tropez"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Saint Tropez.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Saint-Etienne"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Saint Etienne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Saint-Nazaire"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Saintnazaire.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Strasbourg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Strasbourg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Toulon"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Toulon.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Toulouse"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Toulouse.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Tours"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Tours.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Troyes"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Troyes.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Valence"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Valence.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Versailles"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.FRANCE.Versailles.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/FRENCH POLYNESIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Papeete"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.POLYNESIE FRANCAISE.Papeete.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/GABON"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Libreville"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.GABON.Libreville.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/GERMANY"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Aachen"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Aix-la-Chapelle.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Augsburg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Augsburg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Berlin"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Berlin.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bonn"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Bonn.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bremen"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Brême.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cologne"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Cologne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Constance"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Constance.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dortmund"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Dortmund.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dresden"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Dresden.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dusseldorf"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Dusseldorf.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Essen"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Essen.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Frankfurt/Main"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Francfort-sur-le-Main.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Freiburg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Freiburg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Hamburg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Hambourg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Hannover"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Hanovre.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Karlsruhe"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Karlsruhe.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Leipzig"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Leipzig.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lubeck"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Lubeck.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Mannheim"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Mannheim.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Munich"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Munich.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nuremberg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Nuremberg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Osnabruck"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Osnabruck.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Stuttgart"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Stuttgart.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Wiesbaden"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ALLEMAGNE.Wiesbaden.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/GREECE"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Athens"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.GRECE.Athènes.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Heraklion"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.GRECE.Iraklion.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/GUADELOUPE"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/HAWAI"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Honolulu (HI)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.HAWAI.Honolulu.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/HUNGARY"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Budapest"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.HONGRIE.Budapest.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/ICELAND"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Reykjavik"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ISLANDE.Reykjavik.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/INDIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bombay"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.INDE.Bombay.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Jaipur"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.INDE.Jaipur.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/New Delhi"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.INDE.New Delhi.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/IRLAND"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Clare Morris"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.IRLANDE.Clare Morris.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cork"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.IRLANDE.Cork.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dublin"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.IRLANDE.Dublin.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/ISRAEL"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Jerusalem"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ISRAEL.Jérusalem.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/ITALY"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bergamo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Bergamo.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bologna"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Bologne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bolzano"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Bolzano.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Breuil-Cervina"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Breuil-Cervina.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cagliari"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Cagliari.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Catania"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Catania.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Catanzaro"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Catanzaro.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Como"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Como.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cremona"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Crémona.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Ferrara"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Ferrara.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Firenze"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Florence.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Genoa"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Gênes.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Milano"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Milan.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Montesilvano"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Montesilvano.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Naples"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Naples.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Padova"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Padova.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Palermo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Palerme.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Perugia"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Pérouse.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rapallo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Rapallo.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rimini"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Rimini.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rome"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Rome.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Trento"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Trente.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Treviso"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Trévise.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Trieste"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Trieste.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Turin"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Turin.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Venice"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Vénise.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Verona"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Vérone.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Vicenza"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ITALIE.Vicenza.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Akita"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Akita.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Aomori"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Aomori.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Hakodate"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Hakodate.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Hiroshima"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Hiroshima.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Kagoshima"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Kagoshima.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Kanazawa"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Kanazawa.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Kyoto"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Kyoto.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Nagano"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Nagano.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nagasaki"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPON.Nagasaki.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Nagoya"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Nagoya.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Naha"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Naha.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Niigata"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Niigata.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Osaka"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPON.Osaka.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Sapporo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Sapporo.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Sendai"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Sendai.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Shizuoka"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Shizuoka.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Takamatsu"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Takamatsu.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Tokyo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPON.Tokyo.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Utsunomiya"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Utsunomiya.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/JAPAN.Yonago"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.JAPAN.Yonago.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/LEBANON"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Beirut"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.LIBAN.Beyrouth.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/LUXEMBURG"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Luxemburg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.LUXEMBOURG.Luxembourg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/MACEDOINE"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Skopje"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.MACEDOINE.Skopje.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/MADAGASCAR"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Antananarivo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.MADAGASCAR.Antananarivo.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/MALAYSIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Kuala lumpur"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.MALAISIE.Kuala lumpur.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/MALI"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bamako"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.MALI.Bamako.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/MALTA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Valletta"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.MALTE.La Valette.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/MEXICO"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Mexico"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.MEXIQUE.Mexico.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Veracruz"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.MEXIQUE.Veracruz.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/MOROCCO"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Marrakech"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.MAROC.Marrakech.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rabat"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.MAROC.Rabat.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/NEPAL"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Katmandu"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.NEPAL.Katmandu.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/NETHERLANDS"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Amsterdam"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PAYS-BAS.Amsterdam.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Arnhem"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PAYS-BAS.Arnhem.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Eindhoven"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PAYS-BAS.Eindhoven.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Groningen"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PAYS-BAS.Groningen.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Maastricht"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PAYS-BAS.Maastricht.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rotterdam"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PAYS-BAS.Rotterdam.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/The Hague"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PAYS-BAS.The Hague.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Tilburg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PAYS-BAS.Tilburg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Utrecht"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PAYS-BAS.Utrecht.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/NEW CALEDONIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Noumea"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.NOUVELLE-CALEDONIE.Nouméa.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/NEW ZEALAND"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Wellington"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.NOUVELLE ZELANDE.Wellington.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/NORWAY"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Oslo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.NORVEGE.Oslo.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Trondheim"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.NORVEGE.Trondheim.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/PERU"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lima"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PEROU.Lima.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/POLAND"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Warsaw"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.POLOGNE.Varsovie.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/PORTUGAL"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Coimbra"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PORTUGAL.Coimbra.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lisbon"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PORTUGAL.Lisbonne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Porto"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.PORTUGAL.Porto.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/QUATAR"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Doha"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.QUATAR.Doha.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/REUNION"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Saint-Denis"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.REUNION.Saint-denis.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/ROMANIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bucharest"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROUMANIE.Bucarest.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/RUSSIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Moscow"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.RUSSIE.Moscou.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/St Petersburg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.RUSSIE.St Petersbourg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/SAUDI ARABIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Riad"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ARABIE SAOUDITE.Riyadh.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/SENEGAL"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dakar"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SENEGAL.Dakar.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/SINGAPORE"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Singapore"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SINGAPOUR.Singapore.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/SLOVENIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Ljubljana"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SLOVENIE.Ljubljana.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/SOUTH AFRICA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cape Town"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AFRIQUE DU SUD.Cape town.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Pretoria"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.AFRIQUE DU SUD.Pretoria.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/SOUTH KOREA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Seoul"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.COREE DU SUD.Séoul.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/SPAIN"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Alicante"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Alicante.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Asturias/Aviles"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Asturies.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Barcelona"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Barcelone.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bilbao"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Bilbao.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Burgos"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Burgos.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Canary Islands"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Iles Canaries.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Donostia-San Sebastian"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Donostia-Saint Sébastien.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Gibraltar"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Gibraltar.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Granada"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Granada.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Ibiza"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Ibiza.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/La Coruna"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.La Corogne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Madrid"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Madrid.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Malaga"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Malaga.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Murcia"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Murcie.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Palma de Mallorca"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Palma de mallorca.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Santander"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Santander.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Seville"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Seville.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Toledo"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Tolède.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Valencia"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Valence.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Zaragoza"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ESPAGNE.Saragosse.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/SWEDEN"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Borlange"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUEDE.Borlange.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Eskilstuna"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUEDE.Eskilstuna.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Gothenburg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUEDE.Gothenburg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Halmstad"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUEDE.Halmstad.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Malmö"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUEDE.Malmö.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Stockholm"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUEDE.Stockholm.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/SWITZERLAND"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bern"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUISSE.Bern.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Genève"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUISSE.Genève.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lausanne"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUISSE.Lausanne.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Sion"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUISSE.Sion.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Vaduz"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUISSE.Vaduz.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Zurich"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.SUISSE.Zurich.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/THAILAND"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bangkok"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.THAILANDE.Bangkok.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/TUNISIA"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Tunis"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.TUNISIE.Tunis.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/TURKEY"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Istanbul"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.TURQUIE.Istanbul.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/UKRAINE"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Kiev"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.UKRAINE.Kiev.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/UNITED ARAB EMIRATES"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Abu Dhabi"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.EMIRATS-ARABE.ABU-DHABI.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dubai"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.EMIRATS-ARABE.DUBAI.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/UNITED KINGDOM"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Aberdeen"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Aberdeen.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Basingstoke"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Basingstoke.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Belfast"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Belfast.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Birmingham"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Birmingham.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bournemouth"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Bournemouth.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bracknell"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Bracknell.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bradford"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Bradford.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Brighton"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Brighton.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bristol"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Bristol.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Bury"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Bury.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cambridge"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Cambridge.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cardiff"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Cardiff.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Corby"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Corby.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Crosby"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Crosby.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dudley"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Dudley.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dundee"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Dundee.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Edimbourg"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Edimbourg.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Glasgow"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Glasgow.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Inverness"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Inverness.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Jersey"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Jersey.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Kettering"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Kettering.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Kingston-upon-Hull"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Kingston.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lerwick"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Lerwick.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lincoln"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Lincoln.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/London"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.London.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Manchester"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Manchester.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Newcastle"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Newcastle.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Northampton"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Northampton.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Norwich"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Norwich.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nottingham"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Nottingham.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Oxford"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Oxford.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Plymouth"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Plymouth.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Portsmouth"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Portsmouth.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Reading"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Reading.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rochester"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Rochester.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rotherham"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Rotherham.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Sheffield"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Sheffield.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Sunderland"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ROYAUME UNI.Sunderland.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/UNITED STATES"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Anchorage"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Anchorage.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Ann Arbor (MI)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Ann Arbor.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Atlanta (GA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Atlanta.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Austin (TX)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Austin.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Baltimore (MD)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Baltimore.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Boston (MA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Boston.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Buffalo (NY)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Buffalo.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Charleston (SC)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Charleston,SC.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Charlotte"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Charlotte.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Chicago (IL)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Chicago.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cincinnati (OH)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Cincinnati.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Cleveland (OH)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Cleveland.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Columbia (SC)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Columbia,SC.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Columbus (OH)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Columbus.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dallas (TX)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Dallas.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Dayton (OH)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Dayton.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Denver (CO)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Denver.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Des Moines (IA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Des Moines.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Detroit (MI)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Detroit.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Eugene"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Eugene.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Green Bay (WI)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Green Bay.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Hartford"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Hartford.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Houston (TX)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Houston.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Indianapolis (IN)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Indianapolis.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Irvine"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Irvine.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Kansas City"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Kansas City.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Knoxville"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Knoxville.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Lafayette (LA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Lafayette.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Las Vegas (NV)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Las Vegas.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Little Rock (AR)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Little Rock.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Los Angeles (CA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Los Angeles.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Louisville (KY)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Louisville.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Memphis (TN)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Memphis.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Miami (FL)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Miami.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Minneapolis (MN)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Minneapolis.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Nashville (TN)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Nashville - Tenessee.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/New Orleans (LA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Nouvelle Orléans.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/New York (NY)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.New York.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Oakland (CA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Oakland.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Oklahoma City (OK)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Oklahoma City.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Olympia (WA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Olympia.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Omaha (NE)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Omaha (NE).weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Orlando (FL)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Orlando.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Palm Beach (FL)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Palm Beach.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Philadelphia (PA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Philadelphie.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Phoenix (AZ)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Phoenix.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Pittsburgh (PA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Pittsburgh.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Portland (WA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Portland.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Raleigh (NC)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Raleigh.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Richmond (VA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Richmond.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Rochester (NY)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Rochester (NY).weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Sacramento (CA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Sacramento.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Saint-Louis (MO)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Saint Louis.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Salt Lake City (UT)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Salt lake city.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/San Antonio (TX)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.San Antonio.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/San Diego (CA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.San Diego.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/San Francisco (CA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.San Francisco.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/San jose (CA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.San Jose.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Savannah"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Savannah.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Seattle (WA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Seattle.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Sioux Falls (SD)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Sioux Falls - South Dakota.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Tampa (FL)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Tampa.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Tucson (AZ)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Tucson.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Waco (TX)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Waco.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Washington (VA)"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.ETATS-UNIS.Washington.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/TAIWAN"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Taipei"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.CHINE.Taipei.weather"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/VIETNAM"</label><separator>true</separator><enabled>false</enabled></map></item>
+<item><map><type>"PopupItem"</type><label>"source_weather/Hô Chi Minh City"</label><separator>false</separator><enabled>true</enabled><value>"Nmeteo.VIETNAM.Hô chi minh.weather"</value></map></item>
+			
+			
+			
+			
+			</list>
+		</items>
+	</map>
+	</item>
+	
+	<item>
+	<map>
+		<type>"Popup"</type>
+		<key>"language"</key>
+		<label>"srv_weather/language"</label>
+		<items>
+			<list>
+			<item><map><type>"PopupItem"</type><label>"Français"</label><separator>false</separator><enabled>true</enabled><value>"fr-FR"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"English (US)"</label><separator>false</separator><enabled>true</enabled><value>"en-US"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"English (UK)"</label><separator>false</separator><enabled>true</enabled><value>"en-GB"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Deutsch"</label><separator>false</separator><enabled>true</enabled><value>"de-DE"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Español"</label><separator>false</separator><enabled>true</enabled><value>"es-ES"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Italiano"</label><separator>false</separator><enabled>true</enabled><value>"it-IT"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Português"</label><separator>false</separator><enabled>true</enabled><value>"pt-BR"</value></map></item>
+<item><map><type>"PopupItem"</type><label>"Japanese"</label><separator>false</separator><enabled>true</enabled><value>"ja-JP"</value></map></item>
+			
+			</list>
+		</items>
+	</map>
+	</item>
+
+</list>
+</settings>
+</map>

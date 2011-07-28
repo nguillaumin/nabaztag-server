@@ -1,0 +1,25 @@
+--- 
+preferences: !!map:ObjectPreferences
+  timezone: Europe/Paris
+  sleep_times: !!map:PerDaySleepTime
+    wednesday: &id1 !!map:SleepTime
+      &id2 sleep_time_m: 0
+      &id4 sleep_time_h: &id5 23
+      &id6 wakeup_time_m: &id3 30
+      &id7 wakeup_time_h: 18
+    tuesday: *id1
+    friday: *id1
+    monday: *id1
+    sunday: &id8 !!map:SleepTime
+      *id2: *id3
+      *id4: *id5
+      *id6: 15
+      *id7: 10
+    saturday: *id8
+    thursday: *id1
+  private: &id9 true
+  notify_received: *id9
+  language: fr-FR
+  visible: *id9
+session: 26edb:4b7ad45a:94ccd26ec83dfd159665c9b875be69d97e5e3f33
+id: 1b3ebO9180b4af

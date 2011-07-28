@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.libraries.getToken
+content_type=text/json
+regex="errors":\["Forbidden",?"InvalidParameter",?"InvalidSession",?\],.*"method_class":"GET"

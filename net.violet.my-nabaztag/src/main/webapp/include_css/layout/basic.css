@@ -1,0 +1,38 @@
+div, label, input, textarea, td, select, a, p, li {
+	color:#555;
+	font-size:12px;
+	font-family: "trebuchet MS", arial, verdana, sans-serif;
+	line-height:1.5em;
+}
+
+input, textarea {padding:2px;}
+
+a { font-weight:bold; text-decoration:underline; outline:none;}
+a:hover {  color:#333;}
+
+/*a h1, a h2, a h3 { text-decoration:none; border:1px solid red;}*/
+
+form {margin:0; padding:0; zoom:1;}
+label { font-weight:bold;}
+.bigWord {font-size:15px; color:#B80171; font-weight:bold;}
+
+h1, .mainTabBody h2 {margin:0 0 5px 0; padding:0;}
+h2 {color:#666; margin:0 0 5px 0; padding:0;}
+h3 {font-size:12px;}
+h1 { font-size:16px;}
+
+p, h1, h2, h3, h4, h5, h6 {background:none;}
+
+p {margin:0 0 5px 0}
+h3 {margin:0 0 5px 0}
+ul.inline-list { list-style:none; margin:0; padding:0;}
+ul.inline-list li { float:left; margin-right:12px;}
+a.bigLink {font-size:14px; margin:5px 0; display:block; }
+
+
+img {border:none;}
+
+fieldset { padding:8px; margin:0 0 8px 0; }
+
+hr.clearer {clear:both;height:1px;font-size:1px;border:none;margin:0; padding:0;background:transparent;display:block;visibility:hidden;}
+hr.spacer, div.spacer {background:transparent; margin:0; clear: both;height:10px;border:none;visibility:hidden;line-height:1px;font-size:1px; display:block;}

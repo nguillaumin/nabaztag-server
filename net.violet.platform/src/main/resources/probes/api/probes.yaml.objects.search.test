@@ -1,0 +1,25 @@
+application=webui
+
+[existing_object]
+url=objects/search
+content_type=text/yaml
+post_data=@yaml/objects.search.yml
+regex= map:ObjectInformation
+
+[private]
+url=objects/search
+content_type=text/yaml
+post_data=@yaml/objects.search.private.yml
+regex= \[\]
+
+[invisible]
+url=objects/search
+content_type=text/yaml
+post_data=@yaml/objects.search.invisible.yml
+regex= map:ObjectInformation
+
+[private_by_owner]
+url=objects/search
+content_type=text/yaml
+post_data=@yaml/objects.search.main.yml
+regex= map:ObjectInformation

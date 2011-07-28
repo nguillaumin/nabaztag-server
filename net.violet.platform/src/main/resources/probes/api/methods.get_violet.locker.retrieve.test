@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.locker.retrieve
+content_type=text/json
+regex="errors":\["InvalidParameter",?\],.*"method_class":"GET"

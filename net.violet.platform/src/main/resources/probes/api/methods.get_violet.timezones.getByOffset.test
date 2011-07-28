@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.timezones.getByOffset
+content_type=text/json
+regex="errors":\["InvalidParameter",?\],.*"method_class":"GET"

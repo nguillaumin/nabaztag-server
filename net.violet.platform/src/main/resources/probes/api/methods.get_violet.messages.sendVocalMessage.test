@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.messages.sendVocalMessage
+content_type=text/json
+regex="errors":\["BlackListed",?"Forbidden",?"InternalError",?"InvalidParameter",?"InvalidSession",?"NoSuchObject",?"NoSuchPerson",?"ParentalFilter",?"VocalMessageConversionFailed",?\],.*"method_class":"CREATE"

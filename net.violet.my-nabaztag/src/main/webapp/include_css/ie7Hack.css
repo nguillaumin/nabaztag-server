@@ -1,0 +1,99 @@
+/* */
+/* Les regles ci dessous concerne a la base IE6, il faudra y faire le ménage ASAP... */	
+/* */
+/* bidouilles "anti bad browser" */
+
+
+input, select, textarea {padding:2px; }
+
+#loginBox a, #loginBox input{ position: relative; z-index: 1;}
+#alertBox {height:130px}
+#MoreOptions {height: auto;}
+.specialBlock {height:1%;}
+.mainTabBody {margin: 0 12px -1px 0; height:1%;}
+.lastMessageHome {width:46%;}
+
+hr.clearer,
+hr.spacer, div.spacer {margin: 0 0 -5px 0; padding:0; line-height:1px; font-size:1px; height:1px;}
+
+.ficheProfil .profil-scroller {height:121px;}
+.createNabcast li {height:24px;}
+.heureSelect-hold {padding-left:21px;}
+.corps {margin-left:2px;}
+/*.srv-list-entries ul.txt-list {height:47px;}*/
+.star-rating{left:10px;}
+.mainTabHead h2 {height:1%;}
+.contentMainTab {height:1%;}
+.flat-block, .flat-block-content-inner {height:1%;}
+.maMusique {height:1%;}
+.profilBlockLeft {height:1%;}
+.profilBlockRight {height:1%;}
+
+/*#mp3-sender .mp3-choice {height: 190px;} */
+#mp3-sender .mp3-choice input { margin-left:25px; }
+
+.radio-chooser li {overflow: hidden; }
+.radio-chooser li.selected {overflow: hidden; }
+
+
+/*.tabSousNavContener-tr {width:96%}*/
+.heureSelect-hold {position:relative;}
+
+.tabNav li.active a:hover, .tabNav li.active_last a:hover {color:white}
+
+.srv-list-entries li.keywords ul {border:none;}
+.srv-list-entries ul li {float:left; width:90%; }
+.srv-list-entries ul ul li {clear:both;border:none;}
+/* .srv-main-config {border:1px solid red; width: expression( document.body.clientWidth < 1000 ? "630px": "auto" );} */
+
+
+
+.listItemContener table {width:95%;}
+
+
+
+#rabbitSelector { height:1%; width:97%;}
+
+* html .formButton-outside {width:1%;}
+* html .formButton-outside a{ white-space:nowrap;}
+
+legend {background:white;}
+
+#rechercheAnnuaire ul {display:block; position:absolute;}
+
+.main-cadre-top {height:1%; width:100%; }
+.main-cadre-contener, .srv-cadre-contener {height:1%; width:100%;}
+.main-cadre-content {height:1%;}
+.srv-inner, .srv-player {height:1%;}
+.srv-cadre-content {height:220px; }
+
+
+/* ********************************************************************************** */
+
+
+/* Regles que pour ie 7 maintenant.... */
+/* *********************************** */
+
+/* grosse bidouille, mais IE7 rajoute un ascenseur horizontal en bas, meme si tout rentre dans l'écran...*/
+
+html { overflow-x:hidden;}
+
+.list-recherche-contener { height:360px;}
+
+div, h3, h1, h2, h3, h4, p {width:auto;}
+
+/*.flat-block-top {width:auto;}*/
+
+.config {margin-top:3px;}
+
+.flat-block .flat-block-top {   height:33px;}
+
+.srv-cadre-content { height:auto; min-height:220px; }
+
+/*button { background-position:100% 0}*/
+button {width:auto; overflow:visible;}
+button span {line-height:18px;}
+
+#global { width:99.7%;}
+ul.tabSousNav { top:-12px;}
+#rabbitSelector .macaddress {top:-14px;}

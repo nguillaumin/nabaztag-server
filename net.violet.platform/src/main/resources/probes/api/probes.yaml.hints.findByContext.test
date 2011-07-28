@@ -1,0 +1,6 @@
+application=webui
+
+url=hints/findByContext/home
+content_type=text/yaml
+size_greater_than=200
+regex=- !!map:HintInformation

@@ -1,0 +1,37 @@
+log4j.rootLogger=INFO, R, Mail
+log4j.logger.SystemOut=DEBUG
+log4j.logger.net.violet.platform.monitor.MonitorLogger=INFO, MonitorLog
+
+# R est le log roulant de tomcat.
+log4j.appender.R=org.apache.log4j.RollingFileAppender 
+log4j.appender.R.File=${catalina.home}/logs/tomcat.log 
+log4j.appender.R.MaxFileSize=100MB
+log4j.appender.R.MaxBackupIndex=10 
+log4j.appender.R.layout=org.apache.log4j.PatternLayout 
+log4j.appender.R.layout.ConversionPattern=%c{1} %t : %d{MMM/dd HH:mm:ss} %m%n
+
+# Redirection des logs de catalina vers R
+log4j.logger.org.apache.catalina.core.ContainerBase.[Catalina].[localhost]=INFO, R
+log4j.logger.org.apache.catalina.core=INFO, R
+log4j.logger.org.apache.catalina.session=INFO, R
+
+# Mail pour les erreurs fatales
+log4j.appender.Mail=org.apache.log4j.net.SMTPAppender
+log4j.appender.Mail.Threshold=FATAL
+log4j.appender.Mail.BufferSize=10
+log4j.appender.Mail.To=log4j@violet.net
+log4j.appender.Mail.From=log4j-noreply@violet.net
+log4j.appender.Mail.SMTPHost=localhost
+log4j.appender.Mail.Subject=Log4J PP site ${hostname}
+log4j.appender.Mail.layout=org.apache.log4j.PatternLayout
+log4j.appender.Mail.layout.ConversionPattern=%5p [%t] (%F:%L) - %m%n
+log4j.appender.Mail.evaluatorClass=net.violet.common.debug.CustomEvaluator
+
+# MonitorLog
+log4j.appender.MonitorLog=org.apache.log4j.RollingFileAppender 
+log4j.appender.MonitorLog.File=${catalina.home}/logs/monitor.log
+log4j.appender.MonitorLog.MaxFileSize=100MB 
+log4j.appender.MonitorLog.MaxBackupIndex=10 
+log4j.appender.MonitorLog.layout=org.apache.log4j.PatternLayout 
+log4j.appender.MonitorLog.layout.ConversionPattern=%d{MMM/dd HH:mm:ss} %m%n
+

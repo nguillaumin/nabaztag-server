@@ -1,0 +1,6 @@
+application=webui
+
+url=voices/synthetize
+content_type=text/yaml
+post_data=@constants/synthetize.yml
+regex=broadcast/broad/

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/C7tl8u26l0 -->
+	<name>"net.violet.js.flickrsfavorites"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"daylife"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>1000</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"FlickrsFavorites"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Flickr stream : les photos favorites"]]></fr>
+		<en><![CDATA["Flickr's Favorites photostream"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Suivez le fil de photos favorites d'un abonné Flickr.</p>"]]></fr>
+		<en><![CDATA["<p>Follow the favourites stream of anyone on Flickr</p>"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Entrez simplement le nom de la personne <b>Flickr</b> dont vous voulez suivre les photos favorites.<br/>
+Indiquez également combien de photos vous voulez voir. Les photos apparaissent par ordre décroissant de nouveauté.
+Chaque photo s'affiche dans une petite bulle avec la description saisie par l'auteur. Cliquez sur une photo pour y accéder directement.<br/>
+Cette application fonctionne seulement sur Mir:ror.</p>"]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+	<tags><map>
+		<!--Applications tags are a comma separated list of words in a given language -->
+		<fr><![CDATA["photos, flickr, favoris"]]></fr>
+		<en><![CDATA["photos, flickr, favourites"]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></tags>
+
+</map></app>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+		<item><map>
+			<key>"unknownUser"</key>
+			<fr><![CDATA["Flickr n'a pas trouvé d'utilisateur nommé ${userName} !"]]></fr>
+			<en><![CDATA["Flickr doesn't know any user named ${userName}!"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA["Flickr nicht kennt ${userName}!"]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></item>
+
+	</list></dico>
+
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+	<item><map>
+		<key>"userName"</key>
+		<type>"InputLine"</type>
+		<type>"TextArea"</type><!-- Should be TextArea when it will be supported -->
+		<datatype>"text"</datatype>
+		<maxlength>1000</maxlength>
+		<cols>80</cols>
+		<rows>3</rows>
+		<required>false</required>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Nom d'utilisateur Flickr"]]></fr>
+			<en><![CDATA["Flick user's account"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA[""]]></fr>
+			<en><![CDATA[""]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+	</map></item>
+
+	<item><map>
+		<key>"maxItems"</key>
+		<type>"Popup"</type>
+		<datatype>"integer"</datatype>
+		<required>true</required>
+		<default_value>10</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Nombre de photos"]]></fr>
+			<en><![CDATA["Number"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Indiquez le nombre de photos maxi."]]></fr>
+			<en><![CDATA[""]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map><value>"5"</value><label>"5"</label></map></item>
+			<item><map><value>"10"</value><label>"10"</label></map></item>
+			<item><map><value>"20"</value><label>"20"</label></map></item>
+		</list></items>
+	</map></item>
+
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

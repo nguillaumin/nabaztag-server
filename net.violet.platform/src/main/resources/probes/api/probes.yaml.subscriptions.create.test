@@ -1,0 +1,109 @@
+application=webui
+
+[weather]
+url=subscriptions/create
+content_type=text/yaml
+post_data=@yaml/subscriptions.create.weather.yml
+regex=\sid: (.*?)\s
+
+[weather_get]
+url=subscriptions/get
+content_type=text/yaml
+post_data=@yaml/subscriptions.get.weather.yml
+regex=\sid: (.*?)\s
+
+[delete_weather]
+content_type=text/yaml
+url=subscriptions/delete/GROUP_1
+regex=~
+
+[air]
+url=subscriptions/create
+content_type=text/yaml
+post_data=@yaml/subscriptions.create.air.yml
+regex=\sid: (.*?)\s
+
+[air_get]
+url=subscriptions/get
+content_type=text/yaml
+post_data=@yaml/subscriptions.get.air.yml
+regex=\sid: (.*?)\s
+
+[delete_air]
+content_type=text/yaml
+url=subscriptions/delete/GROUP_1
+regex=~
+
+[bilan]
+url=subscriptions/create
+content_type=text/yaml
+post_data=@yaml/subscriptions.create.bilan.yml
+regex=\sid: (.*?)\s
+
+[bilan_get]
+url=subscriptions/get
+content_type=text/yaml
+post_data=@yaml/subscriptions.get.bilan.yml
+regex=\sid: (.*?)\s
+
+[delete_bilan]
+content_type=text/yaml
+url=subscriptions/delete/GROUP_1
+regex=~
+
+[bourse]
+url=subscriptions/create
+content_type=text/yaml
+post_data=@yaml/subscriptions.create.bourse.yml
+regex=\sid: (.*?)\s
+
+[bourse_get]
+url=subscriptions/get
+content_type=text/yaml
+post_data=@yaml/subscriptions.get.bourse.yml
+regex=\sid: (.*?)\s
+
+[delete_bourse]
+content_type=text/yaml
+url=subscriptions/delete/GROUP_1
+regex=~
+
+[boursefull]
+url=subscriptions/create
+content_type=text/yaml
+post_data=@yaml/subscriptions.create.boursefull.yml
+regex=\sid: (.*?)\s
+
+[boursefull_get]
+url=subscriptions/get
+content_type=text/yaml
+post_data=@yaml/subscriptions.get.boursefull.yml
+regex=\sid: (.*?)\s
+
+[delete_boursefull]
+content_type=text/yaml
+url=subscriptions/delete/GROUP_1
+regex=~
+
+[clock]
+url=subscriptions/create
+content_type=text/yaml
+post_data=@yaml/subscriptions.create.clock.yml
+regex=\sid: (.*?)\s
+
+[clock_get]
+url=subscriptions/get
+content_type=text/yaml
+post_data=@yaml/subscriptions.get.clock.yml
+regex=\sid: (.*?)\s
+
+[delete_clock]
+content_type=text/yaml
+url=subscriptions/delete/GROUP_1
+regex=~
+
+[create_trafic]
+url=subscriptions/create
+content_type=text/yaml
+post_data=@subscription_trafic.yml
+regex=\sid:

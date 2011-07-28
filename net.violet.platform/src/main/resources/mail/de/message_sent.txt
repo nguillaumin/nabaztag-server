@@ -1,0 +1,15 @@
+Ihre Nachricht:
+
+MESSAGE
+
+an FIRST_NAME LAST_NAME
+wurde erfolgreich gesendet
+an sein/ihr Objekt OBJ_RECIPIENT
+
+
+
+++ EINIGE VIELLEICHT NICHT GANZ UNWICHTIGE DINGE ++
+-Es gibt viele verschieden Möglichkeiten, Nachrichten zu senden. Sie können zum Beispiel Nachrichten mit Ihrer eigenen Stimme, MP3s, Audiopostkarten… senden. Mit Violet erfinden Sie am laufenden Band unerhörte Arten der Kommunikation
+- In den Voreinstellungen Ihres Kontos  können Sie  die Benachrichtigungen, nachdem Ihre Nachrichten abgespielt wurden, desaktivieren. 
+
+-- Violet. Let All Things Be Connected --

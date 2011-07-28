@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+	<app><map>
+		<!-- application + application_profile -->
+		<!-- http://etherpad.com/5TJVWDSke3 -->
+		<name>"net.violet.js.launchyoutube"</name>
+		<author>"dev-js@violet.net"</author>
+		<category>"tools"</category>
+		<class>"native"</class>
+		<language>"JAVASCRIPT"</language>
+		<apiVersion>"0.8"</apiVersion>
+		<opensource>false</opensource>
+		<interactive>false</interactive>
+		<visible>true</visible>
+		<removable>true</removable>
+		<rank>3000</rank>
+		<credentials><map>
+			<!-- Creates application_credentials entry -->
+			<public_key>"LaunchYouTube"</public_key>
+			<private_key>"private"</private_key>
+		</map></credentials>
+		<title><map>
+			<fr><![CDATA["Jouer une vidéo YouTube"]]></fr>
+			<en><![CDATA["Play YouTube Videos"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></title>
+		<description><map>
+			<fr><![CDATA["<p>Indiquez l'adresse d'une vidéo YouTube qui sera lancée lorsque vous montrez votre Objet.</p>"]]></fr>
+			<en><![CDATA["<p>Input the URL of a YouTube video which will be launched when you show your Object.</p>"]]></en>
+			<it><![CDATA["<p></p>"]]></it>
+			<es><![CDATA["<p></p>"]]></es>
+			<de><![CDATA["<p></p>"]]></de>
+			<pt><![CDATA["<p></p>"]]></pt>
+			<ja><![CDATA["<p></p>"]]></ja>
+		</map></description>
+		<instructions><map>
+			<fr><![CDATA["<p>Rendez-vous sur la vidéo de votre choix sur <a href="http://www.youtube.com">YouTube</a> puis copiez l'URL de la page. Collez ensuite cette adresse dans le champ 'Adresse de la vidéo'.</p>"]]></fr>
+			<en><![CDATA["<p>Browse <a href="http://www.youtube.com">YouTube</a> to find the video you want to be played. Copy the URL of the page and paste it in the field 'Video URL'</p>"]]></en>
+			<it><![CDATA["<p></p>"]]></it>
+			<es><![CDATA["<p></p>"]]></es>
+			<de><![CDATA["<p></p>"]]></de>
+			<pt><![CDATA["<p></p>"]]></pt>
+			<ja><![CDATA["<p></p>"]]></ja>
+		</map></instructions>
+	</map></app>
+
+	<resources>
+		<!-- Entries in the dico -->
+		<dico><list>
+			<item><map>
+				<key>"bubbleMsg"</key>
+				<fr><![CDATA["Lancement de votre vidéo en cours..."]]></fr>
+				<en><![CDATA["Launching your video..."]]></en>
+				<it><![CDATA[""]]></it>
+				<es><![CDATA[""]]></es>
+				<de><![CDATA[""]]></de>
+				<pt><![CDATA[""]]></pt>
+				<ja><![CDATA[""]]></ja>
+			</map></item>
+		</list></dico>
+	</resources>
+
+	<settings><list>
+		<item><map>
+			<key>"url"</key>
+			<type>"InputLine"</type>
+			<datatype>"text"</datatype>
+			<required>false</required>
+			<default_value>""</default_value>
+			<label><map>
+				<!-- Dico key in the form : app/<appName>/settings/<key> -->
+				<fr><![CDATA["Adresse de la vidéo"]]></fr>
+				<en><![CDATA["Video URL"]]></en>
+				<it><![CDATA[""]]></it>
+				<es><![CDATA[""]]></es>
+				<de><![CDATA[""]]></de>
+				<pt><![CDATA[""]]></pt>
+				<ja><![CDATA[""]]></ja>
+			</map></label>
+			<description><map>
+				<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+				<fr><![CDATA["Entrez ici l'adresse de la vidéo sur YouTube"]]></fr>
+				<en><![CDATA["Enter here the address of the YouTube video"]]></en>
+				<it><![CDATA[""]]></it>
+				<es><![CDATA[""]]></es>
+				<de><![CDATA[""]]></de>
+				<pt><![CDATA[""]]></pt>
+				<ja><![CDATA[""]]></ja>
+			</map></description>
+		</map></item>
+
+	<item><map>
+		<key>"background"</key>
+		<type>"Popup"</type>
+		<datatype>"text"</datatype>
+		<required>true</required>
+		<default_value>"White"</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Couleur de fond"]]></fr>
+			<en><![CDATA["Background color"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Sélectionnez la couleur de fond de la page"]]></fr>
+			<en><![CDATA["Select the background color to embed the video player"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+
+		<items><list>
+			<item><map>
+				<value>"white"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Blanc"]]></fr>
+					<en><![CDATA["White"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"blue"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Bleu"]]></fr>
+					<en><![CDATA["Blue"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"kiwi"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Kiwi"]]></fr>
+					<en><![CDATA["Kiwi"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"lime"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Vert citron"]]></fr>
+					<en><![CDATA["Lime"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"silver"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Argent"]]></fr>
+					<en><![CDATA["Silver"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"lemon"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Jaune citron"]]></fr>
+					<en><![CDATA["Lemon"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"apricot"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Abricot"]]></fr>
+					<en><![CDATA["Apricot"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"orange"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Orange"]]></fr>
+					<en><![CDATA["Orange"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"raspberry"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Framboise"]]></fr>
+					<en><![CDATA["Raspberry"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+			<item><map>
+				<value>"black"</value>
+				<label><map>
+					<!-- Dico key in the form : app/<appName>/settings/<key>[i] -->
+					<fr><![CDATA["Noir"]]></fr>
+					<en><![CDATA["Black"]]></en>
+					<it><![CDATA[""]]></it>
+					<es><![CDATA[""]]></es>
+					<de><![CDATA[""]]></de>
+					<pt><![CDATA[""]]></pt>
+					<ja><![CDATA[""]]></ja>
+				</map></label>
+			</map></item>
+
+		</list></items>
+	</map></item>
+
+	</list></settings>
+
+
+	<scheduling_masks><list>
+		<!-- application can be installed on ztamp detection -->
+		<item><map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampDetection"</event>
+			<label>"LOC_events/ZtampDetection"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map></item>
+		<!-- application can be installed on ztamp removal -->
+		<item><map>
+			<hw_type>"violet.rfid"</hw_type>
+			<scheduling_type>"InteractionTrigger"</scheduling_type>
+			<event>"ZtampRemoval"</event>
+			<label>"LOC_events/ZtampRemoval"</label>
+			<minimum>0</minimum>
+			<maximum>1</maximum>
+		</map></item>
+	</list></scheduling_masks>
+</map>

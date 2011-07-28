@@ -1,0 +1,12 @@
+--- 
+profile: !!map:PersonProfile
+  last_name: Rastapoulos
+  first_name: Bob
+  city: Paris
+  zip_code: !!str 101
+  gender: H
+  description: 
+  country: IS
+session: 1f687:4ae319f7:d722e3873092ebc94755b07f94f997e6fe18ddee
+picture_file: 55db30F4110942f
+id: 1f687U31f0b49f

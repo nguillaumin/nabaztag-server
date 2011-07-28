@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map>
+	<title>"I'm The Echo"</title>
+	<japanesetitle>
+		<string>株式会社リコー 新着情報</string>
+  </japanesetitle>
+	<pi>3.14159265</pi>
+	<ysn>true</ysn>
+	<man>
+		<map>
+			<name>"DOE"</name>
+			<surname>"John"</surname>
+			<countries>
+				<list>
+					<item>"France"</item>
+					<item>"Germany"</item>
+					<item>"Japan"</item>
+				</list>
+			</countries>
+		</map>
+	</man>
+</map>

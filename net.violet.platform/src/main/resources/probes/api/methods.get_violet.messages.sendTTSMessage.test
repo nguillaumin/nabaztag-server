@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.messages.sendTTSMessage
+content_type=text/json
+regex="errors":\["BlackListed",?"Forbidden",?"InternalError",?"InvalidParameter",?"InvalidSession",?"NoSuchObject",?"NoSuchPerson",?"ParentalFilter",?"TTSGenerationFailed",?\],.*"method_class":"CREATE"

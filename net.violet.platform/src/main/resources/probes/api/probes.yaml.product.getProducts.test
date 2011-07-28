@@ -1,0 +1,6 @@
+application=webui
+
+[get]
+url=product/getProducts
+content_type=text/yaml
+regex=- Nabaztag

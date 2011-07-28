@@ -1,0 +1,24 @@
+application=webui
+
+[create]
+url=stores/create
+content_type=text/yaml
+post_data=@constants/store.create.yml
+regex= id: (.*?)\s
+
+[update]
+url=stores/update/GROUP_1
+content_type=text/yaml
+post_data=@constants/store.update.yml
+regex= id: (.*?)\s
+
+[update_full]
+url=stores/update/GROUP_1
+content_type=text/yaml
+post_data=@constants/store.updatefull.yml
+regex= id: (.*?)\s
+
+[delete]
+url=stores/delete/GROUP_1
+content_type=text/yaml
+regex=~

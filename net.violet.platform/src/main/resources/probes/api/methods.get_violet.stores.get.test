@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.stores.get
+content_type=text/json
+regex="errors":\["InvalidParameter",?"NoSuchStore",?\],.*"method_class":"GET"

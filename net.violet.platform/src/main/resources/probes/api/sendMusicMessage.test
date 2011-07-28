@@ -1,0 +1,7 @@
+application=webui
+
+[sendMedia]
+url=messages/sendMedia
+content_type=text/yaml
+post_data=@yaml/messages.sendMedia.yml
+regex=~

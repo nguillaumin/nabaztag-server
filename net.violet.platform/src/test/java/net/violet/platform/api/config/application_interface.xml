@@ -1,0 +1,53 @@
+<map>
+	<settings>
+	<list>
+
+		<item>
+		<map>
+			<type>"Label"</type>
+			<label>"mon premier label"</label>
+		</map>
+		</item>
+	
+		<item>
+		<map>
+			<type>"InputLine"</type>
+			<key>"mon premier input"</key>
+		</map>
+		</item>
+
+		<item>
+		<map>
+			<type>"InputLine"</type>
+			<key>"mon deuxième input"</key>
+			<label>"title input 2"</label>
+			<size>20</size>
+			<maxlength>50</maxlength>
+			<default_value>"default"</default_value>
+			<password>true</password>
+		</map>
+		</item>
+
+		<item>
+		<map>
+			<type>"TextArea"</type>
+			<key>"mon premier textarea"</key>
+		</map>
+		</item>
+
+		<item>
+		<map>
+			<type>"TextArea"</type>
+			<key>"mon deuxième textarea"</key>
+			<label>"title textarea"</label>
+			<cols>20</cols>
+			<rows>50</rows>
+			<default_value>"default"</default_value>
+			<maxlength>122</maxlength>
+			<default_value>"Hello"</default_value>
+		</map>
+		</item>
+	
+	</list>
+	</settings>
+</map>

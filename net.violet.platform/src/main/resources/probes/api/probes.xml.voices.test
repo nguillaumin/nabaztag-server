@@ -1,0 +1,7 @@
+application=webui
+
+[getByLang]
+url=voices/getByLang
+post_data=<map><id><string>fr</string></id></map>
+regex= <string>(fr-FR|fr-CA)</string>
+

@@ -1,0 +1,25 @@
+application=webui
+
+[getSiteLanguages]
+url=languages/getSiteLanguages
+content_type=text/yaml
+post_data=@yaml/languages.getsite.yml
+regex=- !!map:LangInformation
+
+[getTTSLanguages]
+url=languages/getTTSLanguages
+content_type=text/yaml
+post_data=@yaml/languages.gettts.yml
+regex=- !!map:LangInformation
+
+[getASRLanguages]
+url=languages/getASRLanguages
+content_type=text/yaml
+post_data=@yaml/languages.getasrl.yml
+regex=- !!map:LangInformation
+
+[getObjectLanguages]
+url=languages/getObjectLanguages
+content_type=text/yaml
+post_data=@yaml/languages.getobject.yml
+regex=- !!map:LangInformation

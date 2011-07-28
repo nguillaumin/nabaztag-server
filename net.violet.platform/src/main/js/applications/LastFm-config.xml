@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/A7UTnTCB3s -->
+	<name>"net.violet.js.lastfm"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"music"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<removable>true</removable>
+	<rank>500</rank> <!-- the greatest numbers will be ranked first -->
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"LastFm"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Last.fm"]]></fr>
+		<en><![CDATA["Last.fm"]]></en>
+		<it><![CDATA["Last.fm"]]></it>
+		<es><![CDATA["Last.fm"]]></es>
+		<de><![CDATA["Last.fm"]]></de>
+		<pt><![CDATA["Last.fm"]]></pt>
+		<ja><![CDATA["Last.fm"]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["<p>Lancez automatiquement votre sélection de musique personnalisée sur le site Last.fm.</p>"]]></fr>
+
+		<en><![CDATA["<p>Launch automatically your personalized music selection on Last.fm.</p>"]]></en>
+
+		<it><![CDATA[""]]></it>
+
+		<es><![CDATA[""]]></es>
+
+		<de><![CDATA[""]]></de>
+
+		<pt><![CDATA[""]]></pt>
+
+		<ja><![CDATA[""]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["<p>Saisissez votre nom d'utilisateur Last.fm pour lancer automatiquement votre sélection de musique.<br/>Fonctionne uniquement sur Mir:ror.</p>"]]></fr>
+
+		<en><![CDATA["<p>Enter your Last.fm username to launch automatically your music selection.<br/>Only works with the Mir:ror.</p>"]]></en>
+
+		<it><![CDATA["<p>Funziona esclusivamente sul Mir:ror.</p>"]]></it>
+
+		<es><![CDATA["<p>Únicamente funciona con Mir:ror.</p>"]]></es>
+
+		<de><![CDATA["<p>Funktioniert ausschließlich mit Mir:ror.</p>"]]></de>
+
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+
+	<item><map>
+		<key>"username"</key>
+		<type>"InputLine"</type>
+		<datatype>"text"</datatype>
+		<default_value>""</default_value>
+		<label><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key> -->
+			<fr><![CDATA["Nom d'utilisateur Last.fm"]]></fr>
+			<en><![CDATA["Last.fm username"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></label>
+		<description><map>
+			<!-- Dico key in the form : app/<appName>/settings/<key>/description -->
+			<fr><![CDATA["Saisissez votre nom d'utilisateur Last.fm"]]></fr>
+			<en><![CDATA["Type your Last.fm username"]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></description>
+	</map></item>
+</list></settings>
+
+<resources><map>
+	<!-- Entries in the dico -->
+	<dico><list>
+		<item><map>
+			<key>"introMsg"</key>
+			<fr><![CDATA["Connexion à votre radio Last.fm en cours..."]]></fr>
+			<en><![CDATA["Connexion to your Last.fm radio in progress..."]]></en>
+			<it><![CDATA[""]]></it>
+			<es><![CDATA[""]]></es>
+			<de><![CDATA[""]]></de>
+			<pt><![CDATA[""]]></pt>
+			<ja><![CDATA[""]]></ja>
+		</map></item>
+
+	</list></dico>
+
+
+</map></resources>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+	<!-- application can be installed on ztamp removal -->
+	<item><map>
+		<hw_type>"violet.rfid"</hw_type>
+		<scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+		<minimum>0</minimum>
+		<maximum>1</maximum>
+	</map></item>
+</list></scheduling_masks>
+
+</map>

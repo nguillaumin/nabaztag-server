@@ -1,0 +1,17 @@
+application=webui
+
+[create_earscommunion]
+url=subscriptions/create
+post_data=<map><application_id><string>38cA4ab46404</string></application_id><object_id><string>10a7aO90ddb8a0</string></object_id><settings><list><item><map><value><string>kowalsky</string></value><key><string>name</string></key></map></item><item><map><value><string>1</string></value><key><string>state</string></key></map></item></list></settings><scheduling><list><item><map><type><string>InteractionTrigger</string></type></map></item></list></scheduling></map>
+regex= <application_id>\s*<string>(.*?)</string>\s*</application_id>
+
+[get_kowalsky]
+url=subscriptions/get
+post_data=<map><id><string>ec2fO7982fa80</string></id><application_id><string>GROUP_0</string></application_id></map>
+regex=<id>\s*<string>(.*?)</string>\s*</id>
+
+
+[update_earscommunion_OK]
+url=subscriptions/setSettings
+post_data=<map><id><string>GROUP_0</string></id><settings><list><item><map><value><string>ChouShoshak</string></value><key><string>name</string></key></map></item><item><map><value><string>5</string></value><key><string>state</string></key></map></item></list></settings><scheduling><list><item><map><type><string>InteractionTrigger</string></type></map></item></list></scheduling></map>
+regex= .*

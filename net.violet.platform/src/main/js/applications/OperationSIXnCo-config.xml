@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+  <!-- application + application_profile -->
+
+  <name>"net.violet.js.operationsixnco"</name>
+  <author>"dev-js@violet.net"</author>
+  <category>"tools"</category>
+  <class>"native"</class>
+  <language>"JAVASCRIPT"</language>
+  <apiVersion>"0.8"</apiVersion>
+  <opensource>false</opensource>
+  <interactive>false</interactive>
+  <visible>false</visible>
+	<removable>true</removable>
+  <removable>false</removable>
+  <rank>0</rank> <!-- the greatest numbers will be ranked first -->
+
+  <credentials><map>
+    <!-- Creates application_credentials entry -->
+    <public_key>"OperationSIXnCo"</public_key>
+    <private_key>"private"</private_key>
+  </map></credentials>
+
+  <title><map>
+    <fr><![CDATA["SIX & Co."]]></fr>
+    <en><![CDATA[""]]></en>
+    <it><![CDATA[""]]></it>
+    <es><![CDATA[""]]></es>
+    <de><![CDATA[""]]></de>
+    <pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+
+  </map></title>
+
+	<description><map>
+		<fr><![CDATA[""]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA[""]]></fr>
+		<en><![CDATA[""]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+  <!-- List of parameters to display in the settings -->
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+    <minimum>1</minimum>
+    <maximum>1</maximum>
+  </map></item>
+</list></scheduling_masks>
+
+</map>

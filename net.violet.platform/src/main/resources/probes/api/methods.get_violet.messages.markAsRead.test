@@ -1,0 +1,4 @@
+application=webui
+url=methods/get/violet.messages.markAsRead
+content_type=text/json
+regex="errors":\["InvalidParameter",?"NoSuchMessage",?"NoSuchObject",?\],.*"method_class":"UPDATE"

@@ -1,0 +1,7 @@
+application=webui
+
+[get]
+url=apilib/get
+content_type=text/yaml
+is_error=yes
+regex=permission_denied

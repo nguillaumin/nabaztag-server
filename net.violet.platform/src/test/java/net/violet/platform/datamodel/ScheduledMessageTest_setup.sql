@@ -1,0 +1,5 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+DELETE FROM scheduled_message;
+
+SET FOREIGN_KEY_CHECKS = 1;

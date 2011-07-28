@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<map>
+<app><map>
+	<!-- application + application_profile -->
+	<!-- http://etherpad.com/W9sZeWuNsH -->
+	<name>"net.violet.js.yourenotalone"</name>
+	<author>"dev-js@violet.net"</author>
+	<category>"communication"</category>
+	<class>"native"</class>
+	<language>"JAVASCRIPT"</language>
+	<apiVersion>"0.8"</apiVersion>
+	<opensource>false</opensource>
+	<interactive>false</interactive>
+	<visible>true</visible>
+	<rank>500</rank>
+
+	<credentials><map>
+		<!-- Creates application_credentials entry -->
+		<public_key>"YoureNotAlone"</public_key>
+		<private_key>"private"</private_key>
+	</map></credentials>
+
+	<title><map>
+		<fr><![CDATA["Vous n'êtes pas seul..."]]></fr>
+		<en><![CDATA["You're Not Alone..."]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></title>
+
+	<description><map>
+		<fr><![CDATA["Installez cette application sur un Ztamp, un Nano:ztag ou un autre Objet RFID et partagez en temps réel votre présence avec les autres Objets ayant cette application installée."]]></fr>
+		<en><![CDATA["Install this application on a Ztam, a Nano:ztag or any other RFID object and share in real-time your online presence with the other Objects having this application installed."]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></description>
+
+	<instructions><map>
+		<fr><![CDATA["Posez simplement votre Objet pour signifier votre présence. Retirez le quand vous ne voulez plus communier avec la grande communauté de l'internet des objets. Lorsque vous montrez votre Objet, cliquez sur la bulle qui s'affiche à l'écran pour accéder à la carte des Objets ayant cette application installée."]]></fr>
+		<en><![CDATA["Simply drop your Object to appear online in the Internet Of Things. Remove it when you want to disconnect from the Internet of Things. When you show your Object, click on the bubble displayed on your screen to access the map of the Objects which have this application installed."]]></en>
+		<it><![CDATA[""]]></it>
+		<es><![CDATA[""]]></es>
+		<de><![CDATA[""]]></de>
+		<pt><![CDATA[""]]></pt>
+		<ja><![CDATA[""]]></ja>
+	</map></instructions>
+
+</map></app>
+
+<resources><map>
+</map></resources>
+
+<settings><list>
+	<!-- List of parameters to display in the settings -->
+</list></settings>
+
+<scheduling_masks><list>
+	<!-- application can be installed on ztamp detection -->
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampDetection"</event>
+		<label>"LOC_events/ZtampDetection"</label>
+    <minimum>1</minimum>
+    <maximum>1</maximum>
+    <supports_target>false</supports_target>
+  </map></item>
+  <item><map>
+    <hw_type>"violet.rfid"</hw_type>
+    <scheduling_type>"InteractionTrigger"</scheduling_type>
+		<event>"ZtampRemoval"</event>
+		<label>"LOC_events/ZtampRemoval"</label>
+    <minimum>1</minimum>
+    <maximum>1</maximum>
+    <supports_target>false</supports_target>
+  </map></item>
+</list></scheduling_masks>
+
+</map>
