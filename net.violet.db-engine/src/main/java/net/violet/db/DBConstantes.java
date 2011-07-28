@@ -35,7 +35,7 @@ public class DBConstantes {
 
 	public static final String USER_DB = "dev";
 	public static final String PASSWORD_DB = "123";
-	public static final String CLASS_DB = "com.mysql.jdbc.Driver";
+	public static final String CLASS_DB = com.mysql.jdbc.Driver.class.getName();
 
 	public static final String USER_DB_W = "dev";
 	public static final String PASSWORD_DB_W = "123";
