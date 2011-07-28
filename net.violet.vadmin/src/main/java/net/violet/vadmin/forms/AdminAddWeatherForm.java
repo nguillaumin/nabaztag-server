@@ -3,7 +3,7 @@ package net.violet.vadmin.forms;
 import java.util.Collections;
 import java.util.List;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 import net.violet.vadmin.objects.data.ContinentData;
 import net.violet.vadmin.objects.data.CountryData;
 import net.violet.vadmin.objects.data.StoreCityData;

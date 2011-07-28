@@ -21,6 +21,10 @@ public abstract class StringShop {
 		}
 	};
 
+	// Common static Strings
+
+	public static final String MIDNIGHT = "00:00:00";
+
 	// Numbers
 	public static final String ZERO = "0";
 
@@ -44,5 +48,7 @@ public abstract class StringShop {
 
 	public static final String EOL = "\n";
 
+	public static final String LANG_ID = "lang_id";
 	public static final String WAV_EXT = ".wav";
+
 }

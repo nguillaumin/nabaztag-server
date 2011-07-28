@@ -69,7 +69,6 @@
 	<modules>
 		<module>net.violet.db-engine</module>
 		<module>net.violet.common</module>
-		<module>net.violet.common-dev</module>
 		<module>net.violet.content-handler</module>
 		<module>net.violet.probes</module>
 		<module>net.violet.platform</module>

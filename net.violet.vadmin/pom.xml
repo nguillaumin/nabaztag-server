@@ -30,10 +30,5 @@
   		<version>${project.version}</version>
   		<classifier>classes</classifier>
   	</dependency>
-  	<dependency>
-  		<groupId>${project.groupId}</groupId>
-  		<artifactId>common-dev</artifactId>
-  		<version>${project.version}</version>
-  	</dependency>
   </dependencies>
 </project>

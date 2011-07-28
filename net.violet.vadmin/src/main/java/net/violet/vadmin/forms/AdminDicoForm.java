@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 import net.violet.vadmin.objects.data.DicoData;
 
 import org.apache.commons.collections.Factory;

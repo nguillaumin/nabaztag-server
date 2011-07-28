@@ -1,6 +1,6 @@
 package net.violet.vadmin.objects.data;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 import net.violet.vadmin.util.AdminConstantes;
 
 public abstract class AdminData {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 import net.violet.platform.datamodel.Store.STORE_STATUS;
 import net.violet.platform.datamodel.Store.STORE_TYPE;
 import net.violet.vadmin.objects.data.ContinentData;

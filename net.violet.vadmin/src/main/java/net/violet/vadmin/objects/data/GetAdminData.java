@@ -2,7 +2,7 @@ package net.violet.vadmin.objects.data;
 
 import java.util.List;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 
 
 public class GetAdminData  extends AdminData{

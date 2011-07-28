@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 
 import org.apache.struts.upload.FormFile;
 import org.apache.struts.util.LabelValueBean;

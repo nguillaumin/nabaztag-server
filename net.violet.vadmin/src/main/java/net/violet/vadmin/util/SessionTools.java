@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 import net.violet.platform.api.actions.Action;
 import net.violet.platform.api.actions.sessions.Create;
 import net.violet.platform.api.exceptions.APIException;

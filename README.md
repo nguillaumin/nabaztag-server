@@ -6,7 +6,7 @@ The sources were released by Mindscape on 2011-07-27 and are available here: htt
 
 ## Current state
 
-The sources are nearly identical to the original. The only major change is that I tried to switch every project from Ant to Maven, as the Ant scripts weren't really usable and because I didn't want to upload all the dependencies (JAR files) to GitHub.
+The sources are nearly identical to the original. The only major change is that I tried to switch every project from Ant to Maven, as the Ant scripts weren't really usable and because I didn't want to upload all the dependencies (JAR files) to GitHub. I also removed the project `CommonDev` which contained only one class nearly identical to another in `common` (I merged the two).
 
 Having to switch a project to Maven is also a good way to understand it.
 

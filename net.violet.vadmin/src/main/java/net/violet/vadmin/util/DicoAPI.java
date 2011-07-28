@@ -18,7 +18,7 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 import net.violet.platform.api.actions.Action;
 import net.violet.platform.api.actions.dico.Create;
 import net.violet.platform.api.actions.dico.Export;

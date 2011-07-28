@@ -9,7 +9,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 import net.violet.platform.api.actions.Action;
 import net.violet.platform.api.actions.files.Synthetize;
 import net.violet.platform.api.exceptions.APIException;

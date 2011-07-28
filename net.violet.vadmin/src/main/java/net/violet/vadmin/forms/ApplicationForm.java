@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import net.violet.commondev.utils.StringShop;
+import net.violet.common.StringShop;
 import net.violet.vadmin.objects.data.GetAdminData;
 import net.violet.vadmin.objects.data.GetApplicationData;
 import net.violet.vadmin.objects.data.HardwareData;
