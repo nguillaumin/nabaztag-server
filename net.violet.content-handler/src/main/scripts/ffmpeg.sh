@@ -20,4 +20,5 @@ fi
 
 OUTPUTCOMMAND="$@"
 
-/usr/local/bin/ffmpeg -f ${INPUTFORMAT} -i ${PATH2FILE} -f wav -vn -y ${TMPFILE} 2> /dev/null && rm -f ${PATH2FILE} && /usr/local/bin/sox -V0 -t wav -v $(/usr/local/bin/sox ${TMPFILE} -n stat -v 2>&1) ${TMPFILE} -t wav - ${FADEOUT} | /usr/local/bin/ffmpeg -f wav -i - -f ${OUTPUTCOMMAND} -vn -y ${PATH2FILE} 2> /dev/null
+# Assumes ffmpeg and sox are on the PATH
+ffmpeg -f ${INPUTFORMAT} -i ${PATH2FILE} -f wav -vn -y ${TMPFILE} 2> /dev/null && rm -f ${PATH2FILE} && sox -V0 -t wav -v $(sox ${TMPFILE} -n stat -v 2>&1) ${TMPFILE} -t wav - ${FADEOUT} | ffmpeg -f wav -i - -f ${OUTPUTCOMMAND} -vn -y ${PATH2FILE} 2> /dev/null

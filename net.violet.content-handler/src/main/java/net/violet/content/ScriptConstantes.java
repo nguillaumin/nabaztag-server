@@ -41,7 +41,7 @@ public class ScriptConstantes {
 
 	public static final String SCRIPT_PATH = ScriptConstantes.PROPERTIES.getProperties("SCRIPT_PATH");
 
-	public static final String LOCAL_TMP_PATH = PROPERTIES.getProperties("LOCAL_TMP_PATH");
+	public static final String LOCAL_TMP_PATH = System.getProperty("java.io.tmpdir");
 
 	public static final String JOIN_MP3 = SCRIPT_PATH + "joinmp3.sh";
 	public static final String RSCMNG_WAV2ADP = SCRIPT_PATH + "wav2adp.sh";
