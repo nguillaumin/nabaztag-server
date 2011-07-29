@@ -23,7 +23,7 @@ public class DownloadingProcessorTest extends MockTestBase {
 		final SyndEntry entry = new SyndEntryImpl();
 		entry.setTitle("my entry");
 		final SyndEnclosure enclosure = new SyndEnclosureImpl();
-		enclosure.setUrl("http://192.168.1.11/tests_silence/P041_Fin_del_Sueno_Zenon_y_Curie1.mp3");
+		enclosure.setUrl("http://www.pdsounds.org/audio/download/779/can+you+hear+me+now.mp3");
 		enclosure.setType("audio/mpeg");
 		entry.setEnclosures(Collections.singletonList(enclosure));
 
@@ -42,7 +42,7 @@ public class DownloadingProcessorTest extends MockTestBase {
 		final SyndEntry entry = new SyndEntryImpl();
 		entry.setTitle("my entry");
 		final SyndEnclosure invalidEnclosure = new SyndEnclosureImpl();
-		invalidEnclosure.setUrl("http://192.168.1.11/tests_silence/P041_Fin_del_Sueno_Zenon_y_Curie1.wav");
+		invalidEnclosure.setUrl("http://www-mmsp.ece.mcgill.ca/documents/audioformats/wave/Samples/AFsp/M1F1-Alaw-AFsp.wav");
 		invalidEnclosure.setType("audio/mpeg");
 		entry.setEnclosures(Arrays.asList(invalidEnclosure));
 
@@ -56,7 +56,7 @@ public class DownloadingProcessorTest extends MockTestBase {
 		final SyndEntry entry = new SyndEntryImpl();
 		entry.setTitle("my entry");
 		final SyndEnclosure invalidEnclosure = new SyndEnclosureImpl();
-		invalidEnclosure.setUrl("http://192.168.1.11/tests_silence/P041_Fin_del_Sueno_Zenon_y_Curie1.mp3");
+		invalidEnclosure.setUrl("http://www.pdsounds.org/audio/download/779/can+you+hear+me+now.mp3");
 		invalidEnclosure.setType("video/avi");
 		entry.setEnclosures(Arrays.asList(invalidEnclosure));
 
@@ -70,10 +70,10 @@ public class DownloadingProcessorTest extends MockTestBase {
 		final SyndEntry entry = new SyndEntryImpl();
 		entry.setTitle("my entry");
 		final SyndEnclosure invalidEnclosure = new SyndEnclosureImpl();
-		invalidEnclosure.setUrl("http://192.168.1.11/tests_silence/P041_Fin_del_Sueno_Zenon_y_Curie1.wav");
+		invalidEnclosure.setUrl("http://www-mmsp.ece.mcgill.ca/documents/audioformats/wave/Samples/AFsp/M1F1-Alaw-AFsp.wav");
 		invalidEnclosure.setType("audio/mpeg");
 		final SyndEnclosure validEnclosure = new SyndEnclosureImpl();
-		validEnclosure.setUrl("http://192.168.1.11/tests_silence/P041_Fin_del_Sueno_Zenon_y_Curie1.mp3");
+		validEnclosure.setUrl("http://www.pdsounds.org/audio/download/779/can+you+hear+me+now.mp3");
 		validEnclosure.setType("audio/mpeg");
 		entry.setEnclosures(Arrays.asList(invalidEnclosure, validEnclosure));
 

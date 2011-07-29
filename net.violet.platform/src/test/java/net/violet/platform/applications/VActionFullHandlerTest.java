@@ -25,6 +25,8 @@ import org.junit.Test;
 
 public class VActionFullHandlerTest extends MockTestBase {
 
+	private static final String PODCAST_URL = "http://www.lesinrocks.com/xml/rss/podcast.xml";
+	
 	private ApplicationData getRssApplication() {
 		new TtsVoiceMock(1L, "voix de virgine", "Virginie", getKowalskyObject().getPreferences().getLangPreferences(), "FR-Anastasie", true, false);
 		final ApplicationData appli = ApplicationData.getData(Application.NativeApplication.RSS_FULL.getApplication());
@@ -84,7 +86,7 @@ public class VActionFullHandlerTest extends MockTestBase {
 	public void tooManyNewsTest() throws InvalidSettingException, MissingSettingException {
 		final VObjectData object = VObjectData.getData(getKowalskyObject());
 		final Map<String, Object> theParams = new HashMap<String, Object>();
-		theParams.put(VActionFullHandler.URL, "http://www.lesinrocks.com/xml/rss/podcast.xml");
+		theParams.put(VActionFullHandler.URL, PODCAST_URL);
 		theParams.put(VActionFullHandler.LABEL, "label");
 		theParams.put(VActionFullHandler.NB_NEWS, "-4");
 		theParams.put(VActionFullHandler.LANG, "fr");
@@ -96,7 +98,7 @@ public class VActionFullHandlerTest extends MockTestBase {
 	public void notEnoughNewsTest() throws InvalidSettingException, MissingSettingException {
 		final VObjectData object = VObjectData.getData(getKowalskyObject());
 		final Map<String, Object> theParams = new HashMap<String, Object>();
-		theParams.put(VActionFullHandler.URL, "http://www.lesinrocks.com/xml/rss/podcast.xml");
+		theParams.put(VActionFullHandler.URL, PODCAST_URL);
 		theParams.put(VActionFullHandler.LABEL, "label");
 		theParams.put(VActionFullHandler.NB_NEWS, "55");
 		theParams.put(VActionFullHandler.LANG, "fr");
@@ -109,11 +111,11 @@ public class VActionFullHandlerTest extends MockTestBase {
 		final VObjectData object = VObjectData.getData(getKowalskyObject());
 
 		final Map<String, Object> theParams = new HashMap<String, Object>();
-		theParams.put(VActionFullHandler.URL, "http://www.lesinrocks.com/xml/rss/podcast.xml");
+		theParams.put(VActionFullHandler.URL, PODCAST_URL);
 		theParams.put(VActionFullHandler.LABEL, "label");
 		theParams.put(VActionFullHandler.LANG, "fr-FR");
 
-		Assert.assertNull(Factories.FEED.findByUrlAndType("http://www.lesinrocks.com/xml/rss/podcast.xml", Feed.Type.PODCAST));
+		Assert.assertNull(Factories.FEED.findByUrlAndType(PODCAST_URL, Feed.Type.PODCAST));
 
 		final SubscriptionData theSub = ApplicationHandlerManager.createSubscription(getPodcastApplication(), object, theParams);
 		Assert.assertTrue(theSub.isValid());
@@ -128,7 +130,7 @@ public class VActionFullHandlerTest extends MockTestBase {
 		final int feedId = Integer.parseInt(settings.get(VActionFullHandler.FEED).toString());
 		final FeedData theFeed = FeedData.findById(feedId);
 		Assert.assertNotNull(theFeed);
-		Assert.assertEquals("http://www.lesinrocks.com/xml/rss/podcast.xml", theFeed.getUrl());
+		Assert.assertEquals(PODCAST_URL, theFeed.getUrl());
 
 		final FeedSubscriptionData fSub = FeedSubscriptionData.findByObjectAndFeed(object, theFeed);
 		Assert.assertNotNull(fSub);

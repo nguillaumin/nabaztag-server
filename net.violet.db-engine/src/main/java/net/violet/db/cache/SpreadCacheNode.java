@@ -222,6 +222,7 @@ public class SpreadCacheNode extends AbstractCacheNode {
 		synchronized (this.mShutdownHook) {
 			if (!this.mShutdownHook) {
 				try {
+					LOGGER.debug("Trying to connect to Spread host '"+DBConstantes.SPREAD_HOST+"' with process name '"+ProcessName.getProcessName()+"'");
 					this.mConnection.connect(InetAddress.getByName(DBConstantes.SPREAD_HOST), 0, ProcessName.getProcessName(), true, true);
 					this.mConnection.addListener(this.mListener);
 					this.mGroup.join(this.mConnection);

@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class GeoCoderTest {
 
-	private final static Coordinates PARIS_COORDINATES = new Coordinates(new BigDecimal("48.8566667"), new BigDecimal("2.3509871"));
+	private final static Coordinates PARIS_COORDINATES = new Coordinates(new BigDecimal("48.8566140"), new BigDecimal("2.3522219"));
 
 	@Test
 	public void geoCodeTest() throws GeoCodingException {

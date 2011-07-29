@@ -35,7 +35,7 @@ import com.sun.syndication.io.XmlReader;
 
 public class AbstractVActionCrawlerTest extends MockTestBase {
 
-	private static final String PATH_2_FILES = "test/net/violet/platform/daemons/crawlers/vaction/";
+	private static final String PATH_2_FILES = "src/test/java/net/violet/platform/daemons/crawlers/vaction/";
 
 	private static final AbstractFeedCrawler<AbstractCrawlerProcessUnit> THE_GENERIC_INSTANCE = new AbstractFeedCrawler<AbstractCrawlerProcessUnit>() {
 

@@ -85,7 +85,7 @@ public class GetTest extends ApiActionTestBase {
 		int nbFailures = 0;
 
 		// Itération sur les fichiers
-		final File theExternalTestsDir = new File("probes/api");
+		final File theExternalTestsDir = new File("src/test/resources/probes/api");
 		for (final File theTestFile : theExternalTestsDir.listFiles()) {
 			if (theTestFile.isFile()) {
 				final String theTestFileName = theTestFile.getName();
@@ -174,7 +174,7 @@ public class GetTest extends ApiActionTestBase {
 	public void specificationTestsList() {
 		int nbFailures = 0;
 		// Itération sur les fichiers source
-		final File theSourceRootDir = new File("net/violet/platform/api/actions/");
+		final File theSourceRootDir = new File("src/main/java/net/violet/platform/api/actions/");
 		for (final File thePackageDir : theSourceRootDir.listFiles()) {
 			if (thePackageDir.isDirectory()) {
 				final String thePackageDirName = thePackageDir.getName();
@@ -190,7 +190,7 @@ public class GetTest extends ApiActionTestBase {
 								try {
 									final Class theClass = Class.forName(theClassName);
 									if ((theClass.getModifiers() & Modifier.ABSTRACT) == 0) {
-										final File theExternalFile = new File("probes/api/methods.get_" + theMethodName + ".test");
+										final File theExternalFile = new File("src/test/resources/probes/api/methods.get_" + theMethodName + ".test");
 										if (theExternalFile.exists()) {
 											System.out.println("Test for method " + theMethodName + " exists");
 										} else {

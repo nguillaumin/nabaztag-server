@@ -56,7 +56,7 @@ public class SchemaTest extends DBTest {
 		// Itération sur les fichiers source
 		SgbdConnection theConnection = null;
 		try {
-			final File theSourceRootDir = new File("net/violet/platform/datamodel/");
+			final File theSourceRootDir = new File("src/main/java/net/violet/platform/datamodel/");
 			for (final File theSourceFile : theSourceRootDir.listFiles()) {
 				if (theSourceFile.isFile()) {
 					final String theSourceFileName = theSourceFile.getName();

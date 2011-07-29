@@ -22,7 +22,7 @@ public class MaskConfigTest extends MockTestBase {
 	@Test
 	public void forNabaztagtagTest() throws InvalidParameterException, FileNotFoundException {
 
-		final String thePath = Constantes.OS_PATH + "test/net/violet/platform/api/config/application_mask.xml";
+		final String thePath = "src/test/java/net/violet/platform/api/config/application_mask.xml";
 		final List<SchedulingMaskMap> theSchedulings = MaskConfig.loadConfig(new FileReader(thePath), MimeType.MIME_TYPES.XML, ObjectType.NABAZTAG_V2);
 
 		final Set<String> touchedType = new HashSet<String>();
@@ -51,7 +51,7 @@ public class MaskConfigTest extends MockTestBase {
 	@Test
 	public void forRfidTest() throws InvalidParameterException, FileNotFoundException {
 
-		final String thePath = Constantes.OS_PATH + "test/net/violet/platform/api/config/application_mask.xml";
+		final String thePath = "src/test/java/net/violet/platform/api/config/application_mask.xml";
 		final List<SchedulingMaskMap> theSchedulings = MaskConfig.loadConfig(new FileReader(thePath), MimeType.MIME_TYPES.XML, ObjectType.RFID_BOOK);
 
 		final Set<String> touchedType = new HashSet<String>();
