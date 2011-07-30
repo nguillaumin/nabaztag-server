@@ -24,7 +24,7 @@ public class AgendaImpl extends ObjectRecord<Agenda, AgendaImpl> implements Agen
 	/**
 	 * Cache de toutes les entrées (pour tous les jours).
 	 */
-	private static final SortedMap<Long, Agenda> AGENDAS = AgendaImpl.createAgendaCache();
+	private static final SortedMap<Long, Agenda> AGENDAS = null;
 
 	/**
 	 * Constructeur protégé à partir d'un id.
@@ -78,6 +78,9 @@ public class AgendaImpl extends ObjectRecord<Agenda, AgendaImpl> implements Agen
 	}
 
 	public static SortedMap<Long, Agenda> listAll() {
+		if (AGENDAS == null) {
+			AgendaImpl.createAgendaCache();
+		}
 		return AgendaImpl.AGENDAS;
 	}
 
