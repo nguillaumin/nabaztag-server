@@ -6,6 +6,11 @@ import java.util.Map;
 import net.violet.db.records.Record;
 import net.violet.platform.datamodel.factories.Factories;
 
+/**
+ * Used by the old site, deprecated.
+ * 
+ *
+ */
 public interface Service extends Record<Service> {
 
 	Map<String, Service> serviceByNameCache = new HashMap<String, Service>();

@@ -42,8 +42,8 @@ public class ApplicationImpl extends ObjectRecord<Application, ApplicationImpl> 
 	protected String application_name;
 	protected Timestamp application_creation_date;
 	protected String application_class;
-	protected long application_category_id;
 	protected boolean application_interactive;
+	protected long application_category_id;	
 	protected boolean application_visible;
 	protected boolean isRemovable;
 

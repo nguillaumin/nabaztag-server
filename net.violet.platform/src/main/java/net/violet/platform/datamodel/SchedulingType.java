@@ -8,6 +8,11 @@ import net.violet.db.records.Record;
 import net.violet.platform.datamodel.factories.Factories;
 import net.violet.platform.util.StringShop;
 
+/**
+ * Types for scheduling applications installed on the objects
+ * 
+ *
+ */
 public interface SchedulingType extends Record<SchedulingType> {
 
 	String TYPE_KEY = StringShop.TYPE;

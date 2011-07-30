@@ -26,8 +26,8 @@ public class MessageCounterImpl extends ObjectRecord<MessageCounter, MessageCoun
 	 */
 	protected long messenger_id;
 	protected Integer rabbit_state;
-	protected Integer w_o_nabcast;
 	protected Integer w_nabcast;
+	protected Integer w_o_nabcast;	
 
 	/**
 	 * Constructeur protégé à partir d'un id.

@@ -67,15 +67,17 @@ public class MessageImpl extends ObjectRecord<Message, MessageImpl> implements M
 	}
 
 	protected long id;
+	protected Integer event_id;
+	protected Long anim_id;
+	protected Long music_id;
 	protected Long body;
 	protected String text;
 	protected Timestamp timeOfDelivery;
 	protected long count;
-	protected Long anim_id;
-	protected Long music_id;
-	protected Long color;
 	protected long palette;
-	protected Integer event_id;
+	protected Long color;
+	
+	
 	protected Long nabcast;
 
 	private Files mBody;

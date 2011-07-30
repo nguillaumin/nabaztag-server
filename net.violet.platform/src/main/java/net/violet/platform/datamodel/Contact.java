@@ -4,6 +4,11 @@ import java.sql.Timestamp;
 
 import net.violet.db.records.Record;
 
+/**
+ * Friends management
+ * 
+ *
+ */
 public interface Contact extends Record<Contact> {
 
 	/**

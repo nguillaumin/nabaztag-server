@@ -8,6 +8,10 @@ import net.violet.db.records.Record;
 import net.violet.platform.datamodel.MessageCounter.RABBIT_STATE;
 import net.violet.platform.datamodel.factories.Factories;
 
+/**
+ * Users and objects are identified in a Messenger.
+ *
+ */
 public interface Messenger extends Record<Messenger> {
 
 	/**

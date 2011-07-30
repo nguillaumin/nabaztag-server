@@ -7,6 +7,11 @@ import net.violet.db.records.Record;
 import net.violet.platform.datamodel.Hardware.HARDWARE;
 import net.violet.platform.util.SleepTime;
 
+/**
+ * Contains all Violet objects
+ * 
+ *
+ */
 public interface VObject extends Record<VObject> {
 
 	/**

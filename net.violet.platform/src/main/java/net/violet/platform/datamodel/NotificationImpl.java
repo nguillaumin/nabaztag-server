@@ -17,8 +17,8 @@ public class NotificationImpl extends ObjectRecord<Notification, NotificationImp
 
 	protected long id;
 	protected long sender_id;
-	protected long recipient_id;
 	protected long application_id;
+	protected long recipient_id;	
 	protected String status;
 	protected Timestamp creation_time;
 

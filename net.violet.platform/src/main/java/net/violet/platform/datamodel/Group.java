@@ -4,6 +4,11 @@ import java.util.List;
 
 import net.violet.db.records.Record;
 
+/**
+ * Groups of friends (unused ?)
+ * 
+ *
+ */
 public interface Group extends Record<Group> {
 
 	String getName();

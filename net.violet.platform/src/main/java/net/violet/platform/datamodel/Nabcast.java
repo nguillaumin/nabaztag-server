@@ -4,6 +4,11 @@ import java.util.List;
 
 import net.violet.db.records.Record;
 
+/**
+ * Nabcasts created by users. Deprecated, was for the previous version.
+ * 
+ *
+ */
 public interface Nabcast extends Record<Nabcast> {
 
 	long getNabcast_anim_sign();

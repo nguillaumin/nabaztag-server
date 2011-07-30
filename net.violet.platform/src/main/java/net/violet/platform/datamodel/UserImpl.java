@@ -1,6 +1,7 @@
 package net.violet.platform.datamodel;
 
 import java.awt.Color;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -21,6 +22,7 @@ import net.violet.db.records.associations.ListAssociation;
 import net.violet.db.records.associations.SingleAssociationNotNull;
 import net.violet.db.records.associations.SingleAssociationNull;
 import net.violet.platform.datamodel.factories.Factories;
+import net.violet.platform.datamodel.util.DBGenerator;
 import net.violet.platform.dataobjects.ObjectLangData;
 import net.violet.platform.util.CCalendar;
 import net.violet.platform.util.CipherTools;
@@ -40,6 +42,16 @@ public final class UserImpl extends ObjectRecord<User, UserImpl> implements User
 
 	protected long user_id;
 	protected String user_password;
+	
+	/**
+	 * This field wasn't the the class, but was in the DB
+	 * so it was created for the {@link DBGenerator} to create
+	 * the corresponding column.
+	 * 
+	 * @author nabaztag-server-project
+	 */
+	protected String user_pseudo;
+	
 	protected String user_email;
 	protected long user_lang;
 	protected long user_main; // il sert desormais a dire si l'utilisateur a au moins un objet
@@ -55,6 +67,16 @@ public final class UserImpl extends ObjectRecord<User, UserImpl> implements User
 	protected long user_good;
 	protected String user_comment;
 	protected String user_color_sign;
+
+	/**
+	 * This field wasn't the the class, but was in the DB
+	 * so it was created for the {@link DBGenerator} to create
+	 * the corresponding column.
+	 * 
+	 * @author nabaztag-server-project
+	 */
+	protected Date user_show_date;
+
 	protected Integer user_newsletter;
 	protected long user_timezone;
 	protected int user_24h;

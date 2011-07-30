@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Languages for the website, TTS, voice recognition, objects
+ * 
+ *
+ */
 public interface Lang extends Record<Lang> {
 
 	/**

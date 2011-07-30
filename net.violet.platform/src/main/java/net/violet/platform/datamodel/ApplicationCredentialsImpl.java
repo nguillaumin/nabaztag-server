@@ -25,10 +25,10 @@ public class ApplicationCredentialsImpl extends ObjectRecord<ApplicationCredenti
 	private static final String[] NEW_COLUMNS = new String[] { "public_key", "private_key", "digested_key", "application_id", };
 
 	protected String public_key;
-	protected long application_id;
 	protected String private_key;
-	protected String application_role;
 	protected String digested_key;
+	protected String application_role;
+	protected long application_id;
 
 	private final SingleAssociationNotNull<ApplicationCredentials, Application, ApplicationImpl> mApplication;
 

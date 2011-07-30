@@ -4,6 +4,12 @@ import java.sql.Timestamp;
 
 import net.violet.db.records.Record;
 
+/**
+ * Notifications between applications.
+ * 
+ * For now only used for ears communion.
+ *
+ */
 public interface Notification extends Record<Notification> {
 
 	/**

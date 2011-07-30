@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Sources for crawlers
+ * 
+ *
+ */
 public interface Source extends Record<Source> {
 
 	long getSource_id();

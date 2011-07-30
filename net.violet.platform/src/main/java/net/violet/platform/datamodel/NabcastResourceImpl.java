@@ -16,10 +16,10 @@ public class NabcastResourceImpl extends ObjectRecord<NabcastResource, NabcastRe
 	private static final String[] NEW_COLUMNS = new String[] { "content_id", "expiration_date", "release_date", "object_reader", "label" };
 
 	protected long content_id;
-	protected Timestamp expiration_date;
-	protected Timestamp release_date;
-	protected String object_reader;
 	protected String label;
+	protected String object_reader;
+	protected Timestamp expiration_date;
+	protected Timestamp release_date;	
 
 	private final SingleAssociationNotNull<NabcastResource, ApplicationContent, ApplicationContentImpl> content;
 

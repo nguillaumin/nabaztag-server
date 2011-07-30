@@ -6,6 +6,11 @@ import java.util.Map;
 
 import net.violet.db.records.Record;
 
+/**
+ * Nabcast signature system, unused ?
+ * 
+ *
+ */
 public interface Signature extends Record<Signature> {
 
 	Files getFile();

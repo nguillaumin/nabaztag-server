@@ -27,8 +27,8 @@ public class MessageReceivedImpl extends AssociationRecord<Message, MessageRecei
 	public static final SQLAssociationSpecification<MessageReceivedImpl> SPECIFICATION = new SQLAssociationSpecification<MessageReceivedImpl>("message_received", MessageReceivedImpl.class, new SQLKey("message_id"));
 
 	protected long message_id;
-	protected long recipient_id;
 	protected long sender_id;
+	protected long recipient_id;
 	protected String message_state;
 
 	private final SingleAssociationNotNull<MessageReceived, Messenger, MessengerImpl> recipient;

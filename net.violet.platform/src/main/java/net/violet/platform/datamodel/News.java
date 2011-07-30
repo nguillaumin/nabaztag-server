@@ -5,6 +5,11 @@ import java.util.Date;
 
 import net.violet.db.records.Record;
 
+/**
+ * News for a Violet product. Unused ?
+ * 
+ *
+ */
 public interface News extends Record<News> {
 
 	public Lang getNewsLang();

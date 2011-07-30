@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Number of messages in an object's inbox
+ * 
+ *
+ */
 public interface MessageCounter extends Record<MessageCounter> {
 
 	public static enum RABBIT_STATE {

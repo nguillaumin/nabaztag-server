@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.associations.AssoRecord;
 
+/**
+ * Objects subscribed to nabcasts
+ * 
+ *
+ */
 public interface Subscriber extends AssoRecord<Nabcast, Subscriber> {
 
 	long getSubscriber_user();

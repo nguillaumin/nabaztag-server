@@ -52,11 +52,12 @@ public final class VObjectImpl extends ObjectRecord<VObject, VObjectImpl> implem
 	protected int object_n2;
 	protected int object_nbmsg;
 	protected int object_mode;
-	protected long time_zone;
 	protected int object_delay;
 	protected String object_loc;
 	protected int object_state;
 	protected int object_bc_version;
+	protected long time_zone;
+	
 
 	private final SingleAssociationNotNull<VObject, Timezone, TimezoneImpl> timeZone;
 

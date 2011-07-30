@@ -27,9 +27,10 @@ public class ConfigFilesImpl extends ObjectRecord<ConfigFiles, ConfigFilesImpl> 
 	 */
 	protected long id;
 	protected Integer lang_id;
-	protected Long application_id;
 	protected long file_id;
 	protected String index;
+	protected Long application_id;
+	
 
 	private final SingleAssociationNull<ConfigFiles, Lang, LangImpl> mLang;
 	private final SingleAssociationNull<ConfigFiles, Application, ApplicationImpl> mApplication;

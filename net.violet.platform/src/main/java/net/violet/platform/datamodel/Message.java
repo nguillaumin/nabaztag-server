@@ -7,6 +7,11 @@ import net.violet.db.records.Record;
 import net.violet.platform.dataobjects.MessageData.Palette;
 import net.violet.platform.util.CCalendar;
 
+/**
+ * Message sent/received by users
+ * 
+ *
+ */
 public interface Message extends Record<Message> {
 
 	/**

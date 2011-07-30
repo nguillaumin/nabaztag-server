@@ -5,6 +5,11 @@ import java.util.Map;
 
 import net.violet.db.records.Record;
 
+/**
+ * Scheduling type for installed applications
+ * 
+ *
+ */
 public interface SubscriptionScheduling extends Record<SubscriptionScheduling> {
 
 	enum SchedulingPossibility {

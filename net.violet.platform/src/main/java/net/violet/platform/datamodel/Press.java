@@ -2,6 +2,10 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Manages press news / releases about Violet objects. Unused ?
+ *
+ */
 public interface Press extends Record<Press> {
 
 	public Lang getPressLang();

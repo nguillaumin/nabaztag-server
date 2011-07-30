@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Subscribtions to Podcasts / RSS.
+ * 
+ *
+ */
 public interface FeedSubscription extends Record<FeedSubscription> {
 
 	Feed getFeed();

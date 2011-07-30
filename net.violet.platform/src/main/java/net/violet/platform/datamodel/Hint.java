@@ -4,6 +4,11 @@ import java.sql.Timestamp;
 
 import net.violet.db.records.Record;
 
+/**
+ * Hints for the web site
+ * 
+ *
+ */
 public interface Hint extends Record<Hint> {
 
 	/**

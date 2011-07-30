@@ -4,6 +4,10 @@ import java.sql.Timestamp;
 
 import net.violet.db.records.Record;
 
+/**
+ * RSS / Podcasts feeds.
+ * 
+ */
 public interface Feed extends Record<Feed> {
 
 	enum Type {

@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Nabcast categories
+ * 
+ *
+ */
 public interface NabcastCateg extends Record<NabcastCateg> {
 
 	long getNabcastcateg_id();

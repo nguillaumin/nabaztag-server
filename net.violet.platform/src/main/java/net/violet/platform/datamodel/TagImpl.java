@@ -31,8 +31,8 @@ public class TagImpl extends ObjectRecord<Tag, TagImpl> implements Tag {
 	/**
 	 * Champs de l'enregistrement.
 	 */
-	protected long tag_mp3;
 	protected String tag_word;
+	protected long tag_mp3;
 	protected long tag_lang;
 
 	private final SingleAssociationNotNull<Tag, Lang, LangImpl> lang;

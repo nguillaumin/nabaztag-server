@@ -10,6 +10,10 @@ import net.violet.db.records.Record;
 import net.violet.platform.datamodel.MimeType.MIME_TYPES;
 import net.violet.platform.datamodel.factories.Factories;
 
+/**
+ * Hardware types
+ *
+ */
 public interface Hardware extends Record<Hardware> {
 
 	enum HARDWARE {

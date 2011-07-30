@@ -12,6 +12,7 @@ import net.violet.db.records.SQLKey;
 import net.violet.db.records.SQLObjectSpecification;
 import net.violet.db.records.associations.SingleAssociationNotNull;
 import net.violet.platform.applets.AppLanguages;
+import net.violet.platform.datamodel.util.DBGenerator;
 import net.violet.platform.files.FilesManagerFactory;
 
 import org.apache.log4j.Logger;
@@ -35,8 +36,19 @@ public class ApplicationApiLibImpl extends ObjectRecord<ApplicationApiLib, Appli
 
 	protected String apilib_language;
 	protected String apilib_version;
-	protected Timestamp apilib_release_date;
 	protected Long apilib_file_id; // can be NULL !!
+	
+	/**
+	 * This field wasn't the the class, but was in the DB
+	 * so it was created for the {@link DBGenerator} to create
+	 * the corresponding column.
+	 * 
+	 * @author nabaztag-server-project
+	 */
+	protected Timestamp apilib_release_notes;
+	
+	protected Timestamp apilib_release_date;
+	
 
 	/**
 	 * References

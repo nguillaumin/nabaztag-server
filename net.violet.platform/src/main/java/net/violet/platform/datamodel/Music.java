@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Sounds from Violet and from the users.
+ * 
+ *
+ */
 public interface Music extends Record<Music> {
 
 	/**

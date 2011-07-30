@@ -5,6 +5,10 @@ import java.util.List;
 import net.violet.db.records.Record;
 import net.violet.vlisp.services.NablifeSrv;
 
+/**
+ * Service Nablife. Deprecated, used by the previous site.
+ *
+ */
 public interface NabLife extends Record<NabLife>, NablifeSrv {
 
 	Service getService();

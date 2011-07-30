@@ -18,8 +18,8 @@ public class FeedSubscriptionImpl extends ObjectRecord<FeedSubscription, FeedSub
 	private static final String[] NEW_COLUMNS = new String[] { "feed_id", "object_id", "last_read_item" };
 
 	protected long id;
-	protected long feed_id;
 	protected long object_id;
+	protected long feed_id;
 	protected Long last_read_item;
 
 	private final SingleAssociationNotNull<FeedSubscription, Feed, FeedImpl> feed;

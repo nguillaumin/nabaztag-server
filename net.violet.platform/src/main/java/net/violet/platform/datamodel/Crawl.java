@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Crawls data sources for applications
+ * 
+ *
+ */
 public interface Crawl extends Record<Crawl> {
 
 	int CRAWL_TYPE_ID_METEO = 1;

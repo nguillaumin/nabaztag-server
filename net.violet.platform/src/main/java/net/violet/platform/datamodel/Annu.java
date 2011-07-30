@@ -5,6 +5,10 @@ import java.sql.Timestamp;
 
 import net.violet.db.records.Record;
 
+/**
+ * User profile. Most informations are not mandatory. 
+ *
+ */
 public interface Annu extends Record<Annu> {
 
 	String MALE = "H";

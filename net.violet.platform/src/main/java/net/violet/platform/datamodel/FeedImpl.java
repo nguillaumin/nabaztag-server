@@ -17,8 +17,8 @@ public class FeedImpl extends ObjectRecord<Feed, FeedImpl> implements Feed {
 	private static final String[] NEW_COLUMNS = new String[] { "url", "language_id", "type", "access_right" };
 
 	protected long id;
-	protected long language_id;
 	protected String url;
+	protected long language_id;	
 	protected Timestamp last_modified;
 	protected String etag;
 	protected String type;

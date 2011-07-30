@@ -2,6 +2,13 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Manages preferences of a user for friends request and filters.
+ * 
+ * Does <b>not</b> contains friends list !
+ * 
+ *
+ */
 public interface FriendsLists extends Record<FriendsLists> {
 
 	long getFriendslists_confirmationlevel();

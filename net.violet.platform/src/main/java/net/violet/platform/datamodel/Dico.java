@@ -6,6 +6,11 @@ import java.util.List;
 import net.violet.db.records.Record;
 import net.violet.platform.datamodel.factories.Factories;
 
+/**
+ * Storage of localized keys, by language.
+ * 
+ *
+ */
 public interface Dico extends Record<Dico> {
 
 	final String LOC_KEY = "^LOC_";

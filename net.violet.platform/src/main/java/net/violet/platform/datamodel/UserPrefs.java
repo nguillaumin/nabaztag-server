@@ -4,6 +4,10 @@ import java.util.Map;
 
 import net.violet.db.records.Record;
 
+/**
+ * Depreacted, was used on the old web site
+ *
+ */
 public interface UserPrefs extends Record<UserPrefs> {
 
 	String USER_PREFS_LAYOUT = "userprefs_layout";

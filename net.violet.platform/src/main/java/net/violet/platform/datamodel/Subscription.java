@@ -5,6 +5,10 @@ import java.util.Map;
 import net.violet.db.records.Record;
 import net.violet.platform.api.maps.PojoMap;
 
+/**
+ * Objects subscription to applications
+ * 
+ */
 public interface Subscription extends Record<Subscription> {
 
 	Application getApplication();

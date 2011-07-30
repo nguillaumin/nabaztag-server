@@ -34,14 +34,14 @@ public class ApplicationProfileImpl extends ObjectRecord<ApplicationProfile, App
 	protected long application_id;
 	protected String application_title;
 	protected String application_description;
-	protected String application_instructions;
 	protected boolean application_open_source;
 	protected Timestamp application_modification_date;
 	protected Long configuration_setting_file_id;
 	protected Long configuration_scheduling_file_id;
+	protected Long application_announce;
 	protected Long picture_file_id;
 	protected Long icon_file_id;
-	protected Long application_announce;
+	protected String application_instructions;
 	protected String url;
 
 	private final SingleAssociationNotNull<ApplicationProfile, Application, ApplicationImpl> mApplication;

@@ -8,6 +8,11 @@ import java.util.Map;
 import net.violet.db.records.Record;
 import net.violet.platform.datamodel.factories.Factories;
 
+/**
+ * Voices for TTS
+ * 
+ *
+ */
 public interface TtsVoice extends Record<TtsVoice> {
 
 	/**

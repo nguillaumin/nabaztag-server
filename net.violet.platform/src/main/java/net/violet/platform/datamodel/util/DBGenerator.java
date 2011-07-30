@@ -3,17 +3,22 @@ package net.violet.platform.datamodel.util;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import net.violet.db.records.ObjectRecord;
+import net.violet.db.records.SQLSpecification;
 import net.violet.db.records.associations.SingleAssociationNotNull;
 import net.violet.db.records.associations.SingleAssociationNull;
 import net.violet.platform.datamodel.MusicStyle;
+import net.violet.platform.datamodel.UserEmail;
 
 
 /**
@@ -26,6 +31,30 @@ import net.violet.platform.datamodel.MusicStyle;
 public class DBGenerator {
 	
 	private static final File root = new File("src/main/java");
+	
+	/**
+	 * Most of the fields are named in lower case + underscore only,
+	 * but there are some exceptions.
+	 */
+	private static Set<String> FIELD_EXCEPTIONS = new HashSet<String>();
+	static {
+		FIELD_EXCEPTIONS.add("isRemovable");
+		FIELD_EXCEPTIONS.add("idCategory");
+		FIELD_EXCEPTIONS.add("idParent");
+		FIELD_EXCEPTIONS.add("bestBefore");
+		FIELD_EXCEPTIONS.add("timeOfDelivery");
+		FIELD_EXCEPTIONS.add("object_longitudeGPS");
+		FIELD_EXCEPTIONS.add("object_latitudeGPS");
+		FIELD_EXCEPTIONS.add("timezone_javaId");
+		FIELD_EXCEPTIONS.add("user_creationDate");
+		FIELD_EXCEPTIONS.add("user_firstName");
+		FIELD_EXCEPTIONS.add("user_lastName");
+		FIELD_EXCEPTIONS.add("userFriendsAddress_userId");
+		FIELD_EXCEPTIONS.add("userFriendsAddress_address");
+		FIELD_EXCEPTIONS.add("isDuplicated");
+		FIELD_EXCEPTIONS.add("timeOfDelivery");
+		FIELD_EXCEPTIONS.add("nbItems");
+	}
 	
 	/**
 	 * @param args
@@ -56,11 +85,10 @@ public class DBGenerator {
 
 	}
 	
+	@SuppressWarnings("rawtypes")
 	private static void generateTable(Class<?> clazz) throws Exception {
-		// The table name is in the SPECIFICATION field, but for now it's
-		// simpler this way.
-		String tableName = getTableName(clazz.getSimpleName().replace("Impl", ""));
-		// 
+		// The table name is in the SPECIFICATION field
+		String tableName = null;
 
 		// List of columns found
 		List<String> columns = new ArrayList<String>();
@@ -75,7 +103,13 @@ public class DBGenerator {
 			}
 			
 			if ("SPECIFICATION".equals(f.getName())) {
-				// Extract the name of the table, ideally.
+				// Extract the table name by reading the static field
+				f.setAccessible(true);
+				SQLSpecification sas = (SQLSpecification) f.get(null);
+				tableName = sas.getTableName();
+				if (tableName == null || "".equals(tableName)) {
+					throw new IllegalStateException("No table name for class '"+clazz.getName()+"'");
+				}
 				continue;
 			}
 			
@@ -89,8 +123,10 @@ public class DBGenerator {
 			
 			// Database mapped columns are usually lower case with underscore,
 			// except for some cases...
-			if (f.getName().matches("[a-z_]+")
-					|| f.getName().contains("userFriendsAddress")) {
+			// Also ANNU.age is in the AnnuImpl class, but not in the DB
+			if ((f.getName().matches("[a-z0-9_]+")
+					|| FIELD_EXCEPTIONS.contains(f.getName()))
+					&& ! "age".equals(f.getName())) {
 
 				// It's a database column
 				columns.add(generateColumn(f, firstColumnField));
@@ -128,6 +164,9 @@ public class DBGenerator {
 				|| int.class.equals(type) || Integer.class.equals(type)) {
 			out.append("` INT");
 			isNumber = true;
+		} else if (BigDecimal.class.equals(type)) {
+			out.append("` DECIMAL");
+			isNumber = true;
 		} else if (String.class.equals(type)) {
 			out.append("` VARCHAR(255)");
 		} else if (Timestamp.class.equals(type)) {
@@ -141,7 +180,7 @@ public class DBGenerator {
 		} else if (List.class.equals(type)) {
 			out.append("-- Ignored List for column '" + f.getName() + "'\n");
 		} else {
-			throw new IllegalArgumentException("Unrecognized type '" + type.getName() + "'");
+			throw new IllegalArgumentException("Unrecognized type '" + type.getName() + "' for field '" + f.getName() + "'");
 		}
 		
 		if (primary && isNumber) {
@@ -151,24 +190,4 @@ public class DBGenerator {
 		return out.toString();
 	}
 	
-	/**
-	 * Converts a CamelCase class name into a table_name.
-	 * @param className
-	 */
-	private static String getTableName(String className) {
-		StringBuffer out = new StringBuffer();
-		for (int i=0; i<className.length(); i++) {
-			char c = className.charAt(i);
-			if (i == 0) {
-				out.append(Character.toLowerCase(c));
-			} else if (Character.isLowerCase(c)) {
-				out.append(c);
-			} else if (Character.isUpperCase(c)) {
-				out.append("_").append(Character.toLowerCase(c));
-			}
-		}
-		
-		return out.toString();
-	}
-
 }

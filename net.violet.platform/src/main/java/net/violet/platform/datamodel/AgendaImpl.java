@@ -11,6 +11,11 @@ import net.violet.db.records.SQLObjectSpecification;
 
 import org.apache.log4j.Logger;
 
+/**
+ * 
+ * Reference table for days of weeks, but apparently deprecated. 
+ *
+ */
 public class AgendaImpl extends ObjectRecord<Agenda, AgendaImpl> implements Agenda {
 
 

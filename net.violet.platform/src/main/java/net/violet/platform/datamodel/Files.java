@@ -21,6 +21,11 @@ import net.violet.platform.util.StringShop;
 
 import org.apache.log4j.Logger;
 
+/**
+ * Contains files stored on the NAS.
+ * 
+ *
+ */
 public interface Files extends Record<Files> {
 
 	public static String UNSUPPORTED_CONTENT = "net.violet.application.messages.unsupported_content";

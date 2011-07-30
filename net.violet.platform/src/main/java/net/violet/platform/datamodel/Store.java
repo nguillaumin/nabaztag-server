@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Lists stores where Violet's objects were sold.
+ * 
+ *
+ */
 public interface Store extends Record<Store> {
 
 	public static enum STORE_TYPE {

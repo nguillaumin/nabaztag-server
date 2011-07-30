@@ -18,6 +18,8 @@ I managed to start the 3 web applications (my-nabaztag, vadmin, platform) howeve
 
 The biggest showstopper now is that the source doesn't contain the database schema. I've asked Mindscape for it, however I suspect I'll have to do without it...
 
+I wrote a tool that retro-generates the DB schema from the Java datamodel classes and it seem to do the job, however some manual tweaking is still needed.
+
 My initial goal is to run a server for my Nabaztag and some friends, and have some fun hacking the project.
 
 ## Maven setup

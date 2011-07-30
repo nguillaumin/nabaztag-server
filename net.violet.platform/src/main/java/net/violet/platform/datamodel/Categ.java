@@ -3,7 +3,7 @@ package net.violet.platform.datamodel;
 import net.violet.db.records.Record;
 
 /**
- * Catégories pour les Nabshare.
+ * Nabshare categories (Shared audio files)
  */
 public interface Categ extends Record<Categ> {
 

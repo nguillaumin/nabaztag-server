@@ -5,6 +5,14 @@ import java.util.List;
 
 import net.violet.db.records.Record;
 
+/**
+ * Versions of a Nathan book. Users can also create
+ * their own versions.
+ * 
+ * Deprecated, used on the old website.
+ * 
+ *
+ */
 public interface NathanVersion extends Record<NathanVersion> {
 
 	enum Status {

@@ -5,6 +5,10 @@ import java.util.Map;
 
 import net.violet.db.records.Record;
 
+/**
+ * Acounts creations
+ *
+ */
 public interface User extends Record<User> {
 
 	boolean use24();

@@ -2,6 +2,10 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Music types
+ *
+ */
 public interface MusicStyle extends Record<MusicStyle> {
 
 	/**

@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Allows to classify applications by tags
+ *
+ *
+ */
 public interface ApplicationTag extends Record<ApplicationTag> {
 
 	/**

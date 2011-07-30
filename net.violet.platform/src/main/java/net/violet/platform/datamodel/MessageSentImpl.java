@@ -25,8 +25,8 @@ public class MessageSentImpl extends AssociationRecord<Message, MessageSent, Mes
 	public static final SQLAssociationSpecification<MessageSentImpl> SPECIFICATION = new SQLAssociationSpecification<MessageSentImpl>("message_sent", MessageSentImpl.class, new SQLKey("message_id"));
 
 	protected long message_id;
-	protected long recipient_id;
 	protected long sender_id;
+	protected long recipient_id;	
 	protected String message_state;
 
 	private final SingleAssociationNotNull<MessageSent, Messenger, MessengerImpl> recipient;

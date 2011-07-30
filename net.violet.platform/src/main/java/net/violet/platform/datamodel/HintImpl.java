@@ -21,8 +21,8 @@ public class HintImpl extends ObjectRecord<Hint, HintImpl> implements Hint {
 	protected Integer picture_width;
 	protected Integer picture_height;
 	protected String link;
-	protected Timestamp modification_date;
 	protected Timestamp creation_date;
+	protected Timestamp modification_date;	
 
 	protected HintImpl() {
 	}

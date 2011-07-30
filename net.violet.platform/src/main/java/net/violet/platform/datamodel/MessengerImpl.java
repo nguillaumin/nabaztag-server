@@ -112,10 +112,10 @@ public class MessengerImpl extends ObjectRecord<Messenger, MessengerImpl> implem
 
 	protected long id;
 	protected Long object_id;
+	protected Long user_id;
 	protected Long anim_id;
 	protected Long music_id;
-	protected long color;
-	protected Long user_id;
+	protected long color;	
 	protected String name;
 
 	private Map<Message, MessageSent> messageSent;

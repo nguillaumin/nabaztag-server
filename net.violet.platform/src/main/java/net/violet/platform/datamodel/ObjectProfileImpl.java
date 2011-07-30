@@ -29,13 +29,16 @@ public class ObjectProfileImpl extends ObjectRecord<ObjectProfile, ObjectProfile
 	 * Champs de l'enregistrement.
 	 */
 	protected long object_id;
+	protected String object_label;
 	protected Long object_profile_picture;
 	protected String object_profile_description;
-	protected Timestamp object_profile_update_time;
-	protected Timestamp object_profile_creation_time;
 	protected BigDecimal object_longitudeGPS;
 	protected BigDecimal object_latitudeGPS;
-	protected String object_label;
+	protected Timestamp object_profile_creation_time;
+	protected Timestamp object_profile_update_time;
+	
+	
+	
 
 	private final SingleAssociationNull<ObjectProfile, Files, FilesImpl> mPictureFile;
 

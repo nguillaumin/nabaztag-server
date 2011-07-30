@@ -4,6 +4,11 @@ import java.util.List;
 
 import net.violet.db.records.Record;
 
+/**
+ * Web site contexts (Unused ?)
+ * 
+ *
+ */
 public interface Context extends Record<Context> {
 
 	/**

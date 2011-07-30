@@ -2,6 +2,11 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Tags associated with a nathan audio book
+ * 
+ *
+ */
 public interface NathanTag extends Record<NathanTag> {
 
 	/**

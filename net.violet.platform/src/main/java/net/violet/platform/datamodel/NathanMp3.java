@@ -2,6 +2,9 @@ package net.violet.platform.datamodel;
 
 import net.violet.db.records.Record;
 
+/**
+ * Different audio files for a Nathan audio book (RFID)
+ */
 public interface NathanMp3 extends Record<NathanMp3> {
 
 	/**

@@ -8,6 +8,12 @@ import java.util.Map;
 import net.violet.db.records.Record;
 import net.violet.platform.datamodel.Application.NativeApplication;
 
+/**
+ * Indexes sounds, by language, for the services like
+ * weather, stock price, etc.
+ * 
+ *
+ */
 public interface ConfigFiles extends Record<ConfigFiles> {
 
 	static enum SERVICES {
