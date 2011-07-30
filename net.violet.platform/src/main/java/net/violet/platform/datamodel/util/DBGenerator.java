@@ -160,8 +160,10 @@ public class DBGenerator {
 		
 		boolean isNumber = false;
 		Class<?> type = f.getType();
-		if (long.class.equals(type) || Long.class.equals(type)
-				|| int.class.equals(type) || Integer.class.equals(type)) {
+		if (long.class.equals(type) || Long.class.equals(type)) {
+			out.append("` INT UNSIGNED");
+			isNumber = true;
+		} else if (int.class.equals(type) || Integer.class.equals(type)) {
 			out.append("` INT");
 			isNumber = true;
 		} else if (BigDecimal.class.equals(type)) {
@@ -171,8 +173,10 @@ public class DBGenerator {
 			out.append("` VARCHAR(255)");
 		} else if (Timestamp.class.equals(type)) {
 			out.append("` TIMESTAMP");
-		} else if (Date.class.equals(type) || java.util.Date.class.equals(type)) {
+		} else if (Date.class.equals(type)) {
 			out.append("` DATE");
+		} else if (java.util.Date.class.equals(type)) {
+			out.append("` DATETIME");
 		} else if (Time.class.equals(type)) {
 			out.append("` TIME");
 		} else if (Boolean.class.equals(type) || boolean.class.equals(type)) {
