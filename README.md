@@ -4,7 +4,7 @@ This is my attempt at doing something with the sources of the [Nabaztag](http://
 
 The sources were released by Mindscape on 2011-07-27 and are available here: http://code.google.com/p/nabaztag-source-code/
 
-## Current state
+## Current state / future
 
 The sources are nearly identical to the original. The only major change is that I tried to switch every project from Ant to Maven, as the Ant scripts weren't really usable and because I didn't want to upload all the dependencies (JAR files) to GitHub. I also removed the project `CommonDev` which contained only one class nearly identical to another in `common` (I merged the two).
 
@@ -12,15 +12,13 @@ Having to switch a project to Maven is also a good way to understand it.
 
 The project compiles, but the unit tests fail.
 
-I managed to start the 3 web applications (my-nabaztag, vadmin, platform) however they don't do much for now as the database, XMPP server, and some config files are missing.
+I though the biggest showstopper was the missing database schema, however I was able to more or less rebuilt it based on the Java classes using reflection (Check the `net.violet.platform.datamodel.util.DBGenerator` class if you're interested), and completing with the provided doco. 
 
-## Future
+By building test data either manually (I added SQL scripts in the `platform` project if you want to recreate the DB), or using the mock data provided for unit tests, I was able to run succesfully the 2 web interfaces `my-nabaztag` (site for object owners) and `vadmin` (backoffice).
 
-The biggest showstopper now is that the source doesn't contain the database schema. I've asked Mindscape for it, however I suspect I'll have to do without it...
+Unfortunately those web apps are the **old** platform, the "green" one, and the provided sources *don't contain* the new interface (the "purple" one), which I believe was written in Ruby. There are a lot of things broken in this old platform since it hasn't been maintained, and it uses now deprecated URLs to third party services like the weather, etc.
 
-I wrote a tool that retro-generates the DB schema from the Java datamodel classes and it seem to do the job, however some manual tweaking is still needed.
-
-My initial goal is to run a server for my Nabaztag and some friends, and have some fun hacking the project.
+So I'm not sure if it's worth trying to repair everything, since it's already deprecated and there seem to be a lot of alternatives started from scratch out there...
 
 ## Maven setup
 
