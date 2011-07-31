@@ -1294,18 +1294,21 @@ public abstract class AbstractSQLRecord<Intf extends Record<Intf>, Impl extends 
 					}*/
 
 				} catch (final ClassCastException anException) {
+					LOGGER.error("Error setting field '"+theFieldName+"' on class '"+theClass.getName()+"'", anException);
 					final String theClassName = theMD.getColumnClassName(indexCol);
 					final Class<?> theType = theField.getType();
 					final SQLException myException = new SQLException("Class cast exception for column " + theColName + " java=" + theType.getName() + " sql=" + theClassName);
 					myException.initCause(anException);
 					throw myException;
 				} catch (final IllegalArgumentException anException) {
+					LOGGER.error("Error setting field '"+theFieldName+"' on class '"+theClass.getName()+"'", anException);
 					final String theClassName = theMD.getColumnClassName(indexCol);
 					final Class<?> theType = theField.getType();
 					final SQLException myException = new SQLException("Illegal argument exception for column " + theColName + " java=" + theType.getName() + " sql=" + theClassName);
 					myException.initCause(anException);
 					throw myException;
 				} catch (final IllegalAccessException anException) {
+					LOGGER.error("Error setting field '"+theFieldName+"' on class '"+theClass.getName()+"'", anException);
 					final SQLException myException = new SQLException("Illegal Access: " + theFieldName);
 					myException.initCause(anException);
 					throw myException;
