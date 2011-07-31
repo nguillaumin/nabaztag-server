@@ -58,8 +58,10 @@ public class AdminAuthentificationAction extends DispatchActionWithLog {
 				}
 			}
 		} catch (NumberFormatException e) {
+			log.error("Authorization not found for email '" + email + "'", e);
 			errors.add("wrongValue", new ActionMessage("error.authentification.incorrect_values"));
 		} catch (FileNotFoundException e) {
+			log.error("Authorization file not found", e);
 			errors.add("inexistingFile", new ActionMessage("error.authentification.inexisting_file"));
 		}
 		

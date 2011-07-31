@@ -30,7 +30,7 @@ public class Create extends AbstractAction {
 		final UserData theUser = Create.findByNameOrEmailAddress(name, email);
 
 		if (theUser == null) {
-			throw new NoSuchPersonException(APIErrorMessage.NO_SUCH_PERSON);
+			throw new NoSuchPersonException(APIErrorMessage.NO_SUCH_PERSON, email);
 		}
 
 		if (!theUser.checkPasswordPlain(password)) {

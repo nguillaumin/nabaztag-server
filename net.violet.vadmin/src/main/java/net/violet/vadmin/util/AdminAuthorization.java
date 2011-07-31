@@ -2,6 +2,8 @@ package net.violet.vadmin.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -9,11 +11,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts.actions.DispatchAction;
+
 import net.violet.common.StringShop;
 
 public class AdminAuthorization {
 
 	public static final Map<String, List<USER_RIGHTS>> USER_RIGHTS_LIST = new HashMap<String, List<USER_RIGHTS>>();
+	
+	private static final Log log = LogFactory.getLog(AdminAuthorization.class);
 	
 	enum USER_RIGHTS {
 
@@ -68,7 +76,21 @@ public class AdminAuthorization {
 	 */
 	public static boolean getAuthorization(String inUserEmail) throws FileNotFoundException, NumberFormatException{
 	
-		Scanner scanner=new Scanner(new File(AdminConstantes.USERS_PERMISSIONS_PATH));
+		File authzFile = null;
+		if (AdminConstantes.USERS_PERMISSIONS_PATH.startsWith("classpath:")) {
+			URL authzUrl = AdminAuthorization.class.getResource(AdminConstantes.USERS_PERMISSIONS_PATH.replace("classpath:", ""));			
+			try {
+				authzFile = new File(authzUrl.toURI());
+			} catch (URISyntaxException use) {
+				log.debug("Unable to use toURI() to get a local file path on '"+authzUrl+"'", use);
+				authzFile = new File(authzUrl.toString());
+			}
+		} else {
+			authzFile = new File(AdminConstantes.USERS_PERMISSIONS_PATH);
+		}
+		
+		Scanner scanner = new Scanner(authzFile);
+		
 		boolean isAuthorized = false;
 
 		while (scanner.hasNextLine()) {

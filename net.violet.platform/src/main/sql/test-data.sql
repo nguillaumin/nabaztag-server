@@ -23,10 +23,12 @@ INSERT INTO `object`
 
 DELETE FROM `user`;
 
+-- user_password is used for vadmin
+-- my-nabaztag uses the user_pwd table
 INSERT INTO `user`
   (`user_id`, `user_password`, `user_pseudo`, `user_email`, `user_lang`, `user_main`, `user_color`, `user_music`, `user_authmsg`, `user_authmsgrcv`, `user_identnumnab`, `user_image`, `user_authmsgrcvme`, `user_extconnect`, `user_creationDate`, `user_good`, `user_comment`, `user_color_sign`, `user_show_date`, `user_newsletter`, `user_timezone`, `user_24h`, `user_firstName`, `user_lastName`)
   VALUES
-(1, NULL, '', 'rabbit@localhost.com', 1, 1, 1, 1, 0, 0, 'X', 1, 0, 1, 1312082958, 1, NULL, NULL, NULL, 0, 1, 0, 'Rabbit', NULL);
+(1, 'dmiodnipffcggiclxx', '', 'rabbit@localhost.com', 1, 1, 1, 1, 0, 0, 'X', 1, 0, 1, 1312082958, 1, NULL, NULL, NULL, 0, 1, 0, 'Rabbit', NULL);
 
 -- INSERT INTO `userLang` (`user_id`, `lang_id`) VALUES (1, 1);
 -- INSERT INTO `userprefs` (`userprefs_id`, `userprefs_layout`) VALUES (1, 'X');
@@ -37,3 +39,18 @@ INSERT INTO `user_pwd`
   (`user_id`, `pseudo`, `pwd`)
 VALUES
   (1, 'rabbit', 'a51e47f646375ab6bf5dd2c42d3e6181');
+  
+  
+DELETE FROM `application`;
+
+INSERT INTO `application`
+  (`application_id`, `user_id`, `application_name`, `application_creation_date`, `application_class`, `application_interactive`, `application_category_id`, `application_visible`, `isRemovable`)
+VALUES
+  (1, 1, 'VAdmin', '2011-07-31 19:10:23', 'WEBUI', 0, 1, 0, 0);
+  
+DELETE FROM `application_credentials`;
+
+INSERT INTO `application_credentials`
+  (`public_key`, `private_key`, `digested_key`, `application_role`, `application_id`)
+VALUES
+  ('VAdmin', NULL, NULL, NULL, 1);
