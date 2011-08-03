@@ -3,7 +3,7 @@
 SRV_PATH	= http://192.168.1.11/vl
 
 #OS servlets root
-OS_SERVLET_ROOT = http://192.168.1.11/OS
+OS_SERVLET_ROOT = http://nabdev.violet.net/OS
 
 #.nabaztag.com
 DOMAIN		= 192.168.1.11
@@ -13,7 +13,9 @@ STREAM_SERVER		= 192.168.1.11
 
 RED5_STREAM_SERVER		= 192.168.1.11
 
-ZONE_PING = 192.168.1.11
+BROAD	= localhost.localdomain
+
+ZONE_PING = localhost.localdomain
 
 #@nabaztag.com
 POPMAIL		= @nabaztag.net
@@ -38,7 +40,7 @@ FILTER_EMAIL = 1
 SEND_MAIL_ALERT_XMPP = 0
 SEND_MAIL_ALERT_BUG = 5
 
-#On garde le bug comme ayant √©t√© d√©j√† vu pour : (en milli secondes)
+#On garde le bug comme ayant ÈtÈ dÈj‡ vu pour : (en milli secondes)
 BUG_KEEP_ALIVE_FOR = 300000
 
 # TTS
@@ -46,46 +48,49 @@ PRIORITY_ACCESS_TTS = 3
 TTS_SERVER = 192.168.1.16
 NB_CONCURRENT_TTS = 0
 
-URL_DBTESTCORE = jdbc:mysql://127.0.0.1/bdCoreTest
+URL_DBTESTCORE = jdbc:mysql://localhost/bdCoreTest
 
 # Chemins des fichiers.
-OS_PATH = /usr/local/tomcat/violet/OS/
+OS_PATH = target/classes/
 RSC_PATH = rsc/
 TOOLS_PATH = tools/
 TTS_PATH = TTS/
 TMP_PATH = tmp/
-LOCAL_TMP_PATH = /usr/local/tomcat/tmp/
+LOCAL_TMP_PATH = /tmp
 TELISMA_PATH = telisma/
 ASM_PATH = asm/
 AUDIOOKI_PATH = audiooki/
-NAS_PATH = /usr/local/violet/
+NAS_PATH = src/main/resources/nas/
 MAIL_PATH = /tools/mail/
 MAIL_HOST = localhost
 
-RED5_URL_SERVER = rtmp://192.168.1.11/vocalRecorder
+RED5_URL_SERVER = rtmp://localhost/vocalRecorder
 
-HADOOP_URI = hdfs://192.168.1.11:54310
+HADOOP_URI = hdfs://localhost:54310
 
-URL_DBCORE = jdbc:mysql://127.0.0.1/bdCoreTest?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
-URL_DBCORE_W = jdbc:mysql://127.0.0.1/bdCoreTest?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
-URL_DBCORE_R = jdbc:mysql://127.0.0.1/bdCoreTest?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
+URL_DBCORE = jdbc:mysql://localhost/bdCore?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
+URL_DBCORE_W = jdbc:mysql://localhost/bdCore?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
+URL_DBCORE_R = jdbc:mysql://localhost/bdCore?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
 
+URL_DBEJABBERD = jdbc:mysql://localhost/ejabberdnabaztagcom?useUnicode=true&characterEncoding=UTF-8
 
-URL_DBEJABBERD = jdbc:mysql://127.0.0.1/ejabberdnabaztagcom?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
+URL_STATS = jdbc:mysql://localhost/bdCore?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
 
-URL_STATS = jdbc:mysql://127.0.0.1/bdCoreTest?useUnicode=true&characterEncoding=UTF-8&useCursorFetch=true
 
 # Serveur & domaine XMPP
-XMPP_SERVER = 192.168.1.11
-XMPP_NABAZTAG_DOMAIN = xmpp-dev.nabaztag.com
+XMPP_SERVER = localhost
+#;192.168.1.36
+#127.0.0.1
+XMPP_NABAZTAG_DOMAIN = localhost.localdomain
 XMPP_PLATFORM_PASSWORD = violet
 
 # API entry point
-API_SERVICE = api.nabaztag.com/vl
+API_SERVICE = 127.0.0.1:8080/vl
+# API_SERVICE = 192.168.1.11/vl
 
 # JGroups
-JGROUPS_NETWORK_INTERFACE = lo0
-JGROUPS_PLATFORM_NAME = SILENCE
+JGROUPS_NETWORK_INTERFACE = eth1
+JGROUPS_PLATFORM_NAME = DEV
 
 # Spread
 SPREAD_HOST = 127.0.0.1
@@ -94,7 +99,6 @@ SPREAD_HOST = 127.0.0.1
 TIME_TO_CLEAN = 300000
 MAX_CACHE_ABSTRACT_RECORD_ENTRIES = 80000
 MAX_CACHE_DB_COLLECTION_ENTRIES = 500
-
 
 # Composants Jabber
 XMPP_API_COMPONENT = xmpp.api.violet.net
@@ -111,12 +115,11 @@ NB_FFMPEG = 3
 NB_SOX = 3
 NB_JOIN = 3
 
-
 NB_COMPOSANT_API_THREADS = 10
 NB_COMPOSANT_APPLET_THREADS = 10
 NB_COMPOSANT_OBJECT_THREADS = 10
 NB_COMPOSANT_PLATFORM_THREADS = 10
 
 #Mirror
-XMPP_MIRROR_DOMAIN = xmpp.mirror.violet.net
-MIRROR_BYTECODE_REF_VERSION = 1067
+XMPP_MIRROR_DOMAIN = xmpp-dev.mirror.violet.net
+

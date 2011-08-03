@@ -10,6 +10,8 @@ The sources are nearly identical to the original. The only major change is that 
 
 Having to switch a project to Maven is also a good way to understand it.
 
+I also removed the unecessary config files for the various Violet environments (testing, staging, production, etc).
+
 The project compiles, but the unit tests fail.
 
 I though the biggest showstopper was the missing database schema, however I was able to more or less rebuilt it based on the Java classes using reflection (Check the `net.violet.platform.datamodel.util.DBGenerator` class if you're interested), and completing with the provided doco. 

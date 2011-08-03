@@ -1,4 +1,0 @@
-DOMAIN = my-pp.nabaztag.com
-IMG_PATH = http://broad-pp.violet.net/
-OS = objects-pp.nabaztag.com
-USERS_PERMISSIONS_PATH=/usr/local/violet/rsc/admin/admin_permissions.txt

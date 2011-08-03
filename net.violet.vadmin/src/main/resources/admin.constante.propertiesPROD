@@ -1,4 +1,0 @@
-DOMAIN = my.nabaztag.com
-IMG_PATH = http://broad.violet.net/
-OS = renard.violet.net
-USERS_PERMISSIONS_PATH=/usr/local/violet/rsc/admin/admin_permissions.txt

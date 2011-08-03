@@ -174,7 +174,7 @@
 						</goals>
 						<configuration>
 							<classifier>classes</classifier>
-						<classesDirectory>${project.build.directory}/${project.artifactId}-${project.version}/WEB-INF/classes</classesDirectory>
+						<classesDirectory>${project.build.directory}/classes</classesDirectory>
 						</configuration>
 					</execution>
 				</executions>

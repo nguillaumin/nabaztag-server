@@ -1,11 +1,12 @@
-<Context path="/vl" docBase="vl.war" debug="10" unpackWAR="false" reloadable="true" swallowOutput="true">
-	<Resource  name="jdbc/bdCore" auth="Container" type="javax.sql.DataSource" maxActive="2000" removeAbandoned="true" removeAbandonedTimeout="60"
-	    logAbandoned="true" maxIdle="20" maxWait="5000" username="dev" password="123" driverClassName="com.mysql.jdbc.Driver"
-	     url="jdbc:mysql://127.0.0.1:3306/bdCore?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
-
-	<Realm className="org.apache.catalina.realm.DataSourceRealm"
-				 dataSourceName="jdbc/bdCore" digest="MD5" debug="99" localDataSource="true"
-				 userTable="application_credentials" userNameCol="public_key" userCredCol="digested_key"
-				 userRoleTable="application_credentials" roleNameCol="application_role" />
+<Context>
+	  <Resource name="jdbc/bdCoreRead" auth="Container" type="javax.sql.DataSource"
+              username="dev" password="123" url="jdbc:mysql://localhost:3306/bdCore"
+              driverClassName="com.mysql.jdbc.Driver"
+              maxActive="20" maxIdle="10"/>
+              
+  <Resource name="jdbc/bdCoreWrite" auth="Container" type="javax.sql.DataSource"
+              username="dev" password="123" url="jdbc:mysql://localhost:3306/bdCore"
+              driverClassName="com.mysql.jdbc.Driver"
+              maxActive="20" maxIdle="10"/>
 
 </Context>

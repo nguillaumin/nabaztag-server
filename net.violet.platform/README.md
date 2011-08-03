@@ -12,6 +12,17 @@ You must run locally an instance of the Spread messaging daemon. Use `apt-get in
 * Edit `/etc/defaults/spread` and set `ENABLED=1`
 * Edit `/etc/init.d/spread` and fix the path to the `spread.conf` file (See [this bug](https://bugs.launchpad.net/ubuntu/+source/spread/+bug/191849)).
 
+Apparently Spread can be disabled when setting the `silence` system property (`-Dsilence=true`).
+
+### Jabber
+
+You need to run a local XMPP server so that the webapp and the rabbit can connect to it. The adress of the machine running the server must be set in `constante.properties` (`XMPP_NABAZTAG_DOMAIN`) so that it's correctly given to the rabbit.
+
+The remaining issue is authentication: The rabbit apparently uses a random password for authentication, so either:
+
+* The XMPP server should be modified to authenticate on the user name only, which doesn't seem trivial with either ejabberd or OpenFire because this must still happen in the SASL layer. Neither of those two XMPP daemon offers a way to customise that.
+* The rabbit boot code should be modified to use a static password.
+
 ### TODO
 
 * Google Maps is used to lookup GPS coordinates and the API key is hardcoded in the class `net.violet.platform.geocoding.GeoCoder`

@@ -1,6 +1,0 @@
-SCRIPT_PATH = /usr/local/tomcat/violet/ContentHandler/scripts/
-LOCAL_TMP_PATH = /usr/local/tomcat/tmp/
-
-NB_ADP = 3
-NB_FFMPEG = 20
-NB_JOIN = 3

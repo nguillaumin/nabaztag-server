@@ -42,8 +42,10 @@ public class BcEntryPoint extends HttpServlet {
 		final PrintWriter out = inResponse.getWriter();
 		final String theSerial = inRequest.getParameter("m");
 		final String theFirmware = inRequest.getParameter("v");
+		final String hardware = inRequest.getParameter("h");
 		final Hardware.HARDWARE theHardware;
-		if (BcEntryPoint.isVersion(theFirmware) && (net.violet.common.utils.RegexTools.isInt(inRequest.getParameter("h")) && (HARDWARE.V2 == (theHardware = HARDWARE.findById(Long.parseLong(inRequest.getParameter("h"))))) && theHardware.checkIdentifier(theSerial))) {
+		LOGGER.debug("Connection from serial '"+theSerial+"' with firmware '"+theFirmware+"' and hardware '"+hardware+"'");
+		if (BcEntryPoint.isVersion(theFirmware) && (net.violet.common.utils.RegexTools.isInt(hardware) && (HARDWARE.V2 == (theHardware = HARDWARE.findById(Long.parseLong(hardware)))) && theHardware.checkIdentifier(theSerial))) {
 			try {
 				out.print(BcEntryPoint.process(theSerial));
 			} catch (final InterruptedException e) {

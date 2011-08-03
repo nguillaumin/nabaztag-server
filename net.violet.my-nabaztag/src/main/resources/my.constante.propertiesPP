@@ -1,7 +1,0 @@
-#.nabaztag.com
-DOMAIN		= .nabaztag.com
-
-#r.nabaztag.com
-STREAM_SERVER		= broad-pp.nabaztag.com
-
-RED5_STREAM_SERVER		= broad-pp.nabaztag.com

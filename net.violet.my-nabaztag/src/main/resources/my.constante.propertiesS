@@ -1,7 +1,0 @@
-#.nabaztag.com
-DOMAIN		= 192.168.1.11
-
-#r.nabaztag.com
-STREAM_SERVER		= 192.168.1.11
-
-RED5_STREAM_SERVER		= 192.168.1.11
