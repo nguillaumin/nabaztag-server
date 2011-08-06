@@ -90,6 +90,7 @@ public class JabberComponentObjectsPacketListener extends AbstractPacketListener
 			theReply.setPacketID(inPacket.getPacketID());
 
 			this.mComponent.sendPacket(theReply);
+			LOGGER.debug("Sent IQ Sources message: " + theReply.getChildElementXML());
 
 		}
 	}

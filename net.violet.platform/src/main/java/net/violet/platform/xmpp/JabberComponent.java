@@ -110,9 +110,11 @@ public class JabberComponent implements ConnectionListener, JabberPacketSender {
 
 		if (this.mComponentName.equals(Constantes.XMPP_API_COMPONENT)) {
 			addPacketListener(new JabberComponentApiPacketListener(this), null);
+			LOGGER.debug("Added " + JabberComponentApiPacketListener.class.getSimpleName());
 
 		} else if (this.mComponentName.equals(Constantes.XMPP_APPLET_COMPONENT)) {
 			addPacketListener(new JabberComponentAppletPacketListener(this), null);
+			LOGGER.debug("Added " + JabberComponentAppletPacketListener.class.getSimpleName());
 
 			/*
 			try {
@@ -145,8 +147,10 @@ public class JabberComponent implements ConnectionListener, JabberPacketSender {
 
 		} else if (this.mComponentName.equals(Constantes.XMPP_OBJECTS_COMPONENT)) {
 			addPacketListener(new JabberComponentObjectsPacketListener(this), null);
+			LOGGER.debug("Added " + JabberComponentObjectsPacketListener.class.getSimpleName());
 		} else if (this.mComponentName.equals(Constantes.XMPP_PLATFORM_COMPONENT)) {
 			addPacketListener(new JabberComponentPlatformPacketListener(this), null);
+			LOGGER.debug("Added " + JabberComponentPlatformPacketListener.class.getSimpleName());
 		}
 	}
 

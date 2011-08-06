@@ -1,4 +1,4 @@
-# My Nabaztag
+# Platform
 
 ## Description
 

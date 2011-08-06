@@ -25,6 +25,7 @@ public abstract class AbstractPacketListener implements PacketListener {
 
 	public final void processPacket(final Packet inPacket) {
 		try {
+			LOGGER.debug("Received packet: " + inPacket);
 			this.mBlockingExecutor.put(inPacket);
 		} catch (final InterruptedException e) {
 			AbstractPacketListener.LOGGER.fatal(e, e);
