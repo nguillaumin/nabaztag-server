@@ -32,6 +32,7 @@ public class PlatformPacketListener implements PacketListener {
 	}
 
 	public void processPacket(Packet inPacket) {
+		LOGGER.debug("Received packet: " + inPacket.toXML());
 		doProcessPacket(inPacket);
 	}
 

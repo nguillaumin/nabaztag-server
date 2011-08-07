@@ -20,8 +20,10 @@ public final class PropertiesTools extends Properties {
 			final String theProperty = aProperty.getValue().toString();
 			if (RegexTools.isInt(theProperty)) {
 				aProperty.setValue(Integer.parseInt(theProperty));
+			} else {
+				// Expand any variable as system property
+				aProperty.setValue(RegexTools.expandWithSysProp(theProperty));
 			}
-
 		}
 	}
 

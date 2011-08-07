@@ -20,4 +20,19 @@
 		<artifactId>parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<systemPropertyVariables>
+						<net.violet.content-handler.script_root>${project.basedir}</net.violet.content-handler.script_root>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
