@@ -17,4 +17,5 @@ Seem to be used to convert media file formats, such as WAV to MP3, etc. Uses wra
 ## Changes
 
 * The unit tests were expecting precise sizes for converted files, which is a problem since it'll vary depending on the `ffmpeg` installation and other factors.
-* This has been changed to expect a range so that they pass, but that's not a very good test either.
+** This has been changed to expect a range so that they pass, but that's not a very good test either.
+* The path to the script shell can now contain a system property that get expanded. That allows to use different paths on different environments, for example setting a different system property when the content handlers are called from within Tomcat as part of the `platform` project.

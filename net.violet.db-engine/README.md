@@ -2,11 +2,13 @@
 
 ## Description
 
-Low level database access classes ?
+Low level database access classes. This is a kind of Object-Relational Mapping framework similar to what Hibernate achieves, but in a custom fashion. I suppose it was kinda cool at the time it was developed but now it would make more sense to use an existing ORM framework.
+
+Also contains a DB cache which cannot be disabled and is very annoying during development since you need to restart your app. server every time you change something in the database by hand.
 
 ## Pre-requisites
 
-For the test to succeed you'll need a local mysql server, with the correct DBs and users. The DBs can be empty apparently.
+For the test to succeed you'll need a local mysql server, with the correct DBs and users. The DBs can be empty for the tests, apparently.
 
 Create DBs:
 

@@ -6,33 +6,30 @@ The sources were released by Mindscape on 2011-07-27 and are available here: htt
 
 ## Current state / future
 
-The sources are nearly identical to the original. The only major change is that I tried to switch every project from Ant to Maven, as the Ant scripts weren't really usable and because I didn't want to upload all the dependencies (JAR files) to GitHub. I also removed the project `CommonDev` which contained only one class nearly identical to another in `common` (I merged the two).
-
-Having to switch a project to Maven is also a good way to understand it.
-
-I also removed the unecessary config files for the various Violet environments (testing, staging, production, etc).
+The sources are nearly identical to the original, bar the switch from Ant to Maven. The single-class `CommonDev` project have been merged with `common`. The various config / property files for Violet test / production environments have been removed.
 
 The project compiles, but the unit tests fail.
 
-I though the biggest showstopper was the missing database schema, however I was able to more or less rebuilt it based on the Java classes using reflection (Check the `net.violet.platform.datamodel.util.DBGenerator` class if you're interested), and completing with the provided doco. 
+Unfortunately some components are missing that prevents one to really use the sources:
 
-By building test data either manually (I added SQL scripts in the `platform` project if you want to recreate the DB), or using the mock data provided for unit tests, I was able to run succesfully the 2 web interfaces `my-nabaztag` (site for object owners) and `vadmin` (backoffice).
+* The database schema is missing, however I was able to more or less retro-engineer it using reflection on the DB-mapped Javabeans (Check the `net.violet.platform.datamodel.util.DBGenerator` class for details). 
+* The modified XMPP server (I suspect ejabberd) sources aren't provided, which makes things complicated because the Nabaztag uses custom XMPP extensions.
 
-Unfortunately those web apps are the **old** platform, the "green" one, and the provided sources *don't contain* the new interface (the "purple" one), which I believe was written in Ruby. There are a lot of things broken in this old platform since it hasn't been maintained, and it uses now deprecated URLs to third party services like the weather, etc.
+You can check the individual README.md files in each module for details and instructions.
 
-So I'm not sure if it's worth trying to repair everything, since it's already deprecated and there seem to be a lot of alternatives started from scratch out there...
+Unfortunately those sources are the **old** platform, the "green" one, and the provided sources *don't contain* the new interface (the "purple" one), which I believe was written in Ruby. There are a lot of things broken in this old platform since it hasn't been maintained, and it uses now deprecated URLs to third party services like the weather, etc.
+
+So I'm not sure if it's worth trying to repair everything, since some components are missing, it's already deprecated and there seem to be a lot of alternatives started from scratch out there...
 
 ## Maven setup
 
-The only problematic point is the `platform` project: It's used as a dependency from `vadmin` and `my-nabaztag`, but because it's a WAR it makes things difficult. In a standard setup this WAR would be split in two project, a JAR with the common classes, and a WAR with the web app. That's what I intend to do once I'll familiar with the sources.
+The only problematic point is the `platform` project: It's used as a dependency from `vadmin` and `my-nabaztag`, but because it's a WAR it makes things difficult. In a standard setup this WAR would be split in two project, a JAR with the common classes, and a WAR with the web app.
 
-For now there's a hack on the `pom.xml` to generate a JAR for the project next to the JAR. Unfortunately it's not very elegant and doesn't seem to work well when running the project under Eclipse (WTP) + Tomcat.
+For now there's a hack on the `pom.xml` to generate a JAR for the project next to the JAR. Unfortunately it's not very elegant and doesn't seem to work well when running the project under Eclipse (WTP) + Tomcat (You'll have to explicitly add the `platform-<VERSION>-classes.jar` file to the classpath).
 
 ### Dependencies
 
 Some dependencies aren't available on Maven public repositories, and some other were old versions that aren't available anymore. You'll need to install them locally (They're available in the `extra-libs` folder).
-
-I'll try to replace them with more recent versions when the code base will be stable enough.
 
 ```bash
 # Spread 4.0.0
@@ -57,7 +54,10 @@ mvn install:install-file -Dfile=nutch-2008-04-30_04-01-32.jar -DgroupId=org.apac
 mvn install:install-file -Dfile=language-identifier.jar -DgroupId=org.apache.nutch -DartifactId=language-identifier -Dversion=2008-04-30_04-01-32 -Dpackaging=jar
 
 # Jive Software Smack
-# Couldn't find which version is used. v3.0.1 is NOT compatible.
+# Seems to be a custom development around the v3.0.0 version. If you look at the SMAC_VERSION
+# field in the org.jivesoftware.smack.SmackConfiguration class it says 3.0.0 but the API
+# doesn't match exactly the official 3.0.0 version. I believe it has been modified to
+# implement XMPP component protocol (XEP-0114)
 mvn install:install-file -Dfile=smack.jar -DgroupId=jivesoftware -DartifactId=smack -Dversion=3.0-violet -Dpackaging=jar
 mvn install:install-file -Dfile=smackx.jar -DgroupId=jivesoftware -DartifactId=smackx -Dversion=3.0-violet -Dpackaging=jar
 
